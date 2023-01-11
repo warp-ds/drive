@@ -1,8 +1,9 @@
 import { isString, toArray, warnOnce } from '@unocss/core';
-import { colorOpacityToString, colorToString, parseCssColor } from './colors';
-import { handler as h } from './handlers';
-import { directionMap, globalKeywords } from './mappings';
-export const CONTROL_MINI_NO_NEGATIVE = '$$mini-no-negative';
+import { colorOpacityToString, colorToString, parseCssColor } from './colors.js'
+import { handler as h } from './handlers/index.js'
+import { directionMap, globalKeywords } from './mappings.js'
+
+export const CONTROL_MINI_NO_NEGATIVE = '$$mini-no-negative'
 /**
  * Provide {@link DynamicMatcher} function returning spacing definition. See spacing rules.
  *

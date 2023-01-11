@@ -5,8 +5,11 @@
   "exports": {
     ".": "./src/index.js"
   },
+  "imports": {
+    "#utils": "./src/_utils/index.js"
+  },
   "scripts": {
-    "dev": "node --experimental-specifier-resolution=node test.js"
+    "dev": "node test.js"
   },
   "keywords": [],
   "author": "@djh",
