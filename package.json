@@ -16,5 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "@unocss/core": "^0.48.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "rollup": "^3.9.1"
   }
 }
