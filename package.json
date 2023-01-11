@@ -1,0 +1,17 @@
+{
+  "name": "engine",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "dev": "node --experimental-specifier-resolution=node test.js"
+  },
+  "keywords": [],
+  "author": "@djh",
+  "license": "MIT",
+  "dependencies": {
+    "@unocss/core": "^0.48.3"
+  }
+}
