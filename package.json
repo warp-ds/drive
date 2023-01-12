@@ -9,7 +9,9 @@
     "#utils": "./src/_utils/index.js"
   },
   "scripts": {
-    "dev": "node test.js"
+    "dev": "node dev.js",
+    "test": "node test.js",
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "@djh",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "rollup": "^3.9.1"
+    "rollup": "^3.9.1",
+    "uvu": "^0.5.6"
   }
 }
