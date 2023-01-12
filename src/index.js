@@ -1,5 +1,6 @@
 // import { preflights } from './preflights.js'
 import { rules } from './rules.js'
+import { variants } from './variants.js'
 // import { theme } from './theme.js'
 
 // export { theme, colors } from './theme.js'
@@ -11,6 +12,7 @@ export function presetEngine (options = {}) {
   return {
     name: '@nmp-ds/engine',
     rules,
+    variants,
   }
 }
 
