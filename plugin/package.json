@@ -21,6 +21,7 @@
   "author": "@djh",
   "license": "MIT",
   "dependencies": {
+    "@nmp-ds/form-preflight": "workspace:*",
     "@unocss/core": "^0.48.3"
   },
   "devDependencies": {
