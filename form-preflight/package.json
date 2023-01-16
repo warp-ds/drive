@@ -1,0 +1,17 @@
+{
+  "name": "forms-dev",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@nmp-ds/engine": "workspace:*",
+    "mini-svg-data-uri": "^1.4.4",
+    "unocss": "^0.48.4",
+    "vite": "^4.0.0"
+  }
+}
