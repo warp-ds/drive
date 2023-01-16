@@ -1,6 +1,6 @@
 // import { preflights } from './preflights.js'
-import { rules } from './rules.js'
-import { variants } from './variants.js'
+import { rules } from '#rules'
+import { variants } from '#variants'
 import { theme } from './theme.js'
 
 // export { theme, colors } from './theme.js'
