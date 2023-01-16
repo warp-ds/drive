@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Form preflight dev</title>
   </head>
   <body style="padding: 64px">
-    <label class="label" style="text-align: left; display: flex; flex-direction: column">
+    <label class="label flex flex-col" style="text-align: left;">
       <span>i am a text field</span>
       <input type="text" class="input" />
     </label>
     <div style="margin: 32px 0;"></div>
-    <label class="label" style="text-align: left; display: flex; flex-direction: column">
+    <label class="label flex flex-col" style="text-align: left;">
       <span>i am a select field</span>
       <select class="select">
         <option selected disabled value="">Choose something</option>
@@ -23,32 +23,32 @@
     </label>
     <div style="margin: 32px 0;"></div>
     <h4 style="text-align: left; margin-bottom: 8px;">Dead toggles</h4>
-    <div style="display: grid; grid-template-columns: max-content max-content; gap: 8px;">
+    <div class="grid grid-cols-[max-content_max-content]" style="gap: 8px;">
       <div class="radio" style="pointer-events: none"></div>
       <div class="radio checked" style="pointer-events: none"></div>
     </div>
     <div style="margin: 32px 0;"></div>
-    <label class="label" style="display: flex; align-items: center;">
+    <label class="label flex items-center">
       <input type="radio" class="radio" name="foo" />
       <span style="margin-left: 8px;">i am a radio field</span>
     </label>
-    <label class="label" style="margin-top: 8px; display: flex; align-items: center;">
+    <label class="label flex items-center" style="margin-top: 8px;">
       <input type="radio" class="radio" name="foo" />
       <span style="margin-left: 8px">i am a radio field</span>
     </label>
 
     <div style="margin: 32px 0;"></div>
     <h4 style="text-align: left; margin-bottom: 8px;">Dead toggles</h4>
-    <div style="display: grid; grid-template-columns: max-content max-content; gap: 8px;">
+    <div class="grid grid-cols[max-content_max-content]" style="gap: 8px;">
       <div class="checkbox" style="pointer-events: none"></div>
       <div class="checkbox checked" style="pointer-events: none"></div>
     </div>
     <div style="margin: 32px 0;"></div>
-    <label class="label" style="display: flex; align-items: center;">
+    <label class="label flex items-center">
       <input type="checkbox" class="checkbox" name="bar" />
       <span style="margin-left: 8px;">i am a checkbox field</span>
     </label>
-    <label class="label" style="margin-top: 8px; display: flex; align-items: center;">
+    <label class="label flex items-center" style="margin-top: 8px;">
       <input type="checkbox" class="checkbox" name="bar" />
       <span style="margin-left: 8px">i am a checkbox field</span>
     </label>
