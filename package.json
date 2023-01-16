@@ -1,31 +1,4 @@
 {
   "name": "engine",
-  "version": "0.0.1",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.js"
-  },
-  "imports": {
-    "#plugin": "./src/index.js",
-    "#utils": "./src/_utils/index.js",
-    "#rules": "./src/_rules/index.js",
-    "#variants": "./src/_variants/index.js",
-    "#bounding": "./src/bounding.js"
-  },
-  "scripts": {
-    "dev": "node dev.js",
-    "test": "node test",
-    "build": "rollup -c"
-  },
-  "keywords": [],
-  "author": "@djh",
-  "license": "MIT",
-  "dependencies": {
-    "@unocss/core": "^0.48.3"
-  },
-  "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "rollup": "^3.9.1",
-    "uvu": "^0.5.6"
-  }
+  "private": "true"
 }

@@ -1,4 +1,5 @@
 // import { preflights } from './preflights.js'
+import { formPreflight } from '@nmp-ds/form-preflight'
 import { rules } from '#rules'
 import { variants } from '#variants'
 import { theme } from './theme.js'
@@ -13,6 +14,9 @@ export function presetEngine (options = {}) {
     theme,
     rules,
     variants,
+    preflights: [
+      formPreflight
+    ]
   }
 }
 

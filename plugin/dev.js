@@ -10,5 +10,5 @@ const uno = createGenerator({
   presets: [presetEngine()]
 })
 
-const result = await uno.generate(['col-span-2', 'col-span-'])
+const result = await uno.generate(['col-span-2', 'col-span-'], { preflights: false })
 console.log(result.css)
