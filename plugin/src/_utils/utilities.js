@@ -3,13 +3,13 @@ import { colorOpacityToString, colorToString, parseCssColor } from './colors.js'
 import { handler as h } from './handlers/index.js'
 import { directionMap, globalKeywords } from './mappings.js'
 
-export const CONTROL_MINI_NO_NEGATIVE = '$$mini-no-negative'
 /**
  * Provide {@link DynamicMatcher} function returning spacing definition. See spacing rules.
  *
  * @param {string} propertyPrefix - Property for the css value to be created. Postfix will be appended according to direction matched.
  * @see {@link directionMap}
  */
+// TODO: hook this into the 'bounding' utils
 export function directionSize(propertyPrefix) {
     return ([_, direction, size], { theme }) => {
         if (!theme.spacing[size]) return warnOnce(`${propertyPrefix} not available in size ${size}`)
