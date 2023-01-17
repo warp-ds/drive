@@ -7,8 +7,8 @@ import presetEngine from './src/index.js'
 // console.log(generated.matched.size === staticProperties.length)
 
 const uno = createGenerator({
-  presets: [presetEngine()]
+  presets: [presetEngine({ mode: 'hyper' })]
 })
 
-const result = await uno.generate(['col-span-2', 'col-span-'], { preflights: false })
+const result = await uno.generate(['col-span-2', 'col-span-'])
 console.log(result.css)
