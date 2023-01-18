@@ -1,5 +1,5 @@
 {
-  "name": "@nmp-ds/form-preflight",
+  "name": "@warp-ds/form-preflight",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@nmp-ds/engine": "workspace:*",
+    "@warp-ds/uno": "workspace:*",
     "mini-svg-data-uri": "^1.4.4",
     "unocss": "^0.48.4",
     "vite": "^4.0.0"

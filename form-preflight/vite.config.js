@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
-import { presetEngine } from '@nmp-ds/engine'
+import { presetEngine } from '@warp-ds/uno'
 
 export default defineConfig({
   plugins: [

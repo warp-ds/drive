@@ -1,5 +1,5 @@
 {
-  "name": "@nmp-ds/engine",
+  "name": "@warp-ds/uno",
   "version": "0.0.1",
   "type": "module",
   "exports": {
@@ -21,7 +21,7 @@
   "author": "@djh",
   "license": "MIT",
   "dependencies": {
-    "@nmp-ds/form-preflight": "workspace:*",
+    "@warp-ds/form-preflight": "workspace:*",
     "@unocss/core": "^0.48.3"
   },
   "devDependencies": {

@@ -3,6 +3,7 @@ import { flex } from './flex.js'
 import { grid } from './grid.js'
 import { opacity } from './color.js'
 import { display } from './display.js'
+import { lineClamp } from './line-clamp.js'
 import { paddings, margins } from './spacing.js'
 
 export const rules = [
@@ -11,6 +12,7 @@ export const rules = [
   grid,
   opacity,
   display,
+  lineClamp,
   paddings, margins,
 ].flat(1)
 

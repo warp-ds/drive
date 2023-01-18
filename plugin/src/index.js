@@ -1,5 +1,5 @@
 // import { preflights } from './preflights.js'
-import { formPreflight } from '@nmp-ds/form-preflight'
+import { formPreflight } from '@warp-ds/form-preflight'
 import { twReset } from './_preflights/tw-reset.js'
 import { rules } from '#rules'
 import { variants } from '#variants'
