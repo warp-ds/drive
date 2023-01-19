@@ -4,7 +4,8 @@ import { grid } from './grid.js'
 import { opacity } from './color.js'
 import { display } from './display.js'
 import { lineClamp } from './line-clamp.js'
-import { paddings, margins } from './spacing.js'
+import { padding, margin } from './spacing.js'
+import { gap } from './gap.js'
 
 export const rules = [
   verticalAligns, textAligns,
@@ -13,7 +14,8 @@ export const rules = [
   opacity,
   display,
   lineClamp,
-  paddings, margins,
+  gap,
+  padding, margin,
 ].flat(1)
 
 export * from './align.js'
@@ -22,3 +24,4 @@ export * from './grid.js'
 export * from './color.js'
 export * from './display.js'
 export * from './spacing.js'
+export * from './gap.js'
