@@ -1,13 +1,20 @@
 import { handler as h } from '#utils';
+import { bounded } from "#bounding"
 
 const autoDirection = (prop) => {
   switch (prop) {
     case 'min': return 'min-content';
     case 'max': return 'max-content';
     case 'fr': return 'minmax(0,1fr)';
+    case 'auto': return 'auto';
   }
-  return h.bracket.cssvar.auto.rem(prop);
+
+  // TODO: Emit warning if prop doesnt match
 };
+
+const ROW_BOUNDS = [1,7]
+const COL_BOUNDS = [1,13]
+const numericHandler = { handler: (d) => h.number(d) }
 
 export const grid = [
   // span
@@ -15,13 +22,57 @@ export const grid = [
   ['row-auto', { 'grid-row': 'auto' }],
   ['col-span-full', { 'grid-column': '1 / -1' }],
   ['row-span-full', { 'grid-row': '1 / -1' }],
-  [/^row-span-(.+)$/, ([, s]) => ({ 'grid-row': `span ${h.bracket.number(s)}/span ${h.bracket.number(s)}` })],
-  [/^col-span-(.+)$/, ([, s]) => ({ 'grid-column': `span ${h.bracket.number(s)}/span ${h.bracket.number(s)}` }), { autocomplete: ['(row|col)-span-<num>'] }],
+  [
+    /^row-span-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-row': `span ${h.number(d)}/span ${h.number(d)}` }),
+      ROW_BOUNDS,
+      numericHandler
+    )
+  ],
+  [
+    /^col-span-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }),
+      COL_BOUNDS,
+      numericHandler
+    ),
+    { autocomplete: ['(row|col)-span-<num>'] }
+  ],
   // starts & ends
-  [/^row-start-(.+)$/, ([, v]) => ({ 'grid-row-start': h.bracket.cssvar(v) ?? v })],
-  [/^col-start-(.+)$/, ([, v]) => ({ 'grid-column-start': h.bracket.cssvar(v) ?? v })],
-  [/^row-end-(.+)$/, ([, v]) => ({ 'grid-row-end': h.bracket.cssvar(v) ?? v })],
-  [/^col-end-(.+)$/, ([, v]) => ({ 'grid-column-end': h.bracket.cssvar(v) ?? v }), { autocomplete: ['(row|col)-(start|end)-<num>'] }],
+  [
+    /^row-start-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-row-start': h.number(d) }),
+      ROW_BOUNDS,
+      numericHandler
+    )
+  ],
+  [
+    /^col-start-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-column-start': h.number(d) }),
+      COL_BOUNDS,
+      numericHandler
+    )
+  ],
+  [
+    /^row-end-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-row-end': h.number(d) }),
+      ROW_BOUNDS,
+      numericHandler
+    )
+  ],
+  [
+    /^col-end-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-column-end': h.number(d) }),
+      COL_BOUNDS,
+      numericHandler
+    ),
+    { autocomplete: ['(row|col)-(start|end)-<num>'] }
+  ],
   // auto flows
   [/^auto-rows-(.+)$/, ([, v]) => ({ 'grid-auto-rows': autoDirection(v) })],
   [/^auto-cols-(.+)$/, ([, v]) => ({ 'grid-auto-columns': autoDirection(v) }), { autocomplete: ['auto-(rows|cols)-<num>'] }],
@@ -31,13 +82,27 @@ export const grid = [
   ['grid-flow-row-dense', { 'grid-auto-flow': 'row dense' }],
   ['grid-flow-col-dense', { 'grid-auto-flow': 'col dense' }],
   // templates
-  [/^grid-rows-(.+)$/, ([, v]) => ({ 'grid-template-rows': h.bracket.cssvar(v) })],
-  [/^grid-cols-(.+)$/, ([, v]) => ({ 'grid-template-columns': h.bracket.cssvar(v) })],
+  [/^grid-rows-(.+)$/, ([, v]) => ({ 'grid-template-rows': h.bracket(v) })],
+  [/^grid-cols-(.+)$/, ([, v]) => ({ 'grid-template-columns': h.bracket(v) })],
   [/^grid-rows-minmax-([\w.-]+)$/, ([, d]) => ({ 'grid-template-rows': `repeat(auto-fill,minmax(${d},1fr))` })],
   [/^grid-cols-minmax-([\w.-]+)$/, ([, d]) => ({ 'grid-template-columns': `repeat(auto-fill,minmax(${d},1fr))` })],
-  [/^grid-rows-(\d+)$/, ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` })],
-  [/^grid-cols-(\d+)$/, ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }), { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] }],
+  [
+    /^grid-rows-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` }),
+      ROW_BOUNDS,
+      numericHandler
+    )
+  ],
+  [
+    /^grid-cols-(\d+)$/,
+    bounded(
+      ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }),
+      COL_BOUNDS,
+      numericHandler
+    ),
+    { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] }
+  ],
   ['grid-rows-none', { 'grid-template-rows': 'none' }],
   ['grid-cols-none', { 'grid-template-columns': 'none' }],
 ];
-
