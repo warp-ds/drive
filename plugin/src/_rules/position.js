@@ -12,9 +12,8 @@ export const insets = [
     [/^inset-(.+)$/, ([, v], ctx) => ({ inset: handleInsetValue(v, ctx) }),
         {
             autocomplete: [
-                '(inset-<directions>-$spacing',
-                'inset-(block|inline)-$spacing',
-                'inset-(bs|be|is|ie)-$spacing',
+                '(inset-$spacing',
+                '(inset-<direction>-$spacing',
                 '(top|left|right|bottom)-$spacing',
             ],
         },
