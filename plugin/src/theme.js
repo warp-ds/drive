@@ -30,7 +30,8 @@ const spacing = {
   80: '8rem',
   96: '9.6rem',
   112: '11.2rem',
-  128: '12.8rem'
+  128: '12.8rem',
+  144: '14.4rem'
 }
 
 export const theme = {
