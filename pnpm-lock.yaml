@@ -8,12 +8,10 @@ importers:
   form-preflight:
     specifiers:
       '@warp-ds/uno': workspace:*
-      mini-svg-data-uri: ^1.4.4
       unocss: ^0.48.4
       vite: ^4.0.0
     devDependencies:
       '@warp-ds/uno': link:../plugin
-      mini-svg-data-uri: 1.4.4
       unocss: 0.48.4_vite@4.0.4
       vite: 4.0.4
 
@@ -21,7 +19,7 @@ importers:
     specifiers:
       '@rollup/plugin-node-resolve': ^15.0.1
       '@unocss/core': ^0.48.3
-      '@warp-ds/form-preflight': workspace:*
+      '@warp-ds/form-preflight': workspace:^
       rollup: ^3.9.1
       uvu: ^0.5.6
     dependencies:
@@ -888,11 +886,6 @@ packages:
   /mimic-fn/2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
-    dev: true
-
-  /mini-svg-data-uri/1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
     dev: true
 
   /mri/1.2.0:

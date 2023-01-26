@@ -1,6 +1,6 @@
 {
   "name": "@warp-ds/form-preflight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "exports": "./export.js",
   "scripts": {
@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@warp-ds/uno": "workspace:*",
-    "mini-svg-data-uri": "^1.4.4",
     "unocss": "^0.48.4",
     "vite": "^4.0.0"
   }
