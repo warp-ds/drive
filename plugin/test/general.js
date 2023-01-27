@@ -1,11 +1,8 @@
-// import { getTestSuite } from './_helpers.js'
-// import * as assert from 'uvu/assert'
 import { rules, display } from '#rules'
 import { assert, test } from 'vitest'
 import { setup } from './_helpers.js'
 
 setup()
-// const test = getTestSuite('general')
 
 
 test('all static rules generate', async ({ uno }) => {
@@ -13,7 +10,7 @@ test('all static rules generate', async ({ uno }) => {
   const generated = await uno.generate(staticClasses)
   // generated.matched is a Set
   assert.equal(generated.matched.size, staticClasses.length)
-  assert.equal(staticClasses.length, 44)
+  assert.equal(staticClasses.length, 95)
 })
 
 test('display rules are sane', async ({ uno }) => {

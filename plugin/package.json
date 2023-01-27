@@ -1,6 +1,6 @@
 {
   "name": "@warp-ds/uno",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "exports": {
     ".": "./src/index.js"
@@ -9,21 +9,21 @@
     "#plugin": "./src/index.js",
     "#utils": "./src/_utils/index.js",
     "#rules": "./src/_rules/index.js",
+    "#theme": "./src/theme.js",
     "#variants": "./src/_variants/index.js",
     "#bounding": "./src/bounding.js"
   },
   "scripts": {
     "dev": "node dev.js",
-    "test": "node test",
-    "build": "rollup -c",
-    "t": "vitest"
+    "test": "vitest",
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "@djh",
   "license": "MIT",
   "dependencies": {
-    "@unocss/core": "^0.48.3",
-    "@warp-ds/form-preflight": "workspace:*"
+    "@warp-ds/form-preflight": "workspace:^",
+    "@unocss/core": "^0.48.3"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",

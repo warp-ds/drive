@@ -1,4 +1,4 @@
-import svgToDataUri from 'mini-svg-data-uri'
+import { svgToDataUri } from './svg-to-data-uri.js'
 
 const encode = svg => `url("${svgToDataUri(svg)}")`
 
