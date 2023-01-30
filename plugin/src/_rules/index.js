@@ -6,7 +6,7 @@ import { display } from './display.js'
 import { lineClamp } from './line-clamp.js'
 import { padding, margin } from './spacing.js'
 import { gap } from './gap.js'
-import { positions, orders, justifies, alignments, placements, insets, floats, zIndexes } from "./position.js"
+import { positions, orders, justifies, alignments, placements, insets, floats, zIndexes, boxSizing } from "./position.js"
 
 export const rules = [
   verticalAligns, textAligns,
@@ -24,7 +24,8 @@ export const rules = [
   placements,
   insets,
   floats,
-  zIndexes
+  zIndexes,
+  boxSizing
 ].flat(1)
 
 export * from './align.js'

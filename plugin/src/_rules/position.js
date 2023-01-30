@@ -147,3 +147,9 @@ export const zIndexes = [
   [/^z-(\d+)$/, ([, v], ctx) => ({ 'z-index': handleZIndexValue(v, ctx) }), { autocomplete: ['z-$zIndex', 'z-<num>'] }],
   ['z-auto', { 'z-index': 'auto' }],
 ];
+
+export const boxSizing = [
+  ['box-border', { 'box-sizing': 'border-box' }],
+  ['box-content', { 'box-sizing': 'content-box' }],
+  ...makeGlobalStaticRules('box', 'box-sizing'),
+];

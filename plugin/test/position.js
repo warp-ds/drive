@@ -697,3 +697,34 @@ describe("z-index", () => {
     expect(css).toMatchInlineSnapshot('""')
   })
 })
+
+// box-sizing
+
+describe("box sizing", () => {
+  test("check box- classes and corresponding values", async (t) => {
+    const classes = ["box-border", "box-content"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .box-border{box-sizing:border-box;}
+      .box-content{box-sizing:content-box;}"
+    `)
+  })
+
+  test("box- classes should work with global keywords", async (t) => {
+    const classes = ["box"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .box-inherit{box-sizing:inherit;}
+      .box-initial{box-sizing:initial;}
+      .box-revert{box-sizing:revert;}
+      .box-revert-layer{box-sizing:revert-layer;}
+      .box-unset{box-sizing:unset;}"
+    `)
+  })
+})
