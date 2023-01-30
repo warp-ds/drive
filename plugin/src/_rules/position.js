@@ -6,12 +6,15 @@ const ORDER_BOUNDS = [1, 12];
 const numericHandler = { handler: (d) => h.number(d) };
 
 export const orders = [
-    [/^order-(\d+)$/,
-    bounded(
-      ([, d]) => ({ 'order': h.number(d)}),
-      ORDER_BOUNDS,
-      numericHandler
-    )],
+    [
+      /^order-(\d+)$/,
+      bounded(
+        ([, d]) => ({ 'order': h.number(d)}),
+        ORDER_BOUNDS,
+        numericHandler
+      ),
+      { autocomplete: 'order-<num>' }
+    ],
     ['order-first', { order: '-9999' }],
     ['order-last', { order: '9999' }],
     ['order-none', { order: '0' }],
@@ -110,8 +113,8 @@ export const insets = [
     [/^inset-(.+)$/, ([, v], ctx) => ({ inset: handleInsetValue(v, ctx) }),
         {
             autocomplete: [
-                '(inset-$spacing',
-                '(inset-<directions>-$spacing',
+                'inset-$spacing',
+                'inset-<directions>-$spacing',
                 '(top|left|right|bottom)-$spacing',
             ],
         },
