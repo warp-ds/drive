@@ -3,15 +3,14 @@ import { directionSize } from '#utils'
 // negatives come in via the negative variant
 // bounding is done via the directionSize function
 export const padding = [
-  [/^pa?()-?(-?.+)$/, directionSize('padding'), { autocomplete: ['(m|p)<num>', '(m|p)-<num>'] }],
-  [/^pxy()()$/, directionSize('padding'), { autocomplete: '(m|p)-(xy)' }],
-  [/^p([xy])(?:-?(-?.+))?$/, directionSize('padding')],
-  [/^p([rltb])(?:-?(-?.+))?$/, directionSize('padding'), { autocomplete: '(m|p)<directions>-<num>' }],
+  // empty capture group here sets an empty string for 'direction' instead of undefined
+  [/^p()-(\d+)$/, directionSize('padding'), { autocomplete: '(m|p)-<num>' }],
+  [/^p([xy])-(\d+)$/, directionSize('padding')],
+  [/^p([rltb])-(\d+)$/, directionSize('padding'), { autocomplete: '(m|p)<directions>-<num>' }],
 ]
 
 export const margin = [
-  [/^ma?()-?(-?.+)$/, directionSize('margin')],
-  [/^mxy()()$/, directionSize('margin')],
-  [/^m([xy])(?:-?(-?.+))?$/, directionSize('margin')],
-  [/^m([rltb])(?:-?(-?.+))?$/, directionSize('margin')],
+  [/^m()-(\d+)$/, directionSize('margin')],
+  [/^m([xy])-(\d+)$/, directionSize('margin')],
+  [/^m([rltb])-(\d+)$/, directionSize('margin')],
 ]
