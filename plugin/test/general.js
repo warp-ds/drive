@@ -1,9 +1,9 @@
 import { rules, display } from '#rules'
 import { assert, test } from 'vitest'
 import { setup } from './_helpers.js'
+import { createAutocomplete } from '@unocss/autocomplete'
 
 setup()
-
 
 test('all static rules generate', async ({ uno }) => {
   const staticClasses = rules.filter(r => typeof r[0] === 'string').map(r => r[0])
@@ -22,4 +22,11 @@ test('display rules are sane', async ({ uno }) => {
   displayExpectations.push(buildDisplayRule('none'), buildDisplayRule('unset'), buildDisplayRule('revert'), buildDisplayRule('inherit'))
   const { css } = await uno.generate(displayClasses)
   for (const expected of displayExpectations) assert.include(css, expected)
+})
+
+test(`autocomplete doesn't throw`, async ({ uno }) => {
+  assert.doesNotThrow(() => {
+    const ac = createAutocomplete(uno)
+    ac.enumerate()
+  })
 })
