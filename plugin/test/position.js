@@ -610,3 +610,53 @@ describe('insets', () => {
     `);
   })
 })
+
+// floats
+describe("floats", () => {
+  test("check float classes and corresponding values", async (t) => {
+    const classes = ["float-left", "float-right", "float-none"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .float-left{float:left;}
+      .float-right{float:right;}
+      .float-none{float:none;}"
+    `)
+  })
+
+  test("check clear classes and corresponding values", async (t) => {
+    const classes = ["clear-left", "clear-right", "clear-both", "clear-none"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .clear-left{clear:left;}
+      .clear-right{clear:right;}
+      .clear-both{clear:both;}
+      .clear-none{clear:none;}"
+    `)
+  })
+
+  test("float and clear should work with global keywords", async (t) => {
+    const classes = ["float", "clear"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .float-inherit{float:inherit;}
+      .float-initial{float:initial;}
+      .float-revert{float:revert;}
+      .float-revert-layer{float:revert-layer;}
+      .float-unset{float:unset;}
+      .clear-inherit{clear:inherit;}
+      .clear-initial{clear:initial;}
+      .clear-revert{clear:revert;}
+      .clear-revert-layer{clear:revert-layer;}
+      .clear-unset{clear:unset;}"
+    `)
+  })
+})

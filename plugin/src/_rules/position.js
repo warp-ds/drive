@@ -122,3 +122,17 @@ export const insets = [
     [/^inset-([xy])-(.+)$/, handleInsetValues],
     [/^(top|left|right|bottom)-(.+)$/, ([, d, v], ctx) => ({ [d]: handleInsetValue(v, ctx) })],
 ];
+
+export const floats = [
+  // floats
+  ['float-left', { float: 'left' }],
+  ['float-right', { float: 'right' }],
+  ['float-none', { float: 'none' }],
+  ...makeGlobalStaticRules('float'),
+  // clears
+  ['clear-left', { clear: 'left' }],
+  ['clear-right', { clear: 'right' }],
+  ['clear-both', { clear: 'both' }],
+  ['clear-none', { clear: 'none' }],
+  ...makeGlobalStaticRules('clear'),
+];
