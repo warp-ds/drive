@@ -1,5 +1,6 @@
 import { handler as h, insetMap } from '#utils';
 import { bounded } from "#bounding";
+import { warnOnce } from '@unocss/core';
 
 export const positions = [
   [/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })],
@@ -135,4 +136,14 @@ export const floats = [
   ['clear-both', { clear: 'both' }],
   ['clear-none', { clear: 'none' }],
   ...makeGlobalStaticRules('clear'),
+];
+
+function handleZIndexValue(v, { theme }) {
+  if (!theme.zIndex?.[v]) return warnOnce(`${v} is not allowed as z-index value`)
+  return theme.zIndex[v]
+}
+
+export const zIndexes = [
+  [/^z-(\d+)$/, ([, v], ctx) => ({ 'z-index': handleZIndexValue(v, ctx) }), { autocomplete: ['z-$zIndex', 'z-<num>'] }],
+  ['z-auto', { 'z-index': 'auto' }],
 ];

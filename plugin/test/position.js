@@ -660,3 +660,40 @@ describe("floats", () => {
     `)
   })
 })
+
+// z-index
+
+describe("z-index", () => {
+  test("check z- classes and their expected values", async (t) => {
+    const validLevels = [0, 10, 20, 30, 40, 50]
+    const positiveClasses = validLevels.map(i => `z-${i}`)
+    const negativeClasses = validLevels.map(i => `-z-${i}`)
+
+    const { css } = await t.uno.generate([...positiveClasses, ...negativeClasses, 'z-auto'])
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .-z-10{z-index:-10;}
+      .-z-20{z-index:-20;}
+      .-z-30{z-index:-30;}
+      .-z-40{z-index:-40;}
+      .-z-50{z-index:-50;}
+      .z-0{z-index:0;}
+      .z-10{z-index:10;}
+      .z-20{z-index:20;}
+      .z-30{z-index:30;}
+      .z-40{z-index:40;}
+      .z-50{z-index:50;}
+      .z-auto{z-index:auto;}"
+    `)
+  })
+
+
+  test("skip invalid classes", async (t) => {
+    const classes = ['z-none', 'z-2', '-z-9999']
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot('""')
+  })
+})
