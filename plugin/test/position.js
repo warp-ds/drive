@@ -4,6 +4,23 @@ import { describe, expect, test } from 'vitest'
 
 setup()
 
+describe("position", () => {
+  test("check static, fixed, absolute, relative and sticky values", async (t) => {
+    const classes = ["static", "fixed", "absolute", "relative", "sticky"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .absolute{position:absolute;}
+      .fixed{position:fixed;}
+      .relative{position:relative;}
+      .static{position:static;}
+      .sticky{position:sticky;}"
+    `)
+  })
+})
+
 describe('order', () => {
   test('allows values 1 to 12', async (t) => {
     const range = Array.from({ length: 12 }).map((_, i) => i + 1)

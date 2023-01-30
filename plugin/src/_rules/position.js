@@ -1,6 +1,9 @@
 import { handler as h, insetMap } from '#utils';
 import { bounded } from "#bounding";
 
+export const positions = [
+  [/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })],
+];
 
 const ORDER_BOUNDS = [1, 12];
 const numericHandler = { handler: (d) => h.number(d) };
