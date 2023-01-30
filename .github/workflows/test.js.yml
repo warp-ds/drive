@@ -1,0 +1,24 @@
+name: Tests
+
+on:
+  push:
+    paths:
+      - 'plugin/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: current
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 7
+        run_install: true
+    - name: test and build
+      run: |
+        cd plugin
+        pnpm test
+        pnpm build
