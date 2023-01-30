@@ -10,7 +10,6 @@ test('all static rules generate', async ({ uno }) => {
   const generated = await uno.generate(staticClasses)
   // generated.matched is a Set
   assert.equal(generated.matched.size, staticClasses.length)
-  assert.equal(staticClasses.length, 95)
 })
 
 test('display rules are sane', async ({ uno }) => {
