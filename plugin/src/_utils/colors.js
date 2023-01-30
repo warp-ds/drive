@@ -1,5 +1,5 @@
 import { escapeRegExp } from '@unocss/core';
-import { getComponents } from './utilities.js';
+import { getComponents } from './getComponents.js';
 
 const cssColorFunctions = ['hsl', 'hsla', 'hwb', 'lab', 'lch', 'oklab', 'oklch', 'rgb', 'rgba'];
 const alphaPlaceholders = ['%alpha', '<alpha-value>'];

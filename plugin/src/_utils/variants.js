@@ -1,5 +1,5 @@
 import { escapeRegExp } from '@unocss/core';
-import { getBracket } from './index.js';
+import { getBracket } from './utilities.js';
 
 export const variantMatcher = (name, handler) => {
     const re = new RegExp(`^${escapeRegExp(name)}[:-]`);
