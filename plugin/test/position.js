@@ -1,5 +1,6 @@
 import { setup } from './_helpers.js'
 import { theme } from '#theme'
+import { globalKeywords } from "#utils"
 import { describe, expect, test } from 'vitest'
 
 setup()
@@ -220,6 +221,64 @@ describe('placements', () => {
       .place-self-end{place-self:end;}
       .place-self-center{place-self:center;}
       .place-self-stretch{place-self:stretch;}"
+    `)
+  })
+})
+
+describe("global keywords", () => {
+
+  test('justify, alignments and placements should work with global keywords', async ({ uno }) => {
+    const classes = ["justify", "justify-items", "justify-self", "content", "items", "self", "place-content", "place-items", "place-self"]
+      .map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+
+    const { css } = await uno.generate(classes)
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .justify-inherit{justify-content:inherit;}
+      .justify-initial{justify-content:initial;}
+      .justify-revert{justify-content:revert;}
+      .justify-revert-layer{justify-content:revert-layer;}
+      .justify-unset{justify-content:unset;}
+      .justify-items-inherit{justify-items:inherit;}
+      .justify-items-initial{justify-items:initial;}
+      .justify-items-revert{justify-items:revert;}
+      .justify-items-revert-layer{justify-items:revert-layer;}
+      .justify-items-unset{justify-items:unset;}
+      .justify-self-inherit{justify-self:inherit;}
+      .justify-self-initial{justify-self:initial;}
+      .justify-self-revert{justify-self:revert;}
+      .justify-self-revert-layer{justify-self:revert-layer;}
+      .justify-self-unset{justify-self:unset;}
+      .content-inherit{align-content:inherit;}
+      .content-initial{align-content:initial;}
+      .content-revert{align-content:revert;}
+      .content-revert-layer{align-content:revert-layer;}
+      .content-unset{align-content:unset;}
+      .items-inherit{align-items:inherit;}
+      .items-initial{align-items:initial;}
+      .items-revert{align-items:revert;}
+      .items-revert-layer{align-items:revert-layer;}
+      .items-unset{align-items:unset;}
+      .self-inherit{align-self:inherit;}
+      .self-initial{align-self:initial;}
+      .self-revert{align-self:revert;}
+      .self-revert-layer{align-self:revert-layer;}
+      .self-unset{align-self:unset;}
+      .place-content-inherit{place-content:inherit;}
+      .place-content-initial{place-content:initial;}
+      .place-content-revert{place-content:revert;}
+      .place-content-revert-layer{place-content:revert-layer;}
+      .place-content-unset{place-content:unset;}
+      .place-items-inherit{place-items:inherit;}
+      .place-items-initial{place-items:initial;}
+      .place-items-revert{place-items:revert;}
+      .place-items-revert-layer{place-items:revert-layer;}
+      .place-items-unset{place-items:unset;}
+      .place-self-inherit{place-self:inherit;}
+      .place-self-initial{place-self:initial;}
+      .place-self-revert{place-self:revert;}
+      .place-self-revert-layer{place-self:revert-layer;}
+      .place-self-unset{place-self:unset;}"
     `)
   })
 })

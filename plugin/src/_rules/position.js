@@ -1,4 +1,4 @@
-import { handler as h, insetMap } from '#utils';
+import { handler as h, insetMap, makeGlobalStaticRules } from '#utils';
 import { bounded } from "#bounding";
 import { warnOnce } from '@unocss/core';
 
@@ -29,14 +29,14 @@ export const justifies = [
     ['justify-between', { 'justify-content': 'space-between' }],
     ['justify-around', { 'justify-content': 'space-around' }],
     ['justify-evenly', { 'justify-content': 'space-evenly' }],
-    // ...makeGlobalStaticRules('justify', 'justify-content'),
+    ...makeGlobalStaticRules('justify', 'justify-content'),
 
     // items
     ['justify-items-start', { 'justify-items': 'start' }],
     ['justify-items-end', { 'justify-items': 'end' }],
     ['justify-items-center', { 'justify-items': 'center' }],
     ['justify-items-stretch', { 'justify-items': 'stretch' }],
-    // ...makeGlobalStaticRules('justify-items'),
+    ...makeGlobalStaticRules('justify-items'),
 
     // selfs
     ['justify-self-auto', { 'justify-self': 'auto' }],
@@ -44,7 +44,7 @@ export const justifies = [
     ['justify-self-end', { 'justify-self': 'end' }],
     ['justify-self-center', { 'justify-self': 'center' }],
     ['justify-self-stretch', { 'justify-self': 'stretch' }],
-    // ...makeGlobalStaticRules('justify-self'),
+    ...makeGlobalStaticRules('justify-self'),
 ]
 
 export const alignments = [
@@ -55,7 +55,7 @@ export const alignments = [
     ['content-between', { 'align-content': 'space-between' }],
     ['content-around', { 'align-content': 'space-around' }],
     ['content-evenly', { 'align-content': 'space-evenly' }],
-    // ...makeGlobalStaticRules('content', 'align-content'),
+    ...makeGlobalStaticRules('content', 'align-content'),
 
     // items
     ['items-start', { 'align-items': 'flex-start' }],
@@ -63,7 +63,7 @@ export const alignments = [
     ['items-center', { 'align-items': 'center' }],
     ['items-baseline', { 'align-items': 'baseline' }],
     ['items-stretch', { 'align-items': 'stretch' }],
-    // ...makeGlobalStaticRules('items', 'align-items'),
+    ...makeGlobalStaticRules('items', 'align-items'),
 
     // selfs
     ['self-auto', { 'align-self': 'auto' }],
@@ -72,7 +72,7 @@ export const alignments = [
     ['self-center', { 'align-self': 'center' }],
     ['self-stretch', { 'align-self': 'stretch' }],
     ['self-baseline', { 'align-self': 'baseline' }],
-    // ...makeGlobalStaticRules('self', 'align-self'),
+    ...makeGlobalStaticRules('self', 'align-self'),
 ]
 
 export const placements = [
@@ -84,14 +84,14 @@ export const placements = [
     ['place-content-around', { 'place-content': 'space-around' }],
     ['place-content-evenly', { 'place-content': 'space-evenly' }],
     ['place-content-stretch', { 'place-content': 'stretch' }],
-    // ...makeGlobalStaticRules('place-content'),
+    ...makeGlobalStaticRules('place-content'),
 
     // items
     ['place-items-start', { 'place-items': 'start' }],
     ['place-items-end', { 'place-items': 'end' }],
     ['place-items-center', { 'place-items': 'center' }],
     ['place-items-stretch', { 'place-items': 'stretch' }],
-    // ...makeGlobalStaticRules('place-items'),
+    ...makeGlobalStaticRules('place-items'),
 
     // selfs
     ['place-self-auto', { 'place-self': 'auto' }],
@@ -99,7 +99,7 @@ export const placements = [
     ['place-self-end', { 'place-self': 'end' }],
     ['place-self-center', { 'place-self': 'center' }],
     ['place-self-stretch', { 'place-self': 'stretch' }],
-    // ...makeGlobalStaticRules('place-self'),
+    ...makeGlobalStaticRules('place-self'),
 ]
 
 function handleInsetValue(v, { theme }) {
