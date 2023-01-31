@@ -144,7 +144,7 @@ function handleZIndexValue(v, { theme }) {
 }
 
 export const zIndexes = [
-  [/^z-(\d+)$/, ([, v], ctx) => ({ 'z-index': handleZIndexValue(v, ctx) }), { autocomplete: ['z-$zIndex', 'z-<num>'] }],
+  [/^z-(\d+)$/, ([, v], ctx) => ({ 'z-index': handleZIndexValue(v, ctx) }), { autocomplete: ['z-$zIndex'] }],
   ['z-auto', { 'z-index': 'auto' }],
 ];
 
