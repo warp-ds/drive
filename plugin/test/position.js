@@ -5,6 +5,23 @@ import { describe, expect, test } from 'vitest'
 
 setup()
 
+describe("position", () => {
+  test("check static, fixed, absolute, relative and sticky values", async (t) => {
+    const classes = ["static", "fixed", "absolute", "relative", "sticky"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .absolute{position:absolute;}
+      .fixed{position:fixed;}
+      .relative{position:relative;}
+      .static{position:static;}
+      .sticky{position:sticky;}"
+    `)
+  })
+})
+
 describe('order', () => {
   test('allows values 1 to 12', async (t) => {
     const range = Array.from({ length: 12 }).map((_, i) => i + 1)
@@ -650,5 +667,123 @@ describe('insets', () => {
       .-top-80{top:-8rem;}
       .-top-96{top:-9.6rem;}"
     `);
+  })
+})
+
+// floats
+describe("floats", () => {
+  test("check float classes and corresponding values", async (t) => {
+    const classes = ["float-left", "float-right", "float-none"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .float-left{float:left;}
+      .float-right{float:right;}
+      .float-none{float:none;}"
+    `)
+  })
+
+  test("check clear classes and corresponding values", async (t) => {
+    const classes = ["clear-left", "clear-right", "clear-both", "clear-none"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .clear-left{clear:left;}
+      .clear-right{clear:right;}
+      .clear-both{clear:both;}
+      .clear-none{clear:none;}"
+    `)
+  })
+
+  test("float and clear should work with global keywords", async (t) => {
+    const classes = ["float", "clear"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .float-inherit{float:inherit;}
+      .float-initial{float:initial;}
+      .float-revert{float:revert;}
+      .float-revert-layer{float:revert-layer;}
+      .float-unset{float:unset;}
+      .clear-inherit{clear:inherit;}
+      .clear-initial{clear:initial;}
+      .clear-revert{clear:revert;}
+      .clear-revert-layer{clear:revert-layer;}
+      .clear-unset{clear:unset;}"
+    `)
+  })
+})
+
+// z-index
+
+describe("z-index", () => {
+  test("check z- classes and their expected values", async (t) => {
+    const validLevels = [0, 10, 20, 30, 40, 50]
+    const positiveClasses = validLevels.map(i => `z-${i}`)
+    const negativeClasses = validLevels.map(i => `-z-${i}`)
+
+    const { css } = await t.uno.generate([...positiveClasses, ...negativeClasses, 'z-auto'])
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .-z-10{z-index:-10;}
+      .-z-20{z-index:-20;}
+      .-z-30{z-index:-30;}
+      .-z-40{z-index:-40;}
+      .-z-50{z-index:-50;}
+      .z-0{z-index:0;}
+      .z-10{z-index:10;}
+      .z-20{z-index:20;}
+      .z-30{z-index:30;}
+      .z-40{z-index:40;}
+      .z-50{z-index:50;}
+      .z-auto{z-index:auto;}"
+    `)
+  })
+
+
+  test("skip invalid classes", async (t) => {
+    const classes = ['z-none', 'z-2', '-z-9999']
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot('""')
+  })
+})
+
+// box-sizing
+
+describe("box sizing", () => {
+  test("check box- classes and corresponding values", async (t) => {
+    const classes = ["box-border", "box-content"]
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .box-border{box-sizing:border-box;}
+      .box-content{box-sizing:content-box;}"
+    `)
+  })
+
+  test("box- classes should work with global keywords", async (t) => {
+    const classes = ["box"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+
+    const { css } = await t.uno.generate(classes)
+
+    expect(css).toMatchInlineSnapshot(`
+      "/* layer: default */
+      .box-inherit{box-sizing:inherit;}
+      .box-initial{box-sizing:initial;}
+      .box-revert{box-sizing:revert;}
+      .box-revert-layer{box-sizing:revert-layer;}
+      .box-unset{box-sizing:unset;}"
+    `)
   })
 })

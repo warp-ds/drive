@@ -1,6 +1,10 @@
 import { handler as h, insetMap, makeGlobalStaticRules } from '#utils';
 import { bounded } from "#bounding";
+import { warnOnce } from '@unocss/core';
 
+export const positions = [
+  [/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })],
+];
 
 const ORDER_BOUNDS = [1, 12];
 const numericHandler = { handler: (d) => h.number(d) };
@@ -121,4 +125,34 @@ export const insets = [
     ],
     [/^inset-([xy])-(.+)$/, handleInsetValues],
     [/^(top|left|right|bottom)-(.+)$/, ([, d, v], ctx) => ({ [d]: handleInsetValue(v, ctx) })],
+];
+
+export const floats = [
+  // floats
+  ['float-left', { float: 'left' }],
+  ['float-right', { float: 'right' }],
+  ['float-none', { float: 'none' }],
+  ...makeGlobalStaticRules('float'),
+  // clears
+  ['clear-left', { clear: 'left' }],
+  ['clear-right', { clear: 'right' }],
+  ['clear-both', { clear: 'both' }],
+  ['clear-none', { clear: 'none' }],
+  ...makeGlobalStaticRules('clear'),
+];
+
+function handleZIndexValue(v, { theme }) {
+  if (!theme.zIndex?.[v]) return warnOnce(`${v} is not allowed as z-index value`)
+  return theme.zIndex[v]
+}
+
+export const zIndexes = [
+  [/^z-(\d+)$/, ([, v], ctx) => ({ 'z-index': handleZIndexValue(v, ctx) }), { autocomplete: ['z-$zIndex'] }],
+  ['z-auto', { 'z-index': 'auto' }],
+];
+
+export const boxSizing = [
+  ['box-border', { 'box-sizing': 'border-box' }],
+  ['box-content', { 'box-sizing': 'content-box' }],
+  ...makeGlobalStaticRules('box', 'box-sizing'),
 ];
