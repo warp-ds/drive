@@ -1,12 +1,12 @@
 import { handler as h, insetMap, makeGlobalStaticRules } from '#utils';
 import { bounded } from "#bounding";
+import * as bounds from '#bounds'
 import { warnOnce } from '@unocss/core';
 
 export const positions = [
   [/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })],
 ];
 
-const ORDER_BOUNDS = [1, 12];
 const numericHandler = { handler: (d) => h.number(d) };
 
 export const orders = [
@@ -14,7 +14,7 @@ export const orders = [
       /^order-(\d+)$/,
       bounded(
         ([, d]) => ({ 'order': h.number(d)}),
-        ORDER_BOUNDS,
+        bounds.order,
         numericHandler
       ),
       { autocomplete: 'order-<num>' }

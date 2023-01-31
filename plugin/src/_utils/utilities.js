@@ -14,9 +14,8 @@ import { getComponents } from './getComponents.js'
 export function directionSize(propertyPrefix) {
     return ([_, direction, size], { theme }) => {
         if (!theme.spacing[size]) return warnOnce(`${propertyPrefix} not available in size ${size}`)
-        const v = theme.spacing?.[size || 'DEFAULT'] ?? h.bracket.cssvar.global.auto.fraction.rem(size);
-        if (v != null)
-            return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
+        const v = theme.spacing?.[size] ?? h.global.auto(size);
+        if (v != null) return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
     };
 }
 /**
