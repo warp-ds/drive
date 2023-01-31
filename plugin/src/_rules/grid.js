@@ -1,5 +1,6 @@
 import { handler as h } from '#utils';
 import { bounded } from "#bounding"
+import * as bounds from '#bounds'
 
 const autoDirection = (prop) => {
   switch (prop) {
@@ -12,8 +13,6 @@ const autoDirection = (prop) => {
   // TODO: Emit warning if prop doesnt match
 };
 
-const ROW_BOUNDS = [1,7]
-const COL_BOUNDS = [1,13]
 const numericHandler = { handler: (d) => h.number(d) }
 
 export const grid = [
@@ -26,7 +25,7 @@ export const grid = [
     /^row-span-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-row': `span ${h.number(d)}/span ${h.number(d)}` }),
-      ROW_BOUNDS,
+      bounds.gridRow,
       numericHandler
     )
   ],
@@ -34,7 +33,7 @@ export const grid = [
     /^col-span-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }),
-      COL_BOUNDS,
+      bounds.gridCol,
       numericHandler
     ),
     { autocomplete: ['(row|col)-span-<num>'] }
@@ -44,7 +43,7 @@ export const grid = [
     /^row-start-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-row-start': h.number(d) }),
-      ROW_BOUNDS,
+      bounds.gridRow,
       numericHandler
     )
   ],
@@ -52,7 +51,7 @@ export const grid = [
     /^col-start-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-column-start': h.number(d) }),
-      COL_BOUNDS,
+      bounds.gridCol,
       numericHandler
     )
   ],
@@ -60,7 +59,7 @@ export const grid = [
     /^row-end-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-row-end': h.number(d) }),
-      ROW_BOUNDS,
+      bounds.gridRow,
       numericHandler
     )
   ],
@@ -68,7 +67,7 @@ export const grid = [
     /^col-end-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-column-end': h.number(d) }),
-      COL_BOUNDS,
+      bounds.gridCol,
       numericHandler
     ),
     { autocomplete: ['(row|col)-(start|end)-<num>'] }
@@ -90,7 +89,7 @@ export const grid = [
     /^grid-rows-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` }),
-      ROW_BOUNDS,
+      bounds.gridRow,
       numericHandler
     )
   ],
@@ -98,7 +97,7 @@ export const grid = [
     /^grid-cols-(\d+)$/,
     bounded(
       ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }),
-      COL_BOUNDS,
+      bounds.gridCol,
       numericHandler
     ),
     { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] }

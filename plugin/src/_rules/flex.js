@@ -1,8 +1,8 @@
 import { handler as h } from '#utils'
 import { bounded } from '#bounding'
+import * as bounds from '#bounds'
 
 const numericHandler = { handler: (d) => h.number(d) }
-const GROW_SHRINK_BOUNDS = [0, 5]
 
 export const flex = [
   // flex
@@ -21,7 +21,7 @@ export const flex = [
     /^shrink(?:-(.*))?$/,
     bounded(
       ([, d = '']) => ({ 'flex-shrink': h.number(d) ?? 1 }),
-      GROW_SHRINK_BOUNDS,
+      bounds.flexGrowShrink,
       { nullable: true, ...numericHandler }
     ),
     { autocomplete: ['shrink-<num>'] }
@@ -30,7 +30,7 @@ export const flex = [
     /^grow(?:-(.*))?$/,
     bounded(
       ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }),
-      GROW_SHRINK_BOUNDS,
+      bounds.flexGrowShrink,
       { nullable: true, ...numericHandler }
     ),
     { autocomplete: ['grow-<num>'] }

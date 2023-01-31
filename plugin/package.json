@@ -11,7 +11,8 @@
     "#rules": "./src/_rules/index.js",
     "#theme": "./src/theme.js",
     "#variants": "./src/_variants/index.js",
-    "#bounding": "./src/bounding.js"
+    "#bounding": "./src/bounding.js",
+    "#bounds": "./src/bounds.js"
   },
   "scripts": {
     "dev": "node dev.js",
