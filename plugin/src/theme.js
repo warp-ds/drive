@@ -7,32 +7,13 @@ const breakpoints = {
   lg: '990px',
 }
 
-const spacing = {
-  0: '0',
-  1: '0.1rem',
-  2: '0.2rem',
-  4: '0.4rem',
-  6: '0.6rem',
-  8: '0.8rem',
-  10: '1rem',
-  12: '1.2rem',
-  14: '1.4rem',
-  16: '1.6rem',
-  20: '2rem',
-  24: '2.4rem',
-  28: '2.8rem',
-  32: '3.2rem',
-  40: '4rem',
-  44: '4.4rem',
-  48: '4.8rem',
-  56: '5.6rem',
-  64: '6.4rem',
-  80: '8rem',
-  96: '9.6rem',
-  112: '11.2rem',
-  128: '12.8rem',
-  144: '14.4rem'
+const divideByTen = n => {
+  const roundedDecimal = Number((n / 10).toFixed(1)) // avoid any JS maths stupidity
+  return Math.round(roundedDecimal) === roundedDecimal ? Math.round(roundedDecimal) : roundedDecimal
 }
+export const spaceBase = [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]
+const spacingInPx = spaceBase.reduce((acc, e) => (acc[e] = `${e}px`, acc), {})
+const spacingInRem = spaceBase.reduce((acc, e) => (acc[e] = `${divideByTen(e)}rem`, acc), {})
 
 const zIndex = {
   0: "0",
@@ -43,8 +24,9 @@ const zIndex = {
   50: "50",
 }
 
-export const theme = {
+export const useTheme = (opts = {}) => ({
+  usingPixels: !!opts.pxSpacing,
   breakpoints,
-  spacing,
+  spacing: opts.usePixels ? spacingInPx : spacingInRem,
   zIndex
-}
+})

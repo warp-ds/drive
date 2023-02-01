@@ -1,5 +1,5 @@
 import { setup } from './_helpers.js'
-import { theme } from '#theme'
+import { spaceBase } from '#theme'
 import { globalKeywords } from "#utils"
 import { describe, expect, test } from 'vitest'
 
@@ -286,14 +286,13 @@ describe("global keywords", () => {
 
 describe('insets', () => {
   test('check inset- classes and their expected values', async (t) => {
-    const { spacing } = theme;
-    const classes = Object.keys(spacing).map((key) => [`inset-${key}`, `inset-x-${key}`, `inset-y-${key}`]).flat();
+    const classes = spaceBase.map(n => ([`inset-${n}`, `inset-x-${n}`, `inset-y-${n}`])).flat();
 
     const { css } = await t.uno.generate(classes)
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
-      .inset-0{inset:0;}
+      .inset-0{inset:0rem;}
       .inset-1{inset:0.1rem;}
       .inset-10{inset:1rem;}
       .inset-112{inset:11.2rem;}
@@ -317,7 +316,7 @@ describe('insets', () => {
       .inset-8{inset:0.8rem;}
       .inset-80{inset:8rem;}
       .inset-96{inset:9.6rem;}
-      .inset-x-0{left:0;right:0;}
+      .inset-x-0{left:0rem;right:0rem;}
       .inset-x-1{left:0.1rem;right:0.1rem;}
       .inset-x-10{left:1rem;right:1rem;}
       .inset-x-112{left:11.2rem;right:11.2rem;}
@@ -341,7 +340,7 @@ describe('insets', () => {
       .inset-x-8{left:0.8rem;right:0.8rem;}
       .inset-x-80{left:8rem;right:8rem;}
       .inset-x-96{left:9.6rem;right:9.6rem;}
-      .inset-y-0{top:0;bottom:0;}
+      .inset-y-0{top:0rem;bottom:0rem;}
       .inset-y-1{top:0.1rem;bottom:0.1rem;}
       .inset-y-10{top:1rem;bottom:1rem;}
       .inset-y-112{top:11.2rem;bottom:11.2rem;}
@@ -369,18 +368,13 @@ describe('insets', () => {
   })
 
   test('check negative -inset- classes and their expected values', async (t) => {
-    const { spacing } = theme;
-
-    const classes = Object.keys(spacing).map((key) => {
-      if(spacing[key] === "0") return;
-
-      return [`-inset-${key}`, `-inset-x-${key}`, `-inset-y-${key}`];
-    }).flat();
+    const classes = spaceBase.map((n) => ([`-inset-${n}`, `-inset-x-${n}`, `-inset-y-${n}`])).flat();
 
     const { css } = await t.uno.generate(classes)
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
+      .-inset-0{inset:-0rem;}
       .-inset-1{inset:-0.1rem;}
       .-inset-10{inset:-1rem;}
       .-inset-112{inset:-11.2rem;}
@@ -404,6 +398,7 @@ describe('insets', () => {
       .-inset-8{inset:-0.8rem;}
       .-inset-80{inset:-8rem;}
       .-inset-96{inset:-9.6rem;}
+      .-inset-x-0{left:-0rem;right:-0rem;}
       .-inset-x-1{left:-0.1rem;right:-0.1rem;}
       .-inset-x-10{left:-1rem;right:-1rem;}
       .-inset-x-112{left:-11.2rem;right:-11.2rem;}
@@ -427,6 +422,7 @@ describe('insets', () => {
       .-inset-x-8{left:-0.8rem;right:-0.8rem;}
       .-inset-x-80{left:-8rem;right:-8rem;}
       .-inset-x-96{left:-9.6rem;right:-9.6rem;}
+      .-inset-y-0{top:-0rem;bottom:-0rem;}
       .-inset-y-1{top:-0.1rem;bottom:-0.1rem;}
       .-inset-y-10{top:-1rem;bottom:-1rem;}
       .-inset-y-112{top:-11.2rem;bottom:-11.2rem;}
@@ -454,15 +450,13 @@ describe('insets', () => {
   })
 
   test('check top-, left-, right-, bottom- classes and their expected values', async (t) => {
-    const { spacing } = theme;
-
-    const classes = Object.keys(spacing).map((key) => [`top-${key}`, `left-${key}`, `right-${key}`, `bottom-${key}`]).flat();
+    const classes = spaceBase.map((n) => ([`top-${n}`, `left-${n}`, `right-${n}`, `bottom-${n}`])).flat();
 
     const { css } = await t.uno.generate(classes)
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
-      .bottom-0{bottom:0;}
+      .bottom-0{bottom:0rem;}
       .bottom-1{bottom:0.1rem;}
       .bottom-10{bottom:1rem;}
       .bottom-112{bottom:11.2rem;}
@@ -486,7 +480,7 @@ describe('insets', () => {
       .bottom-8{bottom:0.8rem;}
       .bottom-80{bottom:8rem;}
       .bottom-96{bottom:9.6rem;}
-      .left-0{left:0;}
+      .left-0{left:0rem;}
       .left-1{left:0.1rem;}
       .left-10{left:1rem;}
       .left-112{left:11.2rem;}
@@ -510,7 +504,7 @@ describe('insets', () => {
       .left-8{left:0.8rem;}
       .left-80{left:8rem;}
       .left-96{left:9.6rem;}
-      .right-0{right:0;}
+      .right-0{right:0rem;}
       .right-1{right:0.1rem;}
       .right-10{right:1rem;}
       .right-112{right:11.2rem;}
@@ -534,7 +528,7 @@ describe('insets', () => {
       .right-8{right:0.8rem;}
       .right-80{right:8rem;}
       .right-96{right:9.6rem;}
-      .top-0{top:0;}
+      .top-0{top:0rem;}
       .top-1{top:0.1rem;}
       .top-10{top:1rem;}
       .top-112{top:11.2rem;}
@@ -562,18 +556,13 @@ describe('insets', () => {
   })
 
   test('check negative -top-, -left-, -right-, -bottom- classes and their expected values', async (t) => {
-    const { spacing } = theme;
-
-    const classes = Object.keys(spacing).map((key) => {
-      if(spacing[key] === "0") return;
-
-      return [`-top-${key}`,`-left-${key}`,`-right-${key}`,`-bottom-${key}`]
-    }).flat()
+    const classes = spaceBase.map((n) => ([`-top-${n}`,`-left-${n}`,`-right-${n}`,`-bottom-${n}`])).flat()
 
     const { css } = await t.uno.generate(classes)
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
+      .-bottom-0{bottom:-0rem;}
       .-bottom-1{bottom:-0.1rem;}
       .-bottom-10{bottom:-1rem;}
       .-bottom-112{bottom:-11.2rem;}
@@ -597,6 +586,7 @@ describe('insets', () => {
       .-bottom-8{bottom:-0.8rem;}
       .-bottom-80{bottom:-8rem;}
       .-bottom-96{bottom:-9.6rem;}
+      .-left-0{left:-0rem;}
       .-left-1{left:-0.1rem;}
       .-left-10{left:-1rem;}
       .-left-112{left:-11.2rem;}
@@ -620,6 +610,7 @@ describe('insets', () => {
       .-left-8{left:-0.8rem;}
       .-left-80{left:-8rem;}
       .-left-96{left:-9.6rem;}
+      .-right-0{right:-0rem;}
       .-right-1{right:-0.1rem;}
       .-right-10{right:-1rem;}
       .-right-112{right:-11.2rem;}
@@ -643,6 +634,7 @@ describe('insets', () => {
       .-right-8{right:-0.8rem;}
       .-right-80{right:-8rem;}
       .-right-96{right:-9.6rem;}
+      .-top-0{top:-0rem;}
       .-top-1{top:-0.1rem;}
       .-top-10{top:-1rem;}
       .-top-112{top:-11.2rem;}

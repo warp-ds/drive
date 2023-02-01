@@ -1,6 +1,6 @@
 export const twReset = {
   layer: 'preflights',
-  getCSS: () => `
+  getCSS: ({ theme }) => `
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -28,6 +28,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  ${theme.usingPixels ? '' : 'font-size: 62.5%;'}
 }
 
 /*
