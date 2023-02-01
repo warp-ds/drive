@@ -27,6 +27,6 @@ const zIndex = {
 export const useTheme = (opts = {}) => ({
   usingPixels: !!opts.pxSpacing,
   breakpoints,
-  spacing: opts.pxSpacing ? spacingInPx : spacingInRem,
+  spacing: opts.usePixels ? spacingInPx : spacingInRem,
   zIndex
 })

@@ -1,6 +1,6 @@
 import { rules, display } from '#rules'
-import { assert, test } from 'vitest'
-import { setup } from './_helpers.js'
+import { assert, expect, test } from 'vitest'
+import { setup, getGenerator } from './_helpers.js'
 import { createAutocomplete } from '@unocss/autocomplete'
 
 setup()
@@ -28,4 +28,15 @@ test(`autocomplete doesn't throw`, async ({ uno }) => {
     const ac = createAutocomplete(uno)
     ac.enumerate()
   })
+})
+
+test('can generate pixel values for theme', async () => {
+  const uno = getGenerator({ usePixels: true })
+  const { css } = await uno.generate(['pt-8', 'bottom-4', '-ml-32'])
+  expect(css).toMatchInlineSnapshot(`
+    "/* layer: default */
+    .pt-8{padding-top:8px;}
+    .-ml-32{margin-left:-32px;}
+    .bottom-4{bottom:4px;}"
+  `)
 })
