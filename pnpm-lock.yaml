@@ -18,11 +18,11 @@ importers:
   plugin:
     specifiers:
       '@rollup/plugin-node-resolve': ^15.0.1
-      '@unocss/autocomplete': ^0.49.2
-      '@unocss/core': ^0.49.2
+      '@unocss/autocomplete': ^0.49.1
+      '@unocss/core': ^0.49.1
       '@warp-ds/form-preflight': workspace:^
       drnm: ^0.9.0
-      rollup: ^3.12.1
+      rollup: ^3.12.0
       uvu: ^0.5.6
       vitest: ^0.28.3
     dependencies:
@@ -1540,7 +1540,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.12.1
+      rollup: 3.10.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
