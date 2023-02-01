@@ -26,13 +26,13 @@ importers:
       uvu: ^0.5.6
       vitest: ^0.28.3
     dependencies:
-      '@unocss/core': 0.49.1
+      '@unocss/core': 0.49.2
       '@warp-ds/form-preflight': link:../form-preflight
     devDependencies:
-      '@rollup/plugin-node-resolve': 15.0.1_rollup@3.12.0
-      '@unocss/autocomplete': 0.49.1
+      '@rollup/plugin-node-resolve': 15.0.1_rollup@3.12.1
+      '@unocss/autocomplete': 0.49.2
       drnm: 0.9.0
-      rollup: 3.12.0
+      rollup: 3.12.1
       uvu: 0.5.6
       vitest: 0.28.3
 
@@ -330,7 +330,7 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-node-resolve/15.0.1_rollup@3.12.0:
+  /@rollup/plugin-node-resolve/15.0.1_rollup@3.12.1:
     resolution: {integrity: sha512-ReY88T7JhJjeRVbfCyNj+NXAG3IIsVMsX9b5/9jC98dRP8/yxlZdz7mHZbHk5zHr24wZZICS5AcXsFZAXYUQEg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -339,13 +339,13 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 5.0.2_rollup@3.12.0
+      '@rollup/pluginutils': 5.0.2_rollup@3.12.1
       '@types/resolve': 1.20.2
       deepmerge: 4.2.2
       is-builtin-module: 3.2.0
       is-module: 1.0.0
       resolve: 1.22.1
-      rollup: 3.12.0
+      rollup: 3.12.1
     dev: true
 
   /@rollup/pluginutils/5.0.2:
@@ -362,7 +362,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@rollup/pluginutils/5.0.2_rollup@3.12.0:
+  /@rollup/pluginutils/5.0.2_rollup@3.12.1:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -374,7 +374,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.12.0
+      rollup: 3.12.1
     dev: true
 
   /@types/chai-subset/1.3.3:
@@ -410,8 +410,8 @@ packages:
       - vite
     dev: true
 
-  /@unocss/autocomplete/0.49.1:
-    resolution: {integrity: sha512-QiWz5VXhxENQmN3HivxPxCxJkc4t7BHk6lpCK0//vZDQLvN0wN8eq6INuyT4+HH649feQdjLKPcZzx774EqHRg==}
+  /@unocss/autocomplete/0.49.2:
+    resolution: {integrity: sha512-bjD2fphyFlw/IQVYpLD5sXEQPBwxJN3J7HZMnOH4OR8Sjaiigkquyx3+TUH63CRGE4OWh0kSp7CGRlYncVySRw==}
     dependencies:
       lru-cache: 7.14.1
     dev: true
@@ -448,6 +448,11 @@ packages:
 
   /@unocss/core/0.49.1:
     resolution: {integrity: sha512-l+L1c8eCwfaQA1sAYDE+xJ+r9ocfyTo9KzRUOIy5eV/wxC82HoLtJN8wIGuWaY8fGQh/gT74Czfq7g7BFNKhaw==}
+    dev: true
+
+  /@unocss/core/0.49.2:
+    resolution: {integrity: sha512-pNoyZU9/rCDKtI+ToVIszkCky8cx4aDYyP2Rm54DMi1HMGJBrQhufnlHE47opnaNXNh5VhI8/1P42aubnrdQDQ==}
+    dev: false
 
   /@unocss/inspector/0.49.1:
     resolution: {integrity: sha512-oC/FOtOCcVP3Yp0me3/2+c/X5OVEnstFKmdEimuJB+z0G8j9l2SLHSqJfBMQm2TCH359sZkybk0kiMg5luwXPA==}
@@ -1233,8 +1238,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/3.12.0:
-    resolution: {integrity: sha512-4MZ8kA2HNYahIjz63rzrMMRvDqQDeS9LoriJvMuV0V6zIGysP36e9t4yObUfwdT9h/szXoHQideICftcdZklWg==}
+  /rollup/3.12.1:
+    resolution: {integrity: sha512-t9elERrz2i4UU9z7AwISj3CQcXP39cWxgRWLdf4Tm6aKm1eYrqHIgjzXBgb67GNY1sZckTFFi0oMozh3/S++Ig==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:

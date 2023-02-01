@@ -24,9 +24,21 @@ const zIndex = {
   50: "50",
 }
 
-export const useTheme = (opts = {}) => ({
-  usingPixels: !!opts.pxSpacing,
-  breakpoints,
-  spacing: opts.usePixels ? spacingInPx : spacingInRem,
-  zIndex
-})
+export const useTheme = (opts = {}) => {
+  const baseSpacing =  opts.usePixels ? spacingInPx : spacingInRem
+  const width = { ...baseSpacing, screen: '100vw' }
+  const height = { ...baseSpacing, screen: '100vh' }
+  return {
+    usingPixels: !!opts.pxSpacing,
+    breakpoints,
+    verticalBreakpoints: breakpoints,
+    spacing: baseSpacing,
+    zIndex,
+    width,
+    height,
+    maxWidth: { none: 'none', ...width },
+    maxHeight: height,
+    minWidth: width,
+    minHeight: height
+  }
+}
