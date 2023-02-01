@@ -3,10 +3,11 @@
   "version": "0.0.3",
   "type": "module",
   "exports": {
-    ".": "./src/index.js"
+    ".": "./src/plugin.js",
+    "./internals": "./src/internals.js"
   },
   "imports": {
-    "#plugin": "./src/index.js",
+    "#plugin": "./src/plugin.js",
     "#utils": "./src/_utils/index.js",
     "#rules": "./src/_rules/index.js",
     "#theme": "./src/theme.js",
