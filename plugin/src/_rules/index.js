@@ -5,6 +5,7 @@ import { opacity } from './color.js'
 import { display } from './display.js'
 import { lineClamp } from './line-clamp.js'
 import { padding, margin } from './spacing.js'
+import { sizes, aspectRatio } from './size.js'
 import { gap } from './gap.js'
 import { positions, orders, justifies, alignments, placements, insets, floats, zIndexes, boxSizing } from "./position.js"
 
@@ -25,7 +26,9 @@ export const rules = [
   insets,
   floats,
   zIndexes,
-  boxSizing
+  boxSizing,
+  sizes,
+  aspectRatio
 ].flat(1)
 
 export * from './align.js'
