@@ -2,7 +2,7 @@ import { createGenerator } from '@unocss/core'
 import { presetWarp } from '#plugin'
 
 const uno = createGenerator({ presets: [presetWarp()] })
-const devClasses = ['box-content', 'z-2', 'z-20', '-z-50', 'float-left', 'clear-both', 'fixed', 'relative', 'top-1', 'left-1', 'right-1', 'bottom-1', '-inset-2', 'inset-1/2', 'inset-full', 'inset-auto', 'inset-y-1', 'row-span-2', 'row-span-10000', 'gap-32', '!sm:pa-16', '-m-2', 'pa-18', '!ma-16', 'opacity-50', 'align-top', 'line-clamp-2']
+const devClasses = ['!m-16', 'opacity-50']
 const cliClasses = process.argv.slice(2)
 const classes = cliClasses.length ? cliClasses : devClasses
 const result = await uno.generate(classes)
