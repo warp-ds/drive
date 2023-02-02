@@ -31,8 +31,7 @@ function handlerBorder(m, ctx) {
 }
 
 function handlerBorderSize([, a = "", b], { theme }) {
-  const v =
-    theme.lineWidth?.[b || "DEFAULT"] ?? h.bracket.cssvar.global.px(b || "1");
+  const v = theme.lineWidth?.[b ?? 2] ?? h.global(b);
   if (a in directionMap && v != null)
     return directionMap[a].map((i) => [`border${i}-width`, v]);
 }
@@ -51,7 +50,7 @@ export const rounded = [
 ]
 
 function handlerRounded([, a = '', s], { theme }) {
-  const v = theme.borderRadius?.[s || 'DEFAULT'] || h.bracket.cssvar.global.fraction.rem(s || '1');
+  const v = theme.borderRadius?.[s ?? 2] || h.global(s);
   if (a in cornerMap && v != null)
       return cornerMap[a].map(i => [`border${i}-radius`, v]);
 }
