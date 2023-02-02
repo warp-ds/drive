@@ -19,7 +19,7 @@ export const borders = [
   [/^border-([xy])-(\d+)$/, handlerBorder],
   [/^border-([rltb])$/, handlerBorder],
   [/^border-([rltb])-(\d+)$/, handlerBorder],
-  [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-<directions>" }],
+  [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
   [/^border-([xy])-(.+)$/, handlerBorderStyle],
   [/^border-([rltb])-(.+)$/, handlerBorderStyle],
 ];
@@ -42,4 +42,18 @@ function handlerBorderSize([, a = "", b], { theme }) {
 function handlerBorderStyle([, a = "", s]) {
   if (borderStyles.includes(s) && a in directionMap)
     return directionMap[a].map((i) => [`border${i}-style`, s]);
+}
+
+export const rounded = [
+  [/^rounded()(?:-(.+))?$/, handlerRounded, { autocomplete: ['(rounded)', '(rounded)-<num>'] }],
+  [/^rounded-([rltb]+)(?:-(.+))?$/, handlerRounded],
+  [/^rounded([rltb]{2})(?:-(.+))?$/, handlerRounded],
+  [/^rounded-([bi][se])(?:-(.+))?$/, handlerRounded],
+  [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handlerRounded],
+]
+
+function handlerRounded([, a = '', s], { theme }) {
+  const v = theme.borderRadius?.[s || 'DEFAULT'] || h.bracket.cssvar.global.fraction.rem(s || '1');
+  if (a in cornerMap && v != null)
+      return cornerMap[a].map(i => [`border${i}-radius`, v]);
 }
