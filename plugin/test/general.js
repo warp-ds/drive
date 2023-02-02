@@ -35,8 +35,8 @@ test('can generate pixel values for theme', async () => {
   const { css } = await uno.generate(['pt-8', 'bottom-4', '-ml-32'])
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
+    .bottom-4{bottom:4px;}
     .pt-8{padding-top:8px;}
-    .-ml-32{margin-left:-32px;}
-    .bottom-4{bottom:4px;}"
+    .-ml-32{margin-left:-32px;}"
   `)
 })
