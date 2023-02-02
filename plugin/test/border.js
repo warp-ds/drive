@@ -14,14 +14,14 @@ describe("border", () => {
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
-      .border-x-0{border-left-width:0px;border-right-width:0px;border-left-style:solid;border-right-style:solid;}
-      .border-x-2{border-left-width:2px;border-right-width:2px;border-left-style:solid;border-right-style:solid;}
-      .border-x-4{border-left-width:4px;border-right-width:4px;border-left-style:solid;border-right-style:solid;}
-      .border-x-8{border-left-width:8px;border-right-width:8px;border-left-style:solid;border-right-style:solid;}
-      .border-y-0{border-top-width:0px;border-bottom-width:0px;border-top-style:solid;border-bottom-style:solid;}
-      .border-y-2{border-top-width:2px;border-bottom-width:2px;border-top-style:solid;border-bottom-style:solid;}
-      .border-y-4{border-top-width:4px;border-bottom-width:4px;border-top-style:solid;border-bottom-style:solid;}
-      .border-y-8{border-top-width:8px;border-bottom-width:8px;border-top-style:solid;border-bottom-style:solid;}"
+      .border-x-0{border-left-width:0px;border-right-width:0px;}
+      .border-x-2{border-left-width:2px;border-right-width:2px;}
+      .border-x-4{border-left-width:4px;border-right-width:4px;}
+      .border-x-8{border-left-width:8px;border-right-width:8px;}
+      .border-y-0{border-top-width:0px;border-bottom-width:0px;}
+      .border-y-2{border-top-width:2px;border-bottom-width:2px;}
+      .border-y-4{border-top-width:4px;border-bottom-width:4px;}
+      .border-y-8{border-top-width:8px;border-bottom-width:8px;}"
     `);
   });
 
@@ -32,11 +32,11 @@ describe("border", () => {
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
-      .border{border-width:1px;border-style:solid;}
-      .border-0{border-width:0px;border-style:solid;}
-      .border-2{border-width:2px;border-style:solid;}
-      .border-4{border-width:4px;border-style:solid;}
-      .border-8{border-width:8px;border-style:solid;}"
+      .border{border-width:1px;}
+      .border-0{border-width:0px;}
+      .border-2{border-width:2px;}
+      .border-4{border-width:4px;}
+      .border-8{border-width:8px;}"
     `);
   });
 
@@ -110,26 +110,26 @@ describe("border", () => {
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
-      .border-b{border-bottom-width:1px;border-bottom-style:solid;}
-      .border-l{border-left-width:1px;border-left-style:solid;}
-      .border-r{border-right-width:1px;border-right-style:solid;}
-      .border-t{border-top-width:1px;border-top-style:solid;}
-      .border-b-0{border-bottom-width:0px;border-bottom-style:solid;}
-      .border-b-2{border-bottom-width:2px;border-bottom-style:solid;}
-      .border-b-4{border-bottom-width:4px;border-bottom-style:solid;}
-      .border-b-8{border-bottom-width:8px;border-bottom-style:solid;}
-      .border-l-0{border-left-width:0px;border-left-style:solid;}
-      .border-l-2{border-left-width:2px;border-left-style:solid;}
-      .border-l-4{border-left-width:4px;border-left-style:solid;}
-      .border-l-8{border-left-width:8px;border-left-style:solid;}
-      .border-r-0{border-right-width:0px;border-right-style:solid;}
-      .border-r-2{border-right-width:2px;border-right-style:solid;}
-      .border-r-4{border-right-width:4px;border-right-style:solid;}
-      .border-r-8{border-right-width:8px;border-right-style:solid;}
-      .border-t-0{border-top-width:0px;border-top-style:solid;}
-      .border-t-2{border-top-width:2px;border-top-style:solid;}
-      .border-t-4{border-top-width:4px;border-top-style:solid;}
-      .border-t-8{border-top-width:8px;border-top-style:solid;}"
+      .border-b{border-bottom-width:1px;}
+      .border-l{border-left-width:1px;}
+      .border-r{border-right-width:1px;}
+      .border-t{border-top-width:1px;}
+      .border-b-0{border-bottom-width:0px;}
+      .border-b-2{border-bottom-width:2px;}
+      .border-b-4{border-bottom-width:4px;}
+      .border-b-8{border-bottom-width:8px;}
+      .border-l-0{border-left-width:0px;}
+      .border-l-2{border-left-width:2px;}
+      .border-l-4{border-left-width:4px;}
+      .border-l-8{border-left-width:8px;}
+      .border-r-0{border-right-width:0px;}
+      .border-r-2{border-right-width:2px;}
+      .border-r-4{border-right-width:4px;}
+      .border-r-8{border-right-width:8px;}
+      .border-t-0{border-top-width:0px;}
+      .border-t-2{border-top-width:2px;}
+      .border-t-4{border-top-width:4px;}
+      .border-t-8{border-top-width:8px;}"
     `);
   });
 });

@@ -26,10 +26,8 @@ export const borders = [
 
 function handlerBorder(m, ctx) {
   const borderSizes = handlerBorderSize(m, ctx);
-  const borderStyle = handlerBorderStyle(["", m[1], "solid"]);
-  if (borderSizes && borderStyle) {
-    return [...borderSizes, ...borderStyle];
-  }
+
+  if (borderSizes ) return [...borderSizes];
 }
 
 function handlerBorderSize([, a = "", b], { theme }) {
