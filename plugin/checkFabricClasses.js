@@ -1,5 +1,5 @@
 import { createGenerator } from '@unocss/core'
-import presetEngine from './src/index.js'
+import presetEngine from '#plugin'
 import { buildList } from '@warp-ds/fabric-parity-checker'
 
 const fabricClassListWithoutClassDots = buildList().map(e => e.replace('.', ''))
