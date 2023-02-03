@@ -1,4 +1,4 @@
-import { assert, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 import { setup } from './_helpers.js'
 
 setup()
@@ -25,16 +25,18 @@ test('padding skips bad values', async ({ uno }) => {
 })
 
 test('margin works', async ({ uno }) => {
-  const classes = ['m-8', 'mx-2', 'my-4', 'ml-32', 'mr-16', 'mb-8', 'mt-16', '-m-8']
+  const classes = ['m-8', 'mx-2', 'my-4', 'ml-32', 'mr-16', 'mb-8', 'mt-16', '-m-8', 'm-auto', 'ml-auto']
   const { css } = await uno.generate(classes)
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
     .-m-8{margin:-0.8rem;}
     .m-8{margin:0.8rem;}
+    .m-auto{margin:auto;}
     .mx-2{margin-left:0.2rem;margin-right:0.2rem;}
     .my-4{margin-top:0.4rem;margin-bottom:0.4rem;}
     .mb-8{margin-bottom:0.8rem;}
     .ml-32{margin-left:3.2rem;}
+    .ml-auto{margin-left:auto;}
     .mr-16{margin-right:1.6rem;}
     .mt-16{margin-top:1.6rem;}"
   `)

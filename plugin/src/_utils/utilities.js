@@ -13,8 +13,8 @@ import { getComponents } from './getComponents.js'
 // TODO: hook this into the 'bounding' utils
 export function directionSize(propertyPrefix) {
     return ([_, direction, size], { theme }) => {
-        if (!theme.spacing[size]) return warnOnce(`${propertyPrefix} not available in size ${size}`)
         const v = theme.spacing?.[size] ?? h.global.auto(size);
+        if (!v) return warnOnce(`${propertyPrefix} not available in size ${size}`)
         if (v != null) return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
     };
 }
