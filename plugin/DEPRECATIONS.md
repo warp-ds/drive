@@ -6,6 +6,26 @@
 - outline-white
 - outline-black
 
+### Ring
+
+- ring-0
+- ring-1
+- ring-2
+- ring-4
+- ring-8
+- ring
+- ring-white
+- ring-current
+- ring-transparent
+- ring-offset-0
+- ring-offset-1
+- ring-offset-2
+- ring-offset-4
+- ring-offset-8
+- ring-offset-white
+- ring-offset-current
+- ring-offset-transparent
+
 ### Shadow
 
 - shadow-2
