@@ -50,7 +50,7 @@ export const rounded = [
 ]
 
 function handlerRounded([, a = '', s], { theme }) {
-  const v = theme.borderRadius?.[s ?? 1] || h.global(s);
+  const v = theme.borderRadius?.[s ?? 4] || h.global(s);
   if (a in cornerMap && v != null)
       return cornerMap[a].map(i => [`border${i}-radius`, v]);
 }
