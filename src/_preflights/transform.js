@@ -1,7 +1,6 @@
 import { entriesToCss } from '@unocss/core'
 
 const transformBaseValues = {
-  // transform
   '--w-rotate': 0,
   '--w-rotate-x': 0,
   '--w-rotate-y': 0,
