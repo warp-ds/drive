@@ -1,5 +1,5 @@
 import { formVariables } from './formVariables.js'
-import { formElements } from './forms.js'
+import { formElements } from './form-elements.js'
 
 // TODO - the export here should probably be an artifact so we get rid of deps and cruft
 export const formPreflight = {
