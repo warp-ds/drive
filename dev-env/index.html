@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warp dev env</title>
+  </head>
+  <body class="p-64 space-y-32">
+    <label class="label flex flex-col">
+      <span>i am a text field</span>
+      <input type="text" class="input" />
+    </label>
+    <label class="label flex flex-col">
+      <span>i am a select field</span>
+      <select class="select">
+        <option selected disabled value="">Choose something</option>
+        <option value="a">Value a</option>
+        <option value="b">Value b</option>
+        <option value="c">Value c</option>
+      </select>
+    </label>
+    <section>
+      <h4 class="mb-8">Dead toggles</h4>
+      <div class="grid grid-cols-[max-content_max-content] gap-8">
+        <div class="radio" style="pointer-events: none"></div>
+        <div class="radio checked" style="pointer-events: none"></div>
+      </div>
+    </section>
+    <section>
+      <h4 class="mb-8">Normal toggles</h4>
+      <label class="label flex items-center">
+        <input type="radio" class="radio" name="foo" />
+        <span class="ml-8">i am a radio field</span>
+      </label>
+      <label class="label flex items-center mt-8">
+        <input type="radio" class="radio" name="foo" />
+        <span class="ml-8">i am a radio field</span>
+      </label>
+    </section>
+
+    <section>
+      <h4 class="mb-8">Dead toggles</h4>
+      <div class="grid grid-cols[max-content_max-content] gap-8">
+        <div class="checkbox" style="pointer-events: none"></div>
+        <div class="checkbox checked" style="pointer-events: none"></div>
+      </div>
+    </section>
+    <section>
+      <h4 class="mb-8">Normal toggles</h4>
+      <label class="label flex items-center">
+        <input type="checkbox" class="checkbox" name="bar" />
+        <span class="ml-8">i am a checkbox field</span>
+      </label>
+      <label class="label flex items-center mt-8">
+        <input type="checkbox" class="checkbox" name="bar" />
+        <span class="ml-8">i am a checkbox field</span>
+      </label>
+    </section>
+    </body>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

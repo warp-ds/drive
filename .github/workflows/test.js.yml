@@ -16,6 +16,5 @@ jobs:
         run_install: true
     - name: Test and build
       run: |
-        cd plugin
         pnpm test
         pnpm build
