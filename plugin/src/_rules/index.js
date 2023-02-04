@@ -1,4 +1,5 @@
 import * as align from "./align.js";
+import * as border from "./border.js";
 import * as color from "./color.js";
 import * as display from "./display.js";
 import * as flex from "./flex.js";
@@ -13,6 +14,7 @@ import * as spacing from "./spacing.js";
 
 const ruleGroups = {
   ...align,
+  ...border,
   ...color,
   ...display,
   ...flex,
@@ -31,6 +33,7 @@ export const rules = [
 ].flat(1);
 
 export * from "./align.js";
+export * from "./border.js";
 export * from "./color.js";
 export * from "./display.js";
 export * from "./flex.js";

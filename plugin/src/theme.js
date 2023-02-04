@@ -24,16 +24,37 @@ const zIndex = {
   50: "50",
 }
 
+const lineWidth = {
+  0: "0",
+  1: "1px",
+  2: "2px",
+  4: "4px",
+  8: "8px",
+}
+
+const borderRadius = {
+  0: "0",
+  2: "2px",
+  4: "4px",
+  6: "6px",
+  8: "8px",
+  16: "16px",
+  "full": "9999px",
+}
+
 export const useTheme = (opts = {}) => {
   const baseSpacing =  opts.usePixels ? spacingInPx : spacingInRem
   const width = { ...baseSpacing, screen: '100vw' }
   const height = { ...baseSpacing, screen: '100vh' }
+
   return {
     usingPixels: !!opts.pxSpacing,
     breakpoints,
+    borderRadius,
     verticalBreakpoints: breakpoints,
     spacing: baseSpacing,
     zIndex,
+    lineWidth,
     width,
     height,
     maxWidth: { none: 'none', ...width },
