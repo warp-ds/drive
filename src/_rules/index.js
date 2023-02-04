@@ -11,6 +11,7 @@ import * as position from "./position.js";
 import * as size from "./size.js"
 import * as spaceMargin from './space-margin.js'
 import * as spacing from "./spacing.js";
+import * as transform from "./transform.js";
 
 const ruleGroups = {
   ...align,
@@ -25,7 +26,8 @@ const ruleGroups = {
   ...position,
   ...size,
   ...spaceMargin,
-  ...spacing
+  ...spacing,
+  ...transform
 }
 
 export const rules = [
@@ -45,3 +47,4 @@ export * from "./position.js";
 export * from "./size.js";
 export * from './space-margin.js'
 export * from "./spacing.js";
+export * from "./transform.js";
