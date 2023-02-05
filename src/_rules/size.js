@@ -42,13 +42,12 @@ export const sizes = [
 ];
 
 function getAspectRatio(prop) {
-  if (/^\d+\/\d+$/.test(prop))
-  return prop;
+  if (/^\d+\/\d+$/.test(prop)) return prop;
   switch (prop) {
     case 'square': return '1/1';
     case 'video': return '16/9';
   }
-  return h.bracket.cssvar.global.auto.number(prop);
+  return h.global.auto.number(prop);
 }
 export const aspectRatio = [
   [/^aspect-(?:ratio-)?(.+)$/, ([, d]) => ({ 'aspect-ratio': getAspectRatio(d) }), { autocomplete: ['aspect-(square|video|ratio)', 'aspect-ratio-(square|video)'] }],
