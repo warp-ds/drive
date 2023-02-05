@@ -1,0 +1,23 @@
+// Vitest Snapshot v1
+
+exports[`overscroll 1`] = `
+"/* layer: default */
+.overscroll-auto{overscroll-behavior:auto;}
+.overscroll-contain{overscroll-behavior:contain;}
+.overscroll-none{overscroll-behavior:none;}
+.overscroll-x-auto{overscroll-behavior-x:auto;}
+.overscroll-x-contain{overscroll-behavior-x:contain;}
+.overscroll-x-none{overscroll-behavior-x:none;}
+.overscroll-y-auto{overscroll-behavior-y:auto;}
+.overscroll-y-contain{overscroll-behavior-y:contain;}
+.overscroll-y-none{overscroll-behavior-y:none;}"
+`;
+
+exports[`will-change 2`] = `
+"/* layer: default */
+.list-circle{list-style-type:circle;}
+.list-disc{list-style-type:disc;}
+.list-outside{list-style-position:outside;}
+.list-inside{list-style-position:inside;}
+.list-none{list-style-type:none;}"
+`;
