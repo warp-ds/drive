@@ -7,9 +7,7 @@ export const appearance = [
         }],
 ];
 
-const willChangeProperty = (prop) => {
-    return h.properties.auto.global(prop);
-};
+const willChangeProperty = (prop) => h.properties.auto.global(prop);
 export const willChange = [
     [/^will-change-(.+)/, ([, p]) => ({ 'will-change': willChangeProperty(p) })],
 ];
