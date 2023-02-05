@@ -1,15 +1,15 @@
 import { handler as h, makeGlobalStaticRules } from '#utils';
 
 export const appearance = [
-    ['appearance-none', {
-            'appearance': 'none',
-            '-webkit-appearance': 'none',
-        }],
+  ['appearance-none', {
+    'appearance': 'none',
+    '-webkit-appearance': 'none',
+  }],
 ];
 
 const willChangeProperty = (prop) => h.properties.auto.global(prop);
 export const willChange = [
-    [/^will-change-(.+)/, ([, p]) => ({ 'will-change': willChangeProperty(p) })],
+  [/^will-change-(.+)/, ([, p]) => ({ 'will-change': willChangeProperty(p) })],
 ];
 
 const listStyles = {
