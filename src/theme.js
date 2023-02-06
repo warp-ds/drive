@@ -42,6 +42,9 @@ const borderRadius = {
   "full": "9999px",
 }
 
+export const durationBase = [75, 100, 150, 200, 300, 500, 700, 1000]
+const duration = durationBase.reduce((acc, e) => (acc[e] = `${e}ms`, acc), {})
+
 export const useTheme = (opts = {}) => {
   const baseSpacing =  opts.usePixels ? spacingInPx : spacingInRem
   const width = { ...baseSpacing, screen: '100vw' }
@@ -60,6 +63,7 @@ export const useTheme = (opts = {}) => {
     maxWidth: { none: 'none', ...width },
     maxHeight: height,
     minWidth: width,
-    minHeight: height
+    minHeight: height,
+    duration
   }
 }

@@ -1,18 +1,10 @@
-import { setup } from './_helpers.js'
+import { setup, getFractions } from './_helpers.js'
 import { spaceBase } from '#theme'
 import { describe, expect, test } from 'vitest'
 
 setup()
 
 const getSpecialSuffixes = (prefix) => ['full', 'fit', 'min', 'max', 'screen'].map(e => `${prefix}-${e}`)
-const getFractions = (prefix) => {
-  const numerator = Array.from({ length: 6 }).map((_, i) => i + 1)
-  const denomenator = Array.from({ length: 6 }).map((_, i) => i + 1)
-  return numerator.flatMap(n => denomenator.map(d => {
-    if (n > d) return
-    return `${prefix}-${n}/${d}`
-  })).filter(Boolean)
-}
 
 describe('width and height', () => {
   test('width', async ({ uno }) => {

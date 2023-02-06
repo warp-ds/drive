@@ -8,3 +8,12 @@ export const setup = (opts = {}) => {
     t.uno = getGenerator(opts)
   })
 }
+
+export const getFractions = (prefix, length = 6) => {
+  const numerator = Array.from({ length }).map((_, i) => i + 1)
+  const denomenator = Array.from({ length }).map((_, i) => i + 1)
+  return numerator.flatMap(n => denomenator.map(d => {
+    if (n > d) return
+    return `${prefix}-${n}/${d}`
+  })).filter(Boolean)
+}

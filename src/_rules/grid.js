@@ -13,7 +13,8 @@ const autoDirection = (prop) => {
   // TODO: Emit warning if prop doesnt match
 };
 
-const numericHandler = { handler: (d) => h.number(d) }
+const numericHandler = { handler: (d) => h.number.auto(d) }
+const numericOrAutoHandler = { handler: (d) => h.number.auto(d) }
 
 export const grid = [
   // span
@@ -40,35 +41,35 @@ export const grid = [
   ],
   // starts & ends
   [
-    /^row-start-(\d+)$/,
+    /^row-start-(.+)$/,
     bounded(
-      ([, d]) => ({ 'grid-row-start': h.number(d) }),
+      ([, d]) => ({ 'grid-row-start': h.number.auto(d) }),
       bounds.gridRow,
-      numericHandler
+      numericOrAutoHandler
     )
   ],
   [
-    /^col-start-(\d+)$/,
+    /^col-start-(.+)$/,
     bounded(
-      ([, d]) => ({ 'grid-column-start': h.number(d) }),
+      ([, d]) => ({ 'grid-column-start': h.number.auto(d) }),
       bounds.gridCol,
-      numericHandler
+      numericOrAutoHandler
     )
   ],
   [
-    /^row-end-(\d+)$/,
+    /^row-end-(.+)$/,
     bounded(
-      ([, d]) => ({ 'grid-row-end': h.number(d) }),
+      ([, d]) => ({ 'grid-row-end': h.number.auto(d) }),
       bounds.gridRow,
-      numericHandler
+      numericOrAutoHandler
     )
   ],
   [
-    /^col-end-(\d+)$/,
+    /^col-end-(.+)$/,
     bounded(
-      ([, d]) => ({ 'grid-column-end': h.number(d) }),
+      ([, d]) => ({ 'grid-column-end': h.number.auto(d) }),
       bounds.gridCol,
-      numericHandler
+      numericOrAutoHandler
     ),
     { autocomplete: ['(row|col)-(start|end)-<num>'] }
   ],
