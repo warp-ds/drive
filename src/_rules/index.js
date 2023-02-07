@@ -3,6 +3,7 @@ import * as behaviors from "./behaviors.js";
 import * as border from "./border.js";
 import * as color from "./color.js";
 import * as display from "./display.js";
+import * as decoration from "./decoration.js";
 import * as flex from "./flex.js";
 import * as gap from "./gap.js";
 import * as grid from "./grid.js";
@@ -22,6 +23,7 @@ const ruleGroups = {
   ...border,
   ...color,
   ...display,
+  ...decoration,
   ...flex,
   ...gap,
   ...grid,
@@ -45,6 +47,7 @@ export * from "./behaviors.js";
 export * from "./border.js";
 export * from "./color.js";
 export * from "./display.js";
+export * from "./decoration.js";
 export * from "./flex.js";
 export * from "./gap.js";
 export * from "./grid.js";
