@@ -1,0 +1,12 @@
+// Vitest Snapshot v1
+
+exports[`text decoration > supports no-underline 1`] = `
+"/* layer: default */
+.no-underline{text-decoration:none;}"
+`;
+
+exports[`text decoration > supports underline and line-through 1`] = `
+"/* layer: default */
+.line-through{text-decoration-line:line-through;}
+.underline{text-decoration-line:underline;}"
+`;

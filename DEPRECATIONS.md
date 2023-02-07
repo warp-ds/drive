@@ -36,6 +36,11 @@ These are TW2 selectors, TW3 and other utility CSS have moved on in syntax.
 - ring-offset-transparent
 - ring-COLOR-*
 
+### Decoration
+
+- decoration-slice
+- decoration-clone
+
 ### Shadow
 
 - shadow-2
