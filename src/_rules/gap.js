@@ -1,5 +1,3 @@
-import { handler as h } from '#utils';
-
 const directions = {
     '': '',
     'x': 'column-',
@@ -7,7 +5,8 @@ const directions = {
 };
 
 const handleGap = ([, d = '', s], { theme }) => {
-    const v = theme.spacing?.[s] ?? h.bracket.cssvar.global.rem(s);
+    const v = theme.spacing?.[s];
+
     if (v != null) {
         return {
             [`${directions[d]}gap`]: v,
@@ -16,7 +15,6 @@ const handleGap = ([, d = '', s], { theme }) => {
 };
 
 export const gap = [
-    [/^gap-?()(\d+)$/, handleGap, { autocomplete: ['gap-$spacing', 'gap-<num>'] }],
-    [/^gap-([xy])-?(\d+)$/, handleGap, { autocomplete: ['gap-(x|y)-$spacing', 'gap-(x|y)-<num>'] }],
+    [/^gap-?()(\d+)$/, handleGap, { autocomplete: ['gap-$spacing'] }],
+    [/^gap-([xy])-?(\d+)$/, handleGap, { autocomplete: ['gap-(x|y)-$spacing'] }],
 ];
-
