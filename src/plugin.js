@@ -20,7 +20,7 @@ export function presetWarp (options = {}) {
   const hasPreflight = options.usePreflight ?? includePreflight.includes(mode)
   const theme = useTheme(options)
   return {
-    name: '@nmp-ds/engine',
+    name: '@warp-ds/uno',
     theme,
     rules,
     variants,
