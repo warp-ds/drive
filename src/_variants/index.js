@@ -15,7 +15,7 @@ export const variants = [
   variantPseudoClassFunctions(),
   variantPseudoClassesAndElements(),
   variantSpaceAndDivide,
-  ...variantTaggedPseudoClasses({ attributifyPseudo: true }),
+  ...variantTaggedPseudoClasses({ attributifyPseudo: false }),
 ]
 
 export {
