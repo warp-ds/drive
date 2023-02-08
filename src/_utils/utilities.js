@@ -39,6 +39,20 @@ function getThemeColor(theme, colors) {
     }
     return obj;
 }
+
+export function splitShorthand(body, type) {
+  const split = body.split(/(?:\/|:)/)
+
+  if (split[0] === `[${type}`) {
+    return [
+      split.slice(0, 2).join(':'),
+      split[2],
+    ]
+  }
+
+  return split
+}
+
 /**
  * Parse color string into {@link ParsedColorValue} (if possible). Color value will first be matched to theme object before parsing.
  * See also color.tests.ts for more examples.
