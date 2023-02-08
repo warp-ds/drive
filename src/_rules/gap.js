@@ -6,6 +6,7 @@ const directions = {
 
 const handleGap = ([, d = '', s], { theme }) => {
     const v = theme.spacing?.[s];
+
     if (v != null) {
         return {
             [`${directions[d]}gap`]: v,
