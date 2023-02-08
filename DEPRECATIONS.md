@@ -172,3 +172,7 @@ All filters
 - backdrop-saturate-200
 - backdrop-sepia-0
 - backdrop-sepia
+
+# Margins
+
+- last-child:mb-0 :: prefer last:mb-0
