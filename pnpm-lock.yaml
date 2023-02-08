@@ -4,6 +4,7 @@ specifiers:
   '@rollup/plugin-node-resolve': ^15.0.1
   '@unocss/autocomplete': ^0.49.1
   '@unocss/core': ^0.49.1
+  '@unocss/preset-mini': ^0.49.4
   drnm: ^0.9.0
   rollup: ^3.12.0
   unocss: ^0.49.4
@@ -13,6 +14,7 @@ specifiers:
 
 dependencies:
   '@unocss/core': 0.49.4
+  '@unocss/preset-mini': 0.49.4
 
 devDependencies:
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.13.0
@@ -450,7 +452,6 @@ packages:
     resolution: {integrity: sha512-GsVKBRi2BbliEic7SfdY2AG03T+wEOd3yZOY+NtwEJ9Z/hwb1zRQHiizDuyth0E3FCHVfZkk9C0/WXy8Z1Qj3g==}
     dependencies:
       '@unocss/core': 0.49.4
-    dev: true
 
   /@unocss/preset-tagify/0.49.4:
     resolution: {integrity: sha512-9KBrkPNZefejUYZlfRHHcdmWPISkAvc1BAZTZYvwOHgacQMKlcfscEVW985E78z14er4nJ7qZNP95o76MYhCQg==}

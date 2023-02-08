@@ -26,7 +26,8 @@
   "author": "@djh",
   "license": "MIT",
   "dependencies": {
-    "@unocss/core": "^0.49.1"
+    "@unocss/core": "^0.49.1",
+    "@unocss/preset-mini": "^0.49.4"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
