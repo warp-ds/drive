@@ -80,7 +80,7 @@ export const grid = [
   ['grid-flow-col', { 'grid-auto-flow': 'column' }],
   ['grid-flow-dense', { 'grid-auto-flow': 'dense' }],
   ['grid-flow-row-dense', { 'grid-auto-flow': 'row dense' }],
-  ['grid-flow-col-dense', { 'grid-auto-flow': 'col dense' }],
+  ['grid-flow-col-dense', { 'grid-auto-flow': 'column dense' }],
   // templates
   [/^grid-rows-(.+)$/, ([, v]) => ({ 'grid-template-rows': h.bracket(v) })],
   [/^grid-cols-(.+)$/, ([, v]) => ({ 'grid-template-columns': h.bracket(v) })],
