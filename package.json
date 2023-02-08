@@ -20,7 +20,8 @@
     "dev": "node dev.js",
     "dev:env": "vite dev-env --config ./vite.config.js",
     "test": "vitest",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "version": "pnpm test && pnpm build && pnpm publish"
   },
   "keywords": [],
   "author": "@djh",
