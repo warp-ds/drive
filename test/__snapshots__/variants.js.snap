@@ -1,0 +1,41 @@
+// Vitest Snapshot v1
+
+exports[`variants > breakpoints 1`] = `
+"/* layer: default */
+@media (max-width: 767.9px){
+.lt-md\\\\:mt-32{margin-top:3.2rem;}
+}
+@media (min-width: 768px){
+.md\\\\:mt-32{margin-top:3.2rem;}
+}
+@media (min-width: 768px) and (max-width: 989.9px){
+.at-md\\\\:mt-32{margin-top:3.2rem;}
+}"
+`;
+
+exports[`variants > important 1`] = `
+"/* layer: default */
+.\\\\!mb-32{margin-bottom:3.2rem !important;}
+@media (min-width: 480px){
+.\\\\!sm\\\\:mt-32{margin-top:3.2rem !important;}
+}
+@media (min-width: 768px){
+.\\\\!md\\\\:-bottom-1\\\\/2{bottom:-50% !important;}
+}"
+`;
+
+exports[`variants > negative 1`] = `
+"/* layer: default */
+.-inset-16{inset:-1.6rem;}
+.-bottom-1\\\\/2{bottom:-50%;}
+.-mt-32{margin-top:-3.2rem;}"
+`;
+
+exports[`variants > pseudo 1`] = `
+"/* layer: default */
+.focus\\\\:border:focus{border-width:1px;}
+.before\\\\:p-32::before{padding:3.2rem;}
+.group:hover .group-hover\\\\:p-16{padding:1.6rem;}
+.group\\\\/llama:hover .group-hover\\\\/llama\\\\:m-32{margin:3.2rem;}
+.last\\\\:mb-0:last-child{margin-bottom:0rem;}"
+`;
