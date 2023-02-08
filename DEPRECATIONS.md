@@ -170,4 +170,4 @@ All filters
 
 # Margins
 
-- last-child
+- last-child:mb-0 :: prefer last:mb-0
