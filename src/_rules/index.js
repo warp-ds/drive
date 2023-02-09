@@ -17,11 +17,13 @@ import * as spacing from "./spacing.js";
 import * as staticRules from "./static.js";
 import * as transform from "./transform.js";
 import * as transition from "./transition.js";
+import * as table from "./table.js";
 
 const ruleGroups = {
   ...align,
   ...behaviors,
   ...border,
+  ...table,
   ...color,
   ...display,
   ...decoration,
@@ -61,5 +63,6 @@ export * from "./size.js";
 export * from './space-margin.js'
 export * from "./spacing.js";
 export * from "./static.js";
+export * from "./table.js";
 export * from "./transform.js";
 export * from "./transition.js";
