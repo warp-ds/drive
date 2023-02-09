@@ -1,9 +1,10 @@
 {
   "name": "@warp-ds/uno",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "exports": {
     ".": "./src/plugin.js",
+    "./client": "./dist/drive.js",
     "./internals": "./src/internals.js",
     "./utils": "./src/_utils/index.js"
   },
