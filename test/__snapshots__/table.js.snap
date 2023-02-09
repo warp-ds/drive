@@ -1,0 +1,77 @@
+// Vitest Snapshot v1
+
+exports[`border-spacing 1`] = `
+"/* layer: default */
+.border-spacing-0{border-spacing:0rem 0rem;}
+.border-spacing-1,
+.border-spacing-x-1,
+.border-spacing-y-1{border-spacing:0.1rem 0.1rem;}
+.border-spacing-10{border-spacing:1rem 1rem;}
+.border-spacing-112{border-spacing:11.2rem 11.2rem;}
+.border-spacing-12{border-spacing:1.2rem 1.2rem;}
+.border-spacing-128{border-spacing:12.8rem 12.8rem;}
+.border-spacing-14{border-spacing:1.4rem 1.4rem;}
+.border-spacing-144{border-spacing:14.4rem 14.4rem;}
+.border-spacing-16{border-spacing:1.6rem 1.6rem;}
+.border-spacing-2{border-spacing:0.2rem 0.2rem;}
+.border-spacing-20{border-spacing:2rem 2rem;}
+.border-spacing-24{border-spacing:2.4rem 2.4rem;}
+.border-spacing-28{border-spacing:2.8rem 2.8rem;}
+.border-spacing-32{border-spacing:3.2rem 3.2rem;}
+.border-spacing-4{border-spacing:0.4rem 0.4rem;}
+.border-spacing-40{border-spacing:4rem 4rem;}
+.border-spacing-44{border-spacing:4.4rem 4.4rem;}
+.border-spacing-48{border-spacing:4.8rem 4.8rem;}
+.border-spacing-56{border-spacing:5.6rem 5.6rem;}
+.border-spacing-6{border-spacing:0.6rem 0.6rem;}
+.border-spacing-64{border-spacing:6.4rem 6.4rem;}
+.border-spacing-8{border-spacing:0.8rem 0.8rem;}
+.border-spacing-80{border-spacing:8rem 8rem;}
+.border-spacing-96{border-spacing:9.6rem 9.6rem;}
+.border-spacing-x-0{border-spacing:0rem 0.1rem;}
+.border-spacing-x-10{border-spacing:1rem 0.1rem;}
+.border-spacing-x-112{border-spacing:11.2rem 0.1rem;}
+.border-spacing-x-12{border-spacing:1.2rem 0.1rem;}
+.border-spacing-x-128{border-spacing:12.8rem 0.1rem;}
+.border-spacing-x-14{border-spacing:1.4rem 0.1rem;}
+.border-spacing-x-144{border-spacing:14.4rem 0.1rem;}
+.border-spacing-x-16{border-spacing:1.6rem 0.1rem;}
+.border-spacing-x-2{border-spacing:0.2rem 0.1rem;}
+.border-spacing-x-20{border-spacing:2rem 0.1rem;}
+.border-spacing-x-24{border-spacing:2.4rem 0.1rem;}
+.border-spacing-x-28{border-spacing:2.8rem 0.1rem;}
+.border-spacing-x-32{border-spacing:3.2rem 0.1rem;}
+.border-spacing-x-4{border-spacing:0.4rem 0.1rem;}
+.border-spacing-x-40{border-spacing:4rem 0.1rem;}
+.border-spacing-x-44{border-spacing:4.4rem 0.1rem;}
+.border-spacing-x-48{border-spacing:4.8rem 0.1rem;}
+.border-spacing-x-56{border-spacing:5.6rem 0.1rem;}
+.border-spacing-x-6{border-spacing:0.6rem 0.1rem;}
+.border-spacing-x-64{border-spacing:6.4rem 0.1rem;}
+.border-spacing-x-8{border-spacing:0.8rem 0.1rem;}
+.border-spacing-x-80{border-spacing:8rem 0.1rem;}
+.border-spacing-x-96{border-spacing:9.6rem 0.1rem;}
+.border-spacing-y-0{border-spacing:0.1rem 0rem;}
+.border-spacing-y-10{border-spacing:0.1rem 1rem;}
+.border-spacing-y-112{border-spacing:0.1rem 11.2rem;}
+.border-spacing-y-12{border-spacing:0.1rem 1.2rem;}
+.border-spacing-y-128{border-spacing:0.1rem 12.8rem;}
+.border-spacing-y-14{border-spacing:0.1rem 1.4rem;}
+.border-spacing-y-144{border-spacing:0.1rem 14.4rem;}
+.border-spacing-y-16{border-spacing:0.1rem 1.6rem;}
+.border-spacing-y-2{border-spacing:0.1rem 0.2rem;}
+.border-spacing-y-20{border-spacing:0.1rem 2rem;}
+.border-spacing-y-24{border-spacing:0.1rem 2.4rem;}
+.border-spacing-y-28{border-spacing:0.1rem 2.8rem;}
+.border-spacing-y-32{border-spacing:0.1rem 3.2rem;}
+.border-spacing-y-4{border-spacing:0.1rem 0.4rem;}
+.border-spacing-y-40{border-spacing:0.1rem 4rem;}
+.border-spacing-y-44{border-spacing:0.1rem 4.4rem;}
+.border-spacing-y-48{border-spacing:0.1rem 4.8rem;}
+.border-spacing-y-56{border-spacing:0.1rem 5.6rem;}
+.border-spacing-y-6{border-spacing:0.1rem 0.6rem;}
+.border-spacing-y-64{border-spacing:0.1rem 6.4rem;}
+.border-spacing-y-8{border-spacing:0.1rem 0.8rem;}
+.border-spacing-y-80{border-spacing:0.1rem 8rem;}
+.border-spacing-y-96{border-spacing:0.1rem 9.6rem;}"
+`;
