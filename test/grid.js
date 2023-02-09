@@ -1,16 +1,16 @@
-import { setup } from "./_helpers.js";
-import { expect, assert, test } from "vitest";
+import { setup } from './_helpers.js';
+import { expect, assert, test } from 'vitest';
 
 setup();
 
-test("grid span", async (t) => {
+test('grid span', async (t) => {
   const classes = [
-    "col-auto",
-    "row-auto",
-    "col-span-full",
-    "row-span-full",
-    "row-span-5",
-    "col-span-3",
+    'col-auto',
+    'row-auto',
+    'col-span-full',
+    'row-span-full',
+    'row-span-5',
+    'col-span-3',
   ];
   const { css } = await t.uno.generate(classes);
   expect(css).toMatchInlineSnapshot(`
@@ -24,8 +24,8 @@ test("grid span", async (t) => {
   `);
 });
 
-test("grid starts and ends", async (t) => {
-  const classes = ["row-start-1", "row-end-5", "col-start-1", "col-end-3"];
+test('grid starts and ends', async (t) => {
+  const classes = ['row-start-1', 'row-end-5', 'col-start-1', 'col-end-3'];
   const { css } = await t.uno.generate(classes);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
@@ -36,27 +36,36 @@ test("grid starts and ends", async (t) => {
   `);
 });
 
-test("grid columns", async (t) => {
+test('grid columns with arbitrary values', async (t) => {
   const arbitrary = [
-    "grid-cols-[200px_minmax(900px,_1fr)_100px]",
-    "grid-cols-[320px_1fr]",
+    'grid-cols-[200px_minmax(900px,_1fr)_100px]',
+    'grid-cols-[320px_1fr]',
   ];
   const { css } = await t.uno.generate(arbitrary);
-  assert.include(css, "grid-template-columns:200px minmax(900px, 1fr) 100px;");
-  assert.include(css, "grid-template-columns:320px 1fr;");
+  assert.include(css, 'grid-template-columns:200px minmax(900px, 1fr) 100px;');
+  assert.include(css, 'grid-template-columns:320px 1fr;');
 });
 
-test("grid auto flows", async (t) => {
+test('grid rows with arbitrary values', async (t) => {
+  const arbitrary = ['grid-rows-[200px repeat(auto-fill, 100px) 300px]'];
+  const { css } = await t.uno.generate(arbitrary);
+  assert.include(
+    css,
+    'grid-template-rows:200px repeat(auto-fill, 100px) 300px;'
+  );
+});
+
+test('grid auto flows', async (t) => {
   const gridFlows = [
-    "auto-rows-auto",
-    "auto-rows-min",
-    "auto-rows-max",
-    "auto-rows-fr",
-    "grid-flow-row",
-    "grid-flow-col",
-    "grid-flow-dense",
-    "grid-flow-row-dense",
-    "grid-flow-col-dense",
+    'auto-rows-auto',
+    'auto-rows-min',
+    'auto-rows-max',
+    'auto-rows-fr',
+    'grid-flow-row',
+    'grid-flow-col',
+    'grid-flow-dense',
+    'grid-flow-row-dense',
+    'grid-flow-col-dense',
   ];
   const { css } = await t.uno.generate(gridFlows);
 
@@ -74,7 +83,7 @@ test("grid auto flows", async (t) => {
   `);
 });
 
-test("grid templates basic", async (t) => {
+test('grid templates basic', async (t) => {
   const numbers = Array.from({ length: 5 });
   const classes = numbers
     .map((_, i) => {
@@ -97,15 +106,15 @@ test("grid templates basic", async (t) => {
   `);
 });
 
-test("grid templates do not render if out of range", async (t) => {
-  const classes = ["grid-rows-8", "grid-rows-13"];
+test('grid templates do not render if out of range', async (t) => {
+  const classes = ['grid-rows-8', 'grid-rows-13'];
   const { css } = await t.uno.generate(classes);
 
   expect(css).toMatchInlineSnapshot('""');
 });
 
-test("grid templates none", async (t) => {
-  const classes = ["grid-rows-none", "grid-cols-none"];
+test('grid templates none', async (t) => {
+  const classes = ['grid-rows-none', 'grid-cols-none'];
   const { css } = await t.uno.generate(classes);
 
   expect(css).toMatchInlineSnapshot(`
