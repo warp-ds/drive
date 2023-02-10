@@ -46,23 +46,34 @@ test('grid starts and ends', async (t) => {
   expect(css).toMatchSnapshot();
 });
 
-test('grid columns with arbitrary values', async (t) => {
+test('grid template columns with arbitrary values', async (t) => {
   const arbitrary = [
     'grid-cols-[200px_minmax(900px,_1fr)_100px]',
     'grid-cols-[320px_1fr]',
+    'grid-cols-minmax-200px'
   ];
   const { css } = await t.uno.generate(arbitrary);
-  assert.include(css, 'grid-template-columns:200px minmax(900px, 1fr) 100px;');
-  assert.include(css, 'grid-template-columns:320px 1fr;');
+  expect(css).toMatchSnapshot();
 });
 
-test('grid rows with arbitrary values', async (t) => {
-  const arbitrary = ['grid-rows-[200px repeat(auto-fill, 100px) 300px]'];
+test('grid template rows with arbitrary values', async (t) => {
+  const arbitrary = [
+    'grid-rows-[200px_repeat(auto-fill, 100px)_300px]',
+    'grid-rows-minmax-400px',
+    'grid-rows-minmax-400px'
+  ];
   const { css } = await t.uno.generate(arbitrary);
-  assert.include(
-    css,
-    'grid-template-rows:200px repeat(auto-fill, 100px) 300px;'
-  );
+  expect(css).toMatchSnapshot();
+});
+
+test('grid template rows and cols with not correct arbitrary values', async (t) => {
+  const arbitrary = [
+    'grid-cols-200px_minmax(900px,_1fr)_100px',
+    'grid-rows-200px_repeat(auto-fill, 100px)_300px',
+    'grid-rows-minmax-[200px-400px]'
+  ];
+  const { css } = await t.uno.generate(arbitrary);
+  expect(css).toMatchInlineSnapshot('""');
 });
 
 test('grid auto flows', async (t) => {
@@ -71,6 +82,10 @@ test('grid auto flows', async (t) => {
     'auto-rows-min',
     'auto-rows-max',
     'auto-rows-fr',
+    'auto-cols-auto',
+    'auto-cols-min',
+    'auto-cols-max',
+    'auto-cols-fr',
     'grid-flow-row',
     'grid-flow-col',
     'grid-flow-dense',

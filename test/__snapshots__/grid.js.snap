@@ -6,6 +6,10 @@ exports[`grid auto flows 1`] = `
 .auto-rows-fr{grid-auto-rows:minmax(0,1fr);}
 .auto-rows-max{grid-auto-rows:max-content;}
 .auto-rows-min{grid-auto-rows:min-content;}
+.auto-cols-auto{grid-auto-columns:auto;}
+.auto-cols-fr{grid-auto-columns:minmax(0,1fr);}
+.auto-cols-max{grid-auto-columns:max-content;}
+.auto-cols-min{grid-auto-columns:min-content;}
 .grid-flow-row{grid-auto-flow:row;}
 .grid-flow-col{grid-auto-flow:column;}
 .grid-flow-dense{grid-auto-flow:dense;}
@@ -83,6 +87,19 @@ exports[`grid starts and ends 1`] = `
 .col-end-7{grid-column-end:7;}
 .col-end-8{grid-column-end:8;}
 .col-end-9{grid-column-end:9;}"
+`;
+
+exports[`grid template columns with arbitrary values 1`] = `
+"/* layer: default */
+.grid-cols-\\\\[200px_minmax\\\\(900px\\\\,_1fr\\\\)_100px\\\\]{grid-template-columns:200px minmax(900px, 1fr) 100px;}
+.grid-cols-\\\\[320px_1fr\\\\]{grid-template-columns:320px 1fr;}
+.grid-cols-minmax-200px{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}"
+`;
+
+exports[`grid template rows with arbitrary values 1`] = `
+"/* layer: default */
+.grid-rows-\\\\[200px_repeat\\\\(auto-fill\\\\,\\\\ 100px\\\\)_300px\\\\]{grid-template-rows:200px repeat(auto-fill, 100px) 300px;}
+.grid-rows-minmax-400px{grid-template-rows:repeat(auto-fill,minmax(400px,1fr));}"
 `;
 
 exports[`grid templates basic 1`] = `
