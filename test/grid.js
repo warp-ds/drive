@@ -104,8 +104,8 @@ test('grid templates basic', async (t) => {
   const classesCols = columns.map((num) => {
     return `grid-cols-${num}`;
   });
-
   const { css } = await t.uno.generate([...classesCols, ...classesRows]);
+  
   expect(css).toMatchSnapshot();
 });
 
