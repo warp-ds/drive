@@ -1,27 +1,37 @@
 import { setup } from './_helpers.js';
 import { expect, assert, test } from 'vitest';
+import { gridCol, gridRow } from '../src/bounds.js';
 
 setup();
 
+const arrRange = (first, last) =>
+  Array.from({ length: last - first + 1 }, (_, index) => first + index);
+
+const columns = arrRange(gridCol[0], gridCol[1]);
+const rows = arrRange(gridRow[0], gridRow[1]);
+
 test('grid span', async (t) => {
-  const classes = [
+  const staticClasses = [
     'col-auto',
     'row-auto',
     'col-span-full',
     'row-span-full',
-    'row-span-5',
-    'col-span-3',
   ];
-  const { css } = await t.uno.generate(classes);
-  expect(css).toMatchInlineSnapshot(`
-    "/* layer: default */
-    .col-auto{grid-column:auto;}
-    .row-auto{grid-row:auto;}
-    .col-span-full{grid-column:1 / -1;}
-    .row-span-full{grid-row:1 / -1;}
-    .row-span-5{grid-row:span 5/span 5;}
-    .col-span-3{grid-column:span 3/span 3;}"
-  `);
+
+  const artbitraryClassesRows = rows.map((_, i) => {
+    return `row-span-${i + 1}`;
+  });
+  const artbitraryClassesCols = columns.map((_, i) => {
+    return `col-span-${i + 1}`;
+  });
+
+  const { css } = await t.uno.generate([
+    ...staticClasses,
+    ...artbitraryClassesCols,
+    ...artbitraryClassesRows,
+  ]);
+
+  expect(css).toMatchSnapshot();
 });
 
 test('grid starts and ends', async (t) => {
@@ -85,25 +95,16 @@ test('grid auto flows', async (t) => {
 
 test('grid templates basic', async (t) => {
   const numbers = Array.from({ length: 5 });
-  const classes = numbers
-    .map((_, i) => {
-      return [`grid-rows-${i + 1}`, `grid-cols-${i + 1}`];
-    })
-    .flat();
-  const { css } = await t.uno.generate(classes);
-  expect(css).toMatchInlineSnapshot(`
-    "/* layer: default */
-    .grid-rows-1{grid-template-rows:repeat(1,minmax(0,1fr));}
-    .grid-rows-2{grid-template-rows:repeat(2,minmax(0,1fr));}
-    .grid-rows-3{grid-template-rows:repeat(3,minmax(0,1fr));}
-    .grid-rows-4{grid-template-rows:repeat(4,minmax(0,1fr));}
-    .grid-rows-5{grid-template-rows:repeat(5,minmax(0,1fr));}
-    .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
-    .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
-    .grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
-    .grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
-    .grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr));}"
-  `);
+
+  const classesRows = rows.map((_, i) => {
+    return `grid-rows-${i + 1}`;
+  });
+  const classesCols = columns.map((_, i) => {
+    return `grid-cols-${i + 1}`;
+  });
+
+  const { css } = await t.uno.generate([...classesCols, ...classesRows]);
+  expect(css).toMatchSnapshot();
 });
 
 test('grid templates do not render if out of range', async (t) => {
