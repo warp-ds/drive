@@ -243,3 +243,7 @@ export function getBracket(str, open, close) {
         }
     }
 }
+
+export function getNumericArrayInRange(first, last) {
+    return Array.from({ length: last - first + 1 }, (_, index) => first + index);
+}

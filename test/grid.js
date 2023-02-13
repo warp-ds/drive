@@ -1,14 +1,12 @@
-import { expect, assert, test } from 'vitest';
+import { expect, test } from 'vitest';
 import { gridCol, gridRow } from '#bounds';
+import { getNumericArrayInRange } from '#utils';
 import { setup } from './_helpers.js';
 
 setup();
 
-const arrRange = (first, last) =>
-  Array.from({ length: last - first + 1 }, (_, index) => first + index);
-
-const columns = arrRange(gridCol[0], gridCol[1]);
-const rows = arrRange(gridRow[0], gridRow[1]);
+const columns = getNumericArrayInRange(gridCol[0], gridCol[1]);
+const rows = getNumericArrayInRange(gridRow[0], gridRow[1]);
 
 test('grid span', async (t) => {
   const staticClasses = [
