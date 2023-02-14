@@ -42,6 +42,13 @@ const borderRadius = {
   "full": "9999px",
 }
 
+export const opacity = {
+  0: '0%',
+  25: '25%',
+  50: '50%',
+  100: '100%',
+};
+
 export const durationBase = [75, 100, 150, 200, 300, 500, 700, 1000]
 const duration = durationBase.reduce((acc, e) => (acc[e] = `${e}ms`, acc), {})
 
@@ -64,6 +71,7 @@ export const useTheme = (opts = {}) => {
     maxHeight: height,
     minWidth: width,
     minHeight: height,
-    duration
+    duration,
+    opacity,
   }
 }
