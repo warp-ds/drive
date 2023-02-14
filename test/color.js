@@ -18,3 +18,9 @@ test('opacity by theme', async (t) => {
       .opacity-50{opacity:50%;}"
     `) 
 });
+test('opacity not created if invalid', async (t) => {
+    const classes = ['opacity-1'];
+    
+    const { css } = await t.uno.generate(classes);
+    expect(css).toMatchInlineSnapshot('""');
+});
