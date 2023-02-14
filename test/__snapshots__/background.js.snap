@@ -1,0 +1,41 @@
+// Vitest Snapshot v1
+
+exports[`bg attachments 1`] = `
+"/* layer: default */
+.bg-fixed{background-attachment:fixed;}
+.bg-local{background-attachment:local;}
+.bg-scroll{background-attachment:scroll;}"
+`;
+
+exports[`bg origins 1`] = `
+"/* layer: default */
+.bg-origin-border{background-origin:border-box;}
+.bg-origin-padding{background-origin:padding-box;}
+.bg-origin-content{background-origin:content-box;}"
+`;
+
+exports[`bg positions 1`] = `
+"/* layer: default */
+.bg-bottom{background-position:bottom;}
+.bg-center{background-position:center;}
+.bg-left{background-position:left;}
+.bg-right{background-position:right;}
+.bg-top{background-position:top;}"
+`;
+
+exports[`bg repeats 1`] = `
+"/* layer: default */
+.bg-repeat{background-repeat:repeat;}
+.bg-no-repeat{background-repeat:no-repeat;}
+.bg-repeat-x{background-repeat:repeat-x;}
+.bg-repeat-y{background-repeat:repeat-y;}
+.bg-repeat-round{background-repeat:round;}
+.bg-repeat-space{background-repeat:space;}"
+`;
+
+exports[`bg size 1`] = `
+"/* layer: default */
+.bg-auto{background-size:auto;}
+.bg-cover{background-size:cover;}
+.bg-contain{background-size:contain;}"
+`;

@@ -1,4 +1,5 @@
 import * as align from "./align.js";
+import * as backgrounds from './background.js'
 import * as behaviors from "./behaviors.js";
 import * as border from "./border.js";
 import * as color from "./color.js";
@@ -21,6 +22,7 @@ import * as table from "./table.js";
 
 const ruleGroups = {
   ...align,
+  ...backgrounds,
   ...behaviors,
   ...border,
   ...table,
@@ -47,6 +49,7 @@ export const rules = [
 ].flat(1);
 
 export * from "./align.js";
+export * from './background.js'
 export * from "./behaviors.js";
 export * from "./border.js";
 export * from "./color.js";
