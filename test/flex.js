@@ -55,6 +55,13 @@ test('flex vitals', async (t) => {
     `);
 });
 
+test('flex invalid', async (t) => {
+  const classes = ['flex-0', 'flex-shrink', 'flex-shrink-0', 'flex-grow-0'];
+
+  const { css } = await t.uno.generate(classes);
+  expect(css).toMatchInlineSnapshot('""');
+});
+
 test('flex shrink/grow', async (t) => {
     const boundsRangeArray  = getNumericArrayInRange(flexGrowShrink[0], flexGrowShrink[1]);
     const autoClasses = ['grow', 'shrink'];
