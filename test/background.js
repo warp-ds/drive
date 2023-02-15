@@ -5,8 +5,12 @@ import { positionMap } from '#utils'
 setup()
 
 test('bg positions', async ({ uno }) => {
-  const classes = Object.values(positionMap).map(e => `bg-${e}`)
-  const { css } = await uno.generate(classes)
+  const positions = Object.values(positionMap)
+  const classes = positions.map(e => `bg-${e}`)
+  const twoDimensionClasses = positions.flatMap(e => {
+    return positions.map(f => `bg-${e}-${f}`)
+  })
+  const { css } = await uno.generate([...classes, ...twoDimensionClasses])
   expect(css).toMatchSnapshot()
 })
 

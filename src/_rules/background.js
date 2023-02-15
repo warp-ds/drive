@@ -12,6 +12,7 @@ export const backgrounds = [
   // positions
   // skip 1 & 2 letters shortcut
   [/^bg-([-\w]{3,})$/, ([, s]) => ({ 'background-position': positionMap[s] })],
+  [/^bg-([-\w]{3,})-([-\w]{3,})$/, ([, first, second]) => ({ 'background-position': `${positionMap[first]} ${positionMap[second]}` })],
   // clip
   ['bg-clip-border', { '-webkit-background-clip': 'border-box', 'background-clip': 'border-box' }],
   ['bg-clip-content', { '-webkit-background-clip': 'content-box', 'background-clip': 'content-box' }],

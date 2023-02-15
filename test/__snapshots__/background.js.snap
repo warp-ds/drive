@@ -20,7 +20,32 @@ exports[`bg positions 1`] = `
 .bg-center{background-position:center;}
 .bg-left{background-position:left;}
 .bg-right{background-position:right;}
-.bg-top{background-position:top;}"
+.bg-top{background-position:top;}
+.bg-bottom-bottom{background-position:bottom bottom;}
+.bg-bottom-center{background-position:bottom center;}
+.bg-bottom-left{background-position:bottom left;}
+.bg-bottom-right{background-position:bottom right;}
+.bg-bottom-top{background-position:bottom top;}
+.bg-center-bottom{background-position:center bottom;}
+.bg-center-center{background-position:center center;}
+.bg-center-left{background-position:center left;}
+.bg-center-right{background-position:center right;}
+.bg-center-top{background-position:center top;}
+.bg-left-bottom{background-position:left bottom;}
+.bg-left-center{background-position:left center;}
+.bg-left-left{background-position:left left;}
+.bg-left-right{background-position:left right;}
+.bg-left-top{background-position:left top;}
+.bg-right-bottom{background-position:right bottom;}
+.bg-right-center{background-position:right center;}
+.bg-right-left{background-position:right left;}
+.bg-right-right{background-position:right right;}
+.bg-right-top{background-position:right top;}
+.bg-top-bottom{background-position:top bottom;}
+.bg-top-center{background-position:top center;}
+.bg-top-left{background-position:top left;}
+.bg-top-right{background-position:top right;}
+.bg-top-top{background-position:top top;}"
 `;
 
 exports[`bg repeats 1`] = `
