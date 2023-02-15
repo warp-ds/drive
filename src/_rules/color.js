@@ -1,5 +1,3 @@
-import { handler as h } from '#utils';
-
 export const opacity = [
-  [/^opacity-?(\d+)$/, ([, d]) => ({ opacity: h.bracket.percent(d) })],
+  [/^opacity-?(\d+)$/, ([, d], { theme }) => ({ opacity: theme.opacity[d] }), { autocomplete: 'opacity-${opacity}' }],
 ];
