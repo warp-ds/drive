@@ -28,9 +28,8 @@ export const formElements = `
   outline-color: var(--x-form-field-focus);
 }
 
-/* FIXME */
 .input::placeholder {
-  color: blue;
+  color: var(--w-text-color-placeholder, blue);
   opacity: 1;
 }
 
