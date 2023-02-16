@@ -3,8 +3,8 @@ import { describe, expect, test } from "vitest";
 
 setup();
 
-describe("list-checked", () => {
-  test("vertical align rules does not render styles based on faulty classes", async (t) => {
+describe("list", () => {
+  test("Render style for list-checked", async (t) => {
     const classes = ['list-checked'];
 
     const { css } = await t.uno.generate(classes);
