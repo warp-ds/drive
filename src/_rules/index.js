@@ -1,4 +1,5 @@
 import * as align from "./align.js";
+import * as aspectRatio from "./aspect-ratio.js";
 import * as backgrounds from './background.js'
 import * as behaviors from "./behaviors.js";
 import * as border from "./border.js";
@@ -9,6 +10,7 @@ import * as flex from "./flex.js";
 import * as focusRing from "./focus-ring.js";
 import * as gap from "./gap.js";
 import * as grid from "./grid.js";
+import * as internal from './internal.js'
 import * as layout from "./layout.js";
 import * as lineClamp from "./line-clamp.js";
 import * as position from "./position.js";
@@ -22,6 +24,7 @@ import * as table from "./table.js";
 
 const ruleGroups = {
   ...align,
+  ...aspectRatio,
   ...backgrounds,
   ...behaviors,
   ...border,
@@ -33,6 +36,7 @@ const ruleGroups = {
   ...focusRing,
   ...gap,
   ...grid,
+  ...internal,
   ...layout,
   ...lineClamp,
   ...position,
@@ -49,6 +53,7 @@ export const rules = [
 ].flat(1);
 
 export * from "./align.js";
+export * from "./aspect-ratio.js";
 export * from './background.js'
 export * from "./behaviors.js";
 export * from "./border.js";
@@ -59,6 +64,7 @@ export * from "./flex.js";
 export * from "./focus-ring.js";
 export * from "./gap.js";
 export * from "./grid.js";
+export * from './internal.js';
 export * from "./layout.js";
 export * from "./line-clamp.js"
 export * from "./position.js";

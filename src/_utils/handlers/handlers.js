@@ -70,6 +70,14 @@ export function percent(str) {
     if (!Number.isNaN(num))
         return `${round(num / 100)}`;
 }
+export function inverseFraction(str) {
+    if (str === 'full')
+        return '100%';
+    const [left, right] = str.split('/');
+    const num = parseFloat(right) / parseFloat(left);
+    if (!Number.isNaN(num))
+        return `${round(num * 100)}%`;
+}
 export function fraction(str) {
     if (str === 'full')
         return '100%';
@@ -137,6 +145,10 @@ export function bracketOfLength(str) {
 }
 export function bracketOfPosition(str) {
     return bracketWithType(str, 'position');
+}
+export function warpToken(str) {
+    if (str.match(/^\$\S/))
+        return `var(--w-${escapeSelector(str.slice(1))})`;
 }
 export function cssvar(str) {
     if (str.match(/^\$\S/))

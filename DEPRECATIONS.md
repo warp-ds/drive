@@ -1,5 +1,13 @@
 # These Fabric css rules will no longer be supported or need rethinking in Warp
 
+### aspect ratio
+
+- aspect-w and aspect-h are deprecated in favor of the aspect-1/1 form
+- aspect-none - no support, not needed anymore since we have more responsive breakpoint support
+
+### focus ring
+- focus-ring :: prefer focusable
+
 ### Flex
 
 These are TW2 selectors, TW3 and other utility CSS have moved on in syntax.
