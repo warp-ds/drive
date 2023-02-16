@@ -1,0 +1,23 @@
+// Vitest Snapshot v1
+
+exports[`bg colors 1`] = `
+"/* layer: default */
+.bg{color:var(--w-background-color);}
+.bg-subtle{color:var(--w-background-color-subtle);}"
+`;
+
+exports[`opacity by theme 1`] = `
+"/* layer: default */
+.opacity-0{opacity:0%;}
+.opacity-100{opacity:100%;}
+.opacity-25{opacity:25%;}
+.opacity-50{opacity:50%;}"
+`;
+
+exports[`text colors 1`] = `
+"/* layer: default */
+.text{color:var(--w-text-color);}
+.text-inverted{color:var(--w-text-color-inverted);}
+.text-inverted-subtle{color:var(--w-text-color-inverted-subtle);}
+.text-subtle{color:var(--w-text-color-subtle);}"
+`;

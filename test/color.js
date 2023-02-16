@@ -5,21 +5,44 @@ import { opacity } from '#theme';
 
 setup();
 
-test('opacity by theme', async (t) => {
+test('opacity by theme', async ({ uno }) => {
   const classes = Object.keys(opacity).map((op => `opacity-${op}`));
 
-  const { css } = await t.uno.generate(classes);
-  expect(css).toMatchInlineSnapshot(`
-      "/* layer: default */
-      .opacity-0{opacity:0%;}
-      .opacity-100{opacity:100%;}
-      .opacity-25{opacity:25%;}
-      .opacity-50{opacity:50%;}"
-    `);
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
 });
-test('opacity not created if invalid', async (t) => {
+
+test('opacity not created if invalid', async ({ uno }) => {
   const classes = ['opacity-1'];
 
-  const { css } = await t.uno.generate(classes);
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot('""');
+});
+
+test('text colors', async({ uno }) => {
+  const classes = ['text' ,'text-inverted', 'text-inverted-subtle', 'text-subtle'];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('text color invalid class', async({ uno }) => {
+  const classes = ['text-color'];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot('""');
+});
+
+test('bg colors', async({ uno }) => {
+  const classes = ['bg' , 'bg-subtle'];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('bg color invalid class', async({ uno }) => {
+  const classes = ['bg-color'];
+
+  const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
 });
