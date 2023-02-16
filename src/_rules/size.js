@@ -1,6 +1,6 @@
-import { handler as h, resolveBreakpoints, resolveVerticalBreakpoints } from '#utils'
+import { handler as h, resolveBreakpoints, resolveVerticalBreakpoints } from '#utils';
 
-const sizeMapping = { h: 'height', w: 'width', };
+const sizeMapping = { h: 'height', w: 'width' };
 const getPropName = (minmax, hw) => `${minmax || ''}${sizeMapping[hw]}`;
 
 function getSizeValue(minmax, hw, theme, prop) {
@@ -25,8 +25,8 @@ export const sizes = [
       autocomplete: [
         '(w|h)-$width|height|maxWidth|maxHeight|minWidth|minHeight',
         '(max|min)-(w|h)-$width|height|maxWidth|maxHeight|minWidth|minHeight',
-      ]
-    }
+      ],
+    },
   ],
   [/^(min-|max-)?(h)-screen-(.+)$/, ([, m, w, s], context) => ({ [getPropName(m, w)]: resolveVerticalBreakpoints(context)?.[s] })],
   [/^(min-|max-)?(w)-screen-(.+)$/, ([, m, w, s], context) => ({ [getPropName(m, w)]: resolveBreakpoints(context)?.[s] }), {

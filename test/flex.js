@@ -4,24 +4,23 @@ import { getNumericArrayInRange } from '#utils';
 import { flexGrowShrink } from '#bounds';
 
 
-
 setup();
 
 test('flex with arbitrary values', async (t) => {
-    const classes = ['flex-[2_2_0%]'];
+  const classes = ['flex-[2_2_0%]'];
 
-    const { css } = await t.uno.generate(classes);
-    expect(css).toMatchInlineSnapshot(`
+  const { css } = await t.uno.generate(classes);
+  expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .flex-\\\\[2_2_0\\\\%\\\\]{flex:2 2 0%;}"
     `);
 });
 
 test('flex directions', async (t) => {
-    const classes = ['flex-row', 'flex-row-reverse', 'flex-col', 'flex-col-reverse'];
+  const classes = ['flex-row', 'flex-row-reverse', 'flex-col', 'flex-col-reverse'];
 
-    const { css } = await t.uno.generate(classes);
-    expect(css).toMatchInlineSnapshot(`
+  const { css } = await t.uno.generate(classes);
+  expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .flex-row{flex-direction:row;}
       .flex-row-reverse{flex-direction:row-reverse;}
@@ -31,10 +30,10 @@ test('flex directions', async (t) => {
 });
 
 test('flex wraps', async (t) => {
-    const classes = ['flex-wrap', 'flex-wrap-reverse', 'flex-nowrap'];
+  const classes = ['flex-wrap', 'flex-wrap-reverse', 'flex-nowrap'];
 
-    const { css } = await t.uno.generate(classes);
-    expect(css).toMatchInlineSnapshot(`
+  const { css } = await t.uno.generate(classes);
+  expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .flex-wrap{flex-wrap:wrap;}
       .flex-wrap-reverse{flex-wrap:wrap-reverse;}
@@ -43,10 +42,10 @@ test('flex wraps', async (t) => {
 });
 
 test('flex vitals', async (t) => {
-    const classes = ['flex-1', 'flex-auto', 'flex-initial', 'flex-none'];
+  const classes = ['flex-1', 'flex-auto', 'flex-initial', 'flex-none'];
 
-    const { css } = await t.uno.generate(classes);
-    expect(css).toMatchInlineSnapshot(`
+  const { css } = await t.uno.generate(classes);
+  expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .flex-1{flex:1 1 0%;}
       .flex-auto{flex:1 1 auto;}
@@ -63,14 +62,12 @@ test('flex invalid', async (t) => {
 });
 
 test('flex shrink/grow', async (t) => {
-    const boundsRangeArray  = getNumericArrayInRange(flexGrowShrink[0], flexGrowShrink[1]);
-    const autoClasses = ['grow', 'shrink'];
-    const classes = boundsRangeArray.map((num) => {
-        return [`shrink-${num}`, `grow-${num}`];
-      }).flat();
-    
-    const { css } = await t.uno.generate([...classes, ...autoClasses]);
-    expect(css).toMatchInlineSnapshot(`
+  const boundsRangeArray  = getNumericArrayInRange(flexGrowShrink[0], flexGrowShrink[1]);
+  const autoClasses = ['grow', 'shrink'];
+  const classes = boundsRangeArray.map((num) => [`shrink-${num}`, `grow-${num}`]).flat();
+
+  const { css } = await t.uno.generate([...classes, ...autoClasses]);
+  expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .shrink,
       .shrink-1{flex-shrink:1;}
@@ -86,6 +83,6 @@ test('flex shrink/grow', async (t) => {
       .grow-3{flex-grow:3;}
       .grow-4{flex-grow:4;}
       .grow-5{flex-grow:5;}"
-    `)
+    `);
 
 });

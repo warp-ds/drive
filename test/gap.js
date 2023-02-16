@@ -1,15 +1,13 @@
-import { setup } from './_helpers.js'
-import { spaceBase } from '#theme'
-import { expect, test } from 'vitest'
+import { setup } from './_helpers.js';
+import { spaceBase } from '#theme';
+import { expect, test } from 'vitest';
 
-setup()
+setup();
 
 test('gap allows to render css based of all units in spaceBase', async (t) => {
-  const classes = spaceBase.map((spacingUnit) => {
-    return `gap-${spacingUnit}`
-  })
+  const classes = spaceBase.map((spacingUnit) => `gap-${spacingUnit}`);
 
-  const { css } = await t.uno.generate(classes)
+  const { css } = await t.uno.generate(classes);
 
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
@@ -37,11 +35,11 @@ test('gap allows to render css based of all units in spaceBase', async (t) => {
     .gap-8{gap:0.8rem;}
     .gap-80{gap:8rem;}
     .gap-96{gap:9.6rem;}"
-  `)
-})
+  `);
+});
 
 test("gap does not render css for invalid spacing units", async (t) => {
-  const { css } = await t.uno.generate(["gap-9999"])
+  const { css } = await t.uno.generate(["gap-9999"]);
 
-  expect(css).toMatchInlineSnapshot('""')
-})
+  expect(css).toMatchInlineSnapshot('""');
+});

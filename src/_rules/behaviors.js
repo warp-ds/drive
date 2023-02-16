@@ -17,25 +17,25 @@ const listStyles = {
   'circle': 'circle',
   'square': 'square',
   'decimal': 'decimal',
-  'zero-decimal': 'decimal-leading-zero'
-}
+  'zero-decimal': 'decimal-leading-zero',
+};
 
 export const listStyle = [
   // base
   [
     /^list-(.+)$/,
     ([, alias]) => {
-      const style = listStyles[alias]
-      if (style) return { 'list-style-type': style }
+      const style = listStyles[alias];
+      if (style) return { 'list-style-type': style };
     },
-    { autocomplete: `list-(${Object.keys(listStyles).join('|')})` }
+    { autocomplete: `list-(${Object.keys(listStyles).join('|')})` },
   ],
   // styles
   ['list-outside', { 'list-style-position': 'outside' }],
   ['list-inside', { 'list-style-position': 'inside' }],
   ['list-none', { 'list-style-type': 'none' }],
   ...makeGlobalStaticRules('list', 'list-style-type'),
-]
+];
 
 export const overscrolls = [
   ['overscroll-auto', { 'overscroll-behavior': 'auto' }],
@@ -50,10 +50,10 @@ export const overscrolls = [
   ['overscroll-y-contain', { 'overscroll-behavior-y': 'contain' }],
   ['overscroll-y-none', { 'overscroll-behavior-y': 'none' }],
   ...makeGlobalStaticRules('overscroll-y', 'overscroll-behavior-y'),
-]
+];
 
 export const scrollBehaviors = [
   ['scroll-auto', { 'scroll-behavior': 'auto' }],
   ['scroll-smooth', { 'scroll-behavior': 'smooth' }],
   ...makeGlobalStaticRules('scroll', 'scroll-behavior'),
-]
+];

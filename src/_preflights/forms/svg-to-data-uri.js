@@ -2,7 +2,7 @@ const REGEX = {
   whitespace: /\s+/g,
   urlHexPairs: /%[\dA-F]{2}/g,
   quotes: /"/g,
-}
+};
 
 const collapseWhitespace = (str) => str.trim().replace(REGEX.whitespace, ' ');
 const dataURIPayload = (string) => encodeURIComponent(string).replace(REGEX.urlHexPairs, specialHexEncode);
@@ -21,10 +21,10 @@ export function svgToDataUri(svgString) {
   if (typeof svgString !== 'string') throw new TypeError('Expected a string, but received ' + typeof svgString);
 
   // Strip the Byte-Order Mark if the SVG has one
-  if (svgString.charCodeAt(0) === 0xfeff) svgString = svgString.slice(1)
+  if (svgString.charCodeAt(0) === 0xfeff) svgString = svgString.slice(1);
 
-  const body = collapseWhitespace(svgString).replace(REGEX.quotes, "'")
-  return 'data:image/svg+xml,' + dataURIPayload(body)
+  const body = collapseWhitespace(svgString).replace(REGEX.quotes, "'");
+  return 'data:image/svg+xml,' + dataURIPayload(body);
 }
 
-export const toSrcset = (svgString) => svgToDataUri(svgString).replace(/ /g, '%20')
+export const toSrcset = (svgString) => svgToDataUri(svgString).replace(/ /g, '%20');
