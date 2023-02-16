@@ -31,7 +31,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-row': `span ${h.number(d)}/span ${h.number(d)}` }),
       bounds.gridRow,
-      numericHandler
+      numericHandler,
     ),
   ],
   [
@@ -39,7 +39,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }),
       bounds.gridCol,
-      numericHandler
+      numericHandler,
     ),
     { autocomplete: ['(row|col)-span-<num>'] },
   ],
@@ -49,7 +49,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-row-start': h.number.auto(d) }),
       bounds.gridRow,
-      numericOrAutoHandler
+      numericOrAutoHandler,
     ),
   ],
   [
@@ -57,7 +57,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-column-start': h.number.auto(d) }),
       bounds.gridCol,
-      numericOrAutoHandler
+      numericOrAutoHandler,
     ),
   ],
   [
@@ -65,7 +65,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-row-end': h.number.auto(d) }),
       bounds.gridRow,
-      numericOrAutoHandler
+      numericOrAutoHandler,
     ),
   ],
   [
@@ -73,7 +73,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-column-end': h.number.auto(d) }),
       bounds.gridCol,
-      numericOrAutoHandler
+      numericOrAutoHandler,
     ),
     { autocomplete: ['(row|col)-(start|end)-<num>'] },
   ],
@@ -107,7 +107,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` }),
       bounds.gridRow,
-      numericHandler
+      numericHandler,
     ),
   ],
   [
@@ -115,7 +115,7 @@ export const grid = [
     bounded(
       ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }),
       bounds.gridCol,
-      numericHandler
+      numericHandler,
     ),
     { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] },
   ],

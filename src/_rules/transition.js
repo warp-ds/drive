@@ -4,8 +4,8 @@ const easings = {
   linear: 'linear',
   in: 'cubic-bezier(0.4, 0, 1, 1)',
   out: 'cubic-bezier(0, 0, 0.2, 1)',
-  'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)'
-}
+  'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+};
 
 const transitionPropertyGroup = {
   all: 'all',
@@ -35,16 +35,16 @@ export const transitions = [
   [
     /^duration-(.+)$/,
     ([, d], { theme }) => ({ 'transition-duration': theme.duration?.[d || 'DEFAULT'] ?? h.time(d) }),
-    { autocomplete: 'duration-$duration' }
+    { autocomplete: 'duration-$duration' },
   ],
   [
     /^delay-(.+)$/,
     ([, d], { theme }) => ({ 'transition-delay': theme.duration?.[d || 'DEFAULT'] ?? h.time(d) }),
-    { autocomplete: 'delay-$duration' }
+    { autocomplete: 'delay-$duration' },
   ],
   [/^ease-(.+)$/,
     ([, d]) => ({ 'transition-timing-function': easings[d] }),
-    { autocomplete: 'ease-(linear|in|out|in-out)' }
+    { autocomplete: 'ease-(linear|in|out|in-out)' },
   ],
   // props
   [/^transition-property-(.+)$/,

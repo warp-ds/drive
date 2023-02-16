@@ -1,15 +1,15 @@
-import { setup } from './_helpers.js'
-import { spaceBase } from '#theme'
-import { globalKeywords } from "#utils"
-import { describe, expect, test } from 'vitest'
+import { setup } from './_helpers.js';
+import { spaceBase } from '#theme';
+import { globalKeywords } from "#utils";
+import { describe, expect, test } from 'vitest';
 
-setup()
+setup();
 
 describe("position", () => {
   test("check static, fixed, absolute, relative and sticky values", async (t) => {
-    const classes = ["static", "fixed", "absolute", "relative", "sticky"]
+    const classes = ["static", "fixed", "absolute", "relative", "sticky"];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -18,16 +18,16 @@ describe("position", () => {
       .relative{position:relative;}
       .static{position:static;}
       .sticky{position:sticky;}"
-    `)
-  })
-})
+    `);
+  });
+});
 
 describe('order', () => {
   test('allows values 1 to 12', async (t) => {
-    const range = Array.from({ length: 12 }).map((_, i) => i + 1)
-    const classes = range.map(value => `order-${value}`)
+    const range = Array.from({ length: 12 }).map((_, i) => i + 1);
+    const classes = range.map(value => `order-${value}`);
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -43,26 +43,26 @@ describe('order', () => {
       .order-7{order:7;}
       .order-8{order:8;}
       .order-9{order:9;}"
-    `)
-  })
+    `);
+  });
 
   test('ensure -first, -last and -none is allowed and that the correct value is set', async (t) => {
     const styles = {
       ["order-first"]: "-9999",
       ["order-last"]: "9999",
-      ["order-none"]: "0"
-    }
+      ["order-none"]: "0",
+    };
 
-    const classes = Object.keys(styles)
+    const classes = Object.keys(styles);
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .order-first{order:-9999;}
       .order-last{order:9999;}
       .order-none{order:0;}"
-    `)
+    `);
   });
 
   test('order does not allow value to be 0 or above 12', async (t) => {
@@ -70,20 +70,19 @@ describe('order', () => {
 
     // TODO: this throws errors since 0 and 13 isnt within the allowed bounds.
     // Make sure to catch and verify those errors being trown
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
     expect(css).toMatchInlineSnapshot('""');
   });
-})
-
+});
 
 
 // justifies
 
 describe("justifies", () => {
   test('check justify- classes and their expected justify-content values', async (t) => {
-    const classes = ['justify-start', 'justify-end','justify-center','justify-between', ',justify-around', 'justify-evenly']
+    const classes = ['justify-start', 'justify-end','justify-center','justify-between', ',justify-around', 'justify-evenly'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -93,12 +92,12 @@ describe("justifies", () => {
       .justify-between{justify-content:space-between;}
       .justify-evenly{justify-content:space-evenly;}"
     `);
-  })
+  });
 
   test('check justify-items- classes and their expected justify-itemns values', async (t) => {
-    const classes = ['justify-items-start', 'justify-items-end', 'justify-items-center', 'justify-items-stretch']
+    const classes = ['justify-items-start', 'justify-items-end', 'justify-items-center', 'justify-items-stretch'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -106,13 +105,13 @@ describe("justifies", () => {
       .justify-items-end{justify-items:end;}
       .justify-items-center{justify-items:center;}
       .justify-items-stretch{justify-items:stretch;}"
-    `)
-  })
+    `);
+  });
 
   test('check justify-self- classes and their expected justify-self values', async (t) => {
-    const classes = ['justify-self-auto', 'justify-self-start', 'justify-self-end', 'justify-self-center', 'justify-self-stretch']
+    const classes = ['justify-self-auto', 'justify-self-start', 'justify-self-end', 'justify-self-center', 'justify-self-stretch'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -122,14 +121,14 @@ describe("justifies", () => {
       .justify-self-center{justify-self:center;}
       .justify-self-stretch{justify-self:stretch;}"
     `);
-  })
-})
+  });
+});
 
 describe("alignments", () => {
   test('check content- classes and their expected align-content values', async (t) => {
-    const classes = ['content-center', 'content-start', 'content-end', 'content-between', 'content-around', 'content-evenly']
+    const classes = ['content-center', 'content-start', 'content-end', 'content-between', 'content-around', 'content-evenly'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -140,12 +139,12 @@ describe("alignments", () => {
       .content-around{align-content:space-around;}
       .content-evenly{align-content:space-evenly;}"
     `);
-  })
+  });
 
   test('check items- classes and their expected align-items values', async (t) => {
-    const classes = ['items-start', 'items-end', 'items-center', 'items-baseline' ,'items-stretch']
+    const classes = ['items-start', 'items-end', 'items-center', 'items-baseline' ,'items-stretch'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -155,12 +154,12 @@ describe("alignments", () => {
       .items-baseline{align-items:baseline;}
       .items-stretch{align-items:stretch;}"
     `);
-  })
+  });
 
   test('check self- classes and their expected align-self values', async (t) => {
-    const classes = ['self-auto', 'auto', 'self-start', 'flex-start', 'self-end', 'flex-end', 'self-center', 'center', 'self-stretch', 'stretch', 'self-baseline', 'baseline']
+    const classes = ['self-auto', 'auto', 'self-start', 'flex-start', 'self-end', 'flex-end', 'self-center', 'center', 'self-stretch', 'stretch', 'self-baseline', 'baseline'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -171,17 +170,17 @@ describe("alignments", () => {
       .self-stretch{align-self:stretch;}
       .self-baseline{align-self:baseline;}"
     `);
-  })
-})
+  });
+});
 
 
 // placements
 
 describe('placements', () => {
   test('check place-content- classes and their expected place-content values', async (t) => {
-    const classes = ['place-content-center', 'place-content-start', 'place-content-end', 'place-content-between', 'place-content-around', 'place-content-evenly', 'place-content-stretch']
+    const classes = ['place-content-center', 'place-content-start', 'place-content-end', 'place-content-between', 'place-content-around', 'place-content-evenly', 'place-content-stretch'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -192,13 +191,13 @@ describe('placements', () => {
       .place-content-around{place-content:space-around;}
       .place-content-evenly{place-content:space-evenly;}
       .place-content-stretch{place-content:stretch;}"
-    `)
-  })
+    `);
+  });
 
   test('check place-items- classes and their expected place-items values', async (t) => {
-    const classes = ['place-items-start', 'place-items-end' ,'place-items-center','place-items-stretch']
+    const classes = ['place-items-start', 'place-items-end' ,'place-items-center','place-items-stretch'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -206,13 +205,13 @@ describe('placements', () => {
       .place-items-end{place-items:end;}
       .place-items-center{place-items:center;}
       .place-items-stretch{place-items:stretch;}"
-    `)
-  })
+    `);
+  });
 
   test('check place-self- classes and their expected place-self values', async (t) => {
-    const classes = ['place-self-auto', 'place-self-start', 'place-self-end', 'place-self-center', 'place-self-stretch']
+    const classes = ['place-self-auto', 'place-self-start', 'place-self-end', 'place-self-center', 'place-self-stretch'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -221,17 +220,17 @@ describe('placements', () => {
       .place-self-end{place-self:end;}
       .place-self-center{place-self:center;}
       .place-self-stretch{place-self:stretch;}"
-    `)
-  })
-})
+    `);
+  });
+});
 
 describe("global keywords", () => {
 
   test('justify, alignments and placements should work with global keywords', async ({ uno }) => {
     const classes = ["justify", "justify-items", "justify-self", "content", "items", "self", "place-content", "place-items", "place-self"]
-      .map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+      .map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat();
 
-    const { css } = await uno.generate(classes)
+    const { css } = await uno.generate(classes);
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .justify-inherit{justify-content:inherit;}
@@ -279,16 +278,16 @@ describe("global keywords", () => {
       .place-self-revert{place-self:revert;}
       .place-self-revert-layer{place-self:revert-layer;}
       .place-self-unset{place-self:unset;}"
-    `)
-  })
-})
+    `);
+  });
+});
 
 
 describe('insets', () => {
   test('check inset- classes and their expected values', async (t) => {
     const classes = spaceBase.map(n => ([`inset-${n}`, `inset-x-${n}`, `inset-y-${n}`])).flat();
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -365,12 +364,12 @@ describe('insets', () => {
       .inset-y-80{top:8rem;bottom:8rem;}
       .inset-y-96{top:9.6rem;bottom:9.6rem;}"
     `);
-  })
+  });
 
   test('check negative -inset- classes and their expected values', async (t) => {
     const classes = spaceBase.map((n) => ([`-inset-${n}`, `-inset-x-${n}`, `-inset-y-${n}`])).flat();
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -447,12 +446,12 @@ describe('insets', () => {
       .-inset-y-80{top:-8rem;bottom:-8rem;}
       .-inset-y-96{top:-9.6rem;bottom:-9.6rem;}"
     `);
-  })
+  });
 
   test('check top-, left-, right-, bottom- classes and their expected values', async (t) => {
     const classes = spaceBase.map((n) => ([`top-${n}`, `left-${n}`, `right-${n}`, `bottom-${n}`])).flat();
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -553,12 +552,12 @@ describe('insets', () => {
       .top-80{top:8rem;}
       .top-96{top:9.6rem;}"
     `);
-  })
+  });
 
   test('check negative -top-, -left-, -right-, -bottom- classes and their expected values', async (t) => {
-    const classes = spaceBase.map((n) => ([`-top-${n}`,`-left-${n}`,`-right-${n}`,`-bottom-${n}`])).flat()
+    const classes = spaceBase.map((n) => ([`-top-${n}`,`-left-${n}`,`-right-${n}`,`-bottom-${n}`])).flat();
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -659,28 +658,28 @@ describe('insets', () => {
       .-top-80{top:-8rem;}
       .-top-96{top:-9.6rem;}"
     `);
-  })
-})
+  });
+});
 
 // floats
 describe("floats", () => {
   test("check float classes and corresponding values", async (t) => {
-    const classes = ["float-left", "float-right", "float-none"]
+    const classes = ["float-left", "float-right", "float-none"];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .float-left{float:left;}
       .float-right{float:right;}
       .float-none{float:none;}"
-    `)
-  })
+    `);
+  });
 
   test("check clear classes and corresponding values", async (t) => {
-    const classes = ["clear-left", "clear-right", "clear-both", "clear-none"]
+    const classes = ["clear-left", "clear-right", "clear-both", "clear-none"];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -688,13 +687,13 @@ describe("floats", () => {
       .clear-right{clear:right;}
       .clear-both{clear:both;}
       .clear-none{clear:none;}"
-    `)
-  })
+    `);
+  });
 
   test("float and clear should work with global keywords", async (t) => {
-    const classes = ["float", "clear"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+    const classes = ["float", "clear"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat();
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -708,19 +707,19 @@ describe("floats", () => {
       .clear-revert{clear:revert;}
       .clear-revert-layer{clear:revert-layer;}
       .clear-unset{clear:unset;}"
-    `)
-  })
-})
+    `);
+  });
+});
 
 // z-index
 
 describe("z-index", () => {
   test("check z- classes and their expected values", async (t) => {
-    const validLevels = [0, 10, 20, 30, 40, 50]
-    const positiveClasses = validLevels.map(i => `z-${i}`)
-    const negativeClasses = validLevels.map(i => `-z-${i}`)
+    const validLevels = [0, 10, 20, 30, 40, 50];
+    const positiveClasses = validLevels.map(i => `z-${i}`);
+    const negativeClasses = validLevels.map(i => `-z-${i}`);
 
-    const { css } = await t.uno.generate([...positiveClasses, ...negativeClasses, 'z-auto'])
+    const { css } = await t.uno.generate([...positiveClasses, ...negativeClasses, 'z-auto']);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -736,38 +735,38 @@ describe("z-index", () => {
       .z-40{z-index:40;}
       .z-50{z-index:50;}
       .z-auto{z-index:auto;}"
-    `)
-  })
+    `);
+  });
 
 
   test("skip invalid classes", async (t) => {
-    const classes = ['z-none', 'z-2', '-z-9999']
+    const classes = ['z-none', 'z-2', '-z-9999'];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
-    expect(css).toMatchInlineSnapshot('""')
-  })
-})
+    expect(css).toMatchInlineSnapshot('""');
+  });
+});
 
 // box-sizing
 
 describe("box sizing", () => {
   test("check box- classes and corresponding values", async (t) => {
-    const classes = ["box-border", "box-content"]
+    const classes = ["box-border", "box-content"];
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .box-border{box-sizing:border-box;}
       .box-content{box-sizing:content-box;}"
-    `)
-  })
+    `);
+  });
 
   test("box- classes should work with global keywords", async (t) => {
-    const classes = ["box"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat()
+    const classes = ["box"].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat();
 
-    const { css } = await t.uno.generate(classes)
+    const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
@@ -776,6 +775,6 @@ describe("box sizing", () => {
       .box-revert{box-sizing:revert;}
       .box-revert-layer{box-sizing:revert-layer;}
       .box-unset{box-sizing:unset;}"
-    `)
-  })
-})
+    `);
+  });
+});
