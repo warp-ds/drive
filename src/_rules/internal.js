@@ -1,7 +1,7 @@
 import { handler as h } from '#utils'
 
 export const internalRules = [
-  [/^i-bg-(.+)$/, ([, cssvar]) => ({ backgroundColor: h.warptoken(cssvar) })],
-  [/^i-text-(.+)$/, ([, cssvar]) => ({ color: h.warptoken(cssvar) })],
-  [/^i-border-(.+)$/, ([, cssvar]) => ({ borderColor: h.warptoken(cssvar) })],
+  [/^i-bg-(.+)$/, ([, cssvar]) => ({ backgroundColor: h.warpToken(cssvar) })],
+  [/^i-text-(.+)$/, ([, cssvar]) => ({ color: h.warpToken(cssvar) })],
+  [/^i-border-(.+)$/, ([, cssvar]) => ({ borderColor: h.warpToken(cssvar) })],
 ]

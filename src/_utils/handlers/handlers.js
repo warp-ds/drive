@@ -146,7 +146,7 @@ export function bracketOfLength(str) {
 export function bracketOfPosition(str) {
     return bracketWithType(str, 'position');
 }
-export function warptoken(str) {
+export function warpToken(str) {
     if (str.match(/^\$\S/))
         return `var(--w-${escapeSelector(str.slice(1))})`;
 }
