@@ -1,49 +1,48 @@
 import { setup } from "./_helpers.js";
 import { expect, test } from "vitest";
-import { opacity } from '#theme'
-
+import { opacity } from '#theme';
 
 
 setup();
 
-test('opacity by theme', async ({uno}) => {
-    const classes = Object.keys(opacity).map((op => `opacity-${op}`));
-    
-    const { css } = await uno.generate(classes);
-    expect(css).toMatchSnapshot(); 
-});
+test('opacity by theme', async ({ uno }) => {
+  const classes = Object.keys(opacity).map((op => `opacity-${op}`));
 
-test('opacity not created if invalid', async ({uno}) => {
-    const classes = ['opacity-1'];
-    
-    const { css } = await uno.generate(classes);
-    expect(css).toMatchInlineSnapshot('""');
-});
-
-test('text colors', async({uno}) => {
-  const classes = ['text' ,'text-inverted', 'text-inverted-subtle', 'text-subtle'];
-  
   const { css } = await uno.generate(classes);
-  expect(css).toMatchSnapshot(); 
+  expect(css).toMatchSnapshot();
 });
 
-test('text color invalid class', async({uno}) => {
-  const classes = ['text-color'];
-  
+test('opacity not created if invalid', async ({ uno }) => {
+  const classes = ['opacity-1'];
+
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
 });
 
-test('bg colors', async({uno}) => {
-  const classes = ['bg' , 'bg-subtle'];
-  
+test('text colors', async({ uno }) => {
+  const classes = ['text' ,'text-inverted', 'text-inverted-subtle', 'text-subtle'];
+
   const { css } = await uno.generate(classes);
-  expect(css).toMatchSnapshot(); 
+  expect(css).toMatchSnapshot();
 });
 
-test('bg color invalid class', async({uno}) => {
+test('text color invalid class', async({ uno }) => {
+  const classes = ['text-color'];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot('""');
+});
+
+test('bg colors', async({ uno }) => {
+  const classes = ['bg' , 'bg-subtle'];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('bg color invalid class', async({ uno }) => {
   const classes = ['bg-color'];
-  
+
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
 });

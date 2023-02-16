@@ -1,4 +1,4 @@
-import { handler as h } from '#utils'
+import { handler as h } from '#utils';
 
 export const display = [
   ['flex', { display: 'flex' }],
@@ -24,4 +24,4 @@ export const display = [
   ['table-row-group', { display: 'table-row-group' }],
   // unset, revert, inherit
   [/^display-(.+)$/, ([, c]) => ({ display: h.bracket.cssvar.global(c) || c })],
-]
+];

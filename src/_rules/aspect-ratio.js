@@ -1,5 +1,5 @@
-import { escapeSelector, entriesToCss } from '@unocss/core'
-import { handler as h } from '#utils'
+import { escapeSelector, entriesToCss } from '@unocss/core';
+import { handler as h } from '#utils';
 
 const childStyles = entriesToCss(Object.entries({
   position: 'absolute',
@@ -9,14 +9,14 @@ const childStyles = entriesToCss(Object.entries({
   right: '0',
   bottom: '0',
   left: '0',
-}))
+}));
 
 export const arBackport = [
   [/^aspect-(.+)$/, ([_selector, d]) => {
-    const selector = escapeSelector(_selector)
-    const ratioAsPercentage = h.inverseFraction(d)
-    const base = `.${selector}{position:relative;padding-bottom:${ratioAsPercentage};}`
-    const child = `.${selector}>*{${childStyles}}`
-    return base + child
+    const selector = escapeSelector(_selector);
+    const ratioAsPercentage = h.inverseFraction(d);
+    const base = `.${selector}{position:relative;padding-bottom:${ratioAsPercentage};}`;
+    const child = `.${selector}>*{${childStyles}}`;
+    return base + child;
   }, { autocomplete: ['aspect-(ratio)'] }],
-]
+];

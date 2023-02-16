@@ -14,6 +14,6 @@ export const overflows = [
   [
     /^(?:overflow)-([xy])-(.+)$/,
     ([, d, v]) =>
-      overflowValues.includes(v) ? { [`overflow-${d}`]: v } : undefined,
+      (overflowValues.includes(v) ? { [`overflow-${d}`]: v } : undefined),
   ],
 ];

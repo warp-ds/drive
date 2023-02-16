@@ -39,7 +39,7 @@ export const transforms = [
   [
     /^origin-(.+)$/,
     ([, s]) => ({ 'transform-origin': positionMap[s] }),
-    { autocomplete: [`origin-(${Object.keys(positionMap).join('|')})`, `origin-(${Object.keys(positionMap).join('|')})`] }
+    { autocomplete: [`origin-(${Object.keys(positionMap).join('|')})`, `origin-(${Object.keys(positionMap).join('|')})`] },
   ],
   // modifiers
   [/^translate-([xyz])-(.+)$/, handleTranslate],
@@ -86,8 +86,7 @@ function handleRotate([, d = '', b]) {
         [`--w-rotate-${d}`]: v,
         'transform': transformCpu,
       };
-    }
-    else {
+    } else {
       return {
         '--w-rotate-x': 0,
         '--w-rotate-y': 0,

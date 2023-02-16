@@ -39,7 +39,7 @@ export const userSelects = [
 export const whitespaces = [
   [
     /^whitespace-([-\w]+)$/,
-    ([, v]) => ['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'break-spaces', ...globalKeywords].includes(v) ? { 'white-space': v } : undefined,
+    ([, v]) => (['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'break-spaces', ...globalKeywords].includes(v) ? { 'white-space': v } : undefined),
     { autocomplete: 'whitespace-(normal|nowrap|pre|pre-line|pre-wrap|break-spaces)' },
   ],
 ];
@@ -77,8 +77,8 @@ export const fontStyles = [
 ];
 
 export const fontSmoothings = [
-  ['antialiased', { '-webkit-font-smoothing': 'antialiased', '-moz-osx-font-smoothing': 'grayscale', 'font-smoothing': 'grayscale', }],
-  ['subpixel-antialiased', { '-webkit-font-smoothing': 'auto', '-moz-osx-font-smoothing': 'auto', 'font-smoothing': 'auto', }],
+  ['antialiased', { '-webkit-font-smoothing': 'antialiased', '-moz-osx-font-smoothing': 'grayscale', 'font-smoothing': 'grayscale' }],
+  ['subpixel-antialiased', { '-webkit-font-smoothing': 'auto', '-moz-osx-font-smoothing': 'auto', 'font-smoothing': 'auto' }],
 ];
 
 export const screenReadersAccess = [
@@ -108,12 +108,12 @@ export const screenReadersAccess = [
       'white-space': 'normal',
     },
   ],
-]
+];
 
 export const isolations = [
   ['isolate', { isolation: 'isolate' }],
   ['isolation-auto', { isolation: 'auto' }],
-]
+];
 
 export const objectPositions = [
   // object fit
@@ -125,9 +125,9 @@ export const objectPositions = [
 
   // object position
   [/^object-(.+)$/, ([, d]) => {
-    if (positionMap[d]) return { 'object-position': positionMap[d] }
+    if (positionMap[d]) return { 'object-position': positionMap[d] };
   }, { autocomplete: `object-(${Object.keys(positionMap).join('|')})` }],
-]
+];
 
 export const backgroundBlendModes = [
   ['bg-blend-multiply', { 'background-blend-mode': 'multiply' }],
@@ -147,7 +147,7 @@ export const backgroundBlendModes = [
   ['bg-blend-luminosity', { 'background-blend-mode': 'luminosity' }],
   ['bg-blend-normal', { 'background-blend-mode': 'normal' }],
   ...makeGlobalStaticRules('bg-blend', 'background-blend'),
-]
+];
 
 export const mixBlendModes = [
   ['mix-blend-multiply', { 'mix-blend-mode': 'multiply' }],
@@ -168,4 +168,4 @@ export const mixBlendModes = [
   ['mix-blend-plus-lighter', { 'mix-blend-mode': 'plus-lighter' }],
   ['mix-blend-normal', { 'mix-blend-mode': 'normal' }],
   ...makeGlobalStaticRules('mix-blend'),
-]
+];

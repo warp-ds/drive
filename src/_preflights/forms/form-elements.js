@@ -97,4 +97,4 @@ export const formElements = `
   border-color: var(--x-form-toggle-border-checked);
   box-shadow: inset 0 0 0 calc(var(--x-form-toggle-size) / 4) var(--x-form-toggle-bg-checked);
 }
-`
+`;

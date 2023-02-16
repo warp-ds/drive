@@ -5,7 +5,7 @@ setup();
 
 describe("text decoration", () => {
   test("supports underline and line-through", async (t) => {
-    const classes = ['underline', 'line-through']
+    const classes = ['underline', 'line-through'];
 
     const { css } = await t.uno.generate(classes);
 
@@ -19,4 +19,4 @@ describe("text decoration", () => {
 
     expect(css).toMatchSnapshot();
   });
-})
+});

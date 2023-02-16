@@ -1,9 +1,9 @@
-import { preflights } from '#preflights'
-import { rules } from '#rules'
-import { variants } from '#variants'
-import { useTheme } from '#theme'
+import { preflights } from '#preflights';
+import { rules } from '#rules';
+import { variants } from '#variants';
+import { useTheme } from '#theme';
 
-const includePreflight = ['base', 'hyper']
+const includePreflight = ['base', 'hyper'];
 
 /**
  * @typedef PluginOptions
@@ -16,16 +16,16 @@ const includePreflight = ['base', 'hyper']
 // TODO: improve generic type passed here
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
-  const mode = options.mode ?? 'app'
-  const hasPreflight = options.usePreflight ?? includePreflight.includes(mode)
-  const theme = useTheme(options)
+  const mode = options.mode ?? 'app';
+  const hasPreflight = options.usePreflight ?? includePreflight.includes(mode);
+  const theme = useTheme(options);
   return {
     name: '@warp-ds/uno',
     theme,
     rules,
     variants,
-    preflights: hasPreflight ? preflights : []
-  }
+    preflights: hasPreflight ? preflights : [],
+  };
 }
 
-export default presetWarp
+export default presetWarp;

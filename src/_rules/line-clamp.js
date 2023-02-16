@@ -8,4 +8,4 @@ export const lineClamp = [
     '-webkit-line-clamp': v,
     'line-clamp': v,
   }), { autocomplete: ['line-clamp-<num>'] }],
-]
+];

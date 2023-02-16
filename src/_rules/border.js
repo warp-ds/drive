@@ -1,4 +1,4 @@
-import { handler as h, directionMap, cornerMap } from "#utils";
+import { directionMap, cornerMap } from "#utils";
 
 const borderStyles = [
   "solid",
@@ -32,13 +32,11 @@ function handlerBorder(m, ctx) {
 
 function handlerBorderSize([, a = "", b], { theme }) {
   const v = theme.lineWidth?.[b ?? 1];
-  if (a in directionMap && v != null)
-    return directionMap[a].map((i) => [`border${i}-width`, v]);
+  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, v]);
 }
 
 function handlerBorderStyle([, a = "", s]) {
-  if (borderStyles.includes(s) && a in directionMap)
-    return directionMap[a].map((i) => [`border${i}-style`, s]);
+  if (borderStyles.includes(s) && a in directionMap) return directionMap[a].map((i) => [`border${i}-style`, s]);
 }
 
 export const rounded = [
@@ -47,10 +45,9 @@ export const rounded = [
   [/^rounded([rltb]{2})(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se])(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handlerRounded],
-]
+];
 
 function handlerRounded([, a = '', s], { theme }) {
   const v = theme.borderRadius?.[s ?? 4];
-  if (a in cornerMap && v != null)
-      return cornerMap[a].map(i => [`border${i}-radius`, v]);
+  if (a in cornerMap && v != null) return cornerMap[a].map(i => [`border${i}-radius`, v]);
 }

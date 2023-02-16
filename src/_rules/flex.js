@@ -1,8 +1,8 @@
-import { handler as h } from '#utils'
-import { bounded } from '#bounding'
-import * as bounds from '#bounds'
+import { handler as h } from '#utils';
+import { bounded } from '#bounding';
+import * as bounds from '#bounds';
 
-const numericHandler = { handler: (d) => h.number(d) }
+const numericHandler = { handler: (d) => h.number(d) };
 
 export const flex = [
   // flex
@@ -22,24 +22,24 @@ export const flex = [
     bounded(
       ([, d = '']) => ({ 'flex-shrink': h.number(d) ?? 1 }),
       bounds.flexGrowShrink,
-      { nullable: true, ...numericHandler }
+      { nullable: true, ...numericHandler },
     ),
-    { autocomplete: ['shrink-<num>'] }
+    { autocomplete: ['shrink-<num>'] },
   ],
   [
     /^grow(?:-(.*))?$/,
     bounded(
       ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }),
       bounds.flexGrowShrink,
-      { nullable: true, ...numericHandler }
+      { nullable: true, ...numericHandler },
     ),
-    { autocomplete: ['grow-<num>'] }
+    { autocomplete: ['grow-<num>'] },
   ],
   // TODO: needs tested
   [
     /^basis-(.+)$/,
     ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }),
-    { autocomplete: ['basis-$spacing'] }
+    { autocomplete: ['basis-$spacing'] },
   ],
   // directions
   ['flex-row', { 'flex-direction': 'row' }],
@@ -50,4 +50,4 @@ export const flex = [
   ['flex-wrap', { 'flex-wrap': 'wrap' }],
   ['flex-wrap-reverse', { 'flex-wrap': 'wrap-reverse' }],
   ['flex-nowrap', { 'flex-wrap': 'nowrap' }],
-]
+];

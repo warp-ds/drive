@@ -1,4 +1,4 @@
-import { entriesToCss } from '@unocss/core'
+import { entriesToCss } from '@unocss/core';
 
 const transformBaseValues = {
   '--w-rotate': 0,
@@ -18,7 +18,7 @@ const transformBaseValues = {
 export const transformBase = {
   layer: 'preflights',
   getCSS() {
-    const css = entriesToCss(Object.entries(transformBaseValues))
-    return `*,::before,::after{${css}}`
-  }
-}
+    const css = entriesToCss(Object.entries(transformBaseValues));
+    return `*,::before,::after{${css}}`;
+  },
+};
