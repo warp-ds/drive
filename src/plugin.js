@@ -8,8 +8,8 @@ import { postprocess } from '#postprocess';
  * @typedef PluginOptions
  * @type {Object}
  * @property {boolean} development // not in use yet
- * @property {boolean} usePreflight - force preflights to be included
- * @property {boolean} includeCoreClasses - force core classes to be included
+ * @property {boolean} usePreflight - force preflights to be included/excluded
+ * @property {boolean} externalizeClasses - force external or 'core' classes to be included/excluded
  * @property {boolean} usePixels - use pixel spacing instead of rem
  */
 
