@@ -15,6 +15,7 @@
     "#theme": "./src/theme.js",
     "#variants": "./src/_variants/index.js",
     "#preflights": "./src/_preflights/index.js",
+    "#postprocess": "./src/postprocessor.js",
     "#bounding": "./src/bounding.js",
     "#bounds": "./src/bounds.js"
   },
