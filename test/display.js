@@ -13,7 +13,7 @@ describe('display', () => {
     expect(css).toMatchSnapshot();
   });
   test('should render styles for arbitrary values', async ({ uno }) => {
-    const arbitraryClasses = ['display-unset', 'display-inherit', 'display-revert', 'display-[revert]'];
+    const arbitraryClasses = ['display-unset', 'display-inherit', 'display-revert', 'display-[revert]',  'display-[unset]',  'display-[inherit]'];
 
     const { css } = await uno.generate(arbitraryClasses);
     expect(css).toMatchSnapshot();
