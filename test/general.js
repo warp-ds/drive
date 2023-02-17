@@ -40,3 +40,13 @@ test('can generate pixel values for theme', async () => {
     .-ml-32{margin-left:-32px;}"
   `);
 });
+
+test('it can externalize classes', async () => {
+  const uno = getGenerator({ externalizeClasses: true, externalClasses: ['p-16', '-ml-32'] });
+  const { css } = await uno.generate(['pt-8', 'bottom-4', '-ml-32']);
+  expect(css).toMatchInlineSnapshot(`
+    "/* layer: default */
+    .bottom-4{bottom:0.4rem;}
+    .pt-8{padding-top:0.8rem;}"
+  `)
+})

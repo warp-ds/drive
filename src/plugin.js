@@ -17,7 +17,8 @@ import { postprocess } from '#postprocess';
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
   const hasPreflight = options.usePreflight ?? options.development
-  const externalizeCore = options.includeCoreClasses ?? !options.development
+  const externalizeClasses = options.externalizeClasses ?? !options.development
+  const externalClasses = options.externalClasses ?? [] // will possibly be our own list in the future
   const theme = useTheme(options);
   return {
     name: '@warp-ds/uno',
@@ -25,7 +26,7 @@ export function presetWarp (options = {}) {
     rules,
     variants,
     preflights: hasPreflight ? preflights : [],
-    postprocess: postprocess(externalizeCore)
+    postprocess: postprocess(externalizeClasses, externalClasses)
   };
 }
 
