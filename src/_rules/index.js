@@ -13,6 +13,7 @@ import * as grid from "./grid.js";
 import * as internal from './internal.js';
 import * as layout from "./layout.js";
 import * as lineClamp from "./line-clamp.js";
+import * as list from "./list.js";
 import * as position from "./position.js";
 import * as size from "./size.js";
 import * as spaceMargin from './space-margin.js';
@@ -39,6 +40,7 @@ const ruleGroups = {
   ...internal,
   ...layout,
   ...lineClamp,
+  ...list,
   ...position,
   ...size,
   ...spaceMargin,
@@ -67,6 +69,7 @@ export * from "./grid.js";
 export * from './internal.js';
 export * from "./layout.js";
 export * from "./line-clamp.js";
+export * from "./list.js";
 export * from "./position.js";
 export * from "./size.js";
 export * from './space-margin.js';
