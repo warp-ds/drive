@@ -1,5 +1,13 @@
 // Vitest Snapshot v1
 
+exports[`display > should render styles for arbitrary values 1`] = `
+"/* layer: default */
+.display-\\\\[revert\\\\],
+.display-revert{display:revert;}
+.display-inherit{display:inherit;}
+.display-unset{display:unset;}"
+`;
+
 exports[`display > should render styles for static classes 1`] = `
 "/* layer: default */
 .flex{display:flex;}

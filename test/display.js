@@ -16,13 +16,7 @@ describe('display', () => {
     const arbitraryClasses = ['display-unset', 'display-inherit', 'display-revert', 'display-[revert]'];
 
     const { css } = await uno.generate(arbitraryClasses);
-    expect(css).toMatchInlineSnapshot(`
-      "/* layer: default */
-      .display-\\\\[revert\\\\],
-      .display-revert{display:revert;}
-      .display-inherit{display:inherit;}
-      .display-unset{display:unset;}"
-    `);
+    expect(css).toMatchSnapshot();
   });
   test('should not render styles for invalid classes', async ({ uno }) => {
     const arbitraryClasses = ['unset'];
