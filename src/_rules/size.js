@@ -39,4 +39,5 @@ export const sizes = [
       '(min|max)-w-screen-$breakpoints',
     ],
   }],
+  [/^(min-|max-)?([wh])-\[(\d+)]$/, ([, minmax, wOrH, d]) => ({ [getPropName(minmax, wOrH)]: `${h.number(d) / 10}rem` })],
 ];
