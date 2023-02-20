@@ -110,6 +110,20 @@ exports[`max width and height > max-width 1`] = `
 .max-w-screen{max-width:100vw;}"
 `;
 
+exports[`max width and height with arbitrary values > max-height 1`] = `
+"/* layer: default */
+.max-h-\\\\[20000\\\\]{max-height:2000rem;}
+.max-h-\\\\[378\\\\]{max-height:37.8rem;}
+.max-h-\\\\[99999\\\\]{max-height:9999.9rem;}"
+`;
+
+exports[`max width and height with arbitrary values > max-width 1`] = `
+"/* layer: default */
+.max-w-\\\\[20000\\\\]{max-width:2000rem;}
+.max-w-\\\\[378\\\\]{max-width:37.8rem;}
+.max-w-\\\\[99999\\\\]{max-width:9999.9rem;}"
+`;
+
 exports[`min width and height > min-height 1`] = `
 "/* layer: default */
 .min-h-0{min-height:0rem;}
@@ -218,6 +232,27 @@ exports[`min width and height > min-width 1`] = `
 .min-w-screen{min-width:100vw;}"
 `;
 
+exports[`min width and height with arbitrary values > min-height 1`] = `
+"/* layer: default */
+.min-h-\\\\[20000\\\\]{min-height:2000rem;}
+.min-h-\\\\[378\\\\]{min-height:37.8rem;}
+.min-h-\\\\[99999\\\\]{min-height:9999.9rem;}"
+`;
+
+exports[`min width and height with arbitrary values > min-width 1`] = `
+"/* layer: default */
+.min-w-\\\\[20000\\\\]{min-width:2000rem;}
+.min-w-\\\\[378\\\\]{min-width:37.8rem;}
+.min-w-\\\\[99999\\\\]{min-width:9999.9rem;}"
+`;
+
+exports[`min width and height with arbitrary values > min-width 2`] = `
+"/* layer: default */
+.min-w-\\\\[20000\\\\]{min-width:2000rem;}
+.min-w-\\\\[378\\\\]{min-width:37.8rem;}
+.min-w-\\\\[99999\\\\]{min-width:9999.9rem;}"
+`;
+
 exports[`width and height > height 1`] = `
 "/* layer: default */
 .h-0{height:0rem;}
@@ -324,4 +359,18 @@ exports[`width and height > width 1`] = `
 .w-max{width:max-content;}
 .w-min{width:min-content;}
 .w-screen{width:100vw;}"
+`;
+
+exports[`width and height with arbitrary values > height 1`] = `
+"/* layer: default */
+.h-\\\\[20000\\\\]{height:2000rem;}
+.h-\\\\[378\\\\]{height:37.8rem;}
+.h-\\\\[99999\\\\]{height:9999.9rem;}"
+`;
+
+exports[`width and height with arbitrary values > width 1`] = `
+"/* layer: default */
+.w-\\\\[20000\\\\]{width:2000rem;}
+.w-\\\\[378\\\\]{width:37.8rem;}
+.w-\\\\[99999\\\\]{width:9999.9rem;}"
 `;
