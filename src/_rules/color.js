@@ -10,6 +10,6 @@ export const textColors = [
 ];
 
 export const bgColors = [
-  ['bg', { color: 'var(--w-background-color)' }],
-  ['bg-subtle', { color: 'var(--w-background-color-subtle)' }],
+  ['bg', { 'background-color': 'var(--w-background-color)' }],
+  ['bg-subtle', { 'background-color': 'var(--w-background-color-subtle)' }],
 ];
