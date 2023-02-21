@@ -39,5 +39,5 @@ export const sizes = [
       '(min|max)-w-screen-$breakpoints',
     ],
   }],
-  [/^(min-|max-)?([wh])-\[(\d+)]$/, ([, minmax, wOrH, d]) => ({ [getPropName(minmax, wOrH)]: h.rem(d) })],
+  [/^(min-|max-)?([wh])-\[(\d+)]$/, ([, minmax, wOrH, d], context) => ({ [getPropName(minmax, wOrH)]: context.theme.usingPixels ? h.px(d) : h.rem(d) })],
 ];
