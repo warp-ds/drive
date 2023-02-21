@@ -24,5 +24,5 @@ export const display = [
   ['table-row', { display: 'table-row' }],
   ['table-row-group', { display: 'table-row-group' }],
   // unset, revert, inherit
-  [/^display-(.+)$/, ([, c]) => ({ display: h.cssvar.global(c) }), { autocomplete: `display-(${globalKeywords.join('|')}` }],
+  [/^display-(.+)$/, ([, c]) => ({ display: h.cssvar.global(c) }), { autocomplete: `display-${globalKeywords.join('|')}` }],
 ];
