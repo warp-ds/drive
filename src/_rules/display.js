@@ -1,4 +1,5 @@
-import { handler as h } from '#utils';
+import { globalKeywords, handler as h } from '#utils';
+
 
 export const display = [
   ['flex', { display: 'flex' }],
@@ -23,5 +24,5 @@ export const display = [
   ['table-row', { display: 'table-row' }],
   ['table-row-group', { display: 'table-row-group' }],
   // unset, revert, inherit
-  [/^display-(.+)$/, ([, c]) => ({ display: h.bracket.cssvar.global(c) || c })],
+  [/^display-(.+)$/, ([, c]) => ({ display: h.cssvar.global(c) }), { autocomplete: `display-${globalKeywords.join('|')}` }],
 ];

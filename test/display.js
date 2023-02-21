@@ -1,5 +1,6 @@
-import { setup } from "./_helpers.js";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from 'vitest';
+import { setup } from './_helpers.js';
+import { globalKeywords } from '#utils';
 import * as displayRules from '../src/_rules/display.js';
 
 
@@ -13,13 +14,13 @@ describe('display', () => {
     expect(css).toMatchSnapshot();
   });
   test('should render styles for arbitrary values', async ({ uno }) => {
-    const arbitraryClasses = ['display-unset', 'display-inherit', 'display-revert', 'display-[revert]',  'display-[unset]',  'display-[inherit]'];
+    const arbitraryClasses = globalKeywords.map((key) => `display-${key}`);
 
     const { css } = await uno.generate(arbitraryClasses);
     expect(css).toMatchSnapshot();
   });
   test('should not render styles for invalid classes', async ({ uno }) => {
-    const arbitraryClasses = ['unset'];
+    const arbitraryClasses = ['unset','display-[revert]',  'display-[unset]',  'display-[inherit]'];
 
     const { css } = await uno.generate(arbitraryClasses);
     expect(css).toMatchInlineSnapshot('""');

@@ -2,11 +2,10 @@
 
 exports[`display > should render styles for arbitrary values 1`] = `
 "/* layer: default */
-.display-\\\\[inherit\\\\],
 .display-inherit{display:inherit;}
-.display-\\\\[revert\\\\],
+.display-initial{display:initial;}
 .display-revert{display:revert;}
-.display-\\\\[unset\\\\],
+.display-revert-layer{display:revert-layer;}
 .display-unset{display:unset;}"
 `;
 
