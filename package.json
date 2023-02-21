@@ -25,7 +25,8 @@
     "test": "vitest",
     "build": "rollup -c",
     "version": "pnpm test && pnpm build && pnpm publish",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "lint:check": "eslint ."
   },
   "keywords": [],
   "author": "@djh",
