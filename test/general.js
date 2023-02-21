@@ -48,5 +48,5 @@ test('it can externalize classes', async () => {
     "/* layer: default */
     .bottom-4{bottom:0.4rem;}
     .pt-8{padding-top:0.8rem;}"
-  `)
-})
+  `);
+});
