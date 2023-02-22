@@ -1,6 +1,6 @@
 import { setup } from './_helpers.js';
 import { expect, test } from 'vitest';
-import { positionMap } from '#utils';
+import { positionMap, globalKeywords } from '#utils';
 
 setup();
 
@@ -34,4 +34,20 @@ test('bg attachments', async ({ uno }) => {
   const classes = ['fixed', 'local', 'scroll'].map(e => `bg-${e}`);
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
+});
+
+test('bg clip', async ({ uno }) => {
+  const staticClasses = ['bg-clip-border',
+    'bg-clip-content',
+    'bg-clip-padding',
+    'bg-clip-text'];
+  const globalKeyClasses = globalKeywords.map(keyword => `bg-clip-${keyword}`);
+  const { css } = await uno.generate([...staticClasses, ...globalKeyClasses]);
+  expect(css).toMatchSnapshot();
+});
+
+test('bg invalid', async ({ uno }) => {
+  const classes = ['bg-transparent', 'bg-white', 'bg-current', 'bg-none'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot('""');
 });

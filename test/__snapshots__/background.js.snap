@@ -7,6 +7,19 @@ exports[`bg attachments 1`] = `
 .bg-scroll{background-attachment:scroll;}"
 `;
 
+exports[`bg clip 1`] = `
+"/* layer: default */
+.bg-clip-border{-webkit-background-clip:border-box;background-clip:border-box;}
+.bg-clip-content{-webkit-background-clip:content-box;background-clip:content-box;}
+.bg-clip-padding{-webkit-background-clip:padding-box;background-clip:padding-box;}
+.bg-clip-text{-webkit-background-clip:text;background-clip:text;}
+.bg-clip-inherit{-webkit-background-clip:inherit;background-clip:inherit;}
+.bg-clip-initial{-webkit-background-clip:initial;background-clip:initial;}
+.bg-clip-revert{-webkit-background-clip:revert;background-clip:revert;}
+.bg-clip-revert-layer{-webkit-background-clip:revert-layer;background-clip:revert-layer;}
+.bg-clip-unset{-webkit-background-clip:unset;background-clip:unset;}"
+`;
+
 exports[`bg origins 1`] = `
 "/* layer: default */
 .bg-origin-border{background-origin:border-box;}
