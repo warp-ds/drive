@@ -30,7 +30,8 @@
 ## generating warp classes using command line
 
 Run `node dev.js` or `pnpm dev`
-  Usage:
-    node dev.js [-c <string> | --cliClasses=<string>] [--usePixels] [--development] [--externalClasses] [--externalizeClasses] [--usePreflight]
-    Example: `node dev.js --usePixels --development --cliClasses=m-2`
-      ! Do not use shortcut when passing negative values, e.g. `node dev.js --cliClasses='-m-2! gap-2'`
+
+Usage: node dev.js [-c <string> | --cliClasses=<string>] [--usePixels] [--development] [--externalClasses] [--externalizeClasses] [--usePreflight]
+
+Example: `node dev.js --usePixels --development --cliClasses=m-2`
+! Do not use shortcut when passing negative values, e.g. `node dev.js --cliClasses='-m-2! gap-2'`
