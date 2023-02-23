@@ -52,6 +52,14 @@ exports[`border > supports divide borders between horizontal and stacked childre
 .divide-y-8-reverse>*+*{border-top-width:0;border-bottom-width:8px}"
 `;
 
+exports[`border > supports divide borders between horizontal and stacked children, default width 1`] = `
+"/* layer: default */
+.divide-x-reverse>*+*{border-left-width:0;border-right-width:1px}
+.divide-x>*+*{border-left-width:1px;border-right-width:0}
+.divide-y-reverse>*+*{border-top-width:0;border-bottom-width:1px}
+.divide-y>*+*{border-top-width:1px;border-bottom-width:0}"
+`;
+
 exports[`border > supports setting border style 1`] = `
 "/* layer: default */
 .border-dashed{border-style:dashed;}

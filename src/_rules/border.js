@@ -30,6 +30,7 @@ export const borders = [
 
 function handlerBorder(m, ctx) {
   const borderSizes = handlerBorderSize(m, ctx);
+
   if (borderSizes ) return [...borderSizes];
 }
 

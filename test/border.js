@@ -82,6 +82,7 @@ describe("border", () => {
 
     expect(css).toMatchSnapshot();
   });
+
   test('supports divide borders between horizontal and stacked children', async ({ uno }) => {
     const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}`, `divide-y-${width}`]).flat();
 
@@ -93,6 +94,11 @@ describe("border", () => {
     const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}-reverse`, `divide-y-${width}-reverse`]).flat();
 
     const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('supports divide borders between horizontal and stacked children, default width', async ({ uno }) => {
+    const { css } = await uno.generate(['divide-x', 'divide-y', 'divide-x-reverse', 'divide-y-reverse']);
     expect(css).toMatchSnapshot();
   });
 
