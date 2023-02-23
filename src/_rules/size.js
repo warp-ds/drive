@@ -2,6 +2,11 @@ import { handler as h, resolveBreakpoints, resolveVerticalBreakpoints } from '#u
 
 const sizeMapping = { h: 'height', w: 'width' };
 const getPropName = (minmax, hw) => `${minmax || ''}${sizeMapping[hw]}`;
+const resolveArbitraryValues = (d, unit, context) => {
+  if (unit === "rem") return h.rem(`${d}${unit}`);
+  if (unit === "px" || context.theme.usingPixels) return h.px(d);
+  return h.rem(d);
+};
 
 function getSizeValue(minmax, hw, theme, prop) {
   const str = getPropName(minmax, hw).replace(/-(\w)/g, (_, p) => p.toUpperCase());
@@ -39,5 +44,5 @@ export const sizes = [
       '(min|max)-w-screen-$breakpoints',
     ],
   }],
-  [/^(min-|max-)?([wh])-\[(\d+)]$/, ([, minmax, wOrH, d], context) => ({ [getPropName(minmax, wOrH)]: context.theme.usingPixels ? h.px(d) : h.rem(d) })],
+  [/^(min-|max-)?([wh])-\[(\d+)(rem|px)?]$/, ([, minmax, wh, d, unit], context) => ({ [getPropName(minmax, wh)]:  resolveArbitraryValues(d, unit, context) })],
 ];
