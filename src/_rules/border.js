@@ -1,3 +1,4 @@
+import { escapeSelector } from '@unocss/core';
 import { directionMap, cornerMap } from "#utils";
 
 const borderStyles = [
@@ -22,11 +23,12 @@ export const borders = [
   [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
   [/^border-([xy])-(.+)$/, handlerBorderStyle],
   [/^border-([rltb])-(.+)$/, handlerBorderStyle],
+  // divide
+  [/^divide-([xy])-?(\d+)?$/, handlerDivideBorder],
 ];
 
 function handlerBorder(m, ctx) {
   const borderSizes = handlerBorderSize(m, ctx);
-
   if (borderSizes ) return [...borderSizes];
 }
 
@@ -50,4 +52,24 @@ export const rounded = [
 function handlerRounded([, a = '', s], { theme }) {
   const v = theme.borderRadius?.[s ?? 4];
   if (a in cornerMap && v != null) return cornerMap[a].map(i => [`border${i}-radius`, v]);
+}
+
+function handleDivideBorderSizes(direction, width, theme) {
+  const borderWidth = theme.lineWidth?.[width ?? 1];
+  if (direction in directionMap && borderWidth) {
+    return directionMap[direction].map((i) => {
+      if (i === directionMap[direction][1]) {
+        return `border${i}-width:0px`;
+      }
+      return `border${i}-width:${borderWidth}`;
+    });
+  };
+}
+
+function handlerDivideBorder([_selector, direction = "", width], { theme }) {
+  const sizes = handleDivideBorderSizes(direction, width, theme)?.join(';');
+  if (sizes) {
+    const selector = escapeSelector(_selector);
+    return `.${selector}>*+*{${sizes}}`;
+  }
 }
