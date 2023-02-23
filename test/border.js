@@ -1,5 +1,6 @@
 import { setup } from "./_helpers.js";
 import { describe, expect, test } from "vitest";
+import { lineWidth } from '#theme';
 
 setup();
 
@@ -81,6 +82,33 @@ describe("border", () => {
 
     expect(css).toMatchSnapshot();
   });
+
+  test('supports divide borders between horizontal and stacked children', async ({ uno }) => {
+    const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}`, `divide-y-${width}`]).flat();
+
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('supports divide borders between horizontal and stacked children in reverse order', async ({ uno }) => {
+    const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}-reverse`, `divide-y-${width}-reverse`]).flat();
+
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('supports divide borders between horizontal and stacked children, default width', async ({ uno }) => {
+    const { css } = await uno.generate(['divide-x', 'divide-y', 'divide-x-reverse', 'divide-y-reverse']);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('does not support divide borders when invalid width provided', async ({ uno }) => {
+    const classes = ['divide-x-10', 'divide-y-hej', 'divide-z-2-not-reverse'];
+
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchInlineSnapshot('""');
+  });
+
 });
 
 describe("rounded", () => {

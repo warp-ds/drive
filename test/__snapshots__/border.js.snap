@@ -24,6 +24,42 @@ exports[`border > right, left, top bottom 1`] = `
 .border-t-8{border-top-width:8px;}"
 `;
 
+exports[`border > supports divide borders between horizontal and stacked children 1`] = `
+"/* layer: default */
+.divide-x-0>*+*{border-left-width:0;border-right-width:0}
+.divide-x-1>*+*{border-left-width:1px;border-right-width:0}
+.divide-x-2>*+*{border-left-width:2px;border-right-width:0}
+.divide-x-4>*+*{border-left-width:4px;border-right-width:0}
+.divide-x-8>*+*{border-left-width:8px;border-right-width:0}
+.divide-y-0>*+*{border-top-width:0;border-bottom-width:0}
+.divide-y-1>*+*{border-top-width:1px;border-bottom-width:0}
+.divide-y-2>*+*{border-top-width:2px;border-bottom-width:0}
+.divide-y-4>*+*{border-top-width:4px;border-bottom-width:0}
+.divide-y-8>*+*{border-top-width:8px;border-bottom-width:0}"
+`;
+
+exports[`border > supports divide borders between horizontal and stacked children in reverse order 1`] = `
+"/* layer: default */
+.divide-x-0-reverse>*+*{border-left-width:0;border-right-width:0}
+.divide-x-1-reverse>*+*{border-left-width:0;border-right-width:1px}
+.divide-x-2-reverse>*+*{border-left-width:0;border-right-width:2px}
+.divide-x-4-reverse>*+*{border-left-width:0;border-right-width:4px}
+.divide-x-8-reverse>*+*{border-left-width:0;border-right-width:8px}
+.divide-y-0-reverse>*+*{border-top-width:0;border-bottom-width:0}
+.divide-y-1-reverse>*+*{border-top-width:0;border-bottom-width:1px}
+.divide-y-2-reverse>*+*{border-top-width:0;border-bottom-width:2px}
+.divide-y-4-reverse>*+*{border-top-width:0;border-bottom-width:4px}
+.divide-y-8-reverse>*+*{border-top-width:0;border-bottom-width:8px}"
+`;
+
+exports[`border > supports divide borders between horizontal and stacked children, default width 1`] = `
+"/* layer: default */
+.divide-x-reverse>*+*{border-left-width:0;border-right-width:1px}
+.divide-x>*+*{border-left-width:1px;border-right-width:0}
+.divide-y-reverse>*+*{border-top-width:0;border-bottom-width:1px}
+.divide-y>*+*{border-top-width:1px;border-bottom-width:0}"
+`;
+
 exports[`border > supports setting border style 1`] = `
 "/* layer: default */
 .border-dashed{border-style:dashed;}
