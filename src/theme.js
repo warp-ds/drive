@@ -58,7 +58,7 @@ export const useTheme = (opts = {}) => {
   const height = { ...baseSpacing, screen: '100vh' };
 
   return {
-    usingPixels: !!opts.pxSpacing,
+    usingPixels: !!opts.usePixels,
     breakpoints,
     borderRadius,
     verticalBreakpoints: breakpoints,
