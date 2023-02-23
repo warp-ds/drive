@@ -89,13 +89,20 @@ describe("border", () => {
     expect(css).toMatchSnapshot();
   });
 
-});
+  test('supports divide borders between horizontal and stacked children in reverse order', async ({ uno }) => {
+    const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}-reverse`, `divide-y-${width}-reverse`]).flat();
 
-test('does not support divide borders when invalid width provided', async ({ uno }) => {
-  const classes = ['divide-x-10', 'divide-y-hej', 'divide-z-2'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
 
-  const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot('""');
+  test('does not support divide borders when invalid width provided', async ({ uno }) => {
+    const classes = ['divide-x-10', 'divide-y-hej', 'divide-z-2-not-reverse'];
+
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchInlineSnapshot('""');
+  });
+
 });
 
 describe("rounded", () => {
