@@ -1,6 +1,34 @@
 import { entriesToCss } from '@unocss/core';
+import { makeGlobalStaticRules } from "#utils";
 
-const listItemStyles = entriesToCss(Object.entries({
+const listStyleTypes = {
+  'disc': 'disc',
+  'circle': 'circle',
+  'square': 'square',
+  'decimal': 'decimal',
+  'zero-decimal': 'decimal-leading-zero',
+};
+
+export const listStyle = [
+  // base
+  [
+    /^list-(.+)$/,
+    ([, alias]) => {
+      const style = listStyleTypes[alias];
+      if (style) return { 'list-style-type': style };
+    },
+  ],
+  // styles
+  ['list-outside', { 'list-style-position': 'outside' }],
+  ['list-inside', { 'list-style-position': 'inside' }],
+  ['list-none', { 'list-style-type': 'none' }],
+  ...makeGlobalStaticRules('list', 'list-style-type'),
+];
+
+const listCheckedContainerStyles = entriesToCss(Object.entries({
+  'line-height': 'var(--w-font-line-height-1)', //TODO: Add proper line-height variable
+}));
+const listCheckedItemStyles = entriesToCss(Object.entries({
   position: 'relative',
   'padding-left': '24px', //TODO: Change to corresponding variable when available
 }));
@@ -20,9 +48,9 @@ const checkmarkStyles = entriesToCss(Object.entries({
 
 export const listChecked = [
   [/^list-checked$/, ([selector]) => {
-    const base = `.${selector}{line-height: var(--w-font-line-height-1);}`; //TODO: Add proper line-height variable
-    const child = `.${selector}>li{${listItemStyles}}`;
+    const listContainer = `.${selector}{${listCheckedContainerStyles}}`;
+    const listItem = `.${selector}>li{${listCheckedItemStyles}}`;
     const checkmark = `.${selector}>li::before{${checkmarkStyles}}`;
-    return base + child + checkmark;
+    return listContainer + listItem + checkmark;
   }],
 ];

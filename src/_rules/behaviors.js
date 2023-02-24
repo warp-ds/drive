@@ -12,31 +12,6 @@ export const willChange = [
   [/^will-change-(.+)/, ([, p]) => ({ 'will-change': willChangeProperty(p) })],
 ];
 
-const listStyles = {
-  'disc': 'disc',
-  'circle': 'circle',
-  'square': 'square',
-  'decimal': 'decimal',
-  'zero-decimal': 'decimal-leading-zero',
-};
-
-export const listStyle = [
-  // base
-  [
-    /^list-(.+)$/,
-    ([, alias]) => {
-      const style = listStyles[alias];
-      if (style) return { 'list-style-type': style };
-    },
-    { autocomplete: `list-(${Object.keys(listStyles).join('|')})` },
-  ],
-  // styles
-  ['list-outside', { 'list-style-position': 'outside' }],
-  ['list-inside', { 'list-style-position': 'inside' }],
-  ['list-none', { 'list-style-type': 'none' }],
-  ...makeGlobalStaticRules('list', 'list-style-type'),
-];
-
 export const overscrolls = [
   ['overscroll-auto', { 'overscroll-behavior': 'auto' }],
   ['overscroll-contain', { 'overscroll-behavior': 'contain' }],
