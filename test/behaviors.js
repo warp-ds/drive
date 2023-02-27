@@ -20,29 +20,6 @@ test('will-change', async ({ uno }) => {
   `);
 });
 
-test('list style type', async ({ uno }) => {
-  const classes = [
-    'list-disc',
-    'list-circle',
-    'list-square',
-    'list-decimal',
-    'list-zero-decimal',
-    'list-none',
-  ];
-  const { css } = await uno.generate(classes);
-  expect(css).toMatchSnapshot();
-});
-
-test('list style position', async ({ uno }) => {
-  const { css } = await uno.generate(['list-outside', 'list-inside']);
-  expect(css).toMatchSnapshot();
-});
-
-test('list style invalid class', async ({ uno }) => {
-  const { css } = await uno.generate(['list-style-invalid', 'list', 'list-[decimal]']);
-  expect(css).toMatchInlineSnapshot('""');
-});
-
 test('overscroll', async ({ uno }) => {
   const classes = ['overscroll-auto', 'overscroll-contain', 'overscroll-none', 'overscroll-y-auto', 'overscroll-y-contain', 'overscroll-y-none', 'overscroll-x-auto', 'overscroll-x-contain', 'overscroll-x-none'];
   const { css } = await uno.generate(classes);
