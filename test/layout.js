@@ -26,6 +26,7 @@ describe("position", () => {
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
       .overflow-auto{overflow:auto;}
+      .overflow-clip{overflow:clip;}
       .overflow-hidden{overflow:hidden;}
       .overflow-scroll{overflow:scroll;}
       .overflow-visible{overflow:visible;}
