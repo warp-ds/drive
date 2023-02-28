@@ -1,4 +1,4 @@
-const overflowValues = ["auto", "hidden", "visible", "scroll"];
+const overflowValues = ["auto", "hidden", "visible", "scroll", "clip"];
 
 export const overflows = [
   [
