@@ -2,7 +2,7 @@
 
 exports[`it generates css based on warp tokens 1`] = `
 "/* layer: default */
-.i-bg-\\\\$foo-bar{backgroundColor:var(--w-foo-bar);}
+.i-bg-\\\\$foo-bar{background-color:var(--w-foo-bar);}
 .i-text-\\\\$biz-baz{color:var(--w-biz-baz);}
-.i-border-\\\\$wombat-llama{borderColor:var(--w-wombat-llama);}"
+.i-border-\\\\$wombat-llama{border-color:var(--w-wombat-llama);}"
 `;
