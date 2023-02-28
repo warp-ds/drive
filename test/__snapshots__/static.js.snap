@@ -142,3 +142,51 @@ exports[`static rules do static things 1`] = `
 .mix-blend-revert-layer{mix-blend:revert-layer;}
 .mix-blend-unset{mix-blend:unset;}"
 `;
+
+exports[`static rules for object position > supports all predefined values in the position map 1`] = `
+"/* layer: default */
+.object-b,
+.object-bottom{object-position:bottom;}
+.object-bc,
+.object-bottom-center{object-position:bottom center;}
+.object-bl,
+.object-bottom-left{object-position:bottom left;}
+.object-bottom-right,
+.object-br{object-position:bottom right;}
+.object-c,
+.object-center{object-position:center;}
+.object-cb,
+.object-center-bottom{object-position:center bottom;}
+.object-cc,
+.object-center-center{object-position:center center;}
+.object-center-left,
+.object-cl{object-position:center left;}
+.object-center-right,
+.object-cr{object-position:center right;}
+.object-center-top,
+.object-ct{object-position:center top;}
+.object-l,
+.object-left{object-position:left;}
+.object-lb,
+.object-left-bottom{object-position:left bottom;}
+.object-lc,
+.object-left-center{object-position:left center;}
+.object-left-top,
+.object-lt{object-position:left top;}
+.object-r,
+.object-right{object-position:right;}
+.object-rb,
+.object-right-bottom{object-position:right bottom;}
+.object-rc,
+.object-right-center{object-position:right center;}
+.object-right-top,
+.object-rt{object-position:right top;}
+.object-t,
+.object-top{object-position:top;}
+.object-tc,
+.object-top-center{object-position:top center;}
+.object-tl,
+.object-top-left{object-position:top left;}
+.object-top-right,
+.object-tr{object-position:top right;}"
+`;

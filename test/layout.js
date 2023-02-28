@@ -6,6 +6,7 @@ setup();
 describe("position", () => {
   test("check static, fixed, absolute, relative and sticky values", async (t) => {
     const classes = [
+      "overflow-clip",
       "overflow-auto",
       "overflow-hidden",
       "overflow-visible",

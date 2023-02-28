@@ -109,7 +109,7 @@ describe("alignments", () => {
 
 describe('placements', () => {
   test('check place-content- classes and their expected place-content values', async (t) => {
-    const classes = ['place-content-center', 'place-content-start', 'place-content-end', 'place-content-between', 'place-content-around', 'place-content-evenly', 'place-content-stretch'];
+    const classes = ['place-content-center', 'place-content-start', 'place-content-end', 'place-content-between', 'place-content-around', 'place-content-evenly', 'place-content-stretch', 'place-content-baseline'];
 
     const { css } = await t.uno.generate(classes);
 
