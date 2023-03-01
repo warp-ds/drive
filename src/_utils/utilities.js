@@ -1,4 +1,4 @@
-import { toArray, warnOnce } from '@unocss/core';
+import { toArray } from '@unocss/core';
 import { colorOpacityToString, colorToString, parseCssColor } from './colors.js';
 import { handler as h } from './handlers/index.js';
 import { directionMap, globalKeywords } from './mappings.js';
@@ -10,11 +10,9 @@ import { getComponents } from './getComponents.js';
  * @param {string} propertyPrefix - Property for the css value to be created. Postfix will be appended according to direction matched.
  * @see {@link directionMap}
  */
-// TODO: hook this into the 'bounding' utils
 export function directionSize(propertyPrefix) {
   return ([_, direction, size], { theme }) => {
-    const v = theme.spacing?.[size] ?? h.global.auto(size);
-    if (!v) return warnOnce(`${propertyPrefix} not available in size ${size}`);
+    const v = theme.spacing?.[size] ?? h.bracket.global.auto.fraction(size);
     if (v != null) return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
   };
 }
@@ -219,8 +217,4 @@ export function getBracket(str, open, close) {
         break;
     }
   }
-}
-
-export function getNumericArrayInRange(first, last) {
-  return Array.from({ length: last - first + 1 }, (_, index) => first + index);
 }

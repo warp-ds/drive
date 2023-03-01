@@ -1,8 +1,5 @@
 import { expect, test } from 'vitest';
-import { setup } from './_helpers.js';
-import { getNumericArrayInRange } from '#utils';
-import { flexGrowShrink } from '#bounds';
-
+import { setup, getNumericArrayInRange } from './_helpers.js';
 
 setup();
 
@@ -62,7 +59,7 @@ test('flex invalid', async (t) => {
 });
 
 test('flex shrink/grow', async (t) => {
-  const boundsRangeArray  = getNumericArrayInRange(flexGrowShrink[0], flexGrowShrink[1]);
+  const boundsRangeArray  = getNumericArrayInRange(0, 5);
   const autoClasses = ['grow', 'shrink'];
   const classes = boundsRangeArray.map((num) => [`shrink-${num}`, `grow-${num}`]).flat();
 

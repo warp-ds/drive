@@ -1,6 +1,4 @@
 import { handler as h } from '#utils';
-import { bounded } from '#bounding';
-import * as bounds from '#bounds';
 
 const autoDirection = (prop) => {
   switch (prop) {
@@ -28,53 +26,29 @@ export const grid = [
   ['row-span-full', { 'grid-row': '1 / -1' }],
   [
     /^row-span-(\d+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-row': `span ${h.number(d)}/span ${h.number(d)}` }),
-      bounds.gridRow,
-      numericHandler,
-    ),
+    ([, d]) => ({ 'grid-row': `span ${h.number(d)}/span ${h.number(d)}` }),
   ],
   [
     /^col-span-(\d+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }),
-      bounds.gridCol,
-      numericHandler,
-    ),
+    ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }),
     { autocomplete: ['(row|col)-span-<num>'] },
   ],
   // starts & ends
   [
     /^row-start-(.+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-row-start': h.number.auto(d) }),
-      bounds.gridRow,
-      numericOrAutoHandler,
-    ),
+    ([, d]) => ({ 'grid-row-start': h.number.auto(d) }),
   ],
   [
     /^col-start-(.+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-column-start': h.number.auto(d) }),
-      bounds.gridCol,
-      numericOrAutoHandler,
-    ),
+    ([, d]) => ({ 'grid-column-start': h.number.auto(d) }),
   ],
   [
     /^row-end-(.+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-row-end': h.number.auto(d) }),
-      bounds.gridRow,
-      numericOrAutoHandler,
-    ),
+    ([, d]) => ({ 'grid-row-end': h.number.auto(d) }),
   ],
   [
     /^col-end-(.+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-column-end': h.number.auto(d) }),
-      bounds.gridCol,
-      numericOrAutoHandler,
-    ),
+    ([, d]) => ({ 'grid-column-end': h.number.auto(d) }),
     { autocomplete: ['(row|col)-(start|end)-<num>'] },
   ],
   // auto flows
@@ -104,19 +78,11 @@ export const grid = [
   ],
   [
     /^grid-rows-(\d+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` }),
-      bounds.gridRow,
-      numericHandler,
-    ),
+    ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` }),
   ],
   [
     /^grid-cols-(\d+)$/,
-    bounded(
-      ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }),
-      bounds.gridCol,
-      numericHandler,
-    ),
+    ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }),
     { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] },
   ],
   ['grid-rows-none', { 'grid-template-rows': 'none' }],
