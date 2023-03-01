@@ -1,13 +1,8 @@
 import { handler as h } from '#utils';
-import { bounded } from '#bounding';
-import * as bounds from '#bounds';
-
-const numericHandler = { handler: (d) => h.number(d) };
 
 export const flex = [
   // flex
   [
-    // TODO: how should we bound or improve this rule?
     /^flex-(.*)$/,
     ([_, d]) => ({ flex: h.bracket(d) != null ? h.bracket(d).split(' ').map(e => h.cssvar.fraction(e) ?? e).join(' ') : h.cssvar.fraction(d) }),
   ],
@@ -19,23 +14,14 @@ export const flex = [
   // grow and shrink have two forms - 'shrink' and 'shrink-N'
   [
     /^shrink(?:-(.*))?$/,
-    bounded(
-      ([, d = '']) => ({ 'flex-shrink': h.number(d) ?? 1 }),
-      bounds.flexGrowShrink,
-      { nullable: true, ...numericHandler },
-    ),
+    ([, d = '']) => ({ 'flex-shrink': h.number(d) ?? 1 }),
     { autocomplete: ['shrink-<num>'] },
   ],
   [
     /^grow(?:-(.*))?$/,
-    bounded(
-      ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }),
-      bounds.flexGrowShrink,
-      { nullable: true, ...numericHandler },
-    ),
+    ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }),
     { autocomplete: ['grow-<num>'] },
   ],
-  // TODO: needs tested
   [
     /^basis-(.+)$/,
     ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }),

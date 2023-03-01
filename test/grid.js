@@ -1,12 +1,10 @@
 import { expect, test } from 'vitest';
-import { gridCol, gridRow } from '#bounds';
-import { getNumericArrayInRange } from '#utils';
-import { setup } from './_helpers.js';
+import { setup, getNumericArrayInRange } from './_helpers.js';
 
 setup();
 
-const columns = getNumericArrayInRange(gridCol[0], gridCol[1]);
-const rows = getNumericArrayInRange(gridRow[0], gridRow[1]);
+const columns = getNumericArrayInRange(1, 13);
+const rows = getNumericArrayInRange(1, 7);
 
 test('grid span', async (t) => {
   const staticClasses = [
@@ -93,24 +91,6 @@ test('grid templates basic', async (t) => {
   const { css } = await t.uno.generate([...classesCols, ...classesRows]);
 
   expect(css).toMatchSnapshot();
-});
-
-test('grid styling is not created if out of range', async (t) => {
-  const outOfRangeRow = rows.length + 1;
-  const outOfRangeColumn = columns.length + 1;
-  const classes = [
-    `grid-rows-${outOfRangeRow}`,
-    `grid-columns-${outOfRangeColumn}`,
-    `row-span-${outOfRangeRow}`,
-    `col-span-${outOfRangeColumn}`,
-    `col-start-${outOfRangeColumn}`,
-    `col-end-${outOfRangeColumn}`,
-    `row-start-${outOfRangeRow}`,
-    `row-end-${outOfRangeRow}`,
-  ];
-  const { css } = await t.uno.generate(classes);
-
-  expect(css).toMatchInlineSnapshot('""');
 });
 
 test('grid templates none', async (t) => {

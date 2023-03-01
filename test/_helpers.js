@@ -17,3 +17,7 @@ export const getFractions = (prefix, length = 6) => {
     return `${prefix}-${n}/${d}`;
   })).filter(Boolean);
 };
+
+export function getNumericArrayInRange(first, last) {
+  return Array.from({ length: last - first + 1 }, (_, index) => first + index);
+}

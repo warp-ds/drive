@@ -1,22 +1,14 @@
 import { handler as h, insetMap, makeGlobalStaticRules } from '#utils';
-import { bounded } from "#bounding";
-import * as bounds from '#bounds';
 import { warnOnce } from '@unocss/core';
 
 export const positions = [
   [/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })],
 ];
 
-const numericHandler = { handler: (d) => h.number(d) };
-
 export const orders = [
   [
     /^order-(\d+)$/,
-    bounded(
-      ([, d]) => ({ 'order': h.number(d) }),
-      bounds.order,
-      numericHandler,
-    ),
+    ([, d]) => ({ 'order': h.number(d) }),
     { autocomplete: 'order-<num>' },
   ],
   ['order-first', { order: '-9999' }],
@@ -107,7 +99,7 @@ export const placements = [
 ];
 
 function handleInsetValue(v, { theme }) {
-  return theme.spacing?.[v] ?? h.fraction.auto(v); // TODO: warn if no value
+  return theme.spacing?.[v] ?? h.bracket.fraction.auto(v);
 }
 function handleInsetValues([, d, v], ctx) {
   const r = handleInsetValue(v, ctx);
