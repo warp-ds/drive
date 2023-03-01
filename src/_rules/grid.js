@@ -11,12 +11,7 @@ const autoDirection = (prop) => {
     case 'auto':
       return 'auto';
   }
-
-  // TODO: Emit warning if prop doesnt match
 };
-
-const numericHandler = { handler: (d) => h.number.auto(d) };
-const numericOrAutoHandler = { handler: (d) => h.number.auto(d) };
 
 export const grid = [
   // span

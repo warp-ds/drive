@@ -99,7 +99,7 @@ export const placements = [
 ];
 
 function handleInsetValue(v, { theme }) {
-  return theme.spacing?.[v] ?? h.fraction.auto(v); // TODO: warn if no value
+  return theme.spacing?.[v] ?? h.bracket.fraction.auto(v);
 }
 function handleInsetValues([, d, v], ctx) {
   const r = handleInsetValue(v, ctx);

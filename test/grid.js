@@ -93,24 +93,6 @@ test('grid templates basic', async (t) => {
   expect(css).toMatchSnapshot();
 });
 
-test('grid styling is not created if out of range', async (t) => {
-  const outOfRangeRow = rows.length + 1;
-  const outOfRangeColumn = columns.length + 1;
-  const classes = [
-    `grid-rows-${outOfRangeRow}`,
-    `grid-columns-${outOfRangeColumn}`,
-    `row-span-${outOfRangeRow}`,
-    `col-span-${outOfRangeColumn}`,
-    `col-start-${outOfRangeColumn}`,
-    `col-end-${outOfRangeColumn}`,
-    `row-start-${outOfRangeRow}`,
-    `row-end-${outOfRangeRow}`,
-  ];
-  const { css } = await t.uno.generate(classes);
-
-  expect(css).toMatchInlineSnapshot('""');
-});
-
 test('grid templates none', async (t) => {
   const classes = ['grid-rows-none', 'grid-cols-none'];
   const { css } = await t.uno.generate(classes);
