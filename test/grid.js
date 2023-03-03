@@ -1,10 +1,10 @@
 import { expect, test } from 'vitest';
-import { setup, getNumericArrayInRange } from './_helpers.js';
+import { setup } from './_helpers.js';
 
 setup();
 
-const columns = getNumericArrayInRange(1, 13);
-const rows = getNumericArrayInRange(1, 7);
+const columns = Array.from({ length: 13 }, (_, index) => 1 + index);
+const rows = Array.from({ length: 7 }, (_, index) => 1 + index);
 
 test('grid span', async (t) => {
   const staticClasses = [

@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { setup, getNumericArrayInRange } from './_helpers.js';
+import { setup } from './_helpers.js';
 
 setup();
 
@@ -59,9 +59,8 @@ test('flex invalid', async (t) => {
 });
 
 test('flex shrink/grow', async (t) => {
-  const boundsRangeArray  = getNumericArrayInRange(0, 5);
   const autoClasses = ['grow', 'shrink'];
-  const classes = boundsRangeArray.map((num) => [`shrink-${num}`, `grow-${num}`]).flat();
+  const classes = Array.from({ length: 6 }, (_, index) => [`shrink-${index}`, `grow-${index}`]).flat();
 
   const { css } = await t.uno.generate([...classes, ...autoClasses]);
   expect(css).toMatchInlineSnapshot(`
