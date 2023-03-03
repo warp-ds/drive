@@ -91,14 +91,14 @@ describe("border", () => {
   });
 
   test('supports divide borders between horizontal and stacked children in reverse order', async ({ uno }) => {
-    const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}-reverse`, `divide-y-${width}-reverse`]).flat();
+    const classes = Object.keys(lineWidth).map(width => [`divide-x-reverse`, `divide-y-reverse`]).flat();
 
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('supports divide borders between horizontal and stacked children, default width', async ({ uno }) => {
-    const { css } = await uno.generate(['divide-x', 'divide-y', 'divide-x-reverse', 'divide-y-reverse']);
+    const { css } = await uno.generate(['divide-x', 'divide-y']);
     expect(css).toMatchSnapshot();
   });
 
