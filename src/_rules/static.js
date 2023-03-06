@@ -76,6 +76,11 @@ export const fontStyles = [
   ['not-italic', { 'font-style': 'normal' }],
 ];
 
+export const fontWeight = [
+  ['font-bold', { 'font-weight': 700 }],
+  ['font-normal', { 'font-weight': 400 }],
+];
+
 export const fontSmoothings = [
   ['antialiased', { '-webkit-font-smoothing': 'antialiased', '-moz-osx-font-smoothing': 'grayscale', 'font-smoothing': 'grayscale' }],
   ['subpixel-antialiased', { '-webkit-font-smoothing': 'auto', '-moz-osx-font-smoothing': 'auto', 'font-smoothing': 'auto' }],
