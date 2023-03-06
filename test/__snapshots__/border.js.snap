@@ -26,38 +26,28 @@ exports[`border > right, left, top bottom 1`] = `
 
 exports[`border > supports divide borders between horizontal and stacked children 1`] = `
 "/* layer: default */
-.divide-x-0>*+*{border-left-width:0;border-right-width:0}
-.divide-x-1>*+*{border-left-width:1px;border-right-width:0}
-.divide-x-2>*+*{border-left-width:2px;border-right-width:0}
-.divide-x-4>*+*{border-left-width:4px;border-right-width:0}
-.divide-x-8>*+*{border-left-width:8px;border-right-width:0}
-.divide-y-0>*+*{border-top-width:0;border-bottom-width:0}
-.divide-y-1>*+*{border-top-width:1px;border-bottom-width:0}
-.divide-y-2>*+*{border-top-width:2px;border-bottom-width:0}
-.divide-y-4>*+*{border-top-width:4px;border-bottom-width:0}
-.divide-y-8>*+*{border-top-width:8px;border-bottom-width:0}"
+.divide-x-0>*+*{--w-divide-x-reverse:0;border-left-width:calc(0 * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(0 * var(--w-divide-x-reverse))}
+.divide-x-1>*+*{--w-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(1px * var(--w-divide-x-reverse))}
+.divide-x-2>*+*{--w-divide-x-reverse:0;border-left-width:calc(2px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(2px * var(--w-divide-x-reverse))}
+.divide-x-4>*+*{--w-divide-x-reverse:0;border-left-width:calc(4px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(4px * var(--w-divide-x-reverse))}
+.divide-x-8>*+*{--w-divide-x-reverse:0;border-left-width:calc(8px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(8px * var(--w-divide-x-reverse))}
+.divide-y-0>*+*{--w-divide-y-reverse:0;border-top-width:calc(0 * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(0 * var(--w-divide-y-reverse))}
+.divide-y-1>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse))}
+.divide-y-2>*+*{--w-divide-y-reverse:0;border-top-width:calc(2px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(2px * var(--w-divide-y-reverse))}
+.divide-y-4>*+*{--w-divide-y-reverse:0;border-top-width:calc(4px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(4px * var(--w-divide-y-reverse))}
+.divide-y-8>*+*{--w-divide-y-reverse:0;border-top-width:calc(8px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(8px * var(--w-divide-y-reverse))}"
 `;
 
 exports[`border > supports divide borders between horizontal and stacked children in reverse order 1`] = `
 "/* layer: default */
-.divide-x-0-reverse>*+*{border-left-width:0;border-right-width:0}
-.divide-x-1-reverse>*+*{border-left-width:0;border-right-width:1px}
-.divide-x-2-reverse>*+*{border-left-width:0;border-right-width:2px}
-.divide-x-4-reverse>*+*{border-left-width:0;border-right-width:4px}
-.divide-x-8-reverse>*+*{border-left-width:0;border-right-width:8px}
-.divide-y-0-reverse>*+*{border-top-width:0;border-bottom-width:0}
-.divide-y-1-reverse>*+*{border-top-width:0;border-bottom-width:1px}
-.divide-y-2-reverse>*+*{border-top-width:0;border-bottom-width:2px}
-.divide-y-4-reverse>*+*{border-top-width:0;border-bottom-width:4px}
-.divide-y-8-reverse>*+*{border-top-width:0;border-bottom-width:8px}"
+.divide-x-reverse>:not([hidden])~:not([hidden]){--w-divide-x-reverse:1;}
+.divide-y-reverse>:not([hidden])~:not([hidden]){--w-divide-y-reverse:1;}"
 `;
 
 exports[`border > supports divide borders between horizontal and stacked children, default width 1`] = `
 "/* layer: default */
-.divide-x-reverse>*+*{border-left-width:0;border-right-width:1px}
-.divide-x>*+*{border-left-width:1px;border-right-width:0}
-.divide-y-reverse>*+*{border-top-width:0;border-bottom-width:1px}
-.divide-y>*+*{border-top-width:1px;border-bottom-width:0}"
+.divide-x>*+*{--w-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(1px * var(--w-divide-x-reverse))}
+.divide-y>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse))}"
 `;
 
 exports[`border > supports setting border style 1`] = `

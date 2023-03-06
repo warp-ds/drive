@@ -25,7 +25,9 @@ export const borders = [
   [/^border-([xy])-(.+)$/, handlerBorderStyle],
   [/^border-([rltb])-(.+)$/, handlerBorderStyle],
   // divide
-  [/^divide-([xy])-?(\d+)?-?(reverse)?$/, handlerDivideBorder, { autocomplete: `divide-<x|y>-(${Object.keys(lineWidth).join('|')})-(reverse)` }],
+  [/^divide-([xy])-(\d+)$/, handlerDivideBorder, { autocomplete: `divide-<x|y>-(${Object.keys(lineWidth).join('|')})-(reverse)` }],
+  [/^divide-([xy])$/, handlerDivideBorder],
+  [/^divide-([xy])-reverse$/, ([, d]) => ({ [`--w-divide-${d}-reverse`]: 1 })],
 ];
 
 function handlerBorder(m, ctx) {
@@ -60,19 +62,19 @@ function handleDivideBorderSizes(direction, width, reverse, theme) {
   const borderWidth = theme.lineWidth?.[width ?? 1];
   if (direction in directionMap && borderWidth) {
     return directionMap[direction].map((i) => {
-      const borderPosition = !!reverse ? 0 : 1;
-      if (i === directionMap[direction][borderPosition]) {
-        return `border${i}-width:0`;
+      if (i === directionMap[direction][1]) {
+        return `border${i}-width:calc(${borderWidth} * var(--w-divide-${direction}-reverse))`;
       }
-      return `border${i}-width:${borderWidth}`;
+      return `border${i}-width:calc(${borderWidth} * calc(1 - var(--w-divide-${direction}-reverse)))`;
     });
   };
 }
 
 function handlerDivideBorder([_selector, direction = "", width, reverse], { theme }) {
   const sizes = handleDivideBorderSizes(direction, width, reverse, theme)?.join(';');
+  const defaultReverse = `--w-divide-${direction}-reverse:0`;
   if (sizes) {
     const selector = escapeSelector(_selector);
-    return `.${selector}>*+*{${sizes}}`;
+    return `.${selector}>*+*{${defaultReverse};${sizes}}`;
   }
 }
