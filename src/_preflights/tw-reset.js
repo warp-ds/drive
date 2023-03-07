@@ -20,6 +20,7 @@ export const twReset = {
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured 'sans' font-family by default.
+5. Use transparent color of the highlight that appears over an element while it's being tapped
 */
 
 html {
@@ -29,6 +30,7 @@ html {
   tab-size: 4; /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   ${theme.usingPixels ? '' : 'font-size: 62.5%;'}
+  -webkit-tap-highlight-color: transparent; / * 5 */
 }
 
 /*
