@@ -22,6 +22,7 @@
     "dist"
   ],
   "scripts": {
+    "commit": "cz",
     "dev": "node dev.js",
     "dev:env": "vite dev-env --config ./vite.config.js",
     "test": "vitest",
@@ -42,6 +43,7 @@
     "@semantic-release/git": "^10.0.1",
     "@unocss/autocomplete": "^0.50.4",
     "@warp-ds/eslint-config": "^0.0.1",
+    "cz-conventional-changelog": "^3.3.0",
     "drnm": "^0.9.0",
     "eslint": "^8.35.0",
     "rollup": "^3.18.0",
@@ -54,5 +56,12 @@
   "eslintConfig": {
     "extends": "@warp-ds"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
