@@ -19,7 +19,9 @@
     "#postprocess": "./src/postprocessor.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "dev.js"
   ],
   "scripts": {
     "commit": "cz",
