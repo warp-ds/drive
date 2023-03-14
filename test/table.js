@@ -5,19 +5,19 @@ import { setup } from './_helpers.js';
 setup();
 
 test('border-collapse', async (t) => {
-  const classes = ["border-collapse", "border-separate"];
+  const classes = ['border-collapse', 'border-separate'];
 
   const { css } = await t.uno.generate(classes);
 
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
     .border-collapse{border-collapse:collapse;}
-    .border-separate{border-separate:separate;}"
+    .border-separate{border-collapse:separate;}"
   `);
 });
 
 test('border-collapse', async (t) => {
-  const classes = ["table-auto", "table-fixed"];
+  const classes = ['table-auto', 'table-fixed'];
 
   const { css } = await t.uno.generate(classes);
 
@@ -29,7 +29,13 @@ test('border-collapse', async (t) => {
 });
 
 test('border-spacing', async (t) => {
-  const classes = spaceBase.map((spacingUnit) => [`border-spacing-x-${spacingUnit}`, `border-spacing-y-${spacingUnit}`, `border-spacing-${spacingUnit}`]).flat();
+  const classes = spaceBase
+    .map((spacingUnit) => [
+      `border-spacing-x-${spacingUnit}`,
+      `border-spacing-y-${spacingUnit}`,
+      `border-spacing-${spacingUnit}`,
+    ])
+    .flat();
 
   const { css } = await t.uno.generate(classes);
 

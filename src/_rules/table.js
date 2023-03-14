@@ -1,11 +1,11 @@
 export const borderCollapse = [
-  ["border-collapse", { 'border-collapse': "collapse" }],
-  ["border-separate", { 'border-separate': "separate" }],
+  ['border-collapse', { 'border-collapse': 'collapse' }],
+  ['border-separate', { 'border-collapse': 'separate' }],
 ];
 
 export const tableLayout = [
-  ["table-auto", { 'table-layout': "auto" }],
-  ["table-fixed", { 'table-layout': "fixed" }],
+  ['table-auto', { 'table-layout': 'auto' }],
+  ['table-fixed', { 'table-layout': 'fixed' }],
 ];
 
 export const borderSpacing = [
@@ -21,9 +21,9 @@ function handleBorderSpacing([, direction, spacing], { theme }) {
 
   const borderSpacingValue = () => {
     switch (direction) {
-      case "x":
+      case 'x':
         return `${spacingValue} ${defaultValue}`;
-      case "y":
+      case 'y':
         return `${defaultValue} ${spacingValue}`;
       default:
         return `${spacingValue} ${spacingValue}`;
@@ -31,6 +31,6 @@ function handleBorderSpacing([, direction, spacing], { theme }) {
   };
 
   return {
-    "border-spacing": borderSpacingValue(),
+    'border-spacing': borderSpacingValue(),
   };
 }
