@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name : Validate title
+      - name: Validate title
         uses: warp-ds/pr-linter@v1
