@@ -1,107 +1,13 @@
 name: PR Title Checker
-
 on:
   pull_request:
-    types: ["opened", "edited", "reopened", "synchronize"]
-    branches: 
-      - '*'
-      - '*/*'
-      - '**'    
-      - '!master'
+    types: [opened, edited, reopened, synchronize]
 
 jobs:
   check:
-    name: Validate PR Title
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: current
-      - name : Get Title of PR
-        uses: actions/github-script@v6
-        id: pr-title
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          result-encoding: json
-          script: |
-            const { data: pr } = await github.rest.issues.get({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            });
-            return pr.title;
-      - name : Test Title of PR
-        uses: actions/github-script@v6
-        id: pr-title-check
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          result-encoding: json
-          script: |
-            const prTitle = ${{steps.pr-title.outputs.result}};
-            const regex = new RegExp('^(chore|docs|feat|fix|perf|refactor|style|test|build|revert)((.+))?:(.+)');
-            return !regex.test(prTitle);
-      - name: Update PR Comment
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          result-encoding: json
-          script: |
-            // Retrieve existing bot comments for the PR
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-            const botComment = comments.find(comment => {
-              return comment.user.type === 'Bot' && comment.body.includes('Incorrect Pull Request Title Format')
-            });
-
-            if (${{steps.pr-title-check.outputs.result}}) {
-              const body = `**Incorrect Pull Request Title Format**
-                The title of this pull request does not appear to match the commit message format.
-                \`\`\`
-                Examples from Commitizen
-                \`\`\`
-                ![](https://github.com/commitizen/cz-cli/raw/master/meta/screenshots/add-commit.png)
-              `;
-
-              // If we have a comment, update it, otherwise create a new one
-              if (botComment) {
-                github.rest.issues.updateComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  comment_id: botComment.id,
-                  body
-                });
-              } else {
-                github.rest.issues.createComment({
-                  issue_number: context.issue.number,
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  body
-                });
-              }
-              return;
-            }
-            if (botComment) {
-              github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: `:sparkles: **Valid Pull Request Title Format** :sparkles:`,
-              });
-              return;
-            }
-      - name: Check PR Title Status
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          result-encoding: json
-          script: |
-            const hasError = ${{steps.pr-title-check.outputs.result}};
-            if (hasError) {
-              core.setFailed('PR Title Checker job has failed!');
-            }
+      - name : Validate title
+        uses: warp-ds/pr-linter@v1
