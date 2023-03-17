@@ -30,7 +30,7 @@ html {
   tab-size: 4; /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   ${theme.usingPixels ? '' : 'font-size: 62.5%;'}
-  -webkit-tap-highlight-color: transparent; / * 5 */
+  -webkit-tap-highlight-color: transparent; /* 5 */
 }
 
 /*
