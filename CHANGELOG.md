@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-03-17)
+
+
+### Bug Fixes
+
+* bad comment syntax in preflight ([#73](https://github.com/warp-ds/drive/issues/73)) ([ae37e8e](https://github.com/warp-ds/drive/commit/ae37e8e823f8c249ad285d428e655bd442f51095))
+
 # 1.0.0-alpha.1 (2023-03-14)
 
 
