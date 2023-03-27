@@ -18,7 +18,8 @@
     [
       "@semantic-release/github",
       {
-        "assets": "release/*.tgz"
+        "assets": "release/*.tgz",
+        "successComment" : false
       }
     ],
     "@semantic-release/git"
