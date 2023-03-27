@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2023-03-27)
+
+
+### Bug Fixes
+
+* add bg color options  ([#76](https://github.com/warp-ds/drive/issues/76)) ([980c532](https://github.com/warp-ds/drive/commit/980c5322d0a7f81b9819273b8abea95bb3e9fa27))
+
 # [1.0.0-alpha.2](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2023-03-17)
 
 
