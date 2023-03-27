@@ -12,4 +12,7 @@ export const textColors = [
 export const bgColors = [
   ['bg', { 'background-color': 'var(--w-background-color)' }],
   ['bg-subtle', { 'background-color': 'var(--w-background-color-subtle)' }],
+  ['bg-inherit', { 'background-color': 'inherit' }],
+  ['bg-transparent', { 'background-color': 'transparent' }],
+  ['bg-current', { 'background-color': 'currentColor' }],
 ];

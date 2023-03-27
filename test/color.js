@@ -34,7 +34,12 @@ test('text color invalid class', async({ uno }) => {
 });
 
 test('bg colors', async({ uno }) => {
-  const classes = ['bg' , 'bg-subtle'];
+  const classes = [
+    'bg',
+    'bg-subtle',
+    'bg-inherit',
+    'bg-transparent',
+    'bg-current'];
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();

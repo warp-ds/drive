@@ -3,7 +3,10 @@
 exports[`bg colors 1`] = `
 "/* layer: default */
 .bg{background-color:var(--w-background-color);}
-.bg-subtle{background-color:var(--w-background-color-subtle);}"
+.bg-subtle{background-color:var(--w-background-color-subtle);}
+.bg-inherit{background-color:inherit;}
+.bg-transparent{background-color:transparent;}
+.bg-current{background-color:currentColor;}"
 `;
 
 exports[`opacity by theme 1`] = `
