@@ -47,7 +47,7 @@ test('bg clip', async ({ uno }) => {
 });
 
 test('bg invalid', async ({ uno }) => {
-  const classes = ['bg-transparent', 'bg-white', 'bg-current', 'bg-none'];
+  const classes = ['bg-white', 'bg-none'];
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
 });
