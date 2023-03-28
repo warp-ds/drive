@@ -4,5 +4,9 @@ exports[`it generates css based on warp tokens 1`] = `
 "/* layer: default */
 .i-bg-\\\\$foo-bar{background-color:var(--w-foo-bar);}
 .i-text-\\\\$biz-baz{color:var(--w-biz-baz);}
-.i-border-\\\\$wombat-llama{border-color:var(--w-wombat-llama);}"
+.i-border-\\\\$wombat-llama{border-color:var(--w-wombat-llama);}
+.i-border-b-\\\\$color-alert-info-border{border-bottom-color:var(--w-color-alert-info-border);}
+.i-border-l-\\\\$color-alert-info-border{border-left-color:var(--w-color-alert-info-border);}
+.i-border-r-\\\\$color-alert-info-border{border-right-color:var(--w-color-alert-info-border);}
+.i-border-t-\\\\$color-alert-info-border{border-top-color:var(--w-color-alert-info-border);}"
 `;
