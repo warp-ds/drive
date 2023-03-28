@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2023-03-28)
+
+
+### Bug Fixes
+
+* add styling for loading ([#77](https://github.com/warp-ds/drive/issues/77)) ([87e0e50](https://github.com/warp-ds/drive/commit/87e0e50fad662dd2cbcff07e0b3903eddff201d3))
+
 # [1.0.0-alpha.3](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2023-03-27)
 
 
