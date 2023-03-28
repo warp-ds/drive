@@ -1,3 +1,10 @@
+# [1.0.0-alpha.5](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2023-03-28)
+
+
+### Features
+
+* **internals:** add rules for border-top/right/bottom/left-color classes ([#78](https://github.com/warp-ds/drive/issues/78)) ([83eb2f5](https://github.com/warp-ds/drive/commit/83eb2f528579d86b3068386ad927cbad5a201fe7))
+
 # [1.0.0-alpha.4](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2023-03-28)
 
 
