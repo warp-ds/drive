@@ -48,7 +48,6 @@ function handlerBorderStyle([, a = "", s]) {
 export const rounded = [
   [/^rounded()(?:-(.+))?$/, handlerRounded, { autocomplete: ['(rounded)', '(rounded)-<num>'] }],
   [/^rounded-([rltb]+)(?:-(.+))?$/, handlerRounded],
-  [/^rounded([rltb]{2})(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se])(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handlerRounded],
 ];
