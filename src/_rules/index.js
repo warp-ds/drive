@@ -1,4 +1,5 @@
 import * as align from "./align.js";
+import * as animations from "./animations.js";
 import * as aspectRatio from "./aspect-ratio.js";
 import * as backgrounds from './background.js';
 import * as behaviors from "./behaviors.js";
@@ -25,6 +26,7 @@ import * as table from "./table.js";
 
 const ruleGroups = {
   ...align,
+  ...animations,
   ...aspectRatio,
   ...backgrounds,
   ...behaviors,
@@ -55,6 +57,7 @@ export const rules = [
 ].flat(1);
 
 export * from "./align.js";
+export * from "./animations.js";
 export * from "./aspect-ratio.js";
 export * from './background.js';
 export * from "./behaviors.js";
