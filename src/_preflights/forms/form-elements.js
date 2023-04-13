@@ -3,7 +3,7 @@ export const formElements = `
   user-select: none;
 }
 
-.input, .textarea, .radio, .checkbox, .select {
+.radio, .checkbox, .select {
   display: block;
   border-width: 1px;
   /* specific properties are used here so the focus-ring via outline is instant */
@@ -13,24 +13,19 @@ export const formElements = `
               box-shadow 0.2s ease;
 }
 
-.input, .textarea, .select {
+.select {
   line-height: 22px;
   background-color: var(--x-form-field-bg);
   border-color: var(--x-form-field-border);
   border-radius: 4px;
   padding: 12px 8px;
 }
-.input:hover, .textarea:hover, .select:hover {
+.select:hover {
   border-color: var(--x-form-field-border-hover);
 }
-.input:focus, .textarea:focus, .select:focus {
+.select:focus {
   border-color: var(--x-form-field-focus);
   outline-color: var(--x-form-field-focus);
-}
-
-.input::placeholder {
-  color: var(--w-text-color-placeholder, blue);
-  opacity: 1;
 }
 
 .select {
