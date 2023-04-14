@@ -1,3 +1,10 @@
+# [1.0.0-alpha.6](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2023-04-14)
+
+
+### Bug Fixes
+
+* remove input related stuff from preflight ([#81](https://github.com/warp-ds/drive/issues/81)) ([a5dcb42](https://github.com/warp-ds/drive/commit/a5dcb4233017e8093787542dffe73a4bfebbfd94))
+
 # [1.0.0-alpha.5](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2023-03-28)
 
 
