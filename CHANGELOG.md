@@ -1,3 +1,11 @@
+# [1.0.0-alpha.7](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2023-04-18)
+
+
+### Bug Fixes
+
+* height and width shouldn't match without a dash ([#83](https://github.com/warp-ds/drive/issues/83)) ([3580750](https://github.com/warp-ds/drive/commit/3580750b806010dfce61cf70c81fa5a0ac2a4846))
+* theme now exports useTheme ([#82](https://github.com/warp-ds/drive/issues/82)) ([88476fd](https://github.com/warp-ds/drive/commit/88476fddf0ba39e677c04737ef332181b8fa390f))
+
 # [1.0.0-alpha.6](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2023-04-14)
 
 
