@@ -14,12 +14,20 @@ describe('width and height', () => {
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
+  test(`width without dash shouldn't match`, async ({ uno }) => {
+    const { css } = await uno.generate(['w2', 'w32']);
+    expect(css).toMatchInlineSnapshot('""');
+  });
   test('height', async ({ uno }) => {
     const classes = spaceBase.map(e => `h-${e}`);
     classes.push(...getSpecialSuffixes('h'));
     classes.push(...getFractions('h'));
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
+  });
+  test(`height without dash shouldn't match`, async ({ uno }) => {
+    const { css } = await uno.generate(['h2', 'h32']);
+    expect(css).toMatchInlineSnapshot('""');
   });
 });
 

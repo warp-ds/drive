@@ -24,7 +24,7 @@ function getSizeValue(minmax, hw, theme, prop) {
 
 export const sizes = [
   [
-    /^(min-|max-)?([wh])-?(.+)$/,
+    /^(min-|max-)?([wh])-(.+)$/,
     ([, minmax, wOrH, s], { theme }) => ({ [getPropName(minmax, wOrH)]: getSizeValue(minmax, wOrH, theme, s) }),
     {
       autocomplete: [
