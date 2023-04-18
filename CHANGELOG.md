@@ -1,3 +1,10 @@
+# [1.0.0-alpha.8](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2023-04-18)
+
+
+### Bug Fixes
+
+* add rules and tests for caret ([#84](https://github.com/warp-ds/drive/issues/84)) ([fac54a1](https://github.com/warp-ds/drive/commit/fac54a1279d7f5aac27009e4db6dce9530e662a2))
+
 # [1.0.0-alpha.7](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2023-04-18)
 
 
