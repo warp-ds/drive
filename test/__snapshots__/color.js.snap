@@ -2,11 +2,19 @@
 
 exports[`bg colors 1`] = `
 "/* layer: default */
-.bg{background-color:var(--w-background-color);}
-.bg-subtle{background-color:var(--w-background-color-subtle);}
+.bg{background-color:var(--w-color-background);}
+.bg-subtle{background-color:var(--w-color-background-subtle);}
 .bg-inherit{background-color:inherit;}
 .bg-transparent{background-color:transparent;}
 .bg-current{background-color:currentColor;}"
+`;
+
+exports[`caret 1`] = `
+"/* layer: default */
+.caret{caret-color:var(--w-color-input-caret);}
+.caret-inherit{caret-color:inherit;}
+.caret-current{caret-color:currentColor;}
+.caret-transparent{caret-color:transparent;}"
 `;
 
 exports[`opacity by theme 1`] = `
@@ -19,8 +27,8 @@ exports[`opacity by theme 1`] = `
 
 exports[`text colors 1`] = `
 "/* layer: default */
-.text{color:var(--w-text-color);}
-.text-inverted{color:var(--w-text-color-inverted);}
-.text-inverted-subtle{color:var(--w-text-color-inverted-subtle);}
-.text-subtle{color:var(--w-text-color-subtle);}"
+.text{color:var(--w-color-text);}
+.text-inverted{color:var(--w-color-text-inverted);}
+.text-inverted-subtle{color:var(--w-color-text-inverted-subtle);}
+.text-subtle{color:var(--w-color-text-subtle);}"
 `;

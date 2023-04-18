@@ -51,3 +51,15 @@ test('bg color invalid class', async({ uno }) => {
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
 });
+
+test('caret', async({ uno }) => {
+  const classes = [
+    'caret',
+    'caret-inherit',
+    'caret-current',
+    'caret-transparent',
+  ];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
