@@ -1,3 +1,10 @@
+# [1.0.0-alpha.9](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2023-04-21)
+
+
+### Bug Fixes
+
+* remove caret class, will use current ([#85](https://github.com/warp-ds/drive/issues/85)) ([f87db11](https://github.com/warp-ds/drive/commit/f87db1151c7d93d79caeab7185c7a308255bdfda))
+
 # [1.0.0-alpha.8](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2023-04-18)
 
 
