@@ -54,7 +54,6 @@ test('bg color invalid class', async({ uno }) => {
 
 test('caret', async({ uno }) => {
   const classes = [
-    'caret',
     'caret-inherit',
     'caret-current',
     'caret-transparent',

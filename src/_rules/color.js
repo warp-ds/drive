@@ -3,7 +3,6 @@ export const opacity = [
 ];
 
 export const caretColors = [
-  ['caret', { 'caret-color': 'var(--w-color-input-caret)' }],
   ['caret-inherit', { 'caret-color': 'inherit'  }],
   ['caret-current', { 'caret-color': 'currentColor' }],
   ['caret-transparent', { 'caret-color': 'transparent' }],
