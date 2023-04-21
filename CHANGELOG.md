@@ -1,3 +1,10 @@
+# [1.0.0-alpha.10](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2023-04-21)
+
+
+### Bug Fixes
+
+* add 75% to the opacity values ([#86](https://github.com/warp-ds/drive/issues/86)) ([fa52e6e](https://github.com/warp-ds/drive/commit/fa52e6e1db0c5acae81fb82df3b55facf2161d35))
+
 # [1.0.0-alpha.9](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2023-04-21)
 
 
