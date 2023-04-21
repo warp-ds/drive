@@ -21,7 +21,8 @@ exports[`opacity by theme 1`] = `
 .opacity-0{opacity:0%;}
 .opacity-100{opacity:100%;}
 .opacity-25{opacity:25%;}
-.opacity-50{opacity:50%;}"
+.opacity-50{opacity:50%;}
+.opacity-75{opacity:75%;}"
 `;
 
 exports[`text colors 1`] = `
