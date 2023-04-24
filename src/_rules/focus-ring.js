@@ -1,6 +1,6 @@
 // TODO: use actual variables and values when those has been defined
 const focusRingStyle = {
-  'outline': '2px solid var(--w-outline)',
+  'outline': '2px solid var(--w-color-focused)',
   'outline-offset': 'var(--w-outline-offset, 1px)',
 };
 
