@@ -1,3 +1,10 @@
+# [1.0.0-alpha.11](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2023-04-25)
+
+
+### Bug Fixes
+
+* add correct token for the focus ring ([#87](https://github.com/warp-ds/drive/issues/87)) ([9191bca](https://github.com/warp-ds/drive/commit/9191bcaabf6788c6d8e4e3cac990c798e1307519))
+
 # [1.0.0-alpha.10](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2023-04-21)
 
 
