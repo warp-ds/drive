@@ -16,7 +16,7 @@ test("focus ring", async (t) => {
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
     .focusable\\\\:focus,
-    .focusable\\\\:focus-visible{outline:2px solid var(--w-outline);outline-offset:var(--w-outline-offset, 1px);}
+    .focusable\\\\:focus-visible{outline:2px solid var(--w-color-focused);outline-offset:var(--w-outline-offset, 1px);}
     .focusable\\\\:focus\\\\:not\\\\(\\\\:focus-visible\\\\){outline:none;}
     .focusable-inset{--w-outline-offset:-3px;}"
   `);
