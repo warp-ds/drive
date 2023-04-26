@@ -51,3 +51,12 @@ test('bg invalid', async ({ uno }) => {
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
 });
+
+test('bg arbitrary url', async ({ uno }) => {
+  const classes = [`bg-[url('/img/hero-pattern.svg')]`];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot(`
+    "/* layer: default */
+    .bg-\\\\[url\\\\(\\\\'\\\\/img\\\\/hero-pattern\\\\.svg\\\\'\\\\)\\\\]{background-image:url(/img/hero-pattern.svg);}"
+  `);
+});
