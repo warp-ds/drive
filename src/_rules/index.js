@@ -16,6 +16,7 @@ import * as layout from "./layout.js";
 import * as lineClamp from "./line-clamp.js";
 import * as list from "./list.js";
 import * as position from "./position.js";
+import * as shadow from "./shadow.js";
 import * as size from "./size.js";
 import * as spaceMargin from './space-margin.js';
 import * as spacing from "./spacing.js";
@@ -44,6 +45,7 @@ const ruleGroups = {
   ...lineClamp,
   ...list,
   ...position,
+  ...shadow,
   ...size,
   ...spaceMargin,
   ...spacing,
@@ -74,6 +76,7 @@ export * from "./layout.js";
 export * from "./line-clamp.js";
 export * from "./list.js";
 export * from "./position.js";
+export * from "./shadow.js";
 export * from "./size.js";
 export * from './space-margin.js';
 export * from "./spacing.js";
