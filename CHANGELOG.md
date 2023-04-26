@@ -1,3 +1,10 @@
+# [1.0.0-alpha.12](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2023-04-26)
+
+
+### Bug Fixes
+
+* be able to use a one-off background image ([#89](https://github.com/warp-ds/drive/issues/89)) ([12df5a9](https://github.com/warp-ds/drive/commit/12df5a924fa80bc0794c3a5b066a2ade99c35883))
+
 # [1.0.0-alpha.11](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2023-04-25)
 
 
