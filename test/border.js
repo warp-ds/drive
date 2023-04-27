@@ -25,7 +25,7 @@ describe("border", () => {
   });
 
   test("supports setting arbitrary border width", async (t) => {
-    const classes = ["border-[6]", "border-l-[7]", "border-r-[7]", "border-t-[7]", "border-b-[7]", "border-w-[7]", "border-[wow]"];
+    const classes = ["border-[66]", "border-[6]", "border-l-[7]", "border-r-[7]", "border-t-[7]", "border-b-[7]", "border-w-[7]", "border-[wow]"];
 
     const { css } = await t.uno.generate(classes);
 

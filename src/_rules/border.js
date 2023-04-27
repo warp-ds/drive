@@ -25,7 +25,7 @@ export const borders = [
   [/^border-([xy])-(.+)$/, handlerBorderStyle],
   [/^border-([rltb])-(.+)$/, handlerBorderStyle],
   [
-    /^border-([rltb])?-?\[([0-9])\]$/,
+    /^border-([rltb])?-?\[(\d+)\]$/,
     handlerArbitraryBorderSize,
     {
       autocomplete: [
