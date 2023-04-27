@@ -1,3 +1,10 @@
+# [1.0.0-alpha.13](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2023-04-27)
+
+
+### Features
+
+* add rules for shadows ([#90](https://github.com/warp-ds/drive/issues/90)) ([a0dfbc5](https://github.com/warp-ds/drive/commit/a0dfbc5b3dd32d45e5a6051af4cfee695f523855))
+
 # [1.0.0-alpha.12](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2023-04-26)
 
 
