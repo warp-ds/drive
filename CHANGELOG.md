@@ -1,3 +1,11 @@
+# [1.0.0-alpha.14](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2023-04-28)
+
+
+### Bug Fixes
+
+* add arbitrary width support for border ([#88](https://github.com/warp-ds/drive/issues/88)) ([2eb8d87](https://github.com/warp-ds/drive/commit/2eb8d878b0ae64ffb07215d264b8bd44672c6b16))
+* add missing apostrofs ([#91](https://github.com/warp-ds/drive/issues/91)) ([a28756e](https://github.com/warp-ds/drive/commit/a28756e21adecac49cf196081b1481ab409625dc))
+
 # [1.0.0-alpha.13](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2023-04-27)
 
 
