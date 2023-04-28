@@ -1,3 +1,10 @@
+# [1.0.0-alpha.15](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2023-04-28)
+
+
+### Bug Fixes
+
+* extend regex for the background arbitrary values ([#92](https://github.com/warp-ds/drive/issues/92)) ([d908e24](https://github.com/warp-ds/drive/commit/d908e249848944a0bdd42c2b598a1c21074cb817))
+
 # [1.0.0-alpha.14](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2023-04-28)
 
 
