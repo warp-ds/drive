@@ -51,9 +51,9 @@ function handlerBorderSize([, a = "", b], { theme }) {
 }
 
 function handlerArbitraryBorderSize([, a, v]) {
-  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, v]);
+  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, `${v}px`]);
 
-  return [[`border-width`, v]];
+  return [[`border-width`, `${v}px`]];
 }
 
 function handlerBorderStyle([, a = "", s]) {
