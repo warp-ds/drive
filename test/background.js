@@ -53,10 +53,13 @@ test('bg invalid', async ({ uno }) => {
 });
 
 test('bg arbitrary url', async ({ uno }) => {
-  const classes = [`bg-[url('/img/hero-pattern.svg')]`];
+  const classes = [`bg-[url('/img/hero-pattern.svg')]`, `peer-checked:before:bg-[url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M4 8L7 11L12.5 5" stroke="%2371717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')]`,
+    `bg-[url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M4 8L7 11L12.5 5" stroke="%2371717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')]`];
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
-    .bg-\\\\[url\\\\(\\\\'\\\\/img\\\\/hero-pattern\\\\.svg\\\\'\\\\)\\\\]{background-image:url(/img/hero-pattern.svg);}"
+    .bg-\\\\[url\\\\(\\\\'\\\\/img\\\\/hero-pattern\\\\.svg\\\\'\\\\)\\\\]{background-image:url('/img/hero-pattern.svg');}
+    .bg-\\\\[url\\\\(\\\\'data\\\\:image\\\\/svg\\\\+xml\\\\,\\\\%3Csvg\\\\ width\\\\=\\\\\\"16\\\\\\"\\\\ height\\\\=\\\\\\"16\\\\\\"\\\\ viewBox\\\\=\\\\\\"0\\\\ 0\\\\ 16\\\\ 16\\\\\\"\\\\ fill\\\\=\\\\\\"white\\\\\\"\\\\ xmlns\\\\=\\\\\\"http\\\\:\\\\/\\\\/www\\\\.w3\\\\.org\\\\/2000\\\\/svg\\\\\\"\\\\%3E\\\\%3Cpath\\\\ d\\\\=\\\\\\"M4\\\\ 8L7\\\\ 11L12\\\\.5\\\\ 5\\\\\\"\\\\ stroke\\\\=\\\\\\"\\\\%2371717A\\\\\\"\\\\ stroke-width\\\\=\\\\\\"1\\\\.5\\\\\\"\\\\ stroke-linecap\\\\=\\\\\\"round\\\\\\"\\\\ stroke-linejoin\\\\=\\\\\\"round\\\\\\"\\\\/\\\\%3E\\\\%3C\\\\/svg\\\\%3E\\\\'\\\\)\\\\]{background-image:url('data:image/svg+xml,%3Csvg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" fill=\\"white\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cpath d=\\"M4 8L7 11L12.5 5\\" stroke=\\"%2371717A\\" stroke-width=\\"1.5\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/%3E%3C/svg%3E');}
+    .peer:checked~.peer-checked\\\\:before\\\\:bg-\\\\[url\\\\(\\\\'data\\\\:image\\\\/svg\\\\+xml\\\\,\\\\%3Csvg\\\\ width\\\\=\\\\\\"16\\\\\\"\\\\ height\\\\=\\\\\\"16\\\\\\"\\\\ viewBox\\\\=\\\\\\"0\\\\ 0\\\\ 16\\\\ 16\\\\\\"\\\\ fill\\\\=\\\\\\"none\\\\\\"\\\\ xmlns\\\\=\\\\\\"http\\\\:\\\\/\\\\/www\\\\.w3\\\\.org\\\\/2000\\\\/svg\\\\\\"\\\\%3E\\\\%3Cpath\\\\ d\\\\=\\\\\\"M4\\\\ 8L7\\\\ 11L12\\\\.5\\\\ 5\\\\\\"\\\\ stroke\\\\=\\\\\\"\\\\%2371717A\\\\\\"\\\\ stroke-width\\\\=\\\\\\"1\\\\.5\\\\\\"\\\\ stroke-linecap\\\\=\\\\\\"round\\\\\\"\\\\ stroke-linejoin\\\\=\\\\\\"round\\\\\\"\\\\/\\\\%3E\\\\%3C\\\\/svg\\\\%3E\\\\'\\\\)\\\\]::before{background-image:url('data:image/svg+xml,%3Csvg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cpath d=\\"M4 8L7 11L12.5 5\\" stroke=\\"%2371717A\\" stroke-width=\\"1.5\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/%3E%3C/svg%3E');}"
   `);
 });
