@@ -1,3 +1,10 @@
+# [1.0.0-alpha.16](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2023-04-28)
+
+
+### Bug Fixes
+
+* add px to the arbitrary border width ([#93](https://github.com/warp-ds/drive/issues/93)) ([c4d17ae](https://github.com/warp-ds/drive/commit/c4d17aed00b25a4f5b8ae004bf6ac4bf943a6549))
+
 # [1.0.0-alpha.15](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2023-04-28)
 
 
