@@ -24,6 +24,15 @@ export const borders = [
   [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
   [/^border-([xy])-(.+)$/, handlerBorderStyle],
   [/^border-([rltb])-(.+)$/, handlerBorderStyle],
+  [
+    /^border-([rltb])?-?\[(\d+)\]$/,
+    handlerArbitraryBorderSize,
+    {
+      autocomplete: [
+        'border-<directions>-[$width]',
+      ],
+    },
+  ],
   // divide
   [/^divide-([xy])-(\d+)$/, handlerDivideBorder, { autocomplete: `divide-<x|y>-(${Object.keys(lineWidth).join('|')})-(reverse)` }],
   [/^divide-([xy])$/, handlerDivideBorder],
@@ -39,6 +48,12 @@ function handlerBorder(m, ctx) {
 function handlerBorderSize([, a = "", b], { theme }) {
   const v = theme.lineWidth?.[b ?? 1];
   if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, v]);
+}
+
+function handlerArbitraryBorderSize([, a, v]) {
+  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, v]);
+
+  return [[`border-width`, v]];
 }
 
 function handlerBorderStyle([, a = "", s]) {
