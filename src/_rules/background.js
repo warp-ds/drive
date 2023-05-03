@@ -38,5 +38,5 @@ export const backgrounds = [
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
   //arbitrary
-  [/^bg-\[url\(['|"](.+)['|"]\)]/, ([, p]) => ({ 'background-image': `url("${p}")` })],
+  [/^bg-\[(.+)\]/, ([, p]) => ({ 'background-image': p })],
 ];
