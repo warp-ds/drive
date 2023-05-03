@@ -12,6 +12,9 @@ test('it generates css based on warp tokens', async ({ uno }) => {
     'i-border-r-$color-alert-info-border',
     'i-border-t-$color-alert-info-border',
     'i-border-b-$color-alert-info-border',
+    'i-elevation-$shadow-card',
+    'i-elevation-$shadow-buttongroup',
+    'i-elevation-$shadow-tooltip',
   ];
   const anticlasses = [
     'i-bg-foos-bars',
@@ -23,6 +26,8 @@ test('it generates css based on warp tokens', async ({ uno }) => {
     'i-border-tl-$color-alert-info-border',
     'i-border-bl-$color-alert-info-border',
     'i-border-tbl-$color-alert-info-border',
+    'i-$shadow-card',
+    'i-shadow-$shadow-card',
   ];
   const { css } = await uno.generate([...classes, ...anticlasses]);
   expect(css).toMatchSnapshot();
