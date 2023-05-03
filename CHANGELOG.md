@@ -1,3 +1,10 @@
+# [1.0.0-alpha.17](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.16...v1.0.0-alpha.17) (2023-05-03)
+
+
+### Features
+
+* **internals:** add rules for shadow component classes ([#94](https://github.com/warp-ds/drive/issues/94)) ([e7e65d1](https://github.com/warp-ds/drive/commit/e7e65d1a39ad9730213e8cdcd2ad59302ce1b39c))
+
 # [1.0.0-alpha.16](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2023-04-28)
 
 
