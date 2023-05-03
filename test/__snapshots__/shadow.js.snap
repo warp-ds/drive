@@ -2,8 +2,8 @@
 
 exports[`shadows work 1`] = `
 "/* layer: default */
-.shadow-large{box-shadow:var(--w-shadow-large, 0 6px 8px rgba(0, 0, 0 , .2), 0 10px 20px rgba(0, 0, 0 , .2));}
-.shadow-medium{box-shadow:var(--w-shadow-medium, 0 3px 8px rgba(0, 0, 0 , .2), 0 3px 6px rgba(0, 0, 0 , .2));}
-.shadow-small{box-shadow:var(--w-shadow-small, 0 1px 6px rgba(0, 0, 0 , .2), 0 1px 1px rgba(0, 0, 0 , .2));}
-.shadow-xlarge{box-shadow:var(--w-shadow-xlarge, 0 9px 12px rgba(0, 0, 0 , .2), 0 14px 28px rgba(0, 0, 0 , .2));}"
+.shadow-large{box-shadow:var(--w-shadow-large, 0 6px 8px rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .2));}
+.shadow-medium{box-shadow:var(--w-shadow-medium, 0 3px 8px rgba(0, 0, 0, .2), 0 3px 6px rgba(0, 0, 0, .2));}
+.shadow-small{box-shadow:var(--w-shadow-small, 0 1px 6px rgba(0, 0, 0, .2), 0 1px 1px rgba(0, 0, 0, .2));}
+.shadow-xlarge{box-shadow:var(--w-shadow-xlarge, 0 9px 12px rgba(0, 0, 0, .2), 0 14px 28px rgba(0, 0, 0, .2));}"
 `;
