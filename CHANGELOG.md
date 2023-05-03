@@ -1,3 +1,10 @@
+# [1.0.0-alpha.18](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.17...v1.0.0-alpha.18) (2023-05-03)
+
+
+### Bug Fixes
+
+* **shadows:** add default box-shadow values to generic shadow classes ([#96](https://github.com/warp-ds/drive/issues/96)) ([4adb2d6](https://github.com/warp-ds/drive/commit/4adb2d6095400ebc0bf9b3ce3b685a9c4b35a8e8))
+
 # [1.0.0-alpha.17](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.16...v1.0.0-alpha.17) (2023-05-03)
 
 
