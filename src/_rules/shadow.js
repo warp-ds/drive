@@ -1,6 +1,12 @@
+const defaultColor = 'rgba(0, 0, 0, .2)';
+
+const boxShadowDefaults = {
+  small: `0 1px 6px ${defaultColor}, 0 1px 1px ${defaultColor}`,
+  medium: `0 3px 8px ${defaultColor}, 0 3px 6px ${defaultColor}`,
+  large: `0 6px 8px ${defaultColor}, 0 10px 20px ${defaultColor}`,
+  xlarge: `0 9px 12px ${defaultColor}, 0 14px 28px ${defaultColor}`,
+};
+
 export const shadows = [
-  ['shadow-small', { 'box-shadow': 'var(--w-shadow-small)' }],
-  ['shadow-medium', { 'box-shadow': 'var(--w-shadow-medium)' }],
-  ['shadow-large', { 'box-shadow': 'var(--w-shadow-large)' }],
-  ['shadow-xlarge', { 'box-shadow': 'var(--w-shadow-xlarge)' }],
+  [/^shadow-(small|medium|large|xlarge)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size}, ${boxShadowDefaults[size]})` })],
 ];
