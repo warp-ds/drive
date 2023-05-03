@@ -1,4 +1,4 @@
-const defaultColor = 'rgba(0, 0, 0 , .2)';
+const defaultColor = 'rgba(0, 0, 0, .2)';
 
 const boxShadowDefaults = {
   small: `0 1px 6px ${defaultColor}, 0 1px 1px ${defaultColor}`,
