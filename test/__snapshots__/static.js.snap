@@ -142,7 +142,22 @@ exports[`static rules do static things 1`] = `
 .mix-blend-initial{mix-blend:initial;}
 .mix-blend-revert{mix-blend:revert;}
 .mix-blend-revert-layer{mix-blend:revert-layer;}
-.mix-blend-unset{mix-blend:unset;}"
+.mix-blend-unset{mix-blend:unset;}
+.touch-auto{touch-action:auto;}
+.touch-none{touch-action:none;}
+.touch-pan-x{touch-action:pan-x;}
+.touch-pan-y{touch-action:pan-y;}
+.touch-pan-left{touch-action:pan-left;}
+.touch-pan-right{touch-action:pan-right;}
+.touch-pan-up{touch-action:pan-up;}
+.touch-pan-down{touch-action:pan-down;}
+.touch-pinch-zoom{touch-action:pinch-zoom;}
+.touch-manipulation{touch-action:manipulation;}
+.touch-inherit{touch-action:inherit;}
+.touch-initial{touch-action:initial;}
+.touch-revert{touch-action:revert;}
+.touch-revert-layer{touch-action:revert-layer;}
+.touch-unset{touch-action:unset;}"
 `;
 
 exports[`static rules for object position > supports all predefined values in the position map 1`] = `
