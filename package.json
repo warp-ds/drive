@@ -13,6 +13,7 @@
     "#plugin": "./src/plugin.js",
     "#utils": "./src/_utils/index.js",
     "#rules": "./src/_rules/index.js",
+    "#shortcuts": "./src/_shortcuts/index.js",
     "#theme": "./src/theme.js",
     "#variants": "./src/_variants/index.js",
     "#preflights": "./src/_preflights/index.js",
