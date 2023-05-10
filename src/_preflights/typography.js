@@ -22,10 +22,37 @@ const lineHeightBaseValues = {
   '--w-line-height-xxxl': "5.6rem",
 };
 
+const headingsReset = `
+  h1  {
+    font-size: var(--w-font-size-xxl);
+    line-height:var(--w-line-height-xxl);
+  }
+
+  h2  {
+    font-size:var(--w-font-size-xl);
+    line-height:var(--w-line-height-xl);
+  }
+
+  h3  {
+    font-size:var(--w-font-size-l);
+    line-height:var(--w-line-height-l);
+  }
+
+  h4  {
+    font-size:var(--w-font-size-m);
+    line-height:var(--w-line-height-m);
+  }
+
+  h5  {
+    font-size:var(--w-font-size-s);
+    line-height:var(--w-line-height-s);
+  }
+`;
+
 export const typographyBase = {
   layer: 'preflights',
   getCSS() {
-    const css = entriesToCss(Object.entries({ ...fontSizeBaseValues, ...lineHeightBaseValues }));
-    return `${css}`;
+    const css = entriesToCss(Object.entries({ ...fontSizeBaseValues, ...lineHeightBaseValues }));
+    return `${css}${headingsReset}`;
   },
 };
