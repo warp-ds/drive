@@ -95,3 +95,25 @@ export const globalKeywords = [
   'revert-layer',
   'unset',
 ];
+
+// for backward compatible typography classes like text-12 or leading-16
+export const textMap = {
+  12: 'xs',
+  14: 's',
+  16: 'm',
+  20: 'ml',
+  22: 'l',
+  28: 'xl',
+  34: 'xxl',
+  48: 'xxxl',
+};
+export const lineHeightMap = {
+  16: 'xs',
+  18: 's',
+  22: 'm',
+  26: 'ml',
+  28: 'l',
+  34: 'xl',
+  41: 'xxl',
+  56: 'xxxl',
+};
