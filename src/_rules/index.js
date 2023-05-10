@@ -20,6 +20,7 @@ import * as shadow from "./shadow.js";
 import * as size from "./size.js";
 import * as spaceMargin from './space-margin.js';
 import * as spacing from "./spacing.js";
+import * as typography from "./typography.js";
 import * as staticRules from "./static.js";
 import * as transform from "./transform.js";
 import * as transition from "./transition.js";
@@ -52,6 +53,7 @@ const ruleGroups = {
   ...staticRules,
   ...transform,
   ...transition,
+  ...typography,
 };
 
 export const rules = [
@@ -84,3 +86,4 @@ export * from "./static.js";
 export * from "./table.js";
 export * from "./transform.js";
 export * from "./transition.js";
+export * from "./typography.js";
