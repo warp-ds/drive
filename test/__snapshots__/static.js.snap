@@ -152,12 +152,7 @@ exports[`static rules do static things 1`] = `
 .touch-pan-up{touch-action:pan-up;}
 .touch-pan-down{touch-action:pan-down;}
 .touch-pinch-zoom{touch-action:pinch-zoom;}
-.touch-manipulation{touch-action:manipulation;}
-.touch-inherit{touch-action:inherit;}
-.touch-initial{touch-action:initial;}
-.touch-revert{touch-action:revert;}
-.touch-revert-layer{touch-action:revert-layer;}
-.touch-unset{touch-action:unset;}"
+.touch-manipulation{touch-action:manipulation;}"
 `;
 
 exports[`static rules for object position > supports all predefined values in the position map 1`] = `
