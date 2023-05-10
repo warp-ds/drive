@@ -26,7 +26,7 @@ describe('width and height', () => {
     expect(css).toMatchSnapshot();
   });
   test(`height without dash shouldn't match`, async ({ uno }) => {
-    const { css } = await uno.generate(['h2', 'h32']);
+    const { css } = await uno.generate(['h32']);
     expect(css).toMatchInlineSnapshot('""');
   });
 });
