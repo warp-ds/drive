@@ -1,3 +1,10 @@
+# [1.0.0-alpha.22](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2023-05-11)
+
+
+### Features
+
+* **slider:** add border shadow for active and hover states ([#98](https://github.com/warp-ds/drive/issues/98)) ([0b36581](https://github.com/warp-ds/drive/commit/0b365818486c3029ad47a9d4056813141492b493))
+
 # [1.0.0-alpha.21](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2023-05-10)
 
 
