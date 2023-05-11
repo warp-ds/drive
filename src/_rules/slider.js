@@ -10,7 +10,7 @@ export const sliderHandleShadow = [
   [
     /^slider-handle-shadow-(active|hover)$/,
     ([, state]) => ({
-      'box-shadow': `${sliderStates[state]} ${defaultColor})`,
+      'box-shadow': `${sliderStates[state]} ${defaultColor}`,
     }),
   ],
 ];
