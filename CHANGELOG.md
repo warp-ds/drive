@@ -1,3 +1,10 @@
+# [1.0.0-alpha.23](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2023-05-11)
+
+
+### Bug Fixes
+
+* **slider:** fix slider bug ([#100](https://github.com/warp-ds/drive/issues/100)) ([31b9b0c](https://github.com/warp-ds/drive/commit/31b9b0cef0de0d270f5bea2f6b734fa32589b780))
+
 # [1.0.0-alpha.22](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2023-05-11)
 
 
