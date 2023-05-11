@@ -16,7 +16,6 @@ describe('slider', () => {
 
   test('get styling for slider outline none', async ({ uno }) => {
     const { css } = await uno.generate(['slider-outline-none']);
-    console.log("css", css);
     expect(css).toMatchSnapshot();
   });
 });
