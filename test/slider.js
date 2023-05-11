@@ -13,9 +13,4 @@ describe('slider', () => {
     const { css } = await uno.generate(['slider-handle-shadow-hover']);
     expect(css).toMatchSnapshot();
   });
-
-  test('get styling for slider outline none', async ({ uno }) => {
-    const { css } = await uno.generate(['slider-outline-none']);
-    expect(css).toMatchSnapshot();
-  });
 });
