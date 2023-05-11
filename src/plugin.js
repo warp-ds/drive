@@ -1,5 +1,6 @@
 import { preflights } from '#preflights';
 import { rules } from '#rules';
+import { shortcuts } from '#shortcuts';
 import { variants } from '#variants';
 import { useTheme } from '#theme';
 import { postprocess } from '#postprocess';
@@ -27,6 +28,7 @@ export function presetWarp (options = {}) {
     variants,
     preflights: hasPreflight ? preflights : [],
     postprocess: postprocess(externalizeClasses, externalClasses),
+    shortcuts,
   };
 }
 

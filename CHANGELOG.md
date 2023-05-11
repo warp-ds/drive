@@ -1,3 +1,17 @@
+# [1.0.0-alpha.21](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2023-05-10)
+
+
+### Features
+
+* **rules:** add typography rules ([#99](https://github.com/warp-ds/drive/issues/99)) ([6e1c363](https://github.com/warp-ds/drive/commit/6e1c363fdda9fb818faa29a8c1afeb1dc67d75f9))
+
+# [1.0.0-alpha.20](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2023-05-10)
+
+
+### Features
+
+* **touch-actions:** add support for touch actions ([#97](https://github.com/warp-ds/drive/issues/97)) ([54a3002](https://github.com/warp-ds/drive/commit/54a300285161d8e9c0a101eff4132d2439abda7b))
+
 # [1.0.0-alpha.19](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.18...v1.0.0-alpha.19) (2023-05-03)
 
 
