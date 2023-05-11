@@ -5,11 +5,26 @@ exports[`slider > get active slider shadow  1`] = `
 .slider-handle-shadow-active{box-shadow:0 0 0 8px rgba(0, 0, 0, .08));}"
 `;
 
+exports[`slider > get active slider shadow 1`] = `
+"/* layer: default */
+.slider-handle-shadow-active{box-shadow:0 0 0 8px rgba(0, 0, 0, .08);}"
+`;
+
 exports[`slider > get hover slider shadow  1`] = `
 "/* layer: default */
 .slider-handle-shadow-hover{box-shadow:0 0 0 6px rgba(0, 0, 0, .08));}"
 `;
 
+exports[`slider > get hover slider shadow 1`] = `
+"/* layer: default */
+.slider-handle-shadow-hover{box-shadow:0 0 0 6px rgba(0, 0, 0, .08);}"
+`;
+
 exports[`slider > get hower shadow 1`] = `""`;
 
 exports[`slider > get slider shadow 1`] = `""`;
+
+exports[`slider > get styling for slider outline none 1`] = `
+"/* layer: default */
+outline:2px solid rgba(0, 0, 0, 0);outline-offset:2px;"
+`;
