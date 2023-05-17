@@ -14,3 +14,13 @@ export const sliderHandleShadow = [
     }),
   ],
 ];
+
+export const sliderOutlineNone = [
+  [
+    /^slider-handle-outline-none$/,
+    () => ({
+      outline: 'rgba(0, 0, 0, 0) solid 2px',
+      'outline-offset': '2px',
+    }),
+  ],
+];
