@@ -35,12 +35,14 @@ html {
 
 /*
 1. Remove the margin in all browsers.
-2. Inherit line-height from 'html' so users can set them as a class directly on the 'html' element.
+2. Base font size.
+3. Base line height.
 */
 
 body {
   margin: 0; /* 1 */
-  line-height: inherit; /* 2 */
+  font-size:var(--w-font-size-m); /* 2 */ 
+  line-height:var(--w-line-height-m); /* 3 */
 }
 
 /*
@@ -82,8 +84,13 @@ Reset links to optimize for opt-in styling instead of opt-out.
 */
 
 a {
-  color: inherit;
+  color: var(--w-color-text-link);
   text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--w-color-text-link);
+  text-decoration: underline;
 }
 
 /*
