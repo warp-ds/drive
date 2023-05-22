@@ -274,6 +274,20 @@ exports[`min width and height > min-width 1`] = `
 .min-w-screen{min-width:100vw;}"
 `;
 
+exports[`min width and height with arbitrary values > min height with css variables and anything else 1`] = `
+"/* layer: default */
+.min-h-\\\\[--css-variable\\\\],
+.min-h-\\\\[var\\\\(--css-variable\\\\)\\\\]{min-height:var(--css-variable);}
+.min-h-\\\\[customStuff\\\\]{min-height:customStuff;}"
+`;
+
+exports[`min width and height with arbitrary values > min width with css variables and anything else 1`] = `
+"/* layer: default */
+.min-w-\\\\[--css-variable\\\\],
+.min-w-\\\\[var\\\\(--css-variable\\\\)\\\\]{min-width:var(--css-variable);}
+.min-w-\\\\[customStuff\\\\]{min-width:customStuff;}"
+`;
+
 exports[`min width and height with arbitrary values > min-height with pixel unit 1`] = `
 "/* layer: default */
 .min-h-\\\\[20000px\\\\]{min-height:20000px;}
@@ -438,6 +452,13 @@ exports[`width and height > width 1`] = `
 .w-screen{width:100vw;}"
 `;
 
+exports[`width and height with arbitrary values > height with css variables and anything else 1`] = `
+"/* layer: default */
+.h-\\\\[--css-variable\\\\],
+.h-\\\\[var\\\\(--css-variable\\\\)\\\\]{height:var(--css-variable);}
+.h-\\\\[customStuff\\\\]{height:customStuff;}"
+`;
+
 exports[`width and height with arbitrary values > height with pixel unit 1`] = `
 "/* layer: default */
 .h-\\\\[20000px\\\\]{height:20000px;}
@@ -464,6 +485,13 @@ exports[`width and height with arbitrary values > height with rem values 1`] = `
 .h-\\\\[20000\\\\]{height:2000rem;}
 .h-\\\\[378\\\\]{height:37.8rem;}
 .h-\\\\[99999\\\\]{height:9999.9rem;}"
+`;
+
+exports[`width and height with arbitrary values > width with css variables and anything else 1`] = `
+"/* layer: default */
+.w-\\\\[--css-variable\\\\],
+.w-\\\\[var\\\\(--css-variable\\\\)\\\\]{width:var(--css-variable);}
+.w-\\\\[customStuff\\\\]{width:customStuff;}"
 `;
 
 exports[`width and height with arbitrary values > width with pixel unit 1`] = `
