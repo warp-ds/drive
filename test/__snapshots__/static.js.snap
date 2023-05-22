@@ -153,7 +153,7 @@ exports[`static rules do static things 1`] = `
 .touch-pan-down{touch-action:pan-down;}
 .touch-pinch-zoom{touch-action:pinch-zoom;}
 .touch-manipulation{touch-action:manipulation;}
-.pb-safe{padding-bottom:calc(32px + env(safe-area-inset-bottom, 0px));}
+.pb-safe{padding-bottom:env(safe-area-inset-bottom, 0px);}
 .mb-safe{margin-bottom:env(safe-area-inset-bottom, 0px);}"
 `;
 
@@ -202,5 +202,6 @@ exports[`static rules for object position > supports all predefined values in th
 .object-tl,
 .object-top-left{object-position:top left;}
 .object-top-right,
-.object-tr{object-position:top right;}"
+.object-tr{object-position:top right;}
+.pb-safe-\\\\[32\\\\]{padding-bottom:calc(32px + env(safe-area-inset-bottom, 0px));}"
 `;

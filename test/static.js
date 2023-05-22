@@ -16,7 +16,8 @@ test('static rules do static things', async ({ uno }) => {
 describe('static rules for object position', () => {
   test('supports all predefined values in the position map', async ({ uno }) => {
     const staticClasses = Object.keys(positionMap).map(position => `object-${position}`);
-    const { css } = await uno.generate(staticClasses);
+    const arbitraryClasses = ['pb-safe-[32]'];
+    const { css } = await uno.generate([...staticClasses, ...arbitraryClasses]);
     expect(css).toMatchSnapshot();
   });
   test('do not support invalid values', async ({ uno }) => {

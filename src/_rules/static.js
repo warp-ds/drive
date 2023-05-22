@@ -189,6 +189,7 @@ export const touchAction = [
 ];
 
 export const safeArea = [
-  ['pb-safe', { 'padding-bottom': 'calc(32px + env(safe-area-inset-bottom, 0px))' }],
+  ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom, 0px)' }],
   ['mb-safe', { 'margin-bottom': 'env(safe-area-inset-bottom, 0px)' }],
+  [/^pb-safe-\[([\d]+)]$/, ([, d]) =>  ({ 'padding-bottom': `calc(${d}px + env(safe-area-inset-bottom, 0px))` })],
 ];
