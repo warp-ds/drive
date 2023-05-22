@@ -187,3 +187,9 @@ export const touchAction = [
   ['touch-pinch-zoom', { 'touch-action': 'pinch-zoom' }],
   ['touch-manipulation', { 'touch-action': 'manipulation' }],
 ];
+
+export const safeArea = [
+  ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom, 0px)' }],
+  ['mb-safe', { 'margin-bottom': 'env(safe-area-inset-bottom, 0px)' }],
+  [/^pb-safe-\[([\d]+)]$/, ([, d]) =>  ({ 'padding-bottom': `calc(${d}px + env(safe-area-inset-bottom, 0px))` })],
+];
