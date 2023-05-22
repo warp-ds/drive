@@ -1,3 +1,10 @@
+# [1.0.0-alpha.24](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.23...v1.0.0-alpha.24) (2023-05-22)
+
+
+### Features
+
+* rule for adding safe area inset from the bottom edge of the viewport ([#103](https://github.com/warp-ds/drive/issues/103)) ([88186f6](https://github.com/warp-ds/drive/commit/88186f63642155837e534dc4797a3617e7426102))
+
 # [1.0.0-alpha.23](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2023-05-11)
 
 
