@@ -30,16 +30,24 @@ html {
   -webkit-tap-highlight-color: transparent; /* 5 */
 }
 
+html, :host {
+  font-family: var(--w-font-family);
+}
+
 /*
 1. Remove the margin in all browsers.
 2. Base font size.
 3. Base line height.
+4. Base background color.
+5. Base text color.
 */
 
 body {
   margin: 0; /* 1 */
   font-size: var(--w-font-size-m); /* 2 */ 
   line-height: var(--w-line-height-m); /* 3 */
+  background-color: var(--w-color-background); /* 4 */
+  color: var(--w-color-text); /* 5 */
 }
 
 /*
@@ -77,17 +85,19 @@ h6 {
 }
 
 /*
-Reset links to optimize for opt-in styling instead of opt-out.
+Reset links.
 */
 
 a {
+  cursor: pointer;
+  text-decoration: none;
   color: var(--w-color-text-link);
-  text-decoration: inherit;
 }
 
-a:hover {
-  color: var(--w-color-text-link);
-  text-decoration: underline;
+a:hover,
+a:focus,
+a:active {
+  text-decoration: var(--w-decoration-text-link);
 }
 
 /*
