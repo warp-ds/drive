@@ -1,5 +1,20 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`drop shadow s 1`] = `
+"/* layer: default */
+.drop-shadow{filter:drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px);}"
+`;
+
+exports[`drop shadow work 1`] = `
+"/* layer: default */
+.drop-shadow{filter:drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px);}"
+`;
+
+exports[`drop shadows 1`] = `
+"/* layer: default */
+.drop-shadow{filter:drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px);}"
+`;
+
 exports[`shadows work 1`] = `
 "/* layer: default */
 .shadow-large{box-shadow:var(--w-shadow-large, 0 6px 8px rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .2));}
