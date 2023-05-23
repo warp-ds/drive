@@ -17,34 +17,29 @@ export const twReset = {
 
 /*
 1. Base font size.
-2. Base line height.
-3. Prevent adjustments of font size after orientation changes in iOS.
-4-5. Use a more readable tab size.
-6. Use the user's configured 'sans' font-family by default.
-7. Use transparent color of the highlight that appears over an element while it's being tapped
+2. Prevent adjustments of font size after orientation changes in iOS.
+3-4. Use a more readable tab size.
+5. Use transparent color of the highlight that appears over an element while it's being tapped
 */
 
 html {
-  font-size:var(--w-font-size-m); /* 1 */ 
-  line-height:var(--w-line-height-m); /* 2 */
-  -webkit-text-size-adjust: 100%; /* 3 */
-  -moz-tab-size: 4; /* 4 */
-  tab-size: 4; /* 5 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 6 */
-  ${theme.usingPixels ? '' : 'font-size: 62.5%;'}
-  -webkit-tap-highlight-color: transparent; /* 7 */
+  font-size: 62.5%; /* 1 */ 
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 4 */
+  -webkit-tap-highlight-color: transparent; /* 5 */
 }
 
 /*
 1. Remove the margin in all browsers.
-2. Inherit font size from html.
-3. Inherit line height from html.
+2. Base font size.
+3. Base line height.
 */
 
 body {
   margin: 0; /* 1 */
-  font-size: inherit; /* 2 */ 
-  line-height: inherit; /* 3 */
+  font-size: var(--w-font-size-m); /* 2 */ 
+  line-height: var(--w-line-height-m); /* 3 */
 }
 
 /*
