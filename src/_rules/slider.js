@@ -15,6 +15,7 @@ export const sliderHandleShadow = [
   ],
 ];
 
+// TODO: Replace with outline-offset when implemented
 export const sliderOutlineNone = [
   [
     /^slider-handle-outline-none$/,
