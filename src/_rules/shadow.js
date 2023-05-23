@@ -1,3 +1,5 @@
+// Todo: Handle dynamic rgba colors instead of constant colors
+
 const defaultColor = 'rgba(0, 0, 0, .2)';
 
 const boxShadowDefaults = {
@@ -11,6 +13,15 @@ export const shadows = [
   [/^shadow-(small|medium|large|xlarge)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size}, ${boxShadowDefaults[size]})` })],
 ];
 
-export const dropShadow = [
-  [/^drop-shadow$/, () => ({ 'filter': 'drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px)' })],
+const dropShadowDefaultColor = '64, 64, 64';
+
+const dropShadowDefaults = {
+  small: [`drop-shadow(rgba(${dropShadowDefaultColor}, .16) 0 1px 6px) drop-shadow(rgba(${dropShadowDefaultColor}, .24) 0 1px 1px)`],
+  medium: [`drop-shadow(rgba(${dropShadowDefaultColor}, .24) 0 3px 8px) drop-shadow(rgba(${dropShadowDefaultColor}, .16) 0 3px 6px)`],
+  large: [`drop-shadow(rgba(${dropShadowDefaultColor}, .23) 0 6px 8px) drop-shadow(rgba(${dropShadowDefaultColor}, .19) 0 10px 20px)`],
+  xlarge: [`drop-shadow(rgba(${dropShadowDefaultColor}, .22) 0 9px 12px) drop-shadow(rgba(${dropShadowDefaultColor}, .25) 0 14px 28px)`],
+};
+
+export const dropShadows = [
+  [/^drop-shadow-(small|medium|large|xlarge)$/, ([, size]) => ({ 'filter': dropShadowDefaults[size] })],
 ];

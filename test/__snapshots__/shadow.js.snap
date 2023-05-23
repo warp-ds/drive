@@ -1,18 +1,11 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`drop shadow s 1`] = `
-"/* layer: default */
-.drop-shadow{filter:drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px);}"
-`;
-
-exports[`drop shadow work 1`] = `
-"/* layer: default */
-.drop-shadow{filter:drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px);}"
-`;
-
 exports[`drop shadows 1`] = `
 "/* layer: default */
-.drop-shadow{filter:drop-shadow(rgba(64, 64, 64, 0.24) 0px 3px 8px) drop-shadow(rgba(64, 64, 64, 0.16) 0px 3px 6px);}"
+.drop-shadow-large{filter:drop-shadow(rgba(64, 64, 64, .23) 0 6px 8px) drop-shadow(rgba(64, 64, 64, .19) 0 10px 20px);}
+.drop-shadow-medium{filter:drop-shadow(rgba(64, 64, 64, .24) 0 3px 8px) drop-shadow(rgba(64, 64, 64, .16) 0 3px 6px);}
+.drop-shadow-small{filter:drop-shadow(rgba(64, 64, 64, .16) 0 1px 6px) drop-shadow(rgba(64, 64, 64, .24) 0 1px 1px);}
+.drop-shadow-xlarge{filter:drop-shadow(rgba(64, 64, 64, .22) 0 9px 12px) drop-shadow(rgba(64, 64, 64, .25) 0 14px 28px);}"
 `;
 
 exports[`shadows work 1`] = `
