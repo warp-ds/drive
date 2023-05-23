@@ -1,3 +1,10 @@
+# [1.0.0-alpha.25](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.24...v1.0.0-alpha.25) (2023-05-23)
+
+
+### Features
+
+* add css variables as arbitrary values for w and h ([#104](https://github.com/warp-ds/drive/issues/104)) ([455c4cb](https://github.com/warp-ds/drive/commit/455c4cbd0c437a374d10f31b0eadf58b78cf868f))
+
 # [1.0.0-alpha.24](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.23...v1.0.0-alpha.24) (2023-05-22)
 
 
