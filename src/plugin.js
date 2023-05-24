@@ -9,7 +9,6 @@ import { postprocess } from '#postprocess';
  * @typedef PluginOptions
  * @type {Object}
  * @property {boolean} development // not in use yet
- * @property {boolean} usePreflight - force preflights to be included/excluded
  * @property {boolean} externalizeClasses - force external or 'core' classes to be included/excluded
  * @property {boolean} usePixels - use pixel spacing instead of rem
  */
@@ -17,7 +16,7 @@ import { postprocess } from '#postprocess';
 // TODO: improve generic type passed here
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
-  const hasPreflight = options.usePreflight ?? options.development;
+  const hasPreflight = options.development;
   const externalizeClasses = options.externalizeClasses ?? !options.development;
   const externalClasses = options.externalClasses ?? []; // will possibly be our own list in the future
   const theme = useTheme(options);

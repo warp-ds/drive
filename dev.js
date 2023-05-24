@@ -23,9 +23,6 @@ const {
     usePixels: {
       type: 'boolean',
     },
-    usePreflight: {
-      type: 'boolean',
-    },
   },
 });
 
