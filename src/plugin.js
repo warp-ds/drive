@@ -16,8 +16,8 @@ import { postprocess } from '#postprocess';
 // TODO: improve generic type passed here
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
-  const hasPreflight = options.development;
-  const externalizeClasses = options.externalizeClasses ?? !options.development;
+  const isDevelopmentMode = options.development;
+  const externalizeClasses = options.externalizeClasses ?? !isDevelopmentMode;
   const externalClasses = options.externalClasses ?? []; // will possibly be our own list in the future
   const theme = useTheme(options);
   return {
@@ -25,7 +25,7 @@ export function presetWarp (options = {}) {
     theme,
     rules,
     variants,
-    preflights: hasPreflight ? preflights : [],
+    preflights: isDevelopmentMode ? [] : preflights,
     postprocess: postprocess(externalizeClasses, externalClasses),
     shortcuts,
   };
