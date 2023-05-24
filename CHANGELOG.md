@@ -1,3 +1,24 @@
+# [1.0.0-alpha.27](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.26...v1.0.0-alpha.27) (2023-05-24)
+
+
+### Features
+
+* **slider:** add outline-none styling for slider ([#102](https://github.com/warp-ds/drive/issues/102)) ([48fdd8a](https://github.com/warp-ds/drive/commit/48fdd8aeedb737d9449cf8cf1050b85297bb85be))
+
+# [1.0.0-alpha.26](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2023-05-23)
+
+
+### Bug Fixes
+
+* add base styles to preflight ([#101](https://github.com/warp-ds/drive/issues/101)) ([19ec46b](https://github.com/warp-ds/drive/commit/19ec46b09384c24cbf5fd83792eba04171fcdd34))
+
+# [1.0.0-alpha.25](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.24...v1.0.0-alpha.25) (2023-05-23)
+
+
+### Features
+
+* add css variables as arbitrary values for w and h ([#104](https://github.com/warp-ds/drive/issues/104)) ([455c4cb](https://github.com/warp-ds/drive/commit/455c4cbd0c437a374d10f31b0eadf58b78cf868f))
+
 # [1.0.0-alpha.24](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.23...v1.0.0-alpha.24) (2023-05-22)
 
 

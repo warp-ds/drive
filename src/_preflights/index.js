@@ -1,6 +1,5 @@
 import { twReset } from './tw-reset.js';
-import { formPreflight } from './forms/export.js';
 import { transformBase } from './transform.js';
-import { typographyBase } from './typography.js';
+import { headingsBase } from './headings.js';
 
-export const preflights = [twReset, transformBase, formPreflight, typographyBase];
+export const preflights = [twReset, transformBase, headingsBase];

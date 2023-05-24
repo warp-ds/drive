@@ -16,31 +16,38 @@ export const twReset = {
 }
 
 /*
-1. Use a consistent sensible line-height in all browsers.
+1. Base font size.
 2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured 'sans' font-family by default.
+3-4. Use a more readable tab size.
 5. Use transparent color of the highlight that appears over an element while it's being tapped
 */
 
-html {
-  line-height: 1.5; /* 1 */
+html, :host {
+  font-size: 62.5%; /* 1 */ 
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
-  tab-size: 4; /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
-  ${theme.usingPixels ? '' : 'font-size: 62.5%;'}
+  tab-size: 4; /* 4 */
   -webkit-tap-highlight-color: transparent; /* 5 */
+  font-family: var(--w-font-family); /* 6 */
+  line-height: var(--w-line-height-m); /* 7 */
 }
 
 /*
 1. Remove the margin in all browsers.
-2. Inherit line-height from 'html' so users can set them as a class directly on the 'html' element.
+2. Base font size.
+3. Base background color.
+4. Base text color.
+5. Always stretch body to fill the width, this makes the behaviour of the scrollbar a little nicer in some cases.
+6. Always show Scrollbar to prevent content jumping in certain situations (dynamic loading etc).
 */
 
 body {
   margin: 0; /* 1 */
-  line-height: inherit; /* 2 */
+  font-size: var(--w-font-size-m); /* 2 */ 
+  background-color: var(--w-color-background); /* 3 */
+  color: var(--w-color-text); /* 4 */
+  min-height: 100%; /* 5 */
+  overflow-y: scroll; /* 6 */
 }
 
 /*
@@ -78,12 +85,19 @@ h6 {
 }
 
 /*
-Reset links to optimize for opt-in styling instead of opt-out.
+Reset links.
 */
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--w-color-text-link);
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: var(--w-decoration-text-link);
 }
 
 /*
@@ -92,7 +106,7 @@ Add the correct font weight in Edge and Safari.
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 /*
@@ -106,14 +120,6 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-/*
-Add the correct font size in all browsers.
-*/
-
-small {
-  font-size: 80%;
 }
 
 /*
@@ -359,5 +365,62 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+/*
+Base styles from Fabric below, migrated from https://github.com/fabric-ds/css/blob/next/src/base.css
+*/
+
+dt,
+dd {
+  margin: 0 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol,
+dl,
+p,
+blockquote {
+  margin: 0 0 8px 0;
+}
+
+/* Used to be part of normalize.css */
+[hidden] {
+  display: none !important;
+}
+
+/* tabindex=-1 are often used on skiplink targets, this ensures the outline is only visible when it should */
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* fieldset + legend tries to place the legend on the fieldset's "line", we need to override this to get sane behavior */
+legend {
+  display: table;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  & + * {
+    clear: both;
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
   `,
 };
