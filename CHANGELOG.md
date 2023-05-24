@@ -1,3 +1,10 @@
+# [1.0.0-alpha.27](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.26...v1.0.0-alpha.27) (2023-05-24)
+
+
+### Features
+
+* **slider:** add outline-none styling for slider ([#102](https://github.com/warp-ds/drive/issues/102)) ([48fdd8a](https://github.com/warp-ds/drive/commit/48fdd8aeedb737d9449cf8cf1050b85297bb85be))
+
 # [1.0.0-alpha.26](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2023-05-23)
 
 
