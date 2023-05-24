@@ -15,6 +15,7 @@ export const sliderHandleShadow = [
   ],
 ];
 
+// Solution from Fabric for ouline styling for slider
 // TODO: Replace with outline-offset when implemented
 export const sliderOutlineNone = [
   [
