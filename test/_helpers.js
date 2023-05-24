@@ -2,10 +2,10 @@ import { createGenerator } from '@unocss/core';
 import { beforeEach } from 'vitest';
 import { presetWarp } from '#plugin';
 
-export const getGenerator = (opts = {}) => createGenerator({ presets: [presetWarp({ ...opts, development: true })] });
+export const getGenerator = (opts = {}) => createGenerator({ presets: [presetWarp({ ...opts, test: true })] });
 export const setup = (opts = {}) => {
   beforeEach(t => {
-    t.uno = getGenerator({ ...opts, development: true });
+    t.uno = getGenerator({ ...opts, test: true });
   });
 };
 
