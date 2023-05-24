@@ -10,7 +10,7 @@ test('shadows work', async ({ uno }) => {
 });
 
 test('drop shadows', async ({ uno }) => {
-  const classes = ['drop-shadow-small', 'drop-shadow-medium', 'drop-shadow-large', 'drop-shadow-xlarge'];
+  const classes = ['drop-shadow-s', 'drop-shadow-m', 'drop-shadow-l', 'drop-shadow-xl'];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
