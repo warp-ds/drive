@@ -1,3 +1,10 @@
+# [1.0.0-alpha.29](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2023-05-25)
+
+
+### Bug Fixes
+
+* restructure html and body styling to make shadow dom styling work ([#107](https://github.com/warp-ds/drive/issues/107)) ([7eb3e94](https://github.com/warp-ds/drive/commit/7eb3e944841d8aacfe7e25c23a477ed5c2ffdfb5))
+
 # [1.0.0-alpha.28](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2023-05-24)
 
 
