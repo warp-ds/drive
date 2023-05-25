@@ -17,37 +17,39 @@ export const twReset = {
 
 /*
 1. Base font size.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3-4. Use a more readable tab size.
-5. Use transparent color of the highlight that appears over an element while it's being tapped
 */
 
-html, :host {
+html {
   font-size: 62.5%; /* 1 */ 
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -moz-tab-size: 4; /* 3 */
-  tab-size: 4; /* 4 */
-  -webkit-tap-highlight-color: transparent; /* 5 */
-  font-family: var(--w-font-family); /* 6 */
-  line-height: var(--w-line-height-m); /* 7 */
 }
 
 /*
-1. Remove the margin in all browsers.
-2. Base font size.
-3. Base background color.
-4. Base text color.
-5. Always stretch body to fill the width, this makes the behaviour of the scrollbar a little nicer in some cases.
-6. Always show Scrollbar to prevent content jumping in certain situations (dynamic loading etc).
+1. Prevent adjustments of font size after orientation changes in iOS.
+2-3. Use a more readable tab size.
+4. Use transparent color of the highlight that appears over an element while it's being tapped
+5. Base font-family.
+6. Base font size.
+7. Base line height.
+8. Remove the margin in all browsers.
+9. Base background color.
+10. Base text color.
+11. Always stretch body to fill the width, this makes the behaviour of the scrollbar a little nicer in some cases.
+12. Always show Scrollbar to prevent content jumping in certain situations (dynamic loading etc).
 */
 
-body {
-  margin: 0; /* 1 */
-  font-size: var(--w-font-size-m); /* 2 */ 
-  background-color: var(--w-color-background); /* 3 */
-  color: var(--w-color-text); /* 4 */
-  min-height: 100%; /* 5 */
-  overflow-y: scroll; /* 6 */
+body, :host {
+  -webkit-text-size-adjust: 100%; /* 1 */
+  -moz-tab-size: 4; /* 2 */
+  tab-size: 4; /* 3 */
+  -webkit-tap-highlight-color: transparent; /* 4 */
+  font-family: var(--w-font-family); /* 5 */
+  font-size: var(--w-font-size-m); /* 6 */ 
+  line-height: var(--w-line-height-m); /* 7 */
+  margin: 0; /* 8 */
+  background-color: var(--w-color-background); /* 9 */
+  color: var(--w-color-text); /* 10 */
+  min-height: 100%; /* 11 */
+  overflow-y: scroll; /* 12 */
 }
 
 /*
