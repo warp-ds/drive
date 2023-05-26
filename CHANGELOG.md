@@ -1,3 +1,10 @@
+# [1.0.0-alpha.30](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2023-05-26)
+
+
+### Bug Fixes
+
+* improve syntax to clear the float for the elements after legend ([#108](https://github.com/warp-ds/drive/issues/108)) ([75f4cac](https://github.com/warp-ds/drive/commit/75f4cac3dfb8307f1dfc9e580fd69b4c95523bd3))
+
 # [1.0.0-alpha.29](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2023-05-25)
 
 
