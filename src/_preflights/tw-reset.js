@@ -407,10 +407,10 @@ legend {
   margin: 0;
   padding: 0;
   width: 100%;
+}
 
-  & + * {
-    clear: both;
-  }
+legend + * {
+  clear: both;
 }
 
 fieldset {
