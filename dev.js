@@ -11,9 +11,6 @@ const {
       type: 'string',
       short: 'c',
     },
-    development: {
-      type: 'boolean',
-    },
     externalClasses: {
       type: 'boolean',
     },
@@ -26,7 +23,7 @@ const {
   },
 });
 
-const uno = createGenerator({ presets: [presetWarp( options, { development: true } )] });
+const uno = createGenerator({ presets: [presetWarp( options, { skipPreflight: true } )] });
 const devClasses = ['m-16!', 'opacity-50'];
 const classes = cliClasses ?? devClasses;
 const result = await uno.generate(classes);

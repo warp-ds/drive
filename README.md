@@ -4,6 +4,11 @@
 
 ## plugin API
 
+### skipPreflight
+
+- `boolean`
+- Internal use only, omits preflights from the build
+
 ### usePixels
 
 - `boolean`
@@ -21,7 +26,7 @@
 
 Run `node dev.js` or `pnpm dev`
 
-Usage: node dev.js [-c <string> | --cliClasses=<string>] [--usePixels] [--development] [--externalClasses] [--externalizeClasses]
+Usage: node dev.js [-c <string> | --cliClasses=<string>] [--usePixels] [--development] [--externalClasses] [--externalizeClasses] [--usePreflight]
 
 Example: `node dev.js --usePixels --development --cliClasses=m-2`
 ! Do not use shortcut when passing negative values, e.g. `node dev.js --cliClasses='-m-2! gap-2'`
