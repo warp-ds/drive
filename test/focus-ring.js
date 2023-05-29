@@ -6,6 +6,7 @@ setup();
 test("focus ring", async (t) => {
   const classes = [
     "focusable",
+    "peer:focus:focusable",
     "focusable-inset",
   ];
 
