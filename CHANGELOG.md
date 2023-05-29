@@ -1,3 +1,10 @@
+# [1.0.0-alpha.31](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2023-05-29)
+
+
+### Bug Fixes
+
+* focusable classes ([#109](https://github.com/warp-ds/drive/issues/109)) ([8e3ca96](https://github.com/warp-ds/drive/commit/8e3ca96729944ed663fa0cc17ab76fccf9ccc7a6))
+
 # [1.0.0-alpha.30](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2023-05-26)
 
 
