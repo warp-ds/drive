@@ -1,3 +1,31 @@
+# [1.0.0-alpha.30](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2023-05-26)
+
+
+### Bug Fixes
+
+* improve syntax to clear the float for the elements after legend ([#108](https://github.com/warp-ds/drive/issues/108)) ([75f4cac](https://github.com/warp-ds/drive/commit/75f4cac3dfb8307f1dfc9e580fd69b4c95523bd3))
+
+# [1.0.0-alpha.29](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2023-05-25)
+
+
+### Bug Fixes
+
+* restructure html and body styling to make shadow dom styling work ([#107](https://github.com/warp-ds/drive/issues/107)) ([7eb3e94](https://github.com/warp-ds/drive/commit/7eb3e944841d8aacfe7e25c23a477ed5c2ffdfb5))
+
+# [1.0.0-alpha.28](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2023-05-24)
+
+
+### Features
+
+* **dropshadow:** add drop shadow ([#105](https://github.com/warp-ds/drive/issues/105)) ([9b68cbe](https://github.com/warp-ds/drive/commit/9b68cbe52739127773edbf938929e1b21b17d8e6))
+
+# [1.0.0-alpha.27](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.26...v1.0.0-alpha.27) (2023-05-24)
+
+
+### Features
+
+* **slider:** add outline-none styling for slider ([#102](https://github.com/warp-ds/drive/issues/102)) ([48fdd8a](https://github.com/warp-ds/drive/commit/48fdd8aeedb737d9449cf8cf1050b85297bb85be))
+
 # [1.0.0-alpha.26](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2023-05-23)
 
 
