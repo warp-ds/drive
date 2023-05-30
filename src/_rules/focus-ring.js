@@ -1,4 +1,4 @@
-import { entriesToCss } from '@unocss/core';
+import { entriesToCss, escapeSelector } from '@unocss/core';
 
 // TODO: use actual variables and values when those has been defined
 const focusRingStyle = entriesToCss(Object.entries({
@@ -14,11 +14,30 @@ const focusRingInsetStyle = {
   '--w-outline-offset': '-3px',
 };
 
+const combinatorsByTag = {
+  'group': ' ',
+  'peer': '~',
+  'parent': '>',
+  'previous': '+',
+};
+
 export const focusRing = [
-  [/^focusable$/, ([selector]) => {
-    const focus = `.${selector}:focus,.${selector}:focus-visible{${focusRingStyle}}`;
-    const notFocusVisible = `.${selector}:not(:focus-visible){${outlineNone}}`;
-    return focus + notFocusVisible;
+  [/focusable$/, ([], { rawSelector: selectorWithVariant, currentSelector }) => {
+    if (currentSelector !== selectorWithVariant) {
+      const escapedSelector = escapeSelector(selectorWithVariant);
+      const tagLabel = selectorWithVariant?.split('-')?.[0] ?? '';
+      const combinator = combinatorsByTag[tagLabel];
+      if (!!combinator) {
+        const focus = `.${tagLabel}:focus${combinator}.${escapedSelector},.${tagLabel}:focus-visible${combinator}.${escapedSelector}{${focusRingStyle}}`;
+        const notFocusVisible = `.${tagLabel}:not(:focus-visible)${combinator}.${escapedSelector}{${outlineNone}}`;
+        return focus + notFocusVisible;
+      }
+      return `.${escapedSelector}:${selectorWithVariant.split(':')?.[0]}{${focusRingStyle}}`;
+    } else {
+      const focus = `.${currentSelector}:focus,.${currentSelector}:focus-visible{${focusRingStyle}}`;
+      const notFocusVisible = `.${currentSelector}:not(:focus-visible){${outlineNone}}`;
+      return focus + notFocusVisible;
+    }
   }],
   ["focusable-inset", { ... focusRingInsetStyle }],
 ];
