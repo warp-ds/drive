@@ -20,7 +20,10 @@ export const animations = [
   }],
   [/^animate-spinner$/, ([_selector]) => {
     const selector = escapeSelector(_selector);
-    const base = `.${selector}{${spinner}};.${selector}:before,.${selector}:before{${spinnerPseudo}};.${selector}after:{${spinnerAfter}};.${selector}:before{${spinnerBefore}}`;
-    return base + spinnerKeyframes;
+    const baseSpinner = `.${selector}{${spinner}}`;
+    const pseudo = `.${selector}::before,.${selector}::after{${spinnerPseudo}}`;
+    const pseudoAfter = `.${selector}::after{${spinnerAfter}}`;
+    const pseudoBefore = `.${selector}::before{${spinnerBefore}}`;
+    return baseSpinner + pseudo + pseudoAfter + pseudoBefore + spinnerKeyframes;
   }],
 ];

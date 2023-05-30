@@ -7,15 +7,10 @@ import {
   variantPseudoClassesAndElements,
 } from '@unocss/preset-mini/variants';
 import { variantSpaceAndDivide } from './spaceAndDivide.js';
+import { variantLastChild } from './lastChild.js';
 
 export const variants = [
-  (matcher) => {
-    if (!matcher.startsWith('last-child:')) { return matcher; };
-    return {
-      matcher: matcher.slice(11),
-      selector: () => `.last-child\\:mb-0>:last-child`,
-    };
-  },
+  variantLastChild,
   variantBreakpoints(),
   variantImportant(),
   variantNegative,
@@ -26,6 +21,7 @@ export const variants = [
 ];
 
 export {
+  variantLastChild,
   variantBreakpoints,
   variantImportant,
   variantNegative,
