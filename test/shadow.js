@@ -4,7 +4,7 @@ import { setup } from './_helpers.js';
 setup();
 
 test('shadows work', async ({ uno }) => {
-  const classes = ['shadow-small', 'shadow-medium', 'shadow-large', 'shadow-xlarge'];
+  const classes = ['shadow-s', 'shadow-m', 'shadow-l', 'shadow-xl'];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });

@@ -3,15 +3,14 @@
 const defaultColor = 'rgba(0, 0, 0, .2)';
 
 const boxShadowDefaults = {
-  small: `0 1px 6px ${defaultColor}, 0 1px 1px ${defaultColor}`,
-  medium: `0 3px 8px ${defaultColor}, 0 3px 6px ${defaultColor}`,
-  large: `0 6px 8px ${defaultColor}, 0 10px 20px ${defaultColor}`,
-  xlarge: `0 9px 12px ${defaultColor}, 0 14px 28px ${defaultColor}`,
+  s: `0 1px 6px ${defaultColor}, 0 1px 1px ${defaultColor}`,
+  m: `0 3px 8px ${defaultColor}, 0 3px 6px ${defaultColor}`,
+  l: `0 6px 8px ${defaultColor}, 0 10px 20px ${defaultColor}`,
+  xl: `0 9px 12px ${defaultColor}, 0 14px 28px ${defaultColor}`,
 };
 
-// TODO: rename to -s, -m, -l, -xs
 export const shadows = [
-  [/^shadow-(small|medium|large|xlarge)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size}, ${boxShadowDefaults[size]})` })],
+  [/^shadow-(s|m|l|xl)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size}, ${boxShadowDefaults[size]})` })],
 ];
 
 const dropShadowDefaultColor = '64, 64, 64';
