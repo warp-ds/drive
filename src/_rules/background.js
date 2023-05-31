@@ -38,5 +38,12 @@ export const backgrounds = [
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
   //arbitrary
-  [/^bg-\[(.+)\]/, ([, p]) => ({ 'background-image': p })],
+  [/^bg-\[(.+)\]/, ([, p]) => {
+    if (p.startsWith('url')) {
+      return { 'background-image': p };
+    } else if (p.startsWith('var')) {
+      return { 'background-color': p };
+    }
+    return { 'background-color': `var(${p})` };
+  }],
 ];
