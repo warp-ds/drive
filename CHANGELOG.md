@@ -1,3 +1,10 @@
+# [1.0.0-alpha.32](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2023-05-31)
+
+
+### Bug Fixes
+
+* **shadow:** update naming of box-shadows ([#112](https://github.com/warp-ds/drive/issues/112)) ([4405ae5](https://github.com/warp-ds/drive/commit/4405ae51b9057e73ec7dfff020c252f54234a94c))
+
 # [1.0.0-alpha.31](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2023-05-29)
 
 
