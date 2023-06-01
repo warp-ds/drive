@@ -1,3 +1,10 @@
+# [1.0.0-alpha.33](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2023-06-01)
+
+
+### Bug Fixes
+
+* focusable, last-child, spinner rules ([#110](https://github.com/warp-ds/drive/issues/110)) ([40e75cf](https://github.com/warp-ds/drive/commit/40e75cfe4d39d7b0dab9ad0ff510c4e6ceac16fc))
+
 # [1.0.0-alpha.32](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2023-05-31)
 
 
