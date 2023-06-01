@@ -7,8 +7,10 @@ import {
   variantPseudoClassesAndElements,
 } from '@unocss/preset-mini/variants';
 import { variantSpaceAndDivide } from './spaceAndDivide.js';
+import { variantLastChild } from './lastChild.js';
 
 export const variants = [
+  variantLastChild,
   variantBreakpoints(),
   variantImportant(),
   variantNegative,
@@ -19,6 +21,7 @@ export const variants = [
 ];
 
 export {
+  variantLastChild,
   variantBreakpoints,
   variantImportant,
   variantNegative,
