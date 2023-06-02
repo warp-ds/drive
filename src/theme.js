@@ -5,6 +5,8 @@ const breakpoints = {
   md: '768px',
   // lg hits full desktop-width and up
   lg: '990px',
+  // xl hits wide desktop-width and up
+  xl: '1300px',
 };
 
 const divideByTen = n => {
