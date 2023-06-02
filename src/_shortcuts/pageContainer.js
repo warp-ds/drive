@@ -1,0 +1,1 @@
+export const pageContainer = { 'page-container': 'bg-[var(--w-color-background)] m-0 p-0 max-w-[1010px] pl-[16px] pr-[16px] lg:mx-auto lg:pl-[31px] lg:pr-[31px]' };
