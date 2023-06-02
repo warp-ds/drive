@@ -205,3 +205,8 @@ exports[`static rules for object position > supports all predefined values in th
 .object-tr{object-position:top right;}
 .pb-safe-\\\\[32\\\\]{padding-bottom:calc(32px + env(safe-area-inset-bottom, 0px));}"
 `;
+
+exports[`static rules for page-container 1`] = `
+"/* layer: default */
+.page-container{background:var(--w-color-background);margin:0;padding:0 16px;max-width:1010px;}@media (min-width: 1300px){.page-container{margin-left:auto;margin-right:auto;padding-left:31px;padding-right:31px;}}"
+`;

@@ -13,6 +13,12 @@ test('static rules do static things', async ({ uno }) => {
   expect(css).toMatchSnapshot();
 });
 
+test('static rules for page-container', async ({ uno }) => {
+  const staticClasses = ['page-container'];
+  const { css } = await uno.generate(staticClasses);
+  expect(css).toMatchSnapshot();
+});
+
 describe('static rules for object position', () => {
   test('supports all predefined values in the position map', async ({ uno }) => {
     const staticClasses = Object.keys(positionMap).map(position => `object-${position}`);

@@ -1,3 +1,4 @@
+import { entriesToCss } from '@unocss/core';
 import { globalKeywords, handler as h, makeGlobalStaticRules, positionMap } from '#utils';
 
 export const appearances = [
@@ -192,4 +193,25 @@ export const safeArea = [
   ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom, 0px)' }],
   ['mb-safe', { 'margin-bottom': 'env(safe-area-inset-bottom, 0px)' }],
   [/^pb-safe-\[([\d]+)]$/, ([, d]) =>  ({ 'padding-bottom': `calc(${d}px + env(safe-area-inset-bottom, 0px))` })],
+];
+
+const pageContainerStyles = entriesToCss(Object.entries({
+  background: 'var(--w-color-background)',
+  margin: 0,
+  padding: '0 16px',
+  'max-width': '1010px',
+}));
+const wrapperBigScreenStyles = entriesToCss(Object.entries({
+  'margin-left': 'auto',
+  'margin-right': 'auto',
+  'padding-left': '31px',
+  'padding-right': '31px',
+}));
+
+export const pageContainter = [
+  [/^page-container$/, ([selector]) => {
+    const base = `.${selector}{${pageContainerStyles}}`;
+    const child = `@media (min-width: 1300px){.${selector}{${wrapperBigScreenStyles}}}`;
+    return base + child;
+  }],
 ];
