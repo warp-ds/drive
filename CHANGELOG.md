@@ -1,3 +1,10 @@
+# [1.0.0-alpha.34](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2023-06-02)
+
+
+### Bug Fixes
+
+* improve arbitrary bg rule ([#111](https://github.com/warp-ds/drive/issues/111)) ([ea43100](https://github.com/warp-ds/drive/commit/ea43100d9159781887e2c76eb111f0df1bf794d3))
+
 # [1.0.0-alpha.33](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2023-06-01)
 
 
