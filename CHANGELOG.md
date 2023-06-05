@@ -1,3 +1,10 @@
+# [1.0.0-alpha.36](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2023-06-05)
+
+
+### Bug Fixes
+
+* remove resets from preflight and refactor ([#106](https://github.com/warp-ds/drive/issues/106)) ([3591a3b](https://github.com/warp-ds/drive/commit/3591a3b8759bb90b852c7c957639797456c92b0e))
+
 # [1.0.0-alpha.35](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2023-06-05)
 
 
