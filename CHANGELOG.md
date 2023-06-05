@@ -1,3 +1,10 @@
+# [1.0.0-alpha.35](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2023-06-05)
+
+
+### Features
+
+* add new shortcut for page-container ([#114](https://github.com/warp-ds/drive/issues/114)) ([8ae08b3](https://github.com/warp-ds/drive/commit/8ae08b3f29b107c7daba086ab1cfe1fe481e80b9))
+
 # [1.0.0-alpha.34](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2023-06-02)
 
 
