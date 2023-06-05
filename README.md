@@ -4,15 +4,10 @@
 
 ## plugin API
 
-### usePreflight
+### skipPreflight
 
 - `boolean`
-- Forces preflights to be included
-
-### development
-
-- `boolean`
-- Will include preflights and base classes when true. These would be 'externalized' to Eik in production builds.
+- Internal use only, omits preflights from the build
 
 ### usePixels
 

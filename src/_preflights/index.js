@@ -1,5 +1,4 @@
-import { twReset } from './tw-reset.js';
 import { transformBase } from './transform.js';
-import { headingsBase } from './headings.js';
+import { resets } from './resets.js';
 
-export const preflights = [twReset, transformBase, headingsBase];
+export const preflights = [transformBase, resets];
