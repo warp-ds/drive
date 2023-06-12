@@ -1,3 +1,10 @@
+# [1.0.0-alpha.37](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2023-06-12)
+
+
+### Bug Fixes
+
+* **workflows:** set node v to lts/* and pnpm to 8 ([#118](https://github.com/warp-ds/drive/issues/118)) ([413058d](https://github.com/warp-ds/drive/commit/413058da8fa25304ef065fe119fd4cee4e2e538b))
+
 # [1.0.0-alpha.36](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2023-06-05)
 
 
