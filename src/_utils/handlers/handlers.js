@@ -124,6 +124,9 @@ export function bracketOfPosition(str) {
 export function warpToken(str) {
   if (str.match(/^\$\S/)) return `var(--w-${escapeSelector(str.slice(1))})`;
 }
+export function semanticToken(str) {
+  return `var(--w-s-color-${str})`;
+}
 export function cssvar(str) {
   if (str.match(/^\$\S/)) return `var(--${escapeSelector(str.slice(1))})`;
 }
