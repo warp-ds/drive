@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`it generates css based on semantic warp tokens 1`] = `
+"/* layer: default */
+.s-bg-default{background-color:var(--w-s-color-background-default);}
+.s-bg-positive-active-hover{background-color:var(--w-s-color-background-positive-active-hover);}
+.s-text-default{color:var(--w-s-color-text-default);}
+.s-text-link-active{color:var(--w-s-color-text-link-active);}
+.s-border-default{border-color:var(--w-s-color-border-default);}
+.s-border-b-negative-hover{border-bottom-color:var(--w-s-color-border-negative-hover);}
+.s-border-l-disabled{border-left-color:var(--w-s-color-border-disabled);}
+.s-border-r-primary-active-hover{border-right-color:var(--w-s-color-border-primary-active-hover);}
+.s-border-t-positive-default{border-top-color:var(--w-s-color-border-positive-default);}
+.s-border-x-warning-active{border-left-color:var(--w-s-color-border-warning-active);border-right-color:var(--w-s-color-border-warning-active);}
+.s-border-y-info-subtle-active-hover{border-top-color:var(--w-s-color-border-info-subtle-active-hover);border-bottom-color:var(--w-s-color-border-info-subtle-active-hover);}"
+`;
