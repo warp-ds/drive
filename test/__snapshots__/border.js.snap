@@ -86,11 +86,11 @@ exports[`border > supports setting border width 1`] = `
 exports[`border > supports x|y with value and without 1`] = `
 "/* layer: default */
 .border-x{border-left-width:1px;border-right-width:1px;}
+.border-y{border-top-width:1px;border-bottom-width:1px;}
 .border-x-0{border-left-width:0;border-right-width:0;}
 .border-x-2{border-left-width:2px;border-right-width:2px;}
 .border-x-4{border-left-width:4px;border-right-width:4px;}
 .border-x-8{border-left-width:8px;border-right-width:8px;}
-.border-y{border-top-width:1px;border-bottom-width:1px;}
 .border-y-0{border-top-width:0;border-bottom-width:0;}
 .border-y-2{border-top-width:2px;border-bottom-width:2px;}
 .border-y-4{border-top-width:4px;border-bottom-width:4px;}
