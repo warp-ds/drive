@@ -5,9 +5,9 @@ import { lineWidth } from '#theme';
 setup();
 
 describe("border", () => {
-  test("supports x|y with value", async (t) => {
-    const x = ["border-x-0", "border-x-2", "border-x-4", "border-x-8"];
-    const y = ["border-y-0", "border-y-2", "border-y-4", "border-y-8"];
+  test("supports x|y with value and without", async (t) => {
+    const x = ["border-x", "border-x-0", "border-x-2", "border-x-4", "border-x-8"];
+    const y = ["border-y", "border-y-0", "border-y-2", "border-y-4", "border-y-8"];
 
     const classes = [...x, ...y];
 

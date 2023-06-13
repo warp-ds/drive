@@ -18,7 +18,7 @@ const borderStyles = [
 export const borders = [
   [/^border$/, handlerBorder],
   [/^border()-(\d+)$/, handlerBorder, { autocomplete: "(border)-<directions>" }],
-  [/^border-([xy])-(\d+)$/, handlerBorder],
+  [/^border-([xy])-?(\d+)?$/, handlerBorder],
   [/^border-([rltb])$/, handlerBorder],
   [/^border-([rltb])-(\d+)$/, handlerBorder],
   [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
