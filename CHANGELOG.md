@@ -1,3 +1,10 @@
+# [1.0.0-alpha.38](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2023-06-13)
+
+
+### Bug Fixes
+
+* border-x|y fix and slider obsolete snapshot fix ([#120](https://github.com/warp-ds/drive/issues/120)) ([85dfaec](https://github.com/warp-ds/drive/commit/85dfaeca20961de142305a8525c1ce27ab20b5cb))
+
 # [1.0.0-alpha.37](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2023-06-12)
 
 
