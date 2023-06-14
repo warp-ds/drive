@@ -1,3 +1,10 @@
+# [1.0.0-alpha.42](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.41...v1.0.0-alpha.42) (2023-06-14)
+
+
+### Bug Fixes
+
+* Added missing rules for static border colors  ([#123](https://github.com/warp-ds/drive/issues/123)) ([6644a66](https://github.com/warp-ds/drive/commit/6644a66abe462c757d43941c6aacab0ede034c56))
+
 # [1.0.0-alpha.41](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.40...v1.0.0-alpha.41) (2023-06-14)
 
 
