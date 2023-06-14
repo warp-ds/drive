@@ -1,3 +1,10 @@
+# [1.0.0-alpha.39](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.38...v1.0.0-alpha.39) (2023-06-14)
+
+
+### Features
+
+* Add background, text and border classes for semantic color tokens ([#119](https://github.com/warp-ds/drive/issues/119)) ([19b5ee9](https://github.com/warp-ds/drive/commit/19b5ee9b785cfdd8d45ccaf8b28838c938cfa52d))
+
 # [1.0.0-alpha.38](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2023-06-13)
 
 
