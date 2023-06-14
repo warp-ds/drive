@@ -50,6 +50,18 @@ describe("border", () => {
     expect(css).toMatchSnapshot();
   });
 
+  test("supports setting border color", async (t) => {
+    const classes = [
+      "border-transparent",
+      "border-inherit",
+      "border-current",
+    ];
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchSnapshot();
+  });
+
   test("right, left, top bottom", async (t) => {
     const right = [
       "border-r",
@@ -127,3 +139,4 @@ describe("rounded", () => {
     expect(css).toMatchSnapshot();
   });
 });
+
