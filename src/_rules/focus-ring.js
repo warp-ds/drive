@@ -34,8 +34,9 @@ export const focusRing = [
       }
       return `.${escapedSelector}:${selectorWithVariant.split(':')?.[0]}{${focusRingStyle}}`;
     } else {
-      const focus = `.${currentSelector}:focus,.${currentSelector}:focus-visible{${focusRingStyle}}`;
-      const notFocusVisible = `.${currentSelector}:not(:focus-visible){${outlineNone}}`;
+      const escapedCurrentSelector = escapeSelector(currentSelector);
+      const focus = `.${escapedCurrentSelector}:focus,.${escapedCurrentSelector}:focus-visible{${focusRingStyle}}`;
+      const notFocusVisible = `.${escapedCurrentSelector}:not(:focus-visible){${outlineNone}}`;
       return focus + notFocusVisible;
     }
   }],
