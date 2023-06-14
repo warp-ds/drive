@@ -1,3 +1,10 @@
+# [1.0.0-alpha.40](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.39...v1.0.0-alpha.40) (2023-06-14)
+
+
+### Bug Fixes
+
+* **typography.js:** add font-bold to .h1-5 shortcuts ([#121](https://github.com/warp-ds/drive/issues/121)) ([b84a631](https://github.com/warp-ds/drive/commit/b84a631cd771691bd3bda95a2127573a5df4356f))
+
 # [1.0.0-alpha.39](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.38...v1.0.0-alpha.39) (2023-06-14)
 
 
