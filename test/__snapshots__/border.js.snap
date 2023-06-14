@@ -60,6 +60,13 @@ exports[`border > supports setting arbitrary border width 1`] = `
 .border-t-\\\\[7\\\\]{border-top-width:7px;}"
 `;
 
+exports[`border > supports setting border color 1`] = `
+"/* layer: default */
+.border-transparent{border-color:transparent;}
+.border-inherit{border-color:inherit;}
+.border-current{border-color:currentColor;}"
+`;
+
 exports[`border > supports setting border style 1`] = `
 "/* layer: default */
 .border-dashed{border-style:dashed;}

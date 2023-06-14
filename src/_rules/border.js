@@ -17,16 +17,16 @@ const borderStyles = [
 
 export const borders = [
   [/^border$/, handlerBorder],
+  [/^border-transparent$/, () => ({ 'border-color': 'transparent' })],
+  [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
+  [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
   [/^border()-(\d+)$/, handlerBorder, { autocomplete: "(border)-<directions>" }],
-  [/^border-([xy])$/, handlerBorder],
-  [/^border-([xy])-(\d+)$/, handlerBorder],
-  [/^border-([rltb])$/, handlerBorder],
-  [/^border-([rltb])-(\d+)$/, handlerBorder],
+  [/^border-([lrtbxy])$/, handlerBorder],
+  [/^border-([lrtbxy])-(\d+)$/, handlerBorder],
   [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
-  [/^border-([xy])-(.+)$/, handlerBorderStyle],
-  [/^border-([rltb])-(.+)$/, handlerBorderStyle],
+  [/^border-([lrtbxy])-(.+)$/, handlerBorderStyle],
   [
-    /^border-([rltb])?-?\[(\d+)\]$/,
+    /^border-([lrtb])?-?\[(\d+)\]$/,
     handlerArbitraryBorderSize,
     {
       autocomplete: [
@@ -82,7 +82,7 @@ function handleDivideBorderSizes(direction, width, reverse, theme) {
       }
       return `border${i}-width:calc(${borderWidth} * calc(1 - var(--w-divide-${direction}-reverse)))`;
     });
-  };
+  }
 }
 
 function handlerDivideBorder([_selector, direction = "", width, reverse], { theme }) {
@@ -93,3 +93,4 @@ function handlerDivideBorder([_selector, direction = "", width, reverse], { them
     return `.${selector}>*+*{${defaultReverse};${sizes}}`;
   }
 }
+
