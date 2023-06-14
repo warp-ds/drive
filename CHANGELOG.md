@@ -1,3 +1,10 @@
+# [1.0.0-alpha.41](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.40...v1.0.0-alpha.41) (2023-06-14)
+
+
+### Bug Fixes
+
+* escape current selector for focusable ([#122](https://github.com/warp-ds/drive/issues/122)) ([00b789b](https://github.com/warp-ds/drive/commit/00b789b0c04aceff7e9e458a46e8c6b1a7982284))
+
 # [1.0.0-alpha.40](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.39...v1.0.0-alpha.40) (2023-06-14)
 
 
