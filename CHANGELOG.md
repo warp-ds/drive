@@ -1,3 +1,10 @@
+# [1.0.0-alpha.43](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.42...v1.0.0-alpha.43) (2023-06-15)
+
+
+### Features
+
+* **semantic.js:** add rules for semantic icon colors ([#124](https://github.com/warp-ds/drive/issues/124)) ([afc0354](https://github.com/warp-ds/drive/commit/afc0354b777c76bed0f962b3fe1099303488353b))
+
 # [1.0.0-alpha.42](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.41...v1.0.0-alpha.42) (2023-06-14)
 
 
