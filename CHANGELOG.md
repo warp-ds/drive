@@ -1,3 +1,10 @@
+# [1.0.0-alpha.44](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.43...v1.0.0-alpha.44) (2023-06-16)
+
+
+### Features
+
+* add rules for outline ([#125](https://github.com/warp-ds/drive/issues/125)) ([3834087](https://github.com/warp-ds/drive/commit/3834087d76bc4204c541503a1fe052a5b21f69f4))
+
 # [1.0.0-alpha.43](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.42...v1.0.0-alpha.43) (2023-06-15)
 
 
