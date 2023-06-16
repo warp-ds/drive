@@ -16,6 +16,7 @@ import * as internal from './internal.js';
 import * as layout from "./layout.js";
 import * as lineClamp from "./line-clamp.js";
 import * as list from "./list.js";
+import * as outline from "./outline.js";
 import * as position from "./position.js";
 import * as semantic from './semantic.js';
 import * as shadow from "./shadow.js";
@@ -49,6 +50,7 @@ const ruleGroups = {
   ...layout,
   ...lineClamp,
   ...list,
+  ...outline,
   ...position,
   ...semantic,
   ...shadow,
@@ -84,6 +86,7 @@ export * from './internal.js';
 export * from "./layout.js";
 export * from "./line-clamp.js";
 export * from "./list.js";
+export * from "./outline.js";
 export * from "./position.js";
 export * from './semantic.js';
 export * from "./shadow.js";
