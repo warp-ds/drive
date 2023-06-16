@@ -1,3 +1,10 @@
+# [1.0.0-alpha.45](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.44...v1.0.0-alpha.45) (2023-06-16)
+
+
+### Bug Fixes
+
+* proper handle bg arbitrary url as var ([#126](https://github.com/warp-ds/drive/issues/126)) ([0ddd0e9](https://github.com/warp-ds/drive/commit/0ddd0e99dd620e2f1947012b4f61a632f8aecc50))
+
 # [1.0.0-alpha.44](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.43...v1.0.0-alpha.44) (2023-06-16)
 
 
