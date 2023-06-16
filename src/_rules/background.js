@@ -40,7 +40,9 @@ export const backgrounds = [
   //arbitrary
   [/^bg-\[(.+)\]/, ([, p]) => {
     if (p.startsWith('url')) {
-      return { 'background-image': p };
+      // Process url(var(--something)) and extract the var itself -> --something
+      const urlAsVar = p.match(/url\(var\(([^)]*)/)?.[1];
+      return { 'background-image': urlAsVar ? `var(${urlAsVar})` : p };
     } else if (p.startsWith('var')) {
       return { 'background-color': p };
     }
