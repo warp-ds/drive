@@ -2,8 +2,6 @@
 
 exports[`bg colors 1`] = `
 "/* layer: default */
-.bg{background-color:var(--w-color-background);}
-.bg-subtle{background-color:var(--w-color-background-subtle);}
 .bg-inherit{background-color:inherit;}
 .bg-transparent{background-color:transparent;}
 .bg-current{background-color:currentColor;}"
@@ -12,8 +10,8 @@ exports[`bg colors 1`] = `
 exports[`caret 1`] = `
 "/* layer: default */
 .caret-inherit{caret-color:inherit;}
-.caret-current{caret-color:currentColor;}
-.caret-transparent{caret-color:transparent;}"
+.caret-transparent{caret-color:transparent;}
+.caret-current{caret-color:currentColor;}"
 `;
 
 exports[`opacity by theme 1`] = `
@@ -27,8 +25,6 @@ exports[`opacity by theme 1`] = `
 
 exports[`text colors 1`] = `
 "/* layer: default */
-.text{color:var(--w-color-text);}
-.text-inverted{color:var(--w-color-text-inverted);}
-.text-inverted-subtle{color:var(--w-color-text-inverted-subtle);}
-.text-subtle{color:var(--w-color-text-subtle);}"
+.text-transparent{color:transparent;}
+.text-current{color:currentColor;}"
 `;
