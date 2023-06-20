@@ -1,3 +1,10 @@
+# [1.0.0-alpha.46](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.45...v1.0.0-alpha.46) (2023-06-20)
+
+
+### Bug Fixes
+
+* Cleanup color classes for text and background color ([#127](https://github.com/warp-ds/drive/issues/127)) ([1b3d13e](https://github.com/warp-ds/drive/commit/1b3d13e90e9d70b33730c64db4a4d64b89b0c858))
+
 # [1.0.0-alpha.45](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.44...v1.0.0-alpha.45) (2023-06-16)
 
 
