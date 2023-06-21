@@ -1,3 +1,10 @@
+# [1.0.0-alpha.47](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.46...v1.0.0-alpha.47) (2023-06-21)
+
+
+### Bug Fixes
+
+* remove a shortcut for the outline-none ([#128](https://github.com/warp-ds/drive/issues/128)) ([ced819c](https://github.com/warp-ds/drive/commit/ced819c6744b61f86ee19456e936827a0e5564a9))
+
 # [1.0.0-alpha.46](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.45...v1.0.0-alpha.46) (2023-06-20)
 
 
