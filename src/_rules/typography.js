@@ -1,4 +1,4 @@
-import { textMap, lineHeightMap } from '#utils';
+import { textMap, lineHeightMap, resolveArbitraryValues } from '#utils';
 
 export const typography = [
   [/^text-(12|14|16|20|22|28|34|48)$/, ([, d]) => ({ 'font-size': `var(--w-font-size-${textMap[d]})`, 'line-height': `var(--w-line-height-${textMap[d]})` })],
@@ -9,4 +9,5 @@ export const typography = [
   [/^leading-(xs|s|m|ml|l|xl|xxl|xxxl)$/, ([, size]) =>
     ({ 'line-height': `var(--w-line-height-${size})` }),
   ],
+  [/^leading-\[(.+)(rem|px)?\]/, ([, value, unit], context) => ({ 'line-height': resolveArbitraryValues(value, unit, context) })],
 ];
