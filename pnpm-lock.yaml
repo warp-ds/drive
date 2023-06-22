@@ -11,6 +11,9 @@ dependencies:
   '@unocss/preset-mini':
     specifier: ^0.50.6
     version: 0.50.6
+  '@warp-ds/component-classes':
+    specifier: 1.0.0-alpha.110
+    version: 1.0.0-alpha.110
 
 devDependencies:
   '@rollup/plugin-node-resolve':
@@ -1078,6 +1081,10 @@ packages:
       loupe: 2.3.6
       pretty-format: 27.5.1
     dev: true
+
+  /@warp-ds/component-classes@1.0.0-alpha.110:
+    resolution: {integrity: sha512-kqOYLHBxNjyuIs7X7hlZyywxua//Gxd6+h3H13d1RT/Zfkjnr/ByUJdFvbcYqPNrNsLLwqdPsRZTbL02f0EuDg==}
+    dev: false
 
   /@warp-ds/eslint-config@0.0.1(eslint@8.36.0):
     resolution: {integrity: sha512-lzmn67NF8ZyilXDiRVPJqx95FvMGVZw//na33DDEPEnk5apeV1WD53uruFJM0DjvO9QEc51xo1zI1oS4ocWRrA==}

@@ -4,10 +4,10 @@
 
 ## plugin API
 
-### skipPreflight
+### development
 
 - `boolean`
-- Internal use only, omits preflights from the build
+- Internal use only - force preflights to be excluded and no externalized classes will be processed
 
 ### usePixels
 

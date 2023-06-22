@@ -4,7 +4,7 @@ import { presetWarp } from '#plugin';
 
 export default defineConfig({
   plugins: [
-    UnoCSS({ presets: [presetWarp({ skipPreflight: true })] }),
+    UnoCSS({ presets: [presetWarp({ development: true })] }),
   ],
   test: {
     include: ['./test/*.js'],
