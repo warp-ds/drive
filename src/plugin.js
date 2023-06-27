@@ -16,6 +16,7 @@ import { postprocess } from '#postprocess';
 // TODO: improve generic type passed here
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
+  checkEnvironment();
   const externalizeClasses = options.externalizeClasses ?? !options.development;
   const externalClasses = options.externalClasses ?? classes;
   const theme = useTheme(options);
@@ -28,6 +29,16 @@ export function presetWarp (options = {}) {
     postprocess: postprocess(externalizeClasses, externalClasses),
     shortcuts,
   };
+}
+
+function checkEnvironment() {
+  if (typeof fetch === 'undefined') {
+    if (typeof process !== 'undefined') {
+      const NODE_MAJOR_VERSION = process.versions.node.split('.')[0];
+      if (NODE_MAJOR_VERSION < 18) throw new Error('Warp requires node 18 or higher');
+    }
+    throw new Error("'fetch' is undefined for some reason and presetWarp requires it");
+  }
 }
 
 export default presetWarp;

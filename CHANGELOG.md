@@ -1,3 +1,17 @@
+# [1.0.0-alpha.49](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.48...v1.0.0-alpha.49) (2023-06-27)
+
+
+### Features
+
+* arbitrary values accepted for leading ([#130](https://github.com/warp-ds/drive/issues/130)) ([39919f4](https://github.com/warp-ds/drive/commit/39919f45f04672d423b44e0e0dc90a5c5da68a07))
+
+# [1.0.0-alpha.48](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.47...v1.0.0-alpha.48) (2023-06-26)
+
+
+### Bug Fixes
+
+* throw better errors for users who are missing 'fetch' ([#132](https://github.com/warp-ds/drive/issues/132)) ([77ba1e2](https://github.com/warp-ds/drive/commit/77ba1e242c5f7c4d27e1e3e75dca19582fbbc223))
+
 # [1.0.0-alpha.47](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.46...v1.0.0-alpha.47) (2023-06-21)
 
 
