@@ -1,3 +1,10 @@
+# [1.0.0-alpha.49](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.48...v1.0.0-alpha.49) (2023-06-27)
+
+
+### Features
+
+* arbitrary values accepted for leading ([#130](https://github.com/warp-ds/drive/issues/130)) ([39919f4](https://github.com/warp-ds/drive/commit/39919f45f04672d423b44e0e0dc90a5c5da68a07))
+
 # [1.0.0-alpha.48](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.47...v1.0.0-alpha.48) (2023-06-26)
 
 
