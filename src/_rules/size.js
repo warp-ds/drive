@@ -1,15 +1,7 @@
-import { handler as h, resolveBreakpoints, resolveVerticalBreakpoints } from '#utils';
+import { handler as h, resolveBreakpoints, resolveVerticalBreakpoints, resolveArbitraryValues } from '#utils';
 
 const sizeMapping = { h: 'height', w: 'width' };
 const getPropName = (minmax, hw) => `${minmax || ''}${sizeMapping[hw]}`;
-const resolveArbitraryValues = (value, unit, context) => {
-  if (unit === "rem") return h.rem(`${value}${unit}`);
-  if (unit === "px" || context.theme.usingPixels) return h.px(value);
-  if (value.startsWith('--')) {
-    return `var(${value})`;
-  }
-  return h.rem(value) || value;
-};
 
 function getSizeValue(minmax, hw, theme, prop) {
   const str = getPropName(minmax, hw).replace(/-(\w)/g, (_, p) => p.toUpperCase());
