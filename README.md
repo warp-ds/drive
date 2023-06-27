@@ -7,7 +7,7 @@
 ### development
 
 - `boolean`
-- Internal use only - force preflights to be excluded and no externalized classes will be processed
+- Internal use only - force preflights(resets.css + transform resets) to be excluded and no externalized classes will be processed
 
 ### usePixels
 
