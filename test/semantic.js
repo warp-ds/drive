@@ -5,23 +5,23 @@ setup();
 
 test('it generates css based on semantic warp tokens', async ({ uno }) => {
   const classes = [
-    's-bg-default',
+    's-bg',
     's-bg-positive-active-hover',
-    's-text-default',
+    's-text',
     's-text-link-active',
-    's-border-default',
+    's-border',
     's-border-l-disabled',
     's-border-r-primary-active-hover',
-    's-border-t-positive-default',
+    's-border-t-positive',
     's-border-b-negative-hover',
     's-border-x-warning-active',
     's-border-y-info-subtle-active-hover',
-    's-icon-default',
+    's-icon',
     's-icon-hover',
     's-icon-active',
     's-icon-active-hover',
     's-icon-disabled',
-    's-icon-subtle-default',
+    's-icon-subtle',
     's-icon-subtle-hover',
     's-icon-subtle-active',
     's-icon-subtle-active-hover',
@@ -33,11 +33,11 @@ test('it generates css based on semantic warp tokens', async ({ uno }) => {
     's-icon-info',
   ];
   const antiClasses = [
-    's-background-default',
+    's-background',
     's-background-positive-active-hover',
-    's-font-default',
+    's-font',
     's-font-link-active',
-    's-bordercolor-default',
+    's-bordercolor',
     's-bordercolor-l-disabled',
   ];
   const { css } = await uno.generate([...classes, ...antiClasses]);
