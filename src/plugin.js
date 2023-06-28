@@ -8,8 +8,10 @@ import { postprocess } from '#postprocess';
 /**
  * @typedef PluginOptions
  * @type {Object}
- * @property {boolean} development // internal use only - force preflights to be excluded and no externalized classes will be processed
- * @property {boolean} externalizeClasses - force external or 'core' classes to be included/excluded
+ * @property {boolean} development // internal use only - force preflights to be excluded and no external classes will be processed
+ * @property {boolean} externalizeClasses - if true forces external or 'core' classes to be excluded from the process.
+ * @property {boolean} omitComponentClasses - if true forces component classes to be excluded from the process.
+ * @property {Array} externalClasses - list of classes that will not be processed
  * @property {boolean} usePixels - use pixel spacing instead of rem
  */
 
@@ -17,8 +19,9 @@ import { postprocess } from '#postprocess';
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
   checkEnvironment();
-  const externalizeClasses = options.externalizeClasses ?? !options.development;
-  const externalClasses = options.externalClasses ?? classes;
+  const externalizeClasses = options.externalizeClasses ?? !options.development; // 'true' by default
+  const safeExternalClasses = options.externalClasses || [];
+  const excludedClasses = options.omitComponentClasses ? [...classes, ...safeExternalClasses] : safeExternalClasses;
   const theme = useTheme(options);
   return {
     name: '@warp-ds/uno',
@@ -26,7 +29,7 @@ export function presetWarp (options = {}) {
     rules,
     variants,
     preflights: options.development ? [] : preflights,
-    postprocess: postprocess(externalizeClasses, externalClasses),
+    postprocess: postprocess(externalizeClasses, excludedClasses),
     shortcuts,
   };
 }
