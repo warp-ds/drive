@@ -1,3 +1,10 @@
+# [1.0.0-alpha.50](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.49...v1.0.0-alpha.50) (2023-06-28)
+
+
+### Bug Fixes
+
+* Updated rules for semantic colors to handle base level token names without ending "default" suffix ([#133](https://github.com/warp-ds/drive/issues/133)) ([805526d](https://github.com/warp-ds/drive/commit/805526df70a339747a45ace1184b060dc4483ce1))
+
 # [1.0.0-alpha.49](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.48...v1.0.0-alpha.49) (2023-06-27)
 
 
