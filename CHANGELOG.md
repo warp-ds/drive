@@ -1,3 +1,10 @@
+# [1.0.0-alpha.51](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.50...v1.0.0-alpha.51) (2023-06-29)
+
+
+### Bug Fixes
+
+* cache the preflight instead of requesting every rebuild ([83537ca](https://github.com/warp-ds/drive/commit/83537ca28c7446f308163b38433045390cf1e675))
+
 # [1.0.0-alpha.50](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.49...v1.0.0-alpha.50) (2023-06-28)
 
 
