@@ -9,6 +9,11 @@
 - `boolean`
 - Internal use only - force preflights(resets.css + transform resets) to be excluded and no externalized classes will be processed
 
+### omitComponentClasses
+
+- `boolean`
+- if true forces component classes to be excluded from the process. Styling for the classes already used in component classes won't be generated.
+
 ### usePixels
 
 - `boolean`
