@@ -1,3 +1,10 @@
+# [1.0.0-alpha.53](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.52...v1.0.0-alpha.53) (2023-06-30)
+
+
+### Bug Fixes
+
+* add development flag back and externalize our published component classes ([#129](https://github.com/warp-ds/drive/issues/129)) ([4470892](https://github.com/warp-ds/drive/commit/4470892714b801c1d44279c3417cee21ff9e135c))
+
 # [1.0.0-alpha.52](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.51...v1.0.0-alpha.52) (2023-06-30)
 
 
