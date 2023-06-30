@@ -1,15 +1,17 @@
+import { classes } from '@warp-ds/component-classes/classes';
 import { preflights } from '#preflights';
 import { rules } from '#rules';
 import { shortcuts } from '#shortcuts';
 import { variants } from '#variants';
 import { useTheme } from '#theme';
 import { postprocess } from '#postprocess';
-
 /**
  * @typedef PluginOptions
  * @type {Object}
- * @property {boolean} skipPreflight // internal use only - force preflights to be excluded
- * @property {boolean} externalizeClasses - force external or 'core' classes to be included/excluded
+ * @property {boolean} development // internal use only - force preflights to be excluded and no external classes will be processed
+ * @property {boolean} externalizeClasses - if true forces external or 'core' classes to be excluded from the process.
+ * @property {boolean} omitComponentClasses - if true forces component classes to be excluded from the process.
+ * @property {Array} externalClasses - list of classes that will not be processed
  * @property {boolean} usePixels - use pixel spacing instead of rem
  */
 
@@ -17,16 +19,17 @@ import { postprocess } from '#postprocess';
 /** @type {import('@unocss/core').Preset<object>} */
 export function presetWarp (options = {}) {
   checkEnvironment();
-  const externalizeClasses = options.externalizeClasses;
-  const externalClasses = options.externalClasses ?? []; // will possibly be our own list in the future
+  const externalizeClasses = options.externalizeClasses ?? !options.development; // 'true' by default
+  const safeExternalClasses = options.externalClasses || [];
+  const excludedClasses = options.omitComponentClasses ? [...classes, ...safeExternalClasses] : safeExternalClasses;
   const theme = useTheme(options);
   return {
     name: '@warp-ds/uno',
     theme,
     rules,
     variants,
-    preflights: options.skipPreflight ? [] : preflights,
-    postprocess: postprocess(externalizeClasses, externalClasses),
+    preflights: options.development ? [] : preflights,
+    postprocess: postprocess(externalizeClasses, excludedClasses),
     shortcuts,
   };
 }
