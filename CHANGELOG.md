@@ -1,3 +1,10 @@
+# [1.0.0-alpha.52](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.51...v1.0.0-alpha.52) (2023-06-30)
+
+
+### Bug Fixes
+
+* avoid top-level await in reset ([#137](https://github.com/warp-ds/drive/issues/137)) ([b35c803](https://github.com/warp-ds/drive/commit/b35c80387cbff4cb6cbbebe5086820c35c3660d3))
+
 # [1.0.0-alpha.51](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.50...v1.0.0-alpha.51) (2023-06-29)
 
 
