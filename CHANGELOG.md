@@ -1,3 +1,10 @@
+# [1.0.0-alpha.55](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.54...v1.0.0-alpha.55) (2023-06-30)
+
+
+### Bug Fixes
+
+* Update focus outline to use new semantic color token ([#139](https://github.com/warp-ds/drive/issues/139)) ([673627d](https://github.com/warp-ds/drive/commit/673627db8ec712242bfe7009462781b20ca18769))
+
 # [1.0.0-alpha.54](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.53...v1.0.0-alpha.54) (2023-06-30)
 
 
