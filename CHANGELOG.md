@@ -1,3 +1,10 @@
+# [1.0.0-alpha.56](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2023-07-03)
+
+
+### Bug Fixes
+
+* Remove old fallback values from box shadows ([#140](https://github.com/warp-ds/drive/issues/140)) ([da00995](https://github.com/warp-ds/drive/commit/da00995d4c89eb2873589db820e5d7fb8bbf0127))
+
 # [1.0.0-alpha.55](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.54...v1.0.0-alpha.55) (2023-06-30)
 
 
