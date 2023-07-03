@@ -10,8 +10,8 @@ exports[`drop shadows 1`] = `
 
 exports[`shadows work 1`] = `
 "/* layer: default */
-.shadow-l{box-shadow:var(--w-shadow-l, 0 6px 8px rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .2));}
-.shadow-m{box-shadow:var(--w-shadow-m, 0 3px 8px rgba(0, 0, 0, .2), 0 3px 6px rgba(0, 0, 0, .2));}
-.shadow-s{box-shadow:var(--w-shadow-s, 0 1px 6px rgba(0, 0, 0, .2), 0 1px 1px rgba(0, 0, 0, .2));}
-.shadow-xl{box-shadow:var(--w-shadow-xl, 0 9px 12px rgba(0, 0, 0, .2), 0 14px 28px rgba(0, 0, 0, .2));}"
+.shadow-l{box-shadow:var(--w-shadow-l);}
+.shadow-m{box-shadow:var(--w-shadow-m);}
+.shadow-s{box-shadow:var(--w-shadow-s);}
+.shadow-xl{box-shadow:var(--w-shadow-xl);}"
 `;
