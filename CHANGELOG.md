@@ -1,3 +1,10 @@
+# [1.0.0-alpha.57](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.56...v1.0.0-alpha.57) (2023-07-07)
+
+
+### Bug Fixes
+
+* add skipResets flag ([#142](https://github.com/warp-ds/drive/issues/142)) ([a13cbcd](https://github.com/warp-ds/drive/commit/a13cbcd7e46bf2641edab6fcd15c1356bf450f6c))
+
 # [1.0.0-alpha.56](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2023-07-03)
 
 
