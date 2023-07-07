@@ -1,4 +1,4 @@
-import { classes } from '@warp-ds/component-classes/classes';
+import { classes } from '@warp-ds/css/component-classes/classes';
 import { preflights } from '#preflights';
 import { rules } from '#rules';
 import { shortcuts } from '#shortcuts';
