@@ -12,4 +12,8 @@ export const typography = [
   [/^leading-\[(.+)(rem|px)?\]/, ([, value, unit], context) => ({ 'line-height': resolveArbitraryValues(value, unit, context) })],
   ['tabular-nums', { 'font-family': 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif', 'font-variant-numeric': 'tabular-nums' }],
   ['lining-nums', { 'font-variant-numeric': 'lining-nums' }],
+  ['ordinal', { 'font-variant-numeric': 'ordinal' }],
+  ['slashed-zero', { 'font-variant-numeric': 'slashed-zero' }],
+  ['oldstyle-nums', { 'font-variant-numeric': 'oldstyle-nums' }],
+  ['proportional-nums', { 'font-variant-numeric': 'proportional-nums' }],
 ];
