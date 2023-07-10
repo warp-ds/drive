@@ -1,3 +1,10 @@
+# [1.0.0-alpha.58](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.57...v1.0.0-alpha.58) (2023-07-10)
+
+
+### Bug Fixes
+
+* add missing classes Fabric supported ([#135](https://github.com/warp-ds/drive/issues/135)) ([4ce6033](https://github.com/warp-ds/drive/commit/4ce6033a65ec4614002113ed2d6609140daf107b))
+
 # [1.0.0-alpha.57](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.56...v1.0.0-alpha.57) (2023-07-07)
 
 
