@@ -18,6 +18,7 @@ const borderStyles = [
 export const borders = [
   [/^border$/, handlerBorder],
   [/^border-transparent$/, () => ({ 'border-color': 'transparent' })],
+  [/^border-inverted$/, () => ({ 'border-color': 'var(--w-s-border-inverted)' })],
   [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
   [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
   [/^border()-(\d+)$/, handlerBorder, { autocomplete: "(border)-<directions>" }],
