@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.50.6
     version: 0.50.6
   '@warp-ds/css':
-    specifier: ^1.0.0-alpha.29
-    version: 1.0.0-alpha.29(@warp-ds/component-classes@1.0.0-alpha.110)
+    specifier: ^1.0.0-alpha.33
+    version: 1.0.0-alpha.33(@warp-ds/component-classes@1.0.0-alpha.110)
 
 devDependencies:
   '@rollup/plugin-node-resolve':
@@ -1086,8 +1086,8 @@ packages:
     resolution: {integrity: sha512-kqOYLHBxNjyuIs7X7hlZyywxua//Gxd6+h3H13d1RT/Zfkjnr/ByUJdFvbcYqPNrNsLLwqdPsRZTbL02f0EuDg==}
     dev: false
 
-  /@warp-ds/css@1.0.0-alpha.29(@warp-ds/component-classes@1.0.0-alpha.110):
-    resolution: {integrity: sha512-7CsQebbTlDjOGvl8Ewf9BAQ/DULCcA2d7Q2lVBdEXly4OoIvus26RhS3RqWQtfkT0cQHR02L34j+B5LBwsGDAA==}
+  /@warp-ds/css@1.0.0-alpha.33(@warp-ds/component-classes@1.0.0-alpha.110):
+    resolution: {integrity: sha512-zc+g1CyKptApAfryLKpEc5N3SnPW87gl7Rx2Zz9hGOrqY42PvjG2NplkKbas1/bLvpGKW5VTBrdaVcyt049cFA==}
     dependencies:
       '@warp-ds/fonts': 1.1.0
       '@warp-ds/tokenizer': 0.0.2
