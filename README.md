@@ -9,6 +9,11 @@
 - `boolean`
 - Internal use only - force preflights(resets.css + transform resets) to be excluded and no externalized classes will be processed
 
+### skipResets
+
+- `boolean`
+- If true forces resets to be excluded from preflights
+
 ### omitComponentClasses
 
 - `boolean`
