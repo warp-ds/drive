@@ -1,3 +1,10 @@
+# [1.0.0-alpha.60](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.59...v1.0.0-alpha.60) (2023-07-13)
+
+
+### Bug Fixes
+
+* use new css repo for component classes ([#143](https://github.com/warp-ds/drive/issues/143)) ([b2816b6](https://github.com/warp-ds/drive/commit/b2816b6eb896b4e3b81555e7aae94d36e06a9b3c))
+
 # [1.0.0-alpha.59](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.58...v1.0.0-alpha.59) (2023-07-13)
 
 
