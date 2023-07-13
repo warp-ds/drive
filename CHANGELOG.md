@@ -1,3 +1,10 @@
+# [1.0.0-alpha.59](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.58...v1.0.0-alpha.59) (2023-07-13)
+
+
+### Bug Fixes
+
+* avoid null issue and use empty array instead ([#144](https://github.com/warp-ds/drive/issues/144)) ([6d56dcd](https://github.com/warp-ds/drive/commit/6d56dcdaa65bf5773530dbefdc30ad61c2953f80))
+
 # [1.0.0-alpha.58](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.57...v1.0.0-alpha.58) (2023-07-10)
 
 
