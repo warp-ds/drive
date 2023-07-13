@@ -12,12 +12,18 @@ const {
       short: 'c',
     },
     externalClasses: {
-      type: 'boolean',
+      type: 'string',
     },
     externalizeClasses: {
       type: 'boolean',
     },
     usePixels: {
+      type: 'boolean',
+    },
+    omitComponentClasses: {
+      type: 'boolean',
+    },
+    skipResets: {
       type: 'boolean',
     },
   },
