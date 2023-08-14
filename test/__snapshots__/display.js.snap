@@ -11,19 +11,13 @@ exports[`display > should render styles for arbitrary values 1`] = `
 
 exports[`display > should render styles for static classes 1`] = `
 "/* layer: default */
-.flex{display:flex;}
-.inline-flex{display:inline-flex;}
-.grid{display:grid;}
-.inline-grid{display:inline-grid;}
-.inline{display:inline;}
 .block{display:block;}
 .inline-block{display:inline-block;}
-.contents{display:contents;}
-.flow-root{display:flow-root;}
-.list-item{display:list-item;}
-.hidden{display:none;}
-.inline-table{display:inline-table;}
+.inline{display:inline;}
+.flex{display:flex;}
+.inline-flex{display:inline-flex;}
 .table{display:table;}
+.inline-table{display:inline-table;}
 .table-caption{display:table-caption;}
 .table-cell{display:table-cell;}
 .table-column{display:table-column;}
@@ -31,5 +25,11 @@ exports[`display > should render styles for static classes 1`] = `
 .table-footer-group{display:table-footer-group;}
 .table-header-group{display:table-header-group;}
 .table-row{display:table-row;}
-.table-row-group{display:table-row-group;}"
+.table-row-group{display:table-row-group;}
+.flow-root{display:flow-root;}
+.grid{display:grid;}
+.inline-grid{display:inline-grid;}
+.contents{display:contents;}
+.list-item{display:list-item;}
+.hidden{display:none;}"
 `;
