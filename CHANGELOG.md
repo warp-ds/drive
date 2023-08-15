@@ -1,3 +1,10 @@
+# [1.0.0-alpha.61](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.60...v1.0.0-alpha.61) (2023-08-15)
+
+
+### Bug Fixes
+
+* add font-bold to t1-t6 and use those classes to ref h1-h5 ([#146](https://github.com/warp-ds/drive/issues/146)) ([1c6a81d](https://github.com/warp-ds/drive/commit/1c6a81d50120b3b05f7a23b7de3e25d6a3e26ef9))
+
 # [1.0.0-alpha.60](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.59...v1.0.0-alpha.60) (2023-07-13)
 
 
