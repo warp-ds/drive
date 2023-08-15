@@ -1,3 +1,10 @@
+# [1.0.0-alpha.62](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.61...v1.0.0-alpha.62) (2023-08-15)
+
+
+### Bug Fixes
+
+* **display.js:** align order of css for display classes with fabric.css ([#147](https://github.com/warp-ds/drive/issues/147)) ([aa00cfc](https://github.com/warp-ds/drive/commit/aa00cfce88730a98994292b919fa46122e19e548))
+
 # [1.0.0-alpha.61](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.60...v1.0.0-alpha.61) (2023-08-15)
 
 
