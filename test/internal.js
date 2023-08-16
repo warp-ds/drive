@@ -32,3 +32,15 @@ test('it generates css based on warp tokens', async ({ uno }) => {
   const { css } = await uno.generate([...classes, ...anticlasses]);
   expect(css).toMatchSnapshot();
 });
+
+test('it generated button css based on warp component tokens', async ({ uno }) => {
+  const classes = [
+    'hover:i-text-$color-button-secondary-text',
+    'i-text-$color-button-secondary-text',
+    'i-text-$color-button-primary-text',
+    'i-text-$color-button-disabled-text',
+  ];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
