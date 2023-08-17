@@ -14,11 +14,6 @@
 - `boolean`
 - If true forces resets to be excluded from preflights
 
-### omitComponentClasses
-
-- `boolean`
-- if true forces component classes to be excluded from the process. Styling for the classes already used in component classes won't be generated.
-
 ### usePixels
 
 - `boolean`

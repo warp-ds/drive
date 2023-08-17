@@ -20,9 +20,6 @@ const {
     usePixels: {
       type: 'boolean',
     },
-    omitComponentClasses: {
-      type: 'boolean',
-    },
     skipResets: {
       type: 'boolean',
     },

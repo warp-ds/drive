@@ -1,4 +1,3 @@
-import { classes } from '@warp-ds/css/component-classes/classes';
 import { preflights } from '#preflights';
 import { rules } from '#rules';
 import { shortcuts } from '#shortcuts';
@@ -11,7 +10,6 @@ import { postprocess } from '#postprocess';
  * @property {boolean} development // internal use only - force preflights(transform + resets) to be excluded and no external classes will be processed
  * @property {boolean} skipResets // force resets to be excluded from preflights
  * @property {boolean} externalizeClasses - if true forces external or 'core' classes to be excluded from the process.
- * @property {boolean} omitComponentClasses - if true forces component classes to be excluded from the process.
  * @property {Array} externalClasses - list of classes that will not be processed
  * @property {boolean} usePixels - use pixel spacing instead of rem
  */
@@ -23,8 +21,7 @@ import { postprocess } from '#postprocess';
 export function presetWarp(options = {}) {
   checkEnvironment();
   const externalizeClasses = options.externalizeClasses ?? !options.development; // 'true' by default
-  const safeExternalClasses = options.externalClasses || [];
-  const excludedClasses = options.omitComponentClasses ? [...classes, ...safeExternalClasses] : safeExternalClasses;
+  const externalClasses = options.externalClasses || [];
   const theme = useTheme(options);
   return {
     name: '@warp-ds/uno',
@@ -32,7 +29,7 @@ export function presetWarp(options = {}) {
     rules,
     variants,
     preflights: options.development ? [] : preflights(options.skipResets),
-    postprocess: postprocess(externalizeClasses, excludedClasses),
+    postprocess: postprocess(externalizeClasses, externalClasses),
     shortcuts,
   };
 }
