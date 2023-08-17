@@ -1,5 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`it generated button css based on warp component tokens 1`] = `
+"/* layer: default */
+.hover\\\\:i-text-\\\\$color-button-secondary-text:hover,
+.i-text-\\\\$color-button-secondary-text{color:var(--w-color-button-secondary-text);}
+.i-text-\\\\$color-button-disabled-text{color:var(--w-color-button-disabled-text);}
+.i-text-\\\\$color-button-primary-text{color:var(--w-color-button-primary-text);}"
+`;
+
 exports[`it generates css based on warp tokens 1`] = `
 "/* layer: default */
 .i-bg-\\\\$foo-bar{background-color:var(--w-foo-bar);}

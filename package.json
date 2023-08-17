@@ -37,26 +37,26 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "^0.50.6",
-    "@unocss/preset-mini": "^0.50.6"
+    "@unocss/core": "^0.55.1",
+    "@unocss/preset-mini": "^0.52.7"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
-    "@unocss/autocomplete": "^0.50.6",
+    "@unocss/autocomplete": "^0.55.1",
     "@warp-ds/eslint-config": "^0.0.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.36.0",
     "rollup": "^3.19.1",
     "semantic-release": "^20.1.1",
-    "unocss": "^0.50.6",
+    "unocss": "^0.55.1",
     "uvu": "^0.5.6",
     "vite": "^4.2.0",
     "vitest": "^0.29.3"
   },
   "peerDependencies": {
-    "@warp-ds/css": "^1.0.0-alpha.33"
+    "@warp-ds/css": "^1.0.0-alpha.37"
   },
   "eslintConfig": {
     "extends": "@warp-ds"
