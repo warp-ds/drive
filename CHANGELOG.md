@@ -1,3 +1,10 @@
+# [1.0.0-alpha.63](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.62...v1.0.0-alpha.63) (2023-08-17)
+
+
+### Bug Fixes
+
+* update & align unocss dependencies ([#148](https://github.com/warp-ds/drive/issues/148)) ([e540d19](https://github.com/warp-ds/drive/commit/e540d19f179308edc3ff3c0442ae2f87cfcf5799))
+
 # [1.0.0-alpha.62](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.61...v1.0.0-alpha.62) (2023-08-15)
 
 
