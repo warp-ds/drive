@@ -9,7 +9,7 @@ describe('external classes', () => {
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
-  test('externaliized class of mt-32 should be excluded from the css', async ({ uno }) => {
+  test('externalized class of mt-32 should be excluded from the css', async ({ uno }) => {
     const classes = ['mt-16', 'mt-32', 'mb-24'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
