@@ -4,7 +4,7 @@ import { describe, expect, test } from 'vitest';
 setup({ externalizeClasses: true, externalClasses: ["mt-32", "mb-32"] });
 
 describe('external classes', () => {
-  test('externaliized classes of mt-32 and mb-32 should be excluded from the css', async ({ uno }) => {
+  test('externalized classes of mt-32 and mb-32 should be excluded from the css', async ({ uno }) => {
     const classes = ['mt-16', 'mt-32', 'mb-32'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
