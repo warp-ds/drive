@@ -1,8 +1,11 @@
-# drive - an UnoCSS preset
+# drive - a UnoCSS preset
 
-## use
+## How to contribute
 
-## plugin API
+If you'd like to contribute to `@warp-ds/drive`, start by reviewing the [contributing guidelines](https://github.com/warp-ds/drive/blob/main/CONTRIBUTING.md).
+
+
+## Plugin API
 
 ### development
 
@@ -12,51 +15,53 @@
 ### skipResets
 
 - `boolean`
-- If true forces resets to be excluded from preflights
+- If true forces resets.css to be excluded from preflights
 
 ### usePixels
 
 - `boolean`
 - Internal use only, for use on sites that are incompatible with root REM/`font-size` changes
 
-## migration development
+### externalizeClasses
 
-## checking fabric classes
+- Forces classes in `externalClasses` to be removed from output
+
+### externalClasses
+
+- A list of CSS classes that should be removed from output
+
+
+## Quick test of utility classes support
+
+In order to generate CSS for utility classes from your terminal, run `pnpm dev` using the following instructions:
+
+Usage: node dev.js [--cliClasses=string | -c string] [--usePixels] [--externalClasses=string] [--externalizeClasses]
+
+Example: 
+```sh
+pnpm dev -c m-2
+```
+! Do not use `-c` when passing negative values, e.g. `pnpm dev --cliClasses='-m-2! gap-2'`
+
+## Migration development
+
+### checking fabric classes
 
 1. Check out the `parity` project from warp-ds, get dependencies for the project
-2. Link to the `parity` project from the `plugin` folder (this folder): `pnpm link ../parity`
+2. Link to the `parity` project from drive's root folder: `pnpm link ../parity`
 3. Run `node checkFabricClasses.js`
-
-## generating warp classes using command line
-
-Run `node dev.js` or `pnpm dev`
-
-Usage: node dev.js [-c <string> | --cliClasses=<string>] [--usePixels] [--development] [--externalClasses] [--externalizeClasses] [--usePreflight]
-
-Example: `node dev.js --usePixels --development --cliClasses=m-2`
-! Do not use shortcut when passing negative values, e.g. `node dev.js --cliClasses='-m-2! gap-2'`
-
-## Contributing
-
-We use [commitizen](https://github.com/commitizen/cz-cli) to ensure coherent commit message structure, used by [semantic release](#releases) to generate change logs and handle versioning.
-
-```
-npm install -g commitizen
-```
-
-When installed, you should be able to type `cz` or `git cz` in your terminal to commit your changes (replacing
-`git commit`).
-
-[![Add and commit with Commitizen](https://github.com/commitizen/cz-cli/raw/master/meta/screenshots/add-commit.png)](https://github.com/commitizen/cz-cli/raw/master/meta/screenshots/add-commit.png)
-
 
 ## Releases
 
-This project uses [Semantic Release](https://github.com/semantic-release/semantic-release) to automate package
-publishing when making changes to the `master` or `alpha` branch.
+This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/drive), also using a `next` tag (e.g. `1.0.0-next.1`).
+Anyone needing to start using the package before the main release can install the `next` version while waiting for the stable version.
 
-It is recommended to branch off the `alpha` branch and follow
-[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) when making changes. When your
-changes are ready for pull request, this should be opened against the `alpha` branch.
 
-Please note that the version published will depend on your commit message structure. Make sure to use commitizen (see [Development section](#Contributing)).
+## Changelog
+
+Detailed changes for each release can be found in the [CHANGELOG](CHANGELOG.md) file.
+
+
+## License
+
+@warp-ds/drive is available under the [Apache-2.0 software license](https://github.com/warp-ds/drive/blob/main/LICENSE).
