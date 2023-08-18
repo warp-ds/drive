@@ -1,3 +1,10 @@
+# [1.0.0-alpha.64](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.63...v1.0.0-alpha.64) (2023-08-18)
+
+
+### Bug Fixes
+
+* remove @warp-ds/css dep to fix circular dependency ([#149](https://github.com/warp-ds/drive/issues/149)) ([e351c76](https://github.com/warp-ds/drive/commit/e351c76da3b8c00ae009aa88fbdaba1de4a676e5))
+
 # [1.0.0-alpha.63](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.62...v1.0.0-alpha.63) (2023-08-17)
 
 
