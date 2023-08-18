@@ -14,7 +14,7 @@ describe('external classes', () => {
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
-  test('externaliized class of mt-32 should be included if used with modifier', async ({ uno }) => {
+  test('externalized class of mt-32 should be included if used with modifier', async ({ uno }) => {
     const classes = ['sm:mt-32', 'md:mt-32', 'active:mt-32'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
