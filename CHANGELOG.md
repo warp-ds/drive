@@ -1,3 +1,10 @@
+# [1.0.0-alpha.65](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.64...v1.0.0-alpha.65) (2023-08-21)
+
+
+### Bug Fixes
+
+* **aspect-ratio:** add rules for aspect-ratio, -video and -square ([#150](https://github.com/warp-ds/drive/issues/150)) ([f5d1c79](https://github.com/warp-ds/drive/commit/f5d1c79c3849293c4e4079407f2aa7456470992a))
+
 # [1.0.0-alpha.64](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.63...v1.0.0-alpha.64) (2023-08-18)
 
 
