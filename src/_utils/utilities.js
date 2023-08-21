@@ -13,7 +13,7 @@ import { getComponents } from './getComponents.js';
  */
 export function directionSize(propertyPrefix, size) {
   return ([_, direction, s], { theme }) => {
-    const v = theme.spacing?.[size] ?? h.bracket.global.auto.fraction(s);
+    const v = theme.spacing?.[size || s] ?? h.bracket.global.auto.fraction(s);
     if (v != null) return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
   };
 }

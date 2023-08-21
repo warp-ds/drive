@@ -47,8 +47,8 @@ test('can generate pixel values for theme', async () => {
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
     .bottom-4{bottom:4px;}
-    .pt-8{padding-top:8px;}
-    .-ml-32{margin-left:-32px;}"
+    .-ml-32{margin-left:-32px;}
+    .pt-8{padding-top:8px;}"
   `);
 });
 

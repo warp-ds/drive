@@ -9,12 +9,12 @@ test('padding works', async ({ uno }) => {
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
     .p-8{padding:0.8rem;}
-    .px-2{padding-left:0.2rem;padding-right:0.2rem;}
-    .py-4{padding-top:0.4rem;padding-bottom:0.4rem;}
     .pb-8{padding-bottom:0.8rem;}
     .pl-32{padding-left:3.2rem;}
     .pr-16{padding-right:1.6rem;}
-    .pt-16{padding-top:1.6rem;}"
+    .pt-16{padding-top:1.6rem;}
+    .px-2{padding-left:0.2rem;padding-right:0.2rem;}
+    .py-4{padding-top:0.4rem;padding-bottom:0.4rem;}"
   `);
 });
 
@@ -32,13 +32,13 @@ test('margin works', async ({ uno }) => {
     .-m-8{margin:-0.8rem;}
     .m-8{margin:0.8rem;}
     .m-auto{margin:auto;}
-    .mx-2{margin-left:0.2rem;margin-right:0.2rem;}
-    .my-4{margin-top:0.4rem;margin-bottom:0.4rem;}
     .mb-8{margin-bottom:0.8rem;}
     .ml-32{margin-left:3.2rem;}
     .ml-auto{margin-left:auto;}
     .mr-16{margin-right:1.6rem;}
-    .mt-16{margin-top:1.6rem;}"
+    .mt-16{margin-top:1.6rem;}
+    .mx-2{margin-left:0.2rem;margin-right:0.2rem;}
+    .my-4{margin-top:0.4rem;margin-bottom:0.4rem;}"
   `);
 });
 
