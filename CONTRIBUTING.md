@@ -105,8 +105,8 @@ publishing when making changes to the `master` or `next` branch.
 Please note that the version published will depend on your commit message structure.
 Make sure to review and follow the instructions in the [Committing](#committing) section before committing.
 
-Before the first major release we develop against a `next` branch which is constantly published to [NPM](https://www.npmjs.com/package/@warp-ds/drive) a `next` tag (e.g. `1.0.0-next.1`).
-Anyone needing to start using the package before the main release can install the `next` version while waiting for the stable version.
+This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/drive) using a `next` tag (e.g. `1.1.0-next.1`).
+Anyone needing to use the latest changes of this package can install the `next` version while waiting for the stable release.
 
 A stable release from the `master` branch is basically done by just opening a pull request from `next` to `master` and then making sure to *merge* commit the pull request.
 NEVER SQUASH-MERGE TO `master` to prevent losing history and commit messages from all commits to `next`.

@@ -53,8 +53,8 @@ pnpm dev -c m-2
 
 ## Releases
 
-This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/drive), also using a `next` tag (e.g. `1.0.0-next.1`).
-Anyone needing to start using the package before the main release can install the `next` version while waiting for the stable version.
+This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/drive) using a `next` tag (e.g. `1.1.0-next.1`).
+Anyone needing to use the latest changes of this package can install the `next` version while waiting for the stable release.
 
 
 ## Changelog
