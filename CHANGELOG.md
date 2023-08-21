@@ -1,3 +1,10 @@
+# [1.0.0-alpha.66](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.65...v1.0.0-alpha.66) (2023-08-21)
+
+
+### Bug Fixes
+
+* update vite to 4.2.3 to fix a vulnerability ([#152](https://github.com/warp-ds/drive/issues/152)) ([929c9af](https://github.com/warp-ds/drive/commit/929c9af50d3ef06db979e99067aa4b9a3668fade))
+
 # [1.0.0-alpha.65](https://github.com/warp-ds/drive/compare/v1.0.0-alpha.64...v1.0.0-alpha.65) (2023-08-21)
 
 
