@@ -1,15 +1,18 @@
 import { directionSize } from '#utils';
+import { spaceBase } from '#theme';
+export const padding =
+  spaceBase.map(s => {
+    var rule = new RegExp('^p([xyrltb]?)' + '-' + s + '$');
+    return [rule, directionSize('padding', s.toString())];
+  });
 
-// negatives come in via the negative variant
-export const padding = [
-  // empty capture group here sets an empty string for 'direction' instead of undefined
-  [/^p()-(.+)$/, directionSize('padding'), { autocomplete: '(m|p)-<num>' }],
-  [/^p([xy])-(.+)$/, directionSize('padding')],
-  [/^p([rltb])-(.+)$/, directionSize('padding'), { autocomplete: '(m|p)<directions>-<num>' }],
-];
+export const margin =
+  spaceBase.map(s => {
+    var rule = new RegExp('^m([xyrltb]?)' + '-' + s + '$');
+    return [rule, directionSize('margin', s.toString())];
+  });
 
-export const margin = [
-  [/^m()-(.+)$/, directionSize('margin')],
-  [/^m([xy])-(.+)$/, directionSize('margin')],
-  [/^m([rltb])-(.+)$/, directionSize('margin')],
+export const spacingAuto = [
+  [/^m([xyrltb]?)-(.+)/, directionSize('margin')],
+  [/^p([xyrltb]?)-(.+)/, directionSize('padding')],
 ];

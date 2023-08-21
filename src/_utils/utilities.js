@@ -8,11 +8,12 @@ import { getComponents } from './getComponents.js';
  * Provide {@link DynamicMatcher} function returning spacing definition. See spacing rules.
  *
  * @param {string} propertyPrefix - Property for the css value to be created. Postfix will be appended according to direction matched.
+ * @param {string} size - Spacing value to be used.
  * @see {@link directionMap}
  */
-export function directionSize(propertyPrefix) {
-  return ([_, direction, size], { theme }) => {
-    const v = theme.spacing?.[size] ?? h.bracket.global.auto.fraction(size);
+export function directionSize(propertyPrefix, size) {
+  return ([_, direction, s], { theme }) => {
+    const v = theme.spacing?.[size] ?? h.bracket.global.auto.fraction(s);
     if (v != null) return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
   };
 }
