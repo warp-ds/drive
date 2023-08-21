@@ -8,3 +8,9 @@ test('it generates backported aspect-ratios', async ({ uno }) => {
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
+
+test('aspect-ratio, -video and -square', async ({ uno }) => {
+  const classes = ['aspect-ratio', 'aspect-video', 'aspect-square'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});

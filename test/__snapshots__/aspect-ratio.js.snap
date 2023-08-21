@@ -1,5 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`aspect-ratio, -video and -square 1`] = `
+"/* layer: default */
+.aspect-square{position:relative;padding-bottom:100%;}.aspect-square>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
+.aspect-video{position:relative;padding-bottom:56.25%;}.aspect-video>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
+.aspect-ratio{aspect-ratio:auto;}"
+`;
+
 exports[`it generates backported aspect-ratios 1`] = `
 "/* layer: default */
 .aspect-1\\\\/1{position:relative;padding-bottom:100%;}.aspect-1\\\\/1>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
