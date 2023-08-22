@@ -1,4 +1,4 @@
-name: Update alpha
+name: Update next
 on:
   workflow_run:
     workflows:
@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Rebase alpha to master
+      - name: Rebase next to master
         run: |
           git fetch --unshallow
-          git checkout alpha
+          git checkout next
           git rebase origin/master
           git push
