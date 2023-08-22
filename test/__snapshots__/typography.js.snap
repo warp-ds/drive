@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`shortcuts 1`] = `
+"/* layer: shortcuts */
+.h1,
+.t1{font-weight:700;font-size:var(--w-font-size-xxl);line-height:var(--w-line-height-xxl);}
+.h2,
+.t2{font-weight:700;font-size:var(--w-font-size-xl);line-height:var(--w-line-height-xl);}
+.h3,
+.t3{font-weight:700;font-size:var(--w-font-size-l);line-height:var(--w-line-height-l);}
+.h4,
+.t4{font-weight:700;font-size:var(--w-font-size-m);line-height:var(--w-line-height-m);}
+.h5,
+.t5{font-weight:700;font-size:var(--w-font-size-s);line-height:var(--w-line-height-s);}
+.t6{font-weight:700;font-size:var(--w-font-size-xs);line-height:var(--w-line-height-xs);}
+.text-body{font-size:var(--w-font-size-m);line-height:var(--w-line-height-m);}
+.text-caption{font-size:var(--w-font-size-s);line-height:var(--w-line-height-s);}
+.text-detail{font-size:var(--w-font-size-xs);line-height:var(--w-line-height-xs);}
+.text-display{font-size:var(--w-font-size-xxxl);line-height:var(--w-line-height-xxxl);}
+.text-preamble{font-size:var(--w-font-size-ml);line-height:var(--w-line-height-ml);}"
+`;
+
+exports[`typography - leading classes  1`] = `
+"/* layer: default */
+.leading-16,
+.leading-xs{line-height:var(--w-line-height-xs);}
+.leading-18,
+.leading-s{line-height:var(--w-line-height-s);}
+.leading-22,
+.leading-m{line-height:var(--w-line-height-m);}
+.leading-26,
+.leading-ml{line-height:var(--w-line-height-ml);}
+.leading-28,
+.leading-l{line-height:var(--w-line-height-l);}
+.leading-34,
+.leading-xl{line-height:var(--w-line-height-xl);}
+.leading-41,
+.leading-xxl{line-height:var(--w-line-height-xxl);}
+.leading-56,
+.leading-xxxl{line-height:var(--w-line-height-xxxl);}"
+`;
+
+exports[`typography - leading classes with arbitrary values 1`] = `
+"/* layer: default */
+.leading-\\\\[11\\\\]{line-height:1.1rem;}
+.leading-\\\\[24\\\\]{line-height:2.4rem;}
+.leading-\\\\[24px\\\\]{line-height:24px;}
+.leading-\\\\[24rem\\\\]{line-height:24rem;}"
+`;
+
+exports[`typography - text classes  1`] = `
+"/* layer: default */
+.text-12,
+.text-xs{font-size:var(--w-font-size-xs);line-height:var(--w-line-height-xs);}
+.text-14,
+.text-s{font-size:var(--w-font-size-s);line-height:var(--w-line-height-s);}
+.text-16,
+.text-m{font-size:var(--w-font-size-m);line-height:var(--w-line-height-m);}
+.text-20,
+.text-ml{font-size:var(--w-font-size-ml);line-height:var(--w-line-height-ml);}
+.text-22,
+.text-l{font-size:var(--w-font-size-l);line-height:var(--w-line-height-l);}
+.text-28,
+.text-xl{font-size:var(--w-font-size-xl);line-height:var(--w-line-height-xl);}
+.text-34,
+.text-xxl{font-size:var(--w-font-size-xxl);line-height:var(--w-line-height-xxl);}
+.text-48,
+.text-xxxl{font-size:var(--w-font-size-xxxl);line-height:var(--w-line-height-xxxl);}"
+`;

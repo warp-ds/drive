@@ -2,14 +2,20 @@ export const opacity = [
   [/^opacity-(\d+)$/, ([, d], { theme }) => ({ opacity: theme.opacity[d] }), { autocomplete: 'opacity-${opacity}' }],
 ];
 
+export const caretColors = [
+  ['caret-inherit', { 'caret-color': 'inherit'  }],
+  ['caret-transparent', { 'caret-color': 'transparent' }],
+  ['caret-current', { 'caret-color': 'currentColor' }],
+];
+
 export const textColors = [
-  ['text', { color: 'var(--w-text-color)' }],
-  ['text-inverted', { color: 'var(--w-text-color-inverted)' }],
-  ['text-inverted-subtle', { color: 'var(--w-text-color-inverted-subtle)' }],
-  ['text-subtle', { color: 'var(--w-text-color-subtle)' }],
+//  ['text-inherit', { 'color': 'inherit' }], // This class currently sets "text-align: inherit;" in align.js
+  ['text-transparent', { 'color': 'transparent' }],
+  ['text-current', { 'color': 'currentColor' }],
 ];
 
 export const bgColors = [
-  ['bg', { 'background-color': 'var(--w-background-color)' }],
-  ['bg-subtle', { 'background-color': 'var(--w-background-color-subtle)' }],
+  ['bg-inherit', { 'background-color': 'inherit' }],
+  ['bg-transparent', { 'background-color': 'transparent' }],
+  ['bg-current', { 'background-color': 'currentColor' }],
 ];

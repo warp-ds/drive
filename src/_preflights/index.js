@@ -1,5 +1,4 @@
-import { twReset } from './tw-reset.js';
-import { formPreflight } from './forms/export.js';
 import { transformBase } from './transform.js';
+import { resets } from './resets.js';
 
-export const preflights = [twReset, transformBase, formPreflight];
+export const preflights = (skipResets) => (skipResets ? [transformBase] : [transformBase, resets]);

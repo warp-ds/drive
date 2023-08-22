@@ -20,7 +20,7 @@ test('opacity not created if invalid', async ({ uno }) => {
 });
 
 test('text colors', async({ uno }) => {
-  const classes = ['text' ,'text-inverted', 'text-inverted-subtle', 'text-subtle'];
+  const classes = ['text-transparent', 'text-current'];
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
@@ -34,7 +34,10 @@ test('text color invalid class', async({ uno }) => {
 });
 
 test('bg colors', async({ uno }) => {
-  const classes = ['bg' , 'bg-subtle'];
+  const classes = [
+    'bg-inherit',
+    'bg-transparent',
+    'bg-current'];
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
@@ -45,4 +48,15 @@ test('bg color invalid class', async({ uno }) => {
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
+});
+
+test('caret', async({ uno }) => {
+  const classes = [
+    'caret-inherit',
+    'caret-current',
+    'caret-transparent',
+  ];
+
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
 });

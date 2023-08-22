@@ -2,8 +2,16 @@
 
 exports[`bg colors 1`] = `
 "/* layer: default */
-.bg{background-color:var(--w-background-color);}
-.bg-subtle{background-color:var(--w-background-color-subtle);}"
+.bg-inherit{background-color:inherit;}
+.bg-transparent{background-color:transparent;}
+.bg-current{background-color:currentColor;}"
+`;
+
+exports[`caret 1`] = `
+"/* layer: default */
+.caret-inherit{caret-color:inherit;}
+.caret-transparent{caret-color:transparent;}
+.caret-current{caret-color:currentColor;}"
 `;
 
 exports[`opacity by theme 1`] = `
@@ -11,13 +19,12 @@ exports[`opacity by theme 1`] = `
 .opacity-0{opacity:0%;}
 .opacity-100{opacity:100%;}
 .opacity-25{opacity:25%;}
-.opacity-50{opacity:50%;}"
+.opacity-50{opacity:50%;}
+.opacity-75{opacity:75%;}"
 `;
 
 exports[`text colors 1`] = `
 "/* layer: default */
-.text{color:var(--w-text-color);}
-.text-inverted{color:var(--w-text-color-inverted);}
-.text-inverted-subtle{color:var(--w-text-color-inverted-subtle);}
-.text-subtle{color:var(--w-text-color-subtle);}"
+.text-transparent{color:transparent;}
+.text-current{color:currentColor;}"
 `;

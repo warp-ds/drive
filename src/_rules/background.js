@@ -36,4 +36,16 @@ export const backgrounds = [
   ['bg-origin-padding', { 'background-origin': 'padding-box' }],
   ['bg-origin-content', { 'background-origin': 'content-box' }],
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
+
+  //arbitrary
+  [/^bg-\[(.+)\]/, ([, p]) => {
+    if (p.startsWith('url')) {
+      // Process url(var(--something)) and extract the var itself -> --something
+      const urlAsVar = p.match(/url\(var\(([^)]*)/)?.[1];
+      return { 'background-image': urlAsVar ? `var(${urlAsVar})` : p };
+    } else if (p.startsWith('var')) {
+      return { 'background-color': p };
+    }
+    return { 'background-color': `var(${p})` };
+  }],
 ];

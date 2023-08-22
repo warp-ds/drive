@@ -5,9 +5,9 @@ import { lineWidth } from '#theme';
 setup();
 
 describe("border", () => {
-  test("supports x|y with value", async (t) => {
-    const x = ["border-x-0", "border-x-2", "border-x-4", "border-x-8"];
-    const y = ["border-y-0", "border-y-2", "border-y-4", "border-y-8"];
+  test("supports x|y with value and without", async (t) => {
+    const x = ["border-x", "border-x-0", "border-x-2", "border-x-4", "border-x-8"];
+    const y = ["border-y", "border-y-0", "border-y-2", "border-y-4", "border-y-8"];
 
     const classes = [...x, ...y];
 
@@ -24,6 +24,13 @@ describe("border", () => {
     expect(css).toMatchSnapshot();
   });
 
+  test("supports setting arbitrary border width", async (t) => {
+    const classes = ["border-[66]", "border-[6]", "border-l-[7]", "border-r-[7]", "border-t-[7]", "border-b-[7]", "border-w-[7]", "border-[wow]"];
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchSnapshot();
+  });
   test("supports setting border style", async (t) => {
     const classes = [
       "border-solid",
@@ -36,6 +43,18 @@ describe("border", () => {
       "border-ridge",
       "border-inset",
       "border-outset",
+    ];
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchSnapshot();
+  });
+
+  test("supports setting border color", async (t) => {
+    const classes = [
+      "border-transparent",
+      "border-inherit",
+      "border-current",
     ];
 
     const { css } = await t.uno.generate(classes);
@@ -120,3 +139,4 @@ describe("rounded", () => {
     expect(css).toMatchSnapshot();
   });
 });
+

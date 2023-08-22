@@ -19,4 +19,12 @@ export const arBackport = [
     const child = `.${selector}>*{${childStyles}}`;
     return base + child;
   }, { autocomplete: ['aspect-(ratio)'] }],
+  [/^aspect-(video|square)$/, ([_selector, v]) => {
+    const fraction = v === "video" ? "16/9" : "1/1";
+    const ratioAsPercentage = h.inverseFraction(fraction);
+    const base = `.${_selector}{position:relative;padding-bottom:${ratioAsPercentage};}`;
+    const child = `.${_selector}>*{${childStyles}}`;
+    return base + child;
+  }, { autocomplete: ['aspect-(ratio)'] }],
+  ['aspect-ratio', { 'aspect-ratio': 'auto' }],
 ];

@@ -31,7 +31,7 @@ test(`autocomplete doesn't throw`, async ({ uno }) => {
 });
 
 test(`the HTML parser is sane`, async ({ uno }) => {
-  const { css } = await uno.generate(`<div class="before:content-['before-stuff'] sm:grid"></div>`);
+  const { css } = await uno.generate([`before:content-['before-stuff']`, 'sm:grid']);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
     .before\\\\:content-\\\\[\\\\'before-stuff\\\\'\\\\]::before{content:'before-stuff';}

@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`it generates css based on semantic warp tokens 1`] = `
+"/* layer: default */
+.s-bg{background-color:var(--w-s-color-background);}
+.s-bg-positive-selected-hover{background-color:var(--w-s-color-background-positive-selected-hover);}
+.s-text{color:var(--w-s-color-text);}
+.s-text-link-active{color:var(--w-s-color-text-link-active);}
+.s-icon{color:var(--w-s-color-icon);}
+.s-icon-active{color:var(--w-s-color-icon-active);}
+.s-icon-disabled{color:var(--w-s-color-icon-disabled);}
+.s-icon-hover{color:var(--w-s-color-icon-hover);}
+.s-icon-info{color:var(--w-s-color-icon-info);}
+.s-icon-inverted{color:var(--w-s-color-icon-inverted);}
+.s-icon-negative{color:var(--w-s-color-icon-negative);}
+.s-icon-positive{color:var(--w-s-color-icon-positive);}
+.s-icon-primary{color:var(--w-s-color-icon-primary);}
+.s-icon-selected-hover{color:var(--w-s-color-icon-selected-hover);}
+.s-icon-subtle{color:var(--w-s-color-icon-subtle);}
+.s-icon-subtle-active{color:var(--w-s-color-icon-subtle-active);}
+.s-icon-subtle-hover{color:var(--w-s-color-icon-subtle-hover);}
+.s-icon-warning{color:var(--w-s-color-icon-warning);}
+.s-border{border-color:var(--w-s-color-border);}
+.s-border-b{border-bottom-color:var(--w-s-color-border);}
+.s-border-l{border-left-color:var(--w-s-color-border);}
+.s-border-r{border-right-color:var(--w-s-color-border);}
+.s-border-t{border-top-color:var(--w-s-color-border);}
+.s-border-x{border-left-color:var(--w-s-color-border);border-right-color:var(--w-s-color-border);}
+.s-border-y{border-top-color:var(--w-s-color-border);border-bottom-color:var(--w-s-color-border);}
+.s-border-b-negative-hover{border-bottom-color:var(--w-s-color-border-negative-hover);}
+.s-border-l-disabled{border-left-color:var(--w-s-color-border-disabled);}
+.s-border-r-primary-selected-hover{border-right-color:var(--w-s-color-border-primary-selected-hover);}
+.s-border-t-positive{border-top-color:var(--w-s-color-border-positive);}
+.s-border-x-warning-active{border-left-color:var(--w-s-color-border-warning-active);border-right-color:var(--w-s-color-border-warning-active);}
+.s-border-y-info-subtle-active{border-top-color:var(--w-s-color-border-info-subtle-active);border-bottom-color:var(--w-s-color-border-info-subtle-active);}"
+`;

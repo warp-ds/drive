@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`drop shadows 1`] = `
+"/* layer: default */
+.drop-shadow-l{filter:drop-shadow(rgba(64, 64, 64, .23) 0 6px 8px) drop-shadow(rgba(64, 64, 64, .19) 0 10px 20px);}
+.drop-shadow-m{filter:drop-shadow(rgba(64, 64, 64, .24) 0 3px 8px) drop-shadow(rgba(64, 64, 64, .16) 0 3px 6px);}
+.drop-shadow-s{filter:drop-shadow(rgba(64, 64, 64, .16) 0 1px 6px) drop-shadow(rgba(64, 64, 64, .24) 0 1px 1px);}
+.drop-shadow-xl{filter:drop-shadow(rgba(64, 64, 64, .22) 0 9px 12px) drop-shadow(rgba(64, 64, 64, .25) 0 14px 28px);}"
+`;
+
+exports[`shadows work 1`] = `
+"/* layer: default */
+.shadow-l{box-shadow:var(--w-shadow-l);}
+.shadow-m{box-shadow:var(--w-shadow-m);}
+.shadow-s{box-shadow:var(--w-shadow-s);}
+.shadow-xl{box-shadow:var(--w-shadow-xl);}"
+`;

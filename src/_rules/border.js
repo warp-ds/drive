@@ -17,13 +17,24 @@ const borderStyles = [
 
 export const borders = [
   [/^border$/, handlerBorder],
+  [/^border-transparent$/, () => ({ 'border-color': 'transparent' })],
+  [/^border-inverted$/, () => ({ 'border-color': 'var(--w-s-border-inverted)' })],
+  [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
+  [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
   [/^border()-(\d+)$/, handlerBorder, { autocomplete: "(border)-<directions>" }],
-  [/^border-([xy])-(\d+)$/, handlerBorder],
-  [/^border-([rltb])$/, handlerBorder],
-  [/^border-([rltb])-(\d+)$/, handlerBorder],
+  [/^border-([lrtbxy])$/, handlerBorder],
+  [/^border-([lrtbxy])-(\d+)$/, handlerBorder],
   [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
-  [/^border-([xy])-(.+)$/, handlerBorderStyle],
-  [/^border-([rltb])-(.+)$/, handlerBorderStyle],
+  [/^border-([lrtbxy])-(.+)$/, handlerBorderStyle],
+  [
+    /^border-([lrtb])?-?\[(\d+)\]$/,
+    handlerArbitraryBorderSize,
+    {
+      autocomplete: [
+        'border-<directions>-[$width]',
+      ],
+    },
+  ],
   // divide
   [/^divide-([xy])-(\d+)$/, handlerDivideBorder, { autocomplete: `divide-<x|y>-(${Object.keys(lineWidth).join('|')})-(reverse)` }],
   [/^divide-([xy])$/, handlerDivideBorder],
@@ -41,6 +52,12 @@ function handlerBorderSize([, a = "", b], { theme }) {
   if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, v]);
 }
 
+function handlerArbitraryBorderSize([, a, v]) {
+  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, `${v}px`]);
+
+  return [[`border-width`, `${v}px`]];
+}
+
 function handlerBorderStyle([, a = "", s]) {
   if (borderStyles.includes(s) && a in directionMap) return directionMap[a].map((i) => [`border${i}-style`, s]);
 }
@@ -48,7 +65,6 @@ function handlerBorderStyle([, a = "", s]) {
 export const rounded = [
   [/^rounded()(?:-(.+))?$/, handlerRounded, { autocomplete: ['(rounded)', '(rounded)-<num>'] }],
   [/^rounded-([rltb]+)(?:-(.+))?$/, handlerRounded],
-  [/^rounded([rltb]{2})(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se])(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handlerRounded],
 ];
@@ -67,7 +83,7 @@ function handleDivideBorderSizes(direction, width, reverse, theme) {
       }
       return `border${i}-width:calc(${borderWidth} * calc(1 - var(--w-divide-${direction}-reverse)))`;
     });
-  };
+  }
 }
 
 function handlerDivideBorder([_selector, direction = "", width, reverse], { theme }) {
@@ -78,3 +94,4 @@ function handlerDivideBorder([_selector, direction = "", width, reverse], { them
     return `.${selector}>*+*{${defaultReverse};${sizes}}`;
   }
 }
+

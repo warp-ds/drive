@@ -50,6 +50,23 @@ exports[`border > supports divide borders between horizontal and stacked childre
 .divide-y>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse))}"
 `;
 
+exports[`border > supports setting arbitrary border width 1`] = `
+"/* layer: default */
+.border-\\\\[6\\\\]{border-width:6px;}
+.border-\\\\[66\\\\]{border-width:66px;}
+.border-b-\\\\[7\\\\]{border-bottom-width:7px;}
+.border-l-\\\\[7\\\\]{border-left-width:7px;}
+.border-r-\\\\[7\\\\]{border-right-width:7px;}
+.border-t-\\\\[7\\\\]{border-top-width:7px;}"
+`;
+
+exports[`border > supports setting border color 1`] = `
+"/* layer: default */
+.border-transparent{border-color:transparent;}
+.border-inherit{border-color:inherit;}
+.border-current{border-color:currentColor;}"
+`;
+
 exports[`border > supports setting border style 1`] = `
 "/* layer: default */
 .border-dashed{border-style:dashed;}
@@ -73,8 +90,10 @@ exports[`border > supports setting border width 1`] = `
 .border-8{border-width:8px;}"
 `;
 
-exports[`border > supports x|y with value 1`] = `
+exports[`border > supports x|y with value and without 1`] = `
 "/* layer: default */
+.border-x{border-left-width:1px;border-right-width:1px;}
+.border-y{border-top-width:1px;border-bottom-width:1px;}
 .border-x-0{border-left-width:0;border-right-width:0;}
 .border-x-2{border-left-width:2px;border-right-width:2px;}
 .border-x-4{border-left-width:4px;border-right-width:4px;}

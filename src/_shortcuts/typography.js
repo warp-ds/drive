@@ -1,0 +1,18 @@
+export const typographyAliases = {
+  t1: 'text-xxl font-bold',
+  t2: 'text-xl font-bold',
+  t3: 'text-l font-bold',
+  t4: 'text-m font-bold',
+  t5: 'text-s font-bold',
+  t6: 'text-xs font-bold',
+  h1: 't1',
+  h2: 't2',
+  h3: 't3',
+  h4: 't4',
+  h5: 't5',
+  'text-display': 'text-xxxl',
+  'text-preamble': 'text-ml',
+  'text-body': 'text-m',
+  'text-caption': 'text-s',
+  'text-detail': 'text-xs',
+};

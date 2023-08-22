@@ -24,5 +24,11 @@ describe('variants', () => {
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
+  test('custom', async ({ uno }) => {
+    const classes = ['last-child:mb-0'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
   // space/divide variant is already tested by the space/divide classes
 });

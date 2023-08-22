@@ -174,3 +174,22 @@ export const mixBlendModes = [
   ['mix-blend-normal', { 'mix-blend-mode': 'normal' }],
   ...makeGlobalStaticRules('mix-blend'),
 ];
+
+export const touchAction = [
+  ['touch-auto', { 'touch-action': 'auto' }],
+  ['touch-none', { 'touch-action': 'none' }],
+  ['touch-pan-x', { 'touch-action': 'pan-x' }],
+  ['touch-pan-y', { 'touch-action': 'pan-y' }],
+  ['touch-pan-left', { 'touch-action': 'pan-left' }],
+  ['touch-pan-right', { 'touch-action': 'pan-right' }],
+  ['touch-pan-up', { 'touch-action': 'pan-up' }],
+  ['touch-pan-down', { 'touch-action': 'pan-down' }],
+  ['touch-pinch-zoom', { 'touch-action': 'pinch-zoom' }],
+  ['touch-manipulation', { 'touch-action': 'manipulation' }],
+];
+
+export const safeArea = [
+  ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom, 0px)' }],
+  ['mb-safe', { 'margin-bottom': 'env(safe-area-inset-bottom, 0px)' }],
+  [/^pb-safe-\[([\d]+)]$/, ([, d]) =>  ({ 'padding-bottom': `calc(${d}px + env(safe-area-inset-bottom, 0px))` })],
+];

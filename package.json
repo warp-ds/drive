@@ -1,6 +1,7 @@
 {
   "name": "@warp-ds/uno",
-  "version": "0.0.15",
+  "repository": "git@github.com:warp-ds/drive.git",
+  "version": "1.0.0-alpha.66",
   "type": "module",
   "exports": {
     ".": "./src/plugin.js",
@@ -12,17 +13,23 @@
     "#plugin": "./src/plugin.js",
     "#utils": "./src/_utils/index.js",
     "#rules": "./src/_rules/index.js",
+    "#shortcuts": "./src/_shortcuts/index.js",
     "#theme": "./src/theme.js",
     "#variants": "./src/_variants/index.js",
     "#preflights": "./src/_preflights/index.js",
     "#postprocess": "./src/postprocessor.js"
   },
+  "files": [
+    "dist",
+    "src",
+    "dev.js"
+  ],
   "scripts": {
+    "commit": "cz",
     "dev": "node dev.js",
     "dev:env": "vite dev-env --config ./vite.config.js",
     "test": "vitest",
     "build": "rollup -c",
-    "version": "pnpm test && pnpm build && pnpm publish",
     "lint": "eslint . --fix",
     "lint:check": "eslint ."
   },
@@ -30,22 +37,33 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "^0.50.4",
-    "@unocss/preset-mini": "^0.50.4"
+    "@unocss/core": "^0.55.1",
+    "@unocss/preset-mini": "^0.52.7"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@unocss/autocomplete": "^0.50.4",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@unocss/autocomplete": "^0.55.1",
     "@warp-ds/eslint-config": "^0.0.1",
-    "drnm": "^0.9.0",
-    "eslint": "^8.35.0",
-    "rollup": "^3.18.0",
-    "unocss": "^0.50.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.36.0",
+    "rollup": "^3.19.1",
+    "semantic-release": "^20.1.1",
+    "unocss": "^0.55.1",
     "uvu": "^0.5.6",
-    "vite": "^4.1.4",
-    "vitest": "^0.29.2"
+    "vite": "^4.2.3",
+    "vitest": "^0.29.3"
   },
   "eslintConfig": {
     "extends": "@warp-ds"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

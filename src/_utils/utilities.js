@@ -218,3 +218,12 @@ export function getBracket(str, open, close) {
     }
   }
 }
+
+export function resolveArbitraryValues(value, unit, context) {
+  if (unit === "rem") return h.rem(`${value}${unit}`);
+  if (unit === "px" || context.theme.usingPixels) return h.px(value);
+  if (value.startsWith('--')) {
+    return `var(${value})`;
+  }
+  return h.rem(value) || value;
+};
