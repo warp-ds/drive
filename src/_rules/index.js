@@ -2,6 +2,7 @@ import * as align from "./align.js";
 import * as animations from "./animations.js";
 import * as arbitrary from "./arbitrary.js";
 import * as aspectRatio from "./aspect-ratio.js";
+import * as backdrop from './backdrop.js';
 import * as backgrounds from './background.js';
 import * as behaviors from "./behaviors.js";
 import * as border from "./border.js";
@@ -35,6 +36,7 @@ const ruleGroups = {
   ...animations,
   ...arbitrary,
   ...aspectRatio,
+  ...backdrop,
   ...backgrounds,
   ...behaviors,
   ...border,
@@ -72,6 +74,7 @@ export * from "./align.js";
 export * from "./animations.js";
 export * from "./arbitrary.js";
 export * from "./aspect-ratio.js";
+export * from './backdrop.js';
 export * from './background.js';
 export * from "./behaviors.js";
 export * from "./border.js";
