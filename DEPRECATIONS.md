@@ -118,6 +118,11 @@ These are TW2 selectors, TW3 and other utility CSS have moved on in syntax.
 - sepia
 - backdrop-filter
 - backdrop-filter-none
+- backdrop-blur-sm :: prefer backdrop-blur-s
+- backdrop-blur-md :: prefer backdrop-blur-m
+- backdrop-blur-lg :: prefer backdrop-blur-l
+- backdrop-blur-2xl :: prefer backdrop-blur-xxl
+- backdrop-blur-3xl :: prefer backdrop-blur-xxxl
 - backdrop-brightness-0
 - backdrop-brightness-50
 - backdrop-brightness-75
