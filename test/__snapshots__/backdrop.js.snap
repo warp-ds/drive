@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`backdrop blur 1`] = `
+"/* layer: default */
+.backdrop-blur{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);}
+.backdrop-blur-l{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.backdrop-blur-m{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);}
+.backdrop-blur-none{-webkit-backdrop-filter:blur(0);backdrop-filter:blur(0);}
+.backdrop-blur-s{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);}
+.backdrop-blur-xl{-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);}
+.backdrop-blur-xxl{-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);}
+.backdrop-blur-xxxl{-webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px);}"
+`;
