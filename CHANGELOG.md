@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/warp-ds/drive/compare/v1.0.0...v1.1.0) (2023-09-19)
+
+
+### Features
+
+* Add rules for backdrop-blur ([#156](https://github.com/warp-ds/drive/issues/156)) ([05b23a7](https://github.com/warp-ds/drive/commit/05b23a7c48491a0f9bb4c0d5f4332951da9f2184))
+
 # [1.1.0-next.1](https://github.com/warp-ds/drive/compare/v1.0.0...v1.1.0-next.1) (2023-09-07)
 
 
