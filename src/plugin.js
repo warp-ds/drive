@@ -1,9 +1,9 @@
-import { preflights } from '#preflights';
-import { rules } from '#rules';
-import { shortcuts } from '#shortcuts';
-import { variants } from '#variants';
-import { useTheme } from '#theme';
-import { postprocess } from '#postprocess';
+import { preflights } from "#preflights";
+import { rules } from "#rules";
+import { shortcuts } from "#shortcuts";
+import { variants } from "#variants";
+import { useTheme } from "#theme";
+import { postprocess } from "#postprocess";
 /**
  * @typedef PluginOptions
  * @type {Object}
@@ -24,7 +24,7 @@ export function presetWarp(options = {}) {
   const externalClasses = options.externalClasses || [];
   const theme = useTheme(options);
   return {
-    name: '@warp-ds/uno',
+    name: "@warp-ds/uno",
     theme,
     rules,
     variants,
@@ -35,12 +35,16 @@ export function presetWarp(options = {}) {
 }
 
 function checkEnvironment() {
-  if (typeof fetch === 'undefined') {
-    if (typeof process !== 'undefined') {
-      const NODE_MAJOR_VERSION = process.versions.node.split('.')[0];
-      if (NODE_MAJOR_VERSION < 18) throw new Error('Warp requires node 18 or higher');
+  if (typeof fetch === "undefined") {
+    if (typeof process !== "undefined") {
+      const NODE_MAJOR_VERSION = process.versions.node.split(".")[0];
+      if (NODE_MAJOR_VERSION < 18) {
+        throw new Error("Warp requires node 18 or higher");
+      }
     }
-    throw new Error("'fetch' is undefined for some reason and presetWarp requires it");
+    throw new Error(
+      "'fetch' is undefined for some reason and presetWarp requires it"
+    );
   }
 }
 
