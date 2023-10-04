@@ -18,7 +18,7 @@ import { postprocess } from "#postprocess";
  * @param {PluginOptions} options
  * @type {import('@unocss/core').Preset}
  */
-export function presetWarp(options = {}) {
+export async function presetWarp(options = {}) {
   checkEnvironment();
   const externalizeClasses = options.externalizeClasses ?? !options.development; // 'true' by default
   const externalClasses = options.externalClasses || [];
@@ -29,7 +29,7 @@ export function presetWarp(options = {}) {
     rules,
     variants,
     preflights: options.development ? [] : preflights(options.skipResets),
-    postprocess: postprocess(externalizeClasses, externalClasses),
+    postprocess: await postprocess(externalizeClasses, externalClasses),
     shortcuts,
   };
 }

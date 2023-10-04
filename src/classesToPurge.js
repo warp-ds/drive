@@ -1,5 +1,5 @@
 let classes;
-export async function getClassesToPurge() {
+async function getClassesToPurge() {
   if (classes) return classes;
   else {
     classes = await fetch(
@@ -10,12 +10,10 @@ export async function getClassesToPurge() {
       );
       return [];
     });
-    return classes;
+    return classes.json();
   }
 }
 
-// export const classesToPurge = () => {
-//   getCSS: getClassesToPurge,
-// };
-
-export const test = () => [classesToPurge()];
+export const classesToPurge = {
+  classes: getClassesToPurge(),
+};
