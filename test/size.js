@@ -90,7 +90,7 @@ describe("width and height with arbitrary values", () => {
   test('width with pixel values', async () => {
     const classes = ['w-[20000]', 'w-[99999]', 'w-[378]'];
 
-    const uno = getGenerator({ usePixels: true });
+    const uno = await getGenerator({ usePixels: true });
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -126,7 +126,7 @@ describe("width and height with arbitrary values", () => {
   test('height with pixel values', async () => {
     const classes = ['h-[20000]', 'h-[99999]', 'h-[378]'];
 
-    const uno = getGenerator({ usePixels: true });
+    const uno = await getGenerator({ usePixels: true });
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -165,7 +165,7 @@ describe("min width and height with arbitrary values", () => {
   test('min-width with pixel values', async () => {
     const classes = ['min-w-[20000]', 'min-w-[99999]', 'min-w-[378]'];
 
-    const uno = getGenerator({ usePixels: true });
+    const uno = await getGenerator({ usePixels: true });
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -202,7 +202,7 @@ describe("min width and height with arbitrary values", () => {
   test('min-height with pixel values', async () => {
     const classes = ['min-h-[20000]', 'min-h-[99999]', 'min-h-[378]'];
 
-    const uno = getGenerator({ usePixels: true });
+    const uno = await getGenerator({ usePixels: true });
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -236,7 +236,7 @@ describe("max width and height with arbitrary values", () => {
   test('max-width with pixel values', async () => {
     const classes = ['max-w-[20000]', 'max-w-[99999]', 'max-w-[378]'];
 
-    const uno = getGenerator({ usePixels: true });
+    const uno = await getGenerator({ usePixels: true });
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -268,7 +268,7 @@ describe("max width and height with arbitrary values", () => {
   test('max-height with pixel values', async () => {
     const classes = ['max-h-[20000]', 'max-h-[99999]', 'max-h-[378]'];
 
-    const uno = getGenerator({ usePixels: true });
+    const uno = await getGenerator({ usePixels: true });
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
