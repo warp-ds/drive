@@ -7,7 +7,7 @@ const classify = (str) => `.${escapeSelector(str)}`;
 export const postprocess = async (
   shouldExternalize,
   _externalClasses = [],
-  omitComponentClasses
+  omitComponentClasses,
 ) => {
   const externalClasses = (
     omitComponentClasses

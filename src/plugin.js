@@ -33,7 +33,7 @@ export async function presetWarp(options = {}) {
     postprocess: await postprocess(
       externalizeClasses,
       externalClasses,
-      options.omitComponentClasses
+      options.omitComponentClasses,
     ),
     shortcuts,
   };
@@ -48,7 +48,7 @@ function checkEnvironment() {
       }
     }
     throw new Error(
-      "'fetch' is undefined for some reason and presetWarp requires it"
+      "'fetch' is undefined for some reason and presetWarp requires it",
     );
   }
 }

@@ -28,7 +28,7 @@ export const getFractions = (prefix, length = 6) => {
       denomenator.map((d) => {
         if (n > d) return;
         return `${prefix}-${n}/${d}`;
-      })
+      }),
     )
     .filter(Boolean);
 };
