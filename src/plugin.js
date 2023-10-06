@@ -43,13 +43,9 @@ function checkEnvironment() {
   if (typeof fetch === 'undefined') {
     if (typeof process !== 'undefined') {
       const NODE_MAJOR_VERSION = process.versions.node.split('.')[0];
-      if (NODE_MAJOR_VERSION < 18) {
-        throw new Error('Warp requires node 18 or higher');
-      }
+      if (NODE_MAJOR_VERSION < 18) throw new Error('Warp requires node 18 or higher');
     }
-    throw new Error(
-      "'fetch' is undefined for some reason and presetWarp requires it",
-    );
+    throw new Error("'fetch' is undefined for some reason and presetWarp requires it");
   }
 }
 

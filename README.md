@@ -17,6 +17,11 @@ If you'd like to contribute to `@warp-ds/drive`, start by reviewing the [contrib
 - `boolean`
 - if true forces component classes to be excluded from the process. Styling for the classes already used in component classes won't be generated.
 
+### skipResets
+
+- `boolean`
+- If true forces resets.css to be excluded from preflights
+
 ### usePixels
 
 - `boolean`
