@@ -8,7 +8,6 @@ import { postprocess } from '#postprocess';
  * @typedef PluginOptions
  * @type {Object}
  * @property {boolean} development // internal use only - force preflights(transform + resets) to be excluded and no external classes will be processed
- * @property {boolean} skipResets // force resets to be excluded from preflights
  * @property {boolean} externalizeClasses - if true forces external or 'core' classes to be excluded from the process.
  * @property {Array} externalClasses - list of classes that will not be processed
  * @property {boolean} usePixels - use pixel spacing instead of rem
@@ -28,7 +27,7 @@ export function presetWarp(options = {}) {
     theme,
     rules,
     variants,
-    preflights: options.development ? [] : preflights(options.skipResets),
+    preflights: options.development ? [] : preflights(),
     postprocess: postprocess(externalizeClasses, externalClasses),
     shortcuts,
   };

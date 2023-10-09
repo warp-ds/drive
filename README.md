@@ -12,11 +12,6 @@ If you'd like to contribute to `@warp-ds/drive`, start by reviewing the [contrib
 - `boolean`
 - Internal use only - force preflights(resets.css + transform resets) to be excluded and no externalized classes will be processed
 
-### skipResets
-
-- `boolean`
-- If true forces resets.css to be excluded from preflights
-
 ### usePixels
 
 - `boolean`
