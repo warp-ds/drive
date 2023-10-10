@@ -42,7 +42,7 @@ devDependencies:
     version: 20.1.1
   unocss:
     specifier: ^0.55.1
-    version: 0.55.1(postcss@8.4.28)(rollup@3.19.1)(vite@4.2.3)
+    version: 0.55.1(postcss@8.4.31)(rollup@3.19.1)(vite@4.2.3)
   uvu:
     specifier: ^0.5.6
     version: 0.5.6
@@ -947,7 +947,7 @@ packages:
       sirv: 2.0.3
     dev: true
 
-  /@unocss/postcss@0.55.1(postcss@8.4.28):
+  /@unocss/postcss@0.55.1(postcss@8.4.31):
     resolution: {integrity: sha512-eQ6kixUujbvUGZaPM56Qxqau4Fie9uSyJiR/s26j77tq2GdOhKIURk0oRgjh4jjyQyE6V6SlypJ5HPoyclpelQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -958,7 +958,7 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.3.1
       magic-string: 0.30.2
-      postcss: 8.4.28
+      postcss: 8.4.31
     dev: true
 
   /@unocss/preset-attributify@0.55.1:
@@ -3540,8 +3540,8 @@ packages:
       pathe: 1.1.1
     dev: true
 
-  /postcss@8.4.28:
-    resolution: {integrity: sha512-Z7V5j0cq8oEKyejIKfpD8b4eBy9cwW2JWPk0+fB1HOAMsfHbnAXLLS+PfVWlzMSLQaWttKDt607I0XHmpE67Vw==}
+  /postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.6
@@ -4327,7 +4327,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.55.1(postcss@8.4.28)(rollup@3.19.1)(vite@4.2.3):
+  /unocss@0.55.1(postcss@8.4.31)(rollup@3.19.1)(vite@4.2.3):
     resolution: {integrity: sha512-WyLlrkB1m37LT3jmT51BOmvcd2/aFL0/QuJLn0gYQUWHi28uPtGFTL2kEvivqxzEgDgDrzbQl8VBgy1RssbRHQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -4343,7 +4343,7 @@ packages:
       '@unocss/cli': 0.55.1(rollup@3.19.1)
       '@unocss/core': 0.55.1
       '@unocss/extractor-arbitrary-variants': 0.55.1
-      '@unocss/postcss': 0.55.1(postcss@8.4.28)
+      '@unocss/postcss': 0.55.1(postcss@8.4.31)
       '@unocss/preset-attributify': 0.55.1
       '@unocss/preset-icons': 0.55.1
       '@unocss/preset-mini': 0.55.1
@@ -4452,7 +4452,7 @@ packages:
     dependencies:
       '@types/node': 20.4.7
       esbuild: 0.17.19
-      postcss: 8.4.28
+      postcss: 8.4.31
       resolve: 1.22.4
       rollup: 3.19.1
     optionalDependencies:
@@ -4486,7 +4486,7 @@ packages:
     dependencies:
       '@types/node': 20.5.0
       esbuild: 0.17.19
-      postcss: 8.4.28
+      postcss: 8.4.31
       resolve: 1.22.4
       rollup: 3.19.1
     optionalDependencies:
