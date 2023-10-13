@@ -26,7 +26,6 @@ const {
 });
 const asyncPreset = await presetWarp({
   ...options,
-  omitComponentClasses: true,
   development: true,
 });
 const uno = createGenerator({ presets: [asyncPreset] });

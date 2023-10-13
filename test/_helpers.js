@@ -13,7 +13,6 @@ export const setup = (opts = {}) => {
   beforeEach(async (t) => {
     t.uno = await getGenerator({
       ...opts,
-      development: true,
     });
   });
 };
