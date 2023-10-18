@@ -6,10 +6,9 @@ const classify = (str) => `.${escapeSelector(str)}`;
 export const postprocess = async (
   shouldExternalize,
   _externalClasses = [],
-  omitComponentClasses,
 ) => {
   const { classesToPurge } =
-    shouldExternalize && omitComponentClasses
+    shouldExternalize
       ? await import('./classesToPurge.js')
       : { classesToPurge: [] };
   const externalClasses = _externalClasses

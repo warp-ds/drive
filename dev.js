@@ -16,9 +16,6 @@ const {
     externalizeClasses: {
       type: 'boolean',
     },
-    omitComponentClasses: {
-      type: 'boolean',
-    },
     usePixels: {
       type: 'boolean',
     },

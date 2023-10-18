@@ -11,7 +11,6 @@ import { postprocess } from '#postprocess';
  * @property {boolean} skipResets // force resets to be excluded from preflights
  * @property {boolean} externalizeClasses - if true forces external or 'core' classes to be excluded from the process.
  * @property {Array} externalClasses - list of classes that will not be processed
- * @property {boolean} omitComponentClasses - if true forces component classes to be excluded from the process.
  * @property {boolean} usePixels - use pixel spacing instead of rem
  */
 
@@ -33,7 +32,6 @@ export async function presetWarp(options = {}) {
     postprocess: await postprocess(
       externalizeClasses,
       externalClasses,
-      options.omitComponentClasses,
     ),
     shortcuts,
   };
