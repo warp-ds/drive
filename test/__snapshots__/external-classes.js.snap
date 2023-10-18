@@ -3,7 +3,7 @@
 exports[`external classes > externalized class of mt-32 should be excluded from the css 1`] = `
 "/* layer: default */
 .mb-24{margin-bottom:2.4rem;}
-.mt-16{margin-top:1.6rem;}"
+.mt-40{margin-top:4rem;}"
 `;
 
 exports[`external classes > externalized class of mt-32 should be included if used with modifier 1`] = `
@@ -19,5 +19,5 @@ exports[`external classes > externalized class of mt-32 should be included if us
 
 exports[`external classes > externalized classes of mt-32 and mb-32 should be excluded from the css 1`] = `
 "/* layer: default */
-.mt-16{margin-top:1.6rem;}"
+.mt-40{margin-top:4rem;}"
 `;
