@@ -48,7 +48,7 @@
     "@warp-ds/eslint-config": "^0.0.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.36.0",
-    "rollup": "^3.19.1",
+    "rollup": "^4.0.0",
     "semantic-release": "^20.1.1",
     "unocss": "^0.55.1",
     "uvu": "^0.5.6",
