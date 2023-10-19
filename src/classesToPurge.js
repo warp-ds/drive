@@ -3,7 +3,7 @@ async function getClassesToPurge() {
   if (classes) return classes;
   else {
     classes = await fetch(
-      'https://warp-ds.github.io/css/component-classes/classesToPurge.json',
+      'https://assets.finn.no/pkg/@warp-ds/css/2.0.0-v2.1/classesToPurge.json',
     ).catch((e) => {
       console.warn(
         "Couldn't fetch any classes to purge, returning empty array",
