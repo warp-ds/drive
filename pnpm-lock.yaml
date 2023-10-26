@@ -6,10 +6,13 @@ settings:
 
 dependencies:
   '@unocss/core':
-    specifier: ^0.57.0
+    specifier: ^0.57.1
     version: 0.57.1
   '@unocss/preset-mini':
-    specifier: ^0.57.0
+    specifier: ^0.57.1
+    version: 0.57.1
+  '@unocss/rule-utils':
+    specifier: ^0.57.1
     version: 0.57.1
 
 devDependencies:
@@ -41,7 +44,7 @@ devDependencies:
     specifier: ^20.1.1
     version: 20.1.1
   unocss:
-    specifier: ^0.57.0
+    specifier: ^0.57.1
     version: 0.57.1(postcss@8.4.31)(rollup@4.1.4)(vite@4.2.3)
   uvu:
     specifier: ^0.5.6
@@ -1219,7 +1222,7 @@ packages:
   /@vitest/snapshot@0.34.6:
     resolution: {integrity: sha512-B3OZqYn6k4VaN011D+ve+AA4whM4QkcwcrwaKwAbyyvS/NB1hCWjFIBQxAQQSQir9/RtyAAGuq+4RJmbn2dH4w==}
     dependencies:
-      magic-string: 0.30.2
+      magic-string: 0.30.5
       pathe: 1.1.1
       pretty-format: 29.7.0
     dev: true
@@ -3179,7 +3182,7 @@ packages:
       acorn: 8.10.0
       pathe: 1.1.1
       pkg-types: 1.0.3
-      ufo: 1.2.0
+      ufo: 1.3.1
     dev: true
 
   /mlly@1.4.2:
@@ -4399,10 +4402,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /ufo@1.2.0:
-    resolution: {integrity: sha512-RsPyTbqORDNDxqAdQPQBpgqhWle1VcTSou/FraClYlHf6TZnQcGslpLcAphNR+sQW4q5lLWLbOsRlh9j24baQg==}
-    dev: true
 
   /ufo@1.3.1:
     resolution: {integrity: sha512-uY/99gMLIOlJPwATcMVYfqDSxUR9//AUcgZMzwfSTJPDKzA1S8mX4VLqa+fiAtveraQUBCz4FFcwVZBGbwBXIw==}

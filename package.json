@@ -37,8 +37,9 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "^0.57.0",
-    "@unocss/preset-mini": "^0.57.0"
+    "@unocss/core": "^0.57.1",
+    "@unocss/rule-utils": "^0.57.1",
+    "@unocss/preset-mini": "^0.57.1"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
@@ -50,7 +51,7 @@
     "eslint": "^8.36.0",
     "rollup": "^4.0.0",
     "semantic-release": "^20.1.1",
-    "unocss": "^0.57.0",
+    "unocss": "^0.57.1",
     "uvu": "^0.5.6",
     "vite": "^4.2.3",
     "vitest": "^0.34.0"
