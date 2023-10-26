@@ -2,10 +2,10 @@
 
 exports[`it generated button css based on warp component tokens 1`] = `
 "/* layer: default */
-.hover\\\\:i-text-\\\\$color-button-secondary-text:hover,
-.i-text-\\\\$color-button-secondary-text{color:var(--w-color-button-secondary-text);}
 .i-text-\\\\$color-button-disabled-text{color:var(--w-color-button-disabled-text);}
-.i-text-\\\\$color-button-primary-text{color:var(--w-color-button-primary-text);}"
+.i-text-\\\\$color-button-primary-text{color:var(--w-color-button-primary-text);}
+.i-text-\\\\$color-button-secondary-text{color:var(--w-color-button-secondary-text);}
+.hover\\\\:i-text-\\\\$color-button-secondary-text:hover{color:var(--w-color-button-secondary-text);}"
 `;
 
 exports[`it generates css based on warp tokens 1`] = `

@@ -39,8 +39,8 @@ exports[`variants > negative 1`] = `
 exports[`variants > pseudo 1`] = `
 "/* layer: default */
 .focus\\\\:border:focus{border-width:1px;}
-.before\\\\:p-32::before{padding:3.2rem;}
 .group:hover .group-hover\\\\:p-16{padding:1.6rem;}
+.before\\\\:p-32::before{padding:3.2rem;}
 .group\\\\/llama:hover .group-hover\\\\/llama\\\\:m-32{margin:3.2rem;}
 .last\\\\:mb-0:last-child{margin-bottom:0rem;}"
 `;
