@@ -10,7 +10,14 @@ async function getClassesToPurge() {
       );
       return [];
     });
-    return classes.json();
+    const result = await classes.json();
+    if (result.status !== 200) {
+      console.warn(
+        "Couldn't fetch any classes to purge, returning empty array",
+      );
+      return [];
+    }
+    return result;
   }
 }
 
