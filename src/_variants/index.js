@@ -5,7 +5,7 @@ import {
   variantTaggedPseudoClasses,
   variantPseudoClassFunctions,
   variantPseudoClassesAndElements,
-  variantPartClasses
+  variantPartClasses,
 } from '@unocss/preset-mini/variants';
 import { variantSpaceAndDivide } from './spaceAndDivide.js';
 import { variantLastChild } from './lastChild.js';
