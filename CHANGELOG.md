@@ -1,3 +1,10 @@
+# [1.2.0-next.1](https://github.com/warp-ds/drive/compare/v1.1.0...v1.2.0-next.1) (2023-11-13)
+
+
+### Features
+
+* add variantPartClasses to _variants ([#170](https://github.com/warp-ds/drive/issues/170)) ([2855d53](https://github.com/warp-ds/drive/commit/2855d53c48456d790d16a0d79c8446abc5a73d6e))
+
 # [1.1.0](https://github.com/warp-ds/drive/compare/v1.0.0...v1.1.0) (2023-09-19)
 
 
