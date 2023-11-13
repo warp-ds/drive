@@ -20,7 +20,7 @@ describe('variants', () => {
     expect(css).toMatchSnapshot();
   });
   test('pseudo', async ({ uno }) => {
-    const classes = ['last:mb-0', 'before:p-32', 'focus:border', 'group', 'group-hover:p-16', 'group/llama', 'group-hover/llama:m-32'];
+    const classes = ['last:mb-0', 'before:p-32', 'focus:border', 'group', 'group-hover:p-16', 'group/llama', 'group-hover/llama:m-32', 'part-[part-name]:s-bg-primary'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
