@@ -32,5 +32,7 @@ exports[`it generates css based on semantic warp tokens 1`] = `
 .s-border-r-primary-selected-hover{border-right-color:var(--w-s-color-border-primary-selected-hover);}
 .s-border-t-positive{border-top-color:var(--w-s-color-border-positive);}
 .s-border-x-warning-active{border-left-color:var(--w-s-color-border-warning-active);border-right-color:var(--w-s-color-border-warning-active);}
-.s-border-y-info-subtle-active{border-top-color:var(--w-s-color-border-info-subtle-active);border-bottom-color:var(--w-s-color-border-info-subtle-active);}"
+.s-border-y-info-subtle-active{border-top-color:var(--w-s-color-border-info-subtle-active);border-bottom-color:var(--w-s-color-border-info-subtle-active);}
+.s-outline-focused{outline-color:var(--w-s-color-border-focused);}
+.s-outline-negative{outline-color:var(--w-s-color-border-negative);}"
 `;

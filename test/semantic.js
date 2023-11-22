@@ -22,6 +22,8 @@ test('it generates css based on semantic warp tokens', async ({ uno }) => {
     's-border-b-negative-hover',
     's-border-x-warning-active',
     's-border-y-info-subtle-active',
+    's-outline-focused',
+    's-outline-negative',
     's-icon',
     's-icon-hover',
     's-icon-active',
