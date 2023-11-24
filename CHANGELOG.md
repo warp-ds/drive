@@ -1,3 +1,10 @@
+# [1.3.0-next.1](https://github.com/warp-ds/drive/compare/v1.2.0...v1.3.0-next.1) (2023-11-24)
+
+
+### Features
+
+* **rules:** add support for outline color classes ([#173](https://github.com/warp-ds/drive/issues/173)) ([da3aec9](https://github.com/warp-ds/drive/commit/da3aec9789d425cbea2c3dbb399d85c64344dff3))
+
 # [1.2.0](https://github.com/warp-ds/drive/compare/v1.1.0...v1.2.0) (2023-11-13)
 
 
