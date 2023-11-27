@@ -15,4 +15,6 @@ export const semanticRules = [
   [/^s-border-([lrtbxy])-(.+)$/, ([, direction, cssvar]) => directionMap[direction]?.map(
     (dir) => [`border${dir}-color`, h.semanticToken(`border-${cssvar}`)],
   )],
+  [/^s-outline$/, () => ({ 'outline-color': h.semanticToken('border') })],
+  [/^s-outline-(.+)$/, ([, cssvar]) => ({ 'outline-color': h.semanticToken(`border-${cssvar}`) })],
 ];
