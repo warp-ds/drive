@@ -23,6 +23,14 @@ exports[`opacity by theme 1`] = `
 .opacity-75{opacity:75%;}"
 `;
 
+exports[`supports setting arbitrary background colors 1`] = `""`;
+
+exports[`supports setting arbitrary background colors 2`] = `
+"/* layer: default */
+.border-\\\\[--w-s-color-border\\\\],
+.border-\\\\[var\\\\(--w-s-color-border\\\\)\\\\]{border-color:var(--w-s-color-border);}"
+`;
+
 exports[`text colors 1`] = `
 "/* layer: default */
 .text-transparent{color:transparent;}
