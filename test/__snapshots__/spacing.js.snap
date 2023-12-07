@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`arbitrary padding works 1`] = `
+"/* layer: default */
+.p-\\\\[8\\\\]{padding:0.8rem;}
+.p-\\\\[8px\\\\]{padding:8px;}
+.p-\\\\[8rem\\\\]{padding:8rem;}"
+`;
