@@ -18,6 +18,15 @@ exports[`outline > style 1`] = `
 .outline-double{outline-style:double;}"
 `;
 
+exports[`outline > supports setting arbitrary outline colors 1`] = `
+"/* layer: default */
+.outline-inherit{outline-color:inherit;}
+.outline-transparent{outline-color:transparent;}
+.outline-current{outline-color:currentColor;}
+.outline-\\\\[--w-s-color-border\\\\],
+.outline-\\\\[var\\\\(--w-s-color-border\\\\)\\\\]{outline-color:var(--w-s-color-border);}"
+`;
+
 exports[`outline > width 1`] = `
 "/* layer: default */
 .outline-0{outline-width:0;}
