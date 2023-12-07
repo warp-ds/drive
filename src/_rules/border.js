@@ -21,13 +21,14 @@ export const borders = [
   [/^border-inverted$/, () => ({ 'border-color': 'var(--w-s-border-inverted)' })],
   [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
   [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
+  [/^border-\[(.+)]/, ([, p]) => ({ 'border-color': p.startsWith('var') ? p : `var(${p})` })],
   [/^border()-(\d+)$/, handlerBorder, { autocomplete: "(border)-<directions>" }],
   [/^border-([lrtbxy])$/, handlerBorder],
   [/^border-([lrtbxy])-(\d+)$/, handlerBorder],
   [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
   [/^border-([lrtbxy])-(.+)$/, handlerBorderStyle],
   [
-    /^border-([lrtb])?-?\[(\d+)\]$/,
+    /^border-([lrtb])?-?\[(\d+)]$/,
     handlerArbitraryBorderSize,
     {
       autocomplete: [
@@ -39,6 +40,7 @@ export const borders = [
   [/^divide-([xy])-(\d+)$/, handlerDivideBorder, { autocomplete: `divide-<x|y>-(${Object.keys(lineWidth).join('|')})-(reverse)` }],
   [/^divide-([xy])$/, handlerDivideBorder],
   [/^divide-([xy])-reverse$/, ([, d]) => ({ [`--w-divide-${d}-reverse`]: 1 })],
+  [/^divide-\[(.+)]/, ([_selector, p]) => `.${escapeSelector(_selector)}>*+*{border-color: ${p.startsWith('var') ? p : `var(${p})`};}`],
 ];
 
 function handlerBorder(m, ctx) {
