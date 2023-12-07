@@ -22,6 +22,10 @@ test('it generates css based on semantic warp tokens', async ({ uno }) => {
     's-border-b-negative-hover',
     's-border-x-warning-active',
     's-border-y-info-subtle-active',
+    's-divide',
+    's-divide-disabled',
+    's-divide-negative',
+    's-divide-info-subtle-active',
     's-outline',
     's-outline-focused',
     's-outline-negative',
@@ -47,6 +51,7 @@ test('it generates css based on semantic warp tokens', async ({ uno }) => {
     's-font-link-active',
     's-bordercolor',
     's-bordercolor-l-disabled',
+    's-dividecolor',
   ];
   const { css } = await uno.generate([...classes, ...antiClasses]);
   expect(css).toMatchSnapshot();

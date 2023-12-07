@@ -35,5 +35,9 @@ exports[`it generates css based on semantic warp tokens 1`] = `
 .s-border-y-info-subtle-active{border-top-color:var(--w-s-color-border-info-subtle-active);border-bottom-color:var(--w-s-color-border-info-subtle-active);}
 .s-outline{outline-color:var(--w-s-color-border);}
 .s-outline-focused{outline-color:var(--w-s-color-border-focused);}
-.s-outline-negative{outline-color:var(--w-s-color-border-negative);}"
+.s-outline-negative{outline-color:var(--w-s-color-border-negative);}
+.s-divide>*+*{border-color: var(--w-s-color-border);}
+.s-divide-disabled>*+*{border-color: var(--w-s-color-border-disabled);}
+.s-divide-info-subtle-active>*+*{border-color: var(--w-s-color-border-info-subtle-active);}
+.s-divide-negative>*+*{border-color: var(--w-s-color-border-negative);}"
 `;
