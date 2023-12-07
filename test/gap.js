@@ -43,3 +43,9 @@ test("gap does not render css for invalid spacing units", async (t) => {
 
   expect(css).toMatchInlineSnapshot('""');
 });
+test("gap does render css for arbitrary values", async (t) => {
+  const classes = ['gap-[27], gap-[27px], gap-[27rem]']
+  const { css } = await t.uno.generate(classes);
+
+  expect(css).toMatchInlineSnapshot(`.gap-96{gap:9.6rem;}`);
+});
