@@ -1,10 +1,10 @@
-import { setup } from './_helpers.js';
-import { spaceBase } from '#theme';
-import { expect, test } from 'vitest';
+import { setup } from "./_helpers.js";
+import { spaceBase } from "#theme";
+import { expect, test } from "vitest";
 
 setup();
 
-test('gap allows to render css based of all units in spaceBase', async (t) => {
+test("gap allows to render css based of all units in spaceBase", async (t) => {
   const classes = spaceBase.map((spacingUnit) => `gap-${spacingUnit}`);
 
   const { css } = await t.uno.generate(classes);
@@ -43,9 +43,30 @@ test("gap does not render css for invalid spacing units", async (t) => {
 
   expect(css).toMatchInlineSnapshot('""');
 });
-test("gap does render css for arbitrary values", async (t) => {
-  const classes = ['gap-[27], gap-[27px], gap-[27rem]']
-  const { css } = await t.uno.generate(classes);
 
-  expect(css).toMatchInlineSnapshot(`.gap-96{gap:9.6rem;}`);
+test("gap does render css for arbitrary values", async ({ uno }) => {
+  const classes = [
+    "gap-[27]",
+    "gap-[27px]",
+    "gap-[27rem]",
+    "gap-x-[27]",
+    "gap-x-[27px]",
+    "gap-x-[27rem]",
+    "gap-y-[27]",
+    "gap-y-[27px]",
+    "gap-y-[27rem]",
+  ];
+  const { css } = await uno.generate(classes);
+
+  expect(css).toMatchInlineSnapshot(`
+  "/* layer: default */
+  .gap-\\\\[27\\\\]{gap:2.7rem;}
+  .gap-\\\\[27px\\\\]{gap:27px;}
+  .gap-\\\\[27rem\\\\]{gap:27rem;}
+  .gap-x-\\\\[27\\\\]{column-gap:2.7rem;}
+  .gap-x-\\\\[27px\\\\]{column-gap:27px;}
+  .gap-x-\\\\[27rem\\\\]{column-gap:27rem;}
+  .gap-y-\\\\[27\\\\]{row-gap:2.7rem;}
+  .gap-y-\\\\[27px\\\\]{row-gap:27px;}
+  .gap-y-\\\\[27rem\\\\]{row-gap:27rem;}"`);
 });
