@@ -18,6 +18,27 @@ test('translate', async ({ uno }) => {
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
+test('arbitrary translate', async ({ uno }) => {
+  const classes = [
+    'translate-x-[75]',
+    'translate-x-[75rem]',
+    'translate-x-[75px]',
+    'translate-y-[75]',
+    'translate-y-[75rem]',
+    'translate-y-[75px]',
+  ];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot(`
+  "/* layer: default */
+  .translate-x-\\\\[75\\\\]{--w-translate-x:7.5rem;transform:translateX(var(--w-translate-x)) translateY(var(--w-translate-y)) translateZ(var(--w-translate-z)) rotate(var(--w-rotate)) rotateX(var(--w-rotate-x)) rotateY(var(--w-rotate-y)) rotateZ(var(--w-rotate-z)) skewX(var(--w-skew-x)) skewY(var(--w-skew-y)) scaleX(var(--w-scale-x)) scaleY(var(--w-scale-y)) scaleZ(var(--w-scale-z));}
+  .translate-x-\\\\[75px\\\\]{--w-translate-x:75px;transform:translateX(var(--w-translate-x)) translateY(var(--w-translate-y)) translateZ(var(--w-translate-z)) rotate(var(--w-rotate)) rotateX(var(--w-rotate-x)) rotateY(var(--w-rotate-y)) rotateZ(var(--w-rotate-z)) skewX(var(--w-skew-x)) skewY(var(--w-skew-y)) scaleX(var(--w-scale-x)) scaleY(var(--w-scale-y)) scaleZ(var(--w-scale-z));}
+  .translate-x-\\\\[75rem\\\\]{--w-translate-x:75rem;transform:translateX(var(--w-translate-x)) translateY(var(--w-translate-y)) translateZ(var(--w-translate-z)) rotate(var(--w-rotate)) rotateX(var(--w-rotate-x)) rotateY(var(--w-rotate-y)) rotateZ(var(--w-rotate-z)) skewX(var(--w-skew-x)) skewY(var(--w-skew-y)) scaleX(var(--w-scale-x)) scaleY(var(--w-scale-y)) scaleZ(var(--w-scale-z));}
+  .translate-y-\\\\[75\\\\]{--w-translate-y:7.5rem;transform:translateX(var(--w-translate-x)) translateY(var(--w-translate-y)) translateZ(var(--w-translate-z)) rotate(var(--w-rotate)) rotateX(var(--w-rotate-x)) rotateY(var(--w-rotate-y)) rotateZ(var(--w-rotate-z)) skewX(var(--w-skew-x)) skewY(var(--w-skew-y)) scaleX(var(--w-scale-x)) scaleY(var(--w-scale-y)) scaleZ(var(--w-scale-z));}
+  .translate-y-\\\\[75px\\\\]{--w-translate-y:75px;transform:translateX(var(--w-translate-x)) translateY(var(--w-translate-y)) translateZ(var(--w-translate-z)) rotate(var(--w-rotate)) rotateX(var(--w-rotate-x)) rotateY(var(--w-rotate-y)) rotateZ(var(--w-rotate-z)) skewX(var(--w-skew-x)) skewY(var(--w-skew-y)) scaleX(var(--w-scale-x)) scaleY(var(--w-scale-y)) scaleZ(var(--w-scale-z));}
+  .translate-y-\\\\[75rem\\\\]{--w-translate-y:75rem;transform:translateX(var(--w-translate-x)) translateY(var(--w-translate-y)) translateZ(var(--w-translate-z)) rotate(var(--w-rotate)) rotateX(var(--w-rotate-x)) rotateY(var(--w-rotate-y)) rotateZ(var(--w-rotate-z)) skewX(var(--w-skew-x)) skewY(var(--w-skew-y)) scaleX(var(--w-scale-x)) scaleY(var(--w-scale-y)) scaleZ(var(--w-scale-z));}"
+  `);
+  
+});
 
 test('rotate', async ({ uno }) => {
   const classes = [0, 1, 2, 3, 6, 12, 45, 90, 180].map(e => `rotate-${e}`);
