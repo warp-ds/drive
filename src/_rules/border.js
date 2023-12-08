@@ -1,5 +1,5 @@
 import { escapeSelector } from '@unocss/core';
-import { directionMap, cornerMap } from "#utils";
+import { directionMap, cornerMap, resolveArbitraryValues } from "#utils";
 import { lineWidth } from '#theme';
 
 const borderStyles = [
@@ -44,7 +44,7 @@ export const borders = [
 function handlerBorder(m, ctx) {
   const borderSizes = handlerBorderSize(m, ctx);
 
-  if (borderSizes ) return [...borderSizes];
+  if (borderSizes) return [...borderSizes];
 }
 
 function handlerBorderSize([, a = "", b], { theme }) {
@@ -67,6 +67,20 @@ export const rounded = [
   [/^rounded-([rltb]+)(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se])(?:-(.+))?$/, handlerRounded],
   [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handlerRounded],
+  // matching arbitrary values
+  [
+    /^rounded-\[(.\d*)(rem|px|%)?]$/,
+    ([, value, unit], context) => ({
+      'border-radius': resolveArbitraryValues(value, unit, context),
+    }),
+  ],
+  [/^rounded-([rltb]+)-\[(.\d*)(rem|px|%)?]$/,
+    ([, direction, value, unit], context) => 
+     cornerMap[direction].map((i) => [
+        `border${i}-radius`,
+        resolveArbitraryValues(value, unit,context)
+      ])
+  ],
 ];
 
 function handlerRounded([, a = '', s], { theme }) {
