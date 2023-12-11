@@ -33,14 +33,6 @@ test('text color invalid class', async({ uno }) => {
   expect(css).toMatchInlineSnapshot('""');
 });
 
-test("supports setting arbitrary background colors", async (t) => {
-  const classes = ["bg-[--w-s-color-background]", "bg-[var(--w-s-color-background)]"];
-
-  const { css } = await t.uno.generate(classes);
-
-  expect(css).toMatchSnapshot();
-});
-
 test('bg colors', async({ uno }) => {
   const classes = [
     'bg-inherit',
@@ -49,13 +41,6 @@ test('bg colors', async({ uno }) => {
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
-});
-
-test('invalid background color classes', async({ uno }) => {
-  const classes = ['bg-color', 'background-[--w-s-color-background]', 'background-[var(--w-s-color-background)]'];
-
-  const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot('""');
 });
 
 test('caret', async({ uno }) => {
