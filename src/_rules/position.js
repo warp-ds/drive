@@ -119,21 +119,21 @@ export const insets = [
   [/^(top|left|right|bottom)-(.+)$/, ([, d, v], ctx) => ({ [d]: handleInsetValue(v, ctx) })],
   //matching arbitrary values
   [/^inset-\[(.\d*)(rem|px|%)?]$/,
-  ([, value, unit], context) => ({
-    inset: resolveArbitraryValues(value, unit, context)
-  })
+    ([, value, unit], context) => ({
+      inset: resolveArbitraryValues(value, unit, context),
+    }),
   ],
   [/^inset-([xy])-\[(.\d*)(rem|px|%)?]$/,
-  ([, direction, value, unit], context) => 
-    insetMap[direction].map((i) => [
-      `${i.slice(1)}`,
-      resolveArbitraryValues(value, unit, context)
-    ])
+    ([, direction, value, unit], context) =>
+      insetMap[direction].map((i) => [
+        `${i.slice(1)}`,
+        resolveArbitraryValues(value, unit, context),
+      ]),
   ],
   [/^(top|left|right|bottom)-\[(.\d*)(rem|px|%)?]$/,
     ([, direction, value, unit], context) => ({
-      [direction]: resolveArbitraryValues(value, unit, context)
-    })
+      [direction]: resolveArbitraryValues(value, unit, context),
+    }),
   ],
 ];
 

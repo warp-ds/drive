@@ -3,7 +3,7 @@ import {
   makeGlobalStaticRules,
   positionMap,
   xyzMap,
-  resolveArbitraryValues 
+  resolveArbitraryValues,
 } from '#utils';
 
 const transformValues = [
@@ -52,14 +52,12 @@ export const transforms = [
   // matching arbitrary values for translate
   [
     /^translate-([xyz])-\[(.\d*)(rem|px)?]$/,
-    ([, direction, value, unit], context) => {
-      return [...xyzMap[direction].map((i) => [
+    ([, direction, value, unit], context) => [...xyzMap[direction].map((i) => [
       `--w-translate${i}`,
       resolveArbitraryValues(value, unit, context),
-    ]),  
-    ['transform', transformCpu]
-    ]
-    }
+    ]),
+    ['transform', transformCpu],
+    ],
   ],
   [/^rotate-()(.+)$/, handleRotate],
   [/^rotate-([xyz])-(.+)$/, handleRotate],

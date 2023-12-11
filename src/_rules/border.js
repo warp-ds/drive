@@ -75,11 +75,11 @@ export const rounded = [
     }),
   ],
   [/^rounded-([rltb]+)-\[(.\d*)(rem|px|%)?]$/,
-    ([, direction, value, unit], context) => 
-     cornerMap[direction].map((i) => [
+    ([, direction, value, unit], context) =>
+      cornerMap[direction].map((i) => [
         `border${i}-radius`,
-        resolveArbitraryValues(value, unit,context)
-      ])
+        resolveArbitraryValues(value, unit,context),
+      ]),
   ],
 ];
 
