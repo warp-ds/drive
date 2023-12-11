@@ -59,8 +59,8 @@ test("supports setting arbitrary border colors", async (t) => {
   expect(css).toMatchSnapshot();
 });
 
-test('bg color invalid class', async({ uno }) => {
-  const classes = ['bg-color'];
+test('invalid background color classes', async({ uno }) => {
+  const classes = ['bg-color', 'background-[--w-s-color-background]', 'background-[var(--w-s-color-background)]'];
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot('""');
