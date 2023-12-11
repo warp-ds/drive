@@ -5,8 +5,7 @@ import { lineWidth } from '#theme';
 setup();
 
 describe("outline", () => {
-  test("style", async ({ uno }) => {
-
+  test("supports setting outline styles", async ({ uno }) => {
     const classes = [
       "outline-none",
       "outline",
@@ -18,7 +17,7 @@ describe("outline", () => {
     expect(css).toMatchSnapshot();
   });
 
-  test("supports setting arbitrary outline colors", async (t) => {
+  test("supports setting outline colors", async ({ uno }) => {
     const classes = [
       "outline-inherit",
       "outline-current",
@@ -26,9 +25,7 @@ describe("outline", () => {
       "outline-[--w-s-color-border]",
       "outline-[var(--w-s-color-border)]",
     ];
-
-    const { css } = await t.uno.generate(classes);
-
+    const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
