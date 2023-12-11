@@ -118,6 +118,39 @@ describe('insets', () => {
     expect(css).toMatchSnapshot();
   });
 
+  test('check inset- classes and their expected arbitrary values', async (t) => {
+    const classes = [
+      "inset-[16]",
+      "inset-x-[16]",
+      "inset-y-[16]",
+      "inset-[16rem]",
+      "inset-x-[16rem]",
+      "inset-y-[16rem]",
+      "inset-[16px]",
+      "inset-x-[16px]",
+      "inset-y-[16px]",
+      "inset-[16%]",
+      "inset-x-[16%]",
+      "inset-y-[16%]",
+    ];
+    const { css } = await t.uno.generate(classes);
+    expect(css).toMatchInlineSnapshot(`
+    "/* layer: default */
+    .inset-\\\\[16\\\\]{inset:1.6rem;}
+    .inset-\\\\[16\\\\%\\\\]{inset:16%;}
+    .inset-\\\\[16px\\\\]{inset:16px;}
+    .inset-\\\\[16rem\\\\]{inset:16rem;}
+    .inset-x-\\\\[16\\\\]{left:1.6rem;right:1.6rem;}
+    .inset-x-\\\\[16\\\\%\\\\]{left:16%;right:16%;}
+    .inset-x-\\\\[16px\\\\]{left:16px;right:16px;}
+    .inset-x-\\\\[16rem\\\\]{left:16rem;right:16rem;}
+    .inset-y-\\\\[16\\\\]{top:1.6rem;bottom:1.6rem;}
+    .inset-y-\\\\[16\\\\%\\\\]{top:16%;bottom:16%;}
+    .inset-y-\\\\[16px\\\\]{top:16px;bottom:16px;}
+    .inset-y-\\\\[16rem\\\\]{top:16rem;bottom:16rem;}"
+  `);
+  });
+
   test('check top-, left-, right-, bottom- classes and their expected values', async (t) => {
     const classes = spaceBase.map((n) => ([`top-${n}`, `left-${n}`, `right-${n}`, `bottom-${n}`])).flat();
     const { css } = await t.uno.generate(classes);
@@ -128,6 +161,47 @@ describe('insets', () => {
     const classes = spaceBase.map((n) => ([`-top-${n}`,`-left-${n}`,`-right-${n}`,`-bottom-${n}`])).flat();
     const { css } = await t.uno.generate(classes);
     expect(css).toMatchSnapshot();
+  });
+
+  test('check top-, left-, right-, bottom- classes and their expected arbitrary values', async (t) => {
+    const classes = [
+      "top-[16]",
+      "left-[16]",
+      "right-[16]",
+      "bottom-[16]",
+      "top-[16rem]",
+      "left-[16rem]",
+      "right-[16rem]",
+      "bottom-[16rem]",
+      "top-[16px]",
+      "left-[16px]",
+      "right-[16px]",
+      "bottom-[16px]",
+      "top-[16%]",
+      "left-[16%]",
+      "right-[16%]",
+      "bottom-[16%]",
+    ];
+    const { css } = await t.uno.generate(classes);
+    expect(css).toMatchInlineSnapshot(`
+    "/* layer: default */
+    .bottom-\\\\[16\\\\]{bottom:1.6rem;}
+    .bottom-\\\\[16\\\\%\\\\]{bottom:16%;}
+    .bottom-\\\\[16px\\\\]{bottom:16px;}
+    .bottom-\\\\[16rem\\\\]{bottom:16rem;}
+    .left-\\\\[16\\\\]{left:1.6rem;}
+    .left-\\\\[16\\\\%\\\\]{left:16%;}
+    .left-\\\\[16px\\\\]{left:16px;}
+    .left-\\\\[16rem\\\\]{left:16rem;}
+    .right-\\\\[16\\\\]{right:1.6rem;}
+    .right-\\\\[16\\\\%\\\\]{right:16%;}
+    .right-\\\\[16px\\\\]{right:16px;}
+    .right-\\\\[16rem\\\\]{right:16rem;}
+    .top-\\\\[16\\\\]{top:1.6rem;}
+    .top-\\\\[16\\\\%\\\\]{top:16%;}
+    .top-\\\\[16px\\\\]{top:16px;}
+    .top-\\\\[16rem\\\\]{top:16rem;}"
+  `);
   });
 });
 
