@@ -1,4 +1,5 @@
 import { directionMap, handler as h } from '#utils';
+import { escapeSelector } from "@unocss/core";
 
 export const semanticRules = [
   [/^s-bg$/, () => ({ 'background-color': h.semanticToken('background') })],
@@ -17,4 +18,6 @@ export const semanticRules = [
   )],
   [/^s-outline$/, () => ({ 'outline-color': h.semanticToken('border') })],
   [/^s-outline-(.+)$/, ([, cssvar]) => ({ 'outline-color': h.semanticToken(`border-${cssvar}`) })],
+  [/^s-divide$/, ([_selector]) => `.${escapeSelector(_selector)}>*+*{border-color: ${h.semanticToken('border')};}`],
+  [/^s-divide-(.+)$/, ([_selector, cssvar]) => `.${escapeSelector(_selector)}>*+*{border-color: ${h.semanticToken(`border-${cssvar}`)};}`],
 ];

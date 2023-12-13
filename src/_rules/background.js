@@ -38,14 +38,12 @@ export const backgrounds = [
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
   //arbitrary
-  [/^bg-\[(.+)\]/, ([, p]) => {
+  [/^bg-\[(.+)]/, ([, p]) => {
     if (p.startsWith('url')) {
       // Process url(var(--something)) and extract the var itself -> --something
       const urlAsVar = p.match(/url\(var\(([^)]*)/)?.[1];
       return { 'background-image': urlAsVar ? `var(${urlAsVar})` : p };
-    } else if (p.startsWith('var')) {
-      return { 'background-color': p };
     }
-    return { 'background-color': `var(${p})` };
+    return { 'background-color': p.startsWith('var') ? p : `var(${p})` };
   }],
 ];
