@@ -1,12 +1,12 @@
 import { resolveArbitraryValues } from "#utils";
 
 const directions = {
-  "": "",
-  x: "column-",
-  y: "row-",
+  '': '',
+  x: 'column-',
+  y: 'row-',
 };
 
-const handleGap = ([, d = "", s], { theme }) => {
+const handleGap = ([, d = '', s], { theme }) => {
   const v = theme.spacing?.[s];
 
   if (v != null) {
