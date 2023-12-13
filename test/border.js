@@ -32,7 +32,12 @@ describe("border", () => {
   });
 
   test("supports setting arbitrary divide colors", async ({ uno }) => {
-    const classes = ["divide-[--w-s-color-border]", "divide-[var(--w-s-color-border)]"];
+    const classes = [
+      "divide-[--w-s-color-border]",
+      "divide-[var(--w-s-color-border-subtle)]",
+      "divide-x-[var(--w-s-color-border-negative)]",
+      "divide-y-[var(--w-s-color-border-positive)]",
+    ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
