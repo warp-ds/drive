@@ -25,6 +25,8 @@ test('it generates css based on semantic warp tokens', async ({ uno }) => {
     's-divide',
     's-divide-disabled',
     's-divide-negative',
+    's-divide-x-disabled',
+    's-divide-y-negative',
     's-divide-info-subtle-active',
     's-outline',
     's-outline-focused',
