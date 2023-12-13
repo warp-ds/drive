@@ -16,57 +16,97 @@ const borderStyles = [
 ];
 
 export const borders = [
-  [/^border$/, handlerBorder],
+  // border-width
+  [
+    /^border(-[lrtbxy])?$/,
+    handleBorderWidth,
+    { autocomplete: ['border', 'border-<directions>'] },
+  ],
+  [
+    /^border(-[lrtbxy])?-(\d+)$/,
+    handleBorderWidth,
+    { autocomplete: [`border-(${Object.keys(lineWidth).join('|')})`, `border-<directions>-(${Object.keys(lineWidth).join('|')})`] },
+  ],
+  [
+    /^border(-[lrtbxy])?-\[(\d+)]$/,
+    handleArbitraryBorderWidth,
+    { autocomplete: ['border-[<num>]', 'border-<directions>-[<num>]'] },
+  ],
+
+  // border-color
   [/^border-transparent$/, () => ({ 'border-color': 'transparent' })],
   [/^border-inverted$/, () => ({ 'border-color': 'var(--w-s-border-inverted)' })],
   [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
   [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
-  [/^border()-(\d+)$/, handlerBorder, { autocomplete: "(border)-<directions>" }],
-  [/^border-([lrtbxy])$/, handlerBorder],
-  [/^border-([lrtbxy])-(\d+)$/, handlerBorder],
-  [/^border()-(.+)$/, handlerBorderStyle, { autocomplete: "(border)-style" }],
-  [/^border-([lrtbxy])-(.+)$/, handlerBorderStyle],
+  [/^border(-[lrtbxy])?-\[(\D.*)]$/, handleArbitraryBorderColor],
+
+  // border-style
   [
-    /^border-([lrtb])?-?\[(\d+)\]$/,
-    handlerArbitraryBorderSize,
-    {
-      autocomplete: [
-        'border-<directions>-[$width]',
-      ],
-    },
+    new RegExp(`^border(-[lrtbxy])?-(${borderStyles.join('|')})$`),
+    handleBorderStyle,
+    { autocomplete: [`border-(${borderStyles.join('|')})`, `border-<directions>-(${borderStyles.join('|')})`] },
   ],
-  // divide
-  [/^divide-([xy])-(\d+)$/, handlerDivideBorder, { autocomplete: `divide-<x|y>-(${Object.keys(lineWidth).join('|')})-(reverse)` }],
-  [/^divide-([xy])$/, handlerDivideBorder],
-  [/^divide-([xy])-reverse$/, ([, d]) => ({ [`--w-divide-${d}-reverse`]: 1 })],
 ];
 
-function handlerBorder(m, ctx) {
-  const borderSizes = handlerBorderSize(m, ctx);
-
-  if (borderSizes) return [...borderSizes];
+function handleBorderWidth([, dir = '', width], { theme }) {
+  const applicableWidth = theme.lineWidth?.[width ?? 1];
+  if (applicableWidth) return directionMap[dir.substring(1)]?.map((i) => [`border${i}-width`, applicableWidth]);
 }
 
-function handlerBorderSize([, a = "", b], { theme }) {
-  const v = theme.lineWidth?.[b ?? 1];
-  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, v]);
+function handleArbitraryBorderWidth([, dir = '', width]) {
+  //TODO: Use the usePixels flag to determine which unit to use
+  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-width`, `${width}px`]);
 }
 
-function handlerArbitraryBorderSize([, a, v]) {
-  if (a in directionMap && v != null) return directionMap[a].map((i) => [`border${i}-width`, `${v}px`]);
-
-  return [[`border-width`, `${v}px`]];
+function handleArbitraryBorderColor([, dir = '', val]) {
+  const cssvar = val.startsWith('var') ? val : `var(${val})`;
+  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-color`, cssvar]);
 }
 
-function handlerBorderStyle([, a = "", s]) {
-  if (borderStyles.includes(s) && a in directionMap) return directionMap[a].map((i) => [`border${i}-style`, s]);
+function handleBorderStyle([, dir = '', style]) {
+  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-style`, style]);
+}
+
+export const divide = [
+  // border-width
+  [/^divide-([xy])$/, handleDivideBorder, { autocomplete: 'divide-(x|y)' }],
+  [
+    /^divide-([xy])-(\d+)(-reverse)?$/,
+    handleDivideBorder,
+    { autocomplete: [`divide-(x|y)-(${Object.keys(lineWidth).join('|')})`, `divide-(x|y)-(${Object.keys(lineWidth).join('|')})-reverse`] },
+  ],
+
+  // reverse order
+  [/^divide-([xy])-reverse$/, ([, d]) => ({ [`--w-divide-${d}-reverse`]: 1 })],
+
+  // arbitrary border-color
+  [/^divide(-[xy])?-\[(.+)]$/, handleArbitraryDivideColor],
+];
+
+function handleDivideBorder([_selector, dir, width, reverse], { theme }) {
+  const applicableWidth = theme.lineWidth?.[width ?? 1];
+  if (applicableWidth) {
+    const sizes = directionMap[dir]?.map((i) => {
+      const reverseVar = `var(--w-divide-${dir}-reverse)`;
+      const reverseCalc = (i === directionMap[dir][1]) ? reverseVar : `calc(1 - ${reverseVar})`;
+      return `border${i}-width:calc(${applicableWidth} * ${reverseCalc})`;
+    });
+    if (sizes) {
+      return `.${escapeSelector(_selector)}>*+*{--w-divide-${dir}-reverse:${reverse ? 1 : 0};${sizes.join(';')};}`;
+    }
+  }
+}
+
+function handleArbitraryDivideColor([_selector, dir = '', val]) {
+  const cssRules = directionMap[dir.substring(1)]?.map((i) => `border${i}-color: ${val.startsWith('var') ? val : `var(${val})`}`);
+  if (cssRules) return `.${escapeSelector(_selector)}>*+*{${cssRules.join(';')};}`;
 }
 
 export const rounded = [
-  [/^rounded()(?:-(.+))?$/, handlerRounded, { autocomplete: ['(rounded)', '(rounded)-<num>'] }],
-  [/^rounded-([rltb]+)(?:-(.+))?$/, handlerRounded],
-  [/^rounded-([bi][se])(?:-(.+))?$/, handlerRounded],
-  [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handlerRounded],
+  [/^rounded()(?:-(.+))?$/, handleRounded, { autocomplete: ['rounded', 'rounded-<num>'] }],
+  [/^rounded-([rltb]+)(?:-(.+))?$/, handleRounded],
+  [/^rounded-([bi][se])(?:-(.+))?$/, handleRounded],
+  [/^rounded-([bi][se]-[bi][se])(?:-(.+))?$/, handleRounded],
   // matching arbitrary values
   [
     /^rounded-\[(.\d*)(rem|px|%)?]$/,
@@ -83,29 +123,7 @@ export const rounded = [
   ],
 ];
 
-function handlerRounded([, a = '', s], { theme }) {
-  const v = theme.borderRadius?.[s ?? 4];
-  if (a in cornerMap && v != null) return cornerMap[a].map(i => [`border${i}-radius`, v]);
+function handleRounded([, corner = '', val], { theme }) {
+  const applicableRadius = theme.borderRadius?.[val ?? 4];
+  if (applicableRadius) return cornerMap[corner].map(i => [`border${i}-radius`, applicableRadius]);
 }
-
-function handleDivideBorderSizes(direction, width, reverse, theme) {
-  const borderWidth = theme.lineWidth?.[width ?? 1];
-  if (direction in directionMap && borderWidth) {
-    return directionMap[direction].map((i) => {
-      if (i === directionMap[direction][1]) {
-        return `border${i}-width:calc(${borderWidth} * var(--w-divide-${direction}-reverse))`;
-      }
-      return `border${i}-width:calc(${borderWidth} * calc(1 - var(--w-divide-${direction}-reverse)))`;
-    });
-  }
-}
-
-function handlerDivideBorder([_selector, direction = "", width, reverse], { theme }) {
-  const sizes = handleDivideBorderSizes(direction, width, reverse, theme)?.join(';');
-  const defaultReverse = `--w-divide-${direction}-reverse:0`;
-  if (sizes) {
-    const selector = escapeSelector(_selector);
-    return `.${selector}>*+*{${defaultReverse};${sizes}}`;
-  }
-}
-

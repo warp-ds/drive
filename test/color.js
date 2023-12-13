@@ -16,7 +16,7 @@ test('opacity not created if invalid', async ({ uno }) => {
   const classes = ['opacity-1'];
 
   const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot('""');
+  expect(css).toHaveLength(0);
 });
 
 test('text colors', async({ uno }) => {
@@ -26,11 +26,19 @@ test('text colors', async({ uno }) => {
   expect(css).toMatchSnapshot();
 });
 
+test("supports setting arbitrary text colors", async ({ uno }) => {
+  const classes = ["text-[--w-s-color-border]", "text-[var(--w-s-color-border)]"];
+
+  const { css } = await uno.generate(classes);
+
+  expect(css).toMatchSnapshot();
+});
+
 test('text color invalid class', async({ uno }) => {
   const classes = ['text-color'];
 
   const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot('""');
+  expect(css).toHaveLength(0);
 });
 
 test('bg colors', async({ uno }) => {
@@ -41,13 +49,6 @@ test('bg colors', async({ uno }) => {
 
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
-});
-
-test('bg color invalid class', async({ uno }) => {
-  const classes = ['bg-color'];
-
-  const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot('""');
 });
 
 test('caret', async({ uno }) => {

@@ -1,3 +1,17 @@
+# [1.4.0-next.2](https://github.com/warp-ds/drive/compare/v1.4.0-next.1...v1.4.0-next.2) (2023-12-13)
+
+
+### Bug Fixes
+
+* Add support for direction in semantic divide classes ([#179](https://github.com/warp-ds/drive/issues/179)) ([d825cde](https://github.com/warp-ds/drive/commit/d825cdec13675b63c176524cb2eb64ffaea2a52d))
+
+# [1.4.0-next.1](https://github.com/warp-ds/drive/compare/v1.3.0...v1.4.0-next.1) (2023-12-13)
+
+
+### Features
+
+* Add missing support for misc arbitrary and semantic colors ([#176](https://github.com/warp-ds/drive/issues/176)) ([ed6b5bf](https://github.com/warp-ds/drive/commit/ed6b5bf40f38986fa27b83bd15fcc37b4128efd4))
+
 # [1.3.0](https://github.com/warp-ds/drive/compare/v1.2.0...v1.3.0) (2023-11-27)
 
 
