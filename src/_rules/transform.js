@@ -52,11 +52,12 @@ export const transforms = [
   // matching arbitrary values for translate
   [
     /^translate-([xyz])-\[(.\d*)(rem|px)?]$/,
-    ([, direction, value, unit], context) => [...xyzMap[direction].map((i) => [
-      `--w-translate${i}`,
-      resolveArbitraryValues(value, unit, context),
-    ]),
-    ['transform', transformCpu],
+    ([, direction, value, unit], context) => [
+      ...xyzMap[direction].map((i) => [
+        `--w-translate${i}`,
+        resolveArbitraryValues(value, unit, context),
+      ]),
+      ['transform', transformCpu],
     ],
   ],
   [/^rotate-()(.+)$/, handleRotate],
