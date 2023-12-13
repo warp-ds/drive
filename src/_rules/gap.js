@@ -1,4 +1,4 @@
-import { resolveArbitraryValues } from "#utils";
+import { resolveArbitraryValues } from '#utils';
 
 const directions = {
   '': '',
@@ -17,8 +17,8 @@ const handleGap = ([, d = '', s], { theme }) => {
 };
 
 export const gap = [
-  [/^gap-()(.\d*)$/, handleGap, { autocomplete: ["gap-$spacing"] }],
-  [/^gap-([xy])-(.\d*)$/, handleGap, { autocomplete: ["gap-(x|y)-$spacing"] }],
+  [/^gap-()(.\d*)$/, handleGap, { autocomplete: ['gap-$spacing'] }],
+  [/^gap-([xy])-(.\d*)$/, handleGap, { autocomplete: ['gap-(x|y)-$spacing'] }],
   // matching arbitrary values
   [
     /^gap-\[(.\d*)(rem|px)?]$/,
