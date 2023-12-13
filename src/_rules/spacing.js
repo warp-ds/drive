@@ -1,14 +1,14 @@
-import { directionSize, resolveArbitraryValues, directionMap } from "#utils";
+import { directionSize, resolveArbitraryValues, directionMap } from '#utils';
 
 // negatives come in via the negative variant
 export const padding = [
   // empty capture group here sets an empty string for 'direction' instead of undefined
-  [/^p()-(.\d*)$/, directionSize("padding"), { autocomplete: "(m|p)-<num>" }],
-  [/^p([xy])-(.\d*)$/, directionSize("padding")],
+  [/^p()-(.\d*)$/, directionSize('padding'), { autocomplete: '(m|p)-<num>' }],
+  [/^p([xy])-(.\d*)$/, directionSize('padding')],
   [
     /^p([rltb])-(.\d*)$/,
-    directionSize("padding"),
-    { autocomplete: "(m|p)<directions>-<num>" },
+    directionSize('padding'),
+    { autocomplete: '(m|p)<directions>-<num>' },
   ],
   // matching arbitrary values
   [
@@ -36,9 +36,9 @@ export const padding = [
 ];
 
 export const margin = [
-  [/^m()-(.+)$/, directionSize("margin")],
-  [/^m([xy])-(.+)$/, directionSize("margin")],
-  [/^m([rltb])-(.+)$/, directionSize("margin")],
+  [/^m()-(.+)$/, directionSize('margin')],
+  [/^m([xy])-(.+)$/, directionSize('margin')],
+  [/^m([rltb])-(.+)$/, directionSize('margin')],
   // matching arbitrary values
   [
     /^m-\[(.\d*)(rem|px)?]$/,
