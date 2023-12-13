@@ -118,6 +118,46 @@ exports[`border > supports x|y with value and without 1`] = `
 .border-y-8{border-top-width:8px;border-bottom-width:8px;}"
 `;
 
+exports[`rounded > support setting arbitrary rounded 1`] = `
+"/* layer: default */
+.rounded-\\\\[31\\\\]{border-radius:3.1rem;}
+.rounded-\\\\[31\\\\%\\\\]{border-radius:31%;}
+.rounded-\\\\[31px\\\\]{border-radius:31px;}
+.rounded-\\\\[31rem\\\\]{border-radius:31rem;}
+.rounded-b-\\\\[31\\\\]{border-bottom-left-radius:3.1rem;border-bottom-right-radius:3.1rem;}
+.rounded-b-\\\\[31\\\\%\\\\]{border-bottom-left-radius:31%;border-bottom-right-radius:31%;}
+.rounded-b-\\\\[31px\\\\]{border-bottom-left-radius:31px;border-bottom-right-radius:31px;}
+.rounded-b-\\\\[31rem\\\\]{border-bottom-left-radius:31rem;border-bottom-right-radius:31rem;}
+.rounded-bl-\\\\[31\\\\]{border-bottom-left-radius:3.1rem;}
+.rounded-bl-\\\\[31\\\\%\\\\]{border-bottom-left-radius:31%;}
+.rounded-bl-\\\\[31px\\\\]{border-bottom-left-radius:31px;}
+.rounded-bl-\\\\[31rem\\\\]{border-bottom-left-radius:31rem;}
+.rounded-br-\\\\[31\\\\]{border-bottom-right-radius:3.1rem;}
+.rounded-br-\\\\[31\\\\%\\\\]{border-bottom-right-radius:31%;}
+.rounded-br-\\\\[31px\\\\]{border-bottom-right-radius:31px;}
+.rounded-br-\\\\[31rem\\\\]{border-bottom-right-radius:31rem;}
+.rounded-l-\\\\[31\\\\]{border-top-left-radius:3.1rem;border-bottom-left-radius:3.1rem;}
+.rounded-l-\\\\[31\\\\%\\\\]{border-top-left-radius:31%;border-bottom-left-radius:31%;}
+.rounded-l-\\\\[31px\\\\]{border-top-left-radius:31px;border-bottom-left-radius:31px;}
+.rounded-l-\\\\[31rem\\\\]{border-top-left-radius:31rem;border-bottom-left-radius:31rem;}
+.rounded-r-\\\\[31\\\\]{border-top-right-radius:3.1rem;border-bottom-right-radius:3.1rem;}
+.rounded-r-\\\\[31\\\\%\\\\]{border-top-right-radius:31%;border-bottom-right-radius:31%;}
+.rounded-r-\\\\[31px\\\\]{border-top-right-radius:31px;border-bottom-right-radius:31px;}
+.rounded-r-\\\\[31rem\\\\]{border-top-right-radius:31rem;border-bottom-right-radius:31rem;}
+.rounded-t-\\\\[31\\\\]{border-top-left-radius:3.1rem;border-top-right-radius:3.1rem;}
+.rounded-t-\\\\[31\\\\%\\\\]{border-top-left-radius:31%;border-top-right-radius:31%;}
+.rounded-t-\\\\[31px\\\\]{border-top-left-radius:31px;border-top-right-radius:31px;}
+.rounded-t-\\\\[31rem\\\\]{border-top-left-radius:31rem;border-top-right-radius:31rem;}
+.rounded-tl-\\\\[31\\\\]{border-top-left-radius:3.1rem;}
+.rounded-tl-\\\\[31\\\\%\\\\]{border-top-left-radius:31%;}
+.rounded-tl-\\\\[31px\\\\]{border-top-left-radius:31px;}
+.rounded-tl-\\\\[31rem\\\\]{border-top-left-radius:31rem;}
+.rounded-tr-\\\\[31\\\\]{border-top-right-radius:3.1rem;}
+.rounded-tr-\\\\[31\\\\%\\\\]{border-top-right-radius:31%;}
+.rounded-tr-\\\\[31px\\\\]{border-top-right-radius:31px;}
+.rounded-tr-\\\\[31rem\\\\]{border-top-right-radius:31rem;}"
+`;
+
 exports[`rounded > supports x|y with value 1`] = `
 "/* layer: default */
 .rounded,
