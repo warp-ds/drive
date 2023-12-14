@@ -1,4 +1,10 @@
-import { handler as h, makeGlobalStaticRules, positionMap, xyzMap } from '#utils';
+import {
+  handler as h,
+  makeGlobalStaticRules,
+  positionMap,
+  xyzMap,
+  resolveArbitraryValues,
+} from '#utils';
 
 const transformValues = [
   'translate',
@@ -43,6 +49,17 @@ export const transforms = [
   ],
   // modifiers
   [/^translate-([xyz])-(.+)$/, handleTranslate],
+  // matching arbitrary values for translate
+  [
+    /^translate-([xyz])-\[(.\d*)(rem|px)?]$/,
+    ([, direction, value, unit], context) => [
+      ...xyzMap[direction].map((i) => [
+        `--w-translate${i}`,
+        resolveArbitraryValues(value, unit, context),
+      ]),
+      ['transform', transformCpu],
+    ],
+  ],
   [/^rotate-()(.+)$/, handleRotate],
   [/^rotate-([xyz])-(.+)$/, handleRotate],
   [/^scale-()(.+)$/, handleScale],

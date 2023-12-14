@@ -19,6 +19,19 @@ test('translate', async ({ uno }) => {
   expect(css).toMatchSnapshot();
 });
 
+test('arbitrary translate', async ({ uno }) => {
+  const classes = [
+    'translate-x-[75]',
+    'translate-x-[75rem]',
+    'translate-x-[75px]',
+    'translate-y-[75]',
+    'translate-y-[75rem]',
+    'translate-y-[75px]',
+  ];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
 test('rotate', async ({ uno }) => {
   const classes = [0, 1, 2, 3, 6, 12, 45, 90, 180].map(e => `rotate-${e}`);
   const { css } = await uno.generate(classes);
