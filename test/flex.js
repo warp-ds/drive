@@ -82,3 +82,11 @@ test('flex shrink/grow', async (t) => {
     `);
 
 });
+
+test('flex shrink/grow with arbitrary values', async (t) => {
+  const autoClasses = ['grow', 'shrink'];
+  const classes = Array.from({ length: 6 }, (_, index) => [`shrink-[${index}]`, `grow-[${index}]`]).flat();
+
+  const { css } = await t.uno.generate([...classes, ...autoClasses]);
+  expect(css).toMatchSnapshot();
+});
