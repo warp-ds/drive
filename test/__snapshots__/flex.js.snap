@@ -17,3 +17,27 @@ exports[`flex shrink/grow with arbitrary values 1`] = `
 .grow-\\\\[4\\\\]{flex-grow:4;}
 .grow-\\\\[5\\\\]{flex-grow:5;}"
 `;
+
+exports[`flex-basis 1`] = `
+"/* layer: default */
+.basis-1{flex-basis:0.1rem;}
+.basis-1\\\\/2{flex-basis:50%;}
+.basis-1\\\\/4{flex-basis:25%;}
+.basis-1\\\\/5{flex-basis:20%;}
+.basis-16{flex-basis:1.6rem;}
+.basis-2{flex-basis:0.2rem;}
+.basis-2\\\\/5{flex-basis:40%;}
+.basis-32{flex-basis:3.2rem;}
+.basis-4{flex-basis:0.4rem;}
+.basis-48{flex-basis:4.8rem;}
+.basis-64{flex-basis:6.4rem;}
+.basis-8{flex-basis:0.8rem;}"
+`;
+
+exports[`flex-basis with arbitrary values 1`] = `
+"/* layer: default */
+.basis-\\\\[15\\\\]{flex-basis:1.5rem;}
+.basis-\\\\[15\\\\%\\\\]{flex-basis:15%;}
+.basis-\\\\[15px\\\\]{flex-basis:15px;}
+.basis-\\\\[15rem\\\\]{flex-basis:15rem;}"
+`;
