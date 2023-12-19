@@ -226,3 +226,18 @@ export function resolveArbitraryValues(value, unit, context) {
   if (value.startsWith('--')) return `var(${value})`;
   return h.rem(value) || value;
 }
+
+export function resolveArbitraryValuesUnderscore(value, unit, context) {
+  if (value.includes('_')) {
+    const valueWithoutUnderscore = value.replace(/_/g, " ");
+    if (/\d/.test(valueWithoutUnderscore)) {
+      const digits = valueWithoutUnderscore.split(' ');
+      const result = digits.map(number => resolveArbitraryValues(number, unit, context));
+      return result.join(' ');
+    } else {
+      return valueWithoutUnderscore;
+    }
+  } else {
+    return resolveArbitraryValues(value, unit, context);
+  }
+}
