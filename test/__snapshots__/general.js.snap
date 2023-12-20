@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing content-empty 1`] = `
+"/* layer: default */
+.before\\\\:content-empty::before{content:\\"\\";}
+@media (min-width: 480px){
+.sm\\\\:grid{display:grid;}
+}"
+`;
+
+exports[`testing content-none 1`] = `
+"/* layer: default */
+.before\\\\:content-none::before{content:none;}
+@media (min-width: 480px){
+.sm\\\\:grid{display:grid;}
+}"
+`;

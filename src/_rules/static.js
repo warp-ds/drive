@@ -48,7 +48,7 @@ export const whitespaces = [
 export const contents = [
   [/^content-(.+)$/, ([, v]) => ({ content: h.bracket.cssvar(v) })],
   ['content-empty', { content: '""' }],
-  ['content-none', { content: '""' }],
+  ['content-none', { content: 'none' }],
 ];
 
 export const breaks = [
