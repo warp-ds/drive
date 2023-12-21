@@ -227,17 +227,15 @@ export function resolveArbitraryValues(value, unit, context) {
   return h.rem(value) || value;
 }
 
-export function resolveArbitraryValuesUnderscore(value, unit, context) {
+export function handleComplexArbitraryValues(value, unit, context) {
   if (value.includes('_')) {
     const valueWithoutUnderscore = value.replace(/_/g, " ");
     if (/\d/.test(valueWithoutUnderscore)) {
       const digits = valueWithoutUnderscore.split(' ');
-      const result = digits.map(number => resolveArbitraryValues(number, unit, context));
-      return result.join(' ');
+      return digits.map(number => resolveArbitraryValues(number, unit, context)).join(' ');
     } else {
       return valueWithoutUnderscore;
     }
-  } else {
-    return resolveArbitraryValues(value, unit, context);
   }
+  return resolveArbitraryValues(value, unit, context);
 }
