@@ -46,7 +46,7 @@ export const backgrounds = [
     } else if (p.startsWith('var')) {
       return { 'background-color': p.startsWith('var') ? p : `var(${p})` };
     } else {
-      return {'background-position': handleComplexArbitraryValues(p, unit, context)}; 
+      return { 'background-position': handleComplexArbitraryValues(p, unit, context) };
     }
   }],
 ];

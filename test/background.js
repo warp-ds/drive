@@ -73,7 +73,7 @@ test("supports setting arbitrary background positions", async ({ uno }) => {
   const classes = [
     "bg-[25%_75%]",
     "bg-[right_3em_bottom_10px]",
-    "bg-[center_top_1rem]"
+    "bg-[center_top_1rem]",
   ];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();

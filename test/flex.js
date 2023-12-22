@@ -105,7 +105,7 @@ test('flex-basis', async (t) => {
     'basis-1/2',
     'basis-1/5',
     'basis-1/4',
-    'basis-2/5'
+    'basis-2/5',
   ];
 
   const { css } = await t.uno.generate([...classes, ...autoClasses]);
