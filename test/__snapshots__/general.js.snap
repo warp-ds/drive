@@ -15,3 +15,11 @@ exports[`testing content-none 1`] = `
 .sm\\\\:grid{display:grid;}
 }"
 `;
+
+exports[`testing empty string as arbitrary value 1`] = `
+"/* layer: default */
+.before\\\\:content-\\\\[\\\\\\"\\\\\\"\\\\]::before{content:\\"\\";}
+@media (min-width: 480px){
+.sm\\\\:grid{display:grid;}
+}"
+`;
