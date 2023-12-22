@@ -221,7 +221,7 @@ export function getBracket(str, open, close) {
 
 export function resolveArbitraryValues(value, unit, context) {
   if (unit === 'rem') return h.rem(`${value}${unit}`);
-  if (unit === 'px' || context.theme.usingPixels) return h.px(value);
+  if (unit === 'px' || context?.theme?.usingPixels) return h.px(value);
   if (unit === '%') return `${h.percent(`${value}`) * 100 }${unit}`;
   if (value.startsWith('--')) return `var(${value})`;
   return h.rem(value) || value;
@@ -232,7 +232,7 @@ export function handleComplexArbitraryValues(value, unit, context) {
     const valueWithoutUnderscore = value.replace(/_/g, " ");
     if (/\d/.test(valueWithoutUnderscore)) {
       const digits = valueWithoutUnderscore.split(' ');
-      return digits.map(number => resolveArbitraryValues(number, unit, context)).join(' ');
+      return digits?.map(number => resolveArbitraryValues(number, unit, context)).join(' ');
     } else {
       return valueWithoutUnderscore;
     }

@@ -89,6 +89,13 @@ exports[`bg size 1`] = `
 
 exports[`supports setting arbitrary background colors 1`] = `
 "/* layer: default */
-.bg-\\\\[--w-s-color-background\\\\],
+.bg-\\\\[--w-s-color-background\\\\]{background-position:var(--w-s-color-background);}
 .bg-\\\\[var\\\\(--w-s-color-background\\\\)\\\\]{background-color:var(--w-s-color-background);}"
+`;
+
+exports[`supports setting arbitrary background positions 1`] = `
+"/* layer: default */
+.bg-\\\\[25\\\\%_75\\\\%\\\\]{background-position:25% 75%;}
+.bg-\\\\[center_top_1rem\\\\]{background-position:center top 1rem;}
+.bg-\\\\[right_3em_bottom_10px\\\\]{background-position:right 3em bottom 10px;}"
 `;

@@ -1,4 +1,4 @@
-import { positionMap, globalKeywords, makeGlobalStaticRules } from '#utils';
+import { positionMap, globalKeywords, makeGlobalStaticRules, handleComplexArbitraryValues } from '#utils';
 
 export const backgrounds = [
   // size
@@ -37,13 +37,16 @@ export const backgrounds = [
   ['bg-origin-content', { 'background-origin': 'content-box' }],
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
-  //arbitrary
-  [/^bg-\[(.+)]/, ([, p]) => {
+  // matching arbitrary values
+  [/^bg-\[(.+)]/, ([, p, unit, context]) => {
     if (p.startsWith('url')) {
       // Process url(var(--something)) and extract the var itself -> --something
       const urlAsVar = p.match(/url\(var\(([^)]*)/)?.[1];
       return { 'background-image': urlAsVar ? `var(${urlAsVar})` : p };
+    } else if (p.startsWith('var')) {
+      return { 'background-color': p.startsWith('var') ? p : `var(${p})` };
+    } else {
+      return {'background-position': handleComplexArbitraryValues(p, unit, context)}; 
     }
-    return { 'background-color': p.startsWith('var') ? p : `var(${p})` };
   }],
 ];
