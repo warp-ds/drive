@@ -32,6 +32,12 @@ exports[`ease 1`] = `
 .ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1);}"
 `;
 
+exports[`ease with arbitrary values 1`] = `
+"/* layer: default */
+.ease-\\\\[cubic-bezier\\\\(\\\\.29\\\\,\\\\ 1\\\\.01\\\\,\\\\ 1\\\\,\\\\ -0\\\\.68\\\\)\\\\]{transition-timing-function:cubic-bezier(.29, 1.01, 1, -0.68);}
+.ease-\\\\[cubic-bezier\\\\(0\\\\.95\\\\,0\\\\.05\\\\,0\\\\.795\\\\,0\\\\.035\\\\)\\\\]{transition-timing-function:cubic-bezier(0.95,0.05,0.795,0.035);}"
+`;
+
 exports[`transition 1`] = `
 "/* layer: default */
 .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
