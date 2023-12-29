@@ -560,6 +560,13 @@ exports[`order > allows values 1 to 12 1`] = `
 .order-9{order:9;}"
 `;
 
+exports[`order > arbitrary values 1`] = `
+"/* layer: default */
+.order-\\\\[14\\\\]{order:14;}
+.order-\\\\[20\\\\]{order:20;}
+.order-\\\\[50\\\\]{order:50;}"
+`;
+
 exports[`order > ensure -first, -last and -none is allowed and that the correct value is set 1`] = `
 "/* layer: default */
 .order-first{order:-9999;}

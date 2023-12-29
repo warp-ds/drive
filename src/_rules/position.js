@@ -14,6 +14,12 @@ export const orders = [
   ['order-first', { order: '-9999' }],
   ['order-last', { order: '9999' }],
   ['order-none', { order: '0' }],
+  // matching arbitrary values
+  [
+    /^order-\[(.\d*)?]$/,
+    ([, d]) => ({ 'order': h.number(d) }),
+    { autocomplete: 'order-<num>' },
+  ],
 ];
 
 export const justifies = [

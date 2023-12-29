@@ -31,6 +31,15 @@ describe('order', () => {
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
+  test('arbitrary values', async ({ uno }) => {
+    const classes = [
+      'order-[14]',
+      'order-[20]',
+      'order-[50]',
+    ];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
 });
 
 describe('justifies', () => {
