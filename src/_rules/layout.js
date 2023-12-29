@@ -1,3 +1,5 @@
+import { handler as h } from '#utils';
+
 const overflowValues = ["auto", "hidden", "visible", "scroll", "clip"];
 
 export const overflows = [
@@ -15,5 +17,20 @@ export const overflows = [
     /^(?:overflow)-([xy])-(.+)$/,
     ([, d, v]) =>
       (overflowValues.includes(v) ? { [`overflow-${d}`]: v } : undefined),
+  ],
+];
+
+export const columns = [
+  [
+    /^columns-(\d+)$/,
+    ([, d]) => ({ 'columns': h.number(d) }),
+    { autocomplete: 'columns-<num>' },
+  ],
+  ['columns-auto', { 'columns': 'auto' }],
+  // matching arbitrary values
+  [
+    /^columns-\[(.\d*)?]$/,
+    ([, d]) => ({ 'columns': h.number(d) }),
+    { autocomplete: 'columns-<num>' },
   ],
 ];
