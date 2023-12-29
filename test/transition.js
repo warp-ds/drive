@@ -32,7 +32,7 @@ test('ease with arbitrary values', async ({ uno }) => {
   const classes = [
     'ease-[cubic-bezier(0.95,0.05,0.795,0.035)]',
     'ease-[cubic-bezier(.29, 1.01, 1, -0.68)]',
-    'cubic-bezier(0.1, 0.7, 1, 0.1)'
+    'cubic-bezier(0.1, 0.7, 1, 0.1)',
   ];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();

@@ -48,7 +48,7 @@ export const transitions = [
   ],
   // matching arbitrary values transition-timing
   [/^ease-\[(cubic-bezier\(.*\))]$/,
-    ([, value]) => ({ 'transition-timing-function': value}),
+    ([, value]) => ({ 'transition-timing-function': value }),
   ],
   // props
   [/^transition-property-(.+)$/,
