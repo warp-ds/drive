@@ -60,9 +60,9 @@ describe('columns', () => {
   });
   test('arbitrary values', async ({ uno }) => {
     const classes = [
-      'columns-[14]',
-      'columns-[20]',
-      'columns-[50]',
+      'columns-[13]',
+      'columns-[25]',
+      'columns-[55]',
     ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
