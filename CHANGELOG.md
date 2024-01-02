@@ -1,3 +1,10 @@
+# [1.4.0-next.5](https://github.com/warp-ds/drive/compare/v1.4.0-next.4...v1.4.0-next.5) (2024-01-02)
+
+
+### Features
+
+* support arbitrary values for order, columns and transition-timing ([#181](https://github.com/warp-ds/drive/issues/181)) ([4116fda](https://github.com/warp-ds/drive/commit/4116fda825bbba1836466e763aa060497ddbac78))
+
 # [1.4.0-next.4](https://github.com/warp-ds/drive/compare/v1.4.0-next.3...v1.4.0-next.4) (2024-01-02)
 
 
