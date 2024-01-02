@@ -37,7 +37,7 @@ export const backgrounds = [
   ['bg-origin-content', { 'background-origin': 'content-box' }],
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
- //arbitrary
+  //arbitrary
   [/^bg-\[(.+)]/, ([, p]) => {
     if (p.startsWith('url')) {
       // Process url(var(--something)) and extract the var itself -> --something
