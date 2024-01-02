@@ -15,7 +15,7 @@ export const orders = [
     { autocomplete: 'order-<num>' },
   ],
   // matching arbitrary values
-  [/^order-\[(\d+)?]$/,
+  [/^order-\[(\d+)]$/,
     ([, d]) => ({ 'order': h.number(d) }),
     { autocomplete: 'order-<num>' },
   ],
