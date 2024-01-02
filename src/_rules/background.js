@@ -41,11 +41,16 @@ export const backgrounds = [
   ['bg-origin-content', { 'background-origin': 'content-box' }],
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
-  // arbitrary background-color
+  // color
+  ['bg-inherit', { 'background-color': 'inherit' }],
+  ['bg-transparent', { 'background-color': 'transparent' }],
+  ['bg-current', { 'background-color': 'currentColor' }],
+
+  // arbitrary color
   [/^bg-\[(--.+)]$/, ([, p]) => ({ 'background-color': `var(${p})` })],
   [/^bg-\[(var\(--.+\))]$/, ([, p]) => ({ 'background-color': p })],
 
-  // arbitrary background-image
+  // arbitrary image
   [/^bg-\[(url\(.+\))]$/, ([, p]) => {
     // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
     const cssVar = p.match(/^url\((var\([^)]+\))\)$/)?.[1];
