@@ -219,7 +219,7 @@ export function getBracket(str, open, close) {
   }
 }
 
-export function resolveArbitraryValues (value, unit, context) {
+export function resolveArbitraryValues(value, unit, context) {
   if (value.includes('_')) {
     const valueWithoutUnderscore = value.replace(/_/g, " ");
     if (/\d/.test(valueWithoutUnderscore)) {
