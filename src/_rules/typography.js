@@ -9,7 +9,7 @@ export const typography = [
   [/^leading-(xs|s|m|ml|l|xl|xxl|xxxl)$/, ([, size]) =>
     ({ 'line-height': `var(--w-line-height-${size})` }),
   ],
-  [/^leading-\[(.+)(rem|px)?\]/, ([, value, unit], context) => ({ 'line-height': resolveArbitraryValues(value, unit, context) })],
+  [/^leading-\[(.+)(rem|px)?]$/, ([, value, unit], context) => ({ 'line-height': resolveArbitraryValues(value, unit, context) })],
   ['tabular-nums', { 'font-family': 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif', 'font-variant-numeric': 'tabular-nums' }],
   ['lining-nums', { 'font-variant-numeric': 'lining-nums' }],
   ['ordinal', { 'font-variant-numeric': 'ordinal' }],

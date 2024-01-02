@@ -20,7 +20,7 @@ describe('border', () => {
   });
 
   test('supports setting arbitrary border width', async ({ uno }) => {
-    const classes = ['border-[66]', 'border-[6]', 'border-l-[7]', 'border-r-[7]', 'border-t-[7]', 'border-b-[7]', 'border-w-[7]'];
+    const classes = ['border-[66px]', 'border-[6]', 'border-l-[10%]', 'border-r-[7]', 'border-t-[7rem]', 'border-b-[7px]', 'border-w-[800]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });

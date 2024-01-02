@@ -1,6 +1,6 @@
 import { escapeSelector } from '@unocss/core';
-import { globalKeywords } from '../mappings.js';
-import { numberRE, numberWithUnitRE, unitOnlyRE } from './regex.js';
+import { numberRE, numberWithUnitRE, unitOnlyRE, globalKeywords } from '#utils';
+
 // Not all, but covers most high frequency attributes
 const cssProps = [
   // basic props

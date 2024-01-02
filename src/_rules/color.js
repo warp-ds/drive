@@ -12,11 +12,6 @@ export const textColors = [
 //  ['text-inherit', { 'color': 'inherit' }], // This class currently sets "text-align: inherit;" in align.js
   ['text-transparent', { 'color': 'transparent' }],
   ['text-current', { 'color': 'currentColor' }],
-  [/^text-\[(.+)]/, ([, p]) => ({ 'color': p.startsWith('var') ? p : `var(${p})` })],
-];
-
-export const bgColors = [
-  ['bg-inherit', { 'background-color': 'inherit' }],
-  ['bg-transparent', { 'background-color': 'transparent' }],
-  ['bg-current', { 'background-color': 'currentColor' }],
+  [/^text-\[(--.+)]$/, ([, p]) => ({ 'color': `var(${p})` })],
+  [/^text-\[(var\(--.+\))]$/, ([, p]) => ({ 'color': p })],
 ];

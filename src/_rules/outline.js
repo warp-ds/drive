@@ -9,7 +9,8 @@ export const outlineColors = [
   ['outline-inherit', { 'outline-color': 'inherit' }],
   ['outline-transparent', { 'outline-color': 'transparent' }],
   ['outline-current', { 'outline-color': 'currentColor' }],
-  [/^outline-\[(.+)]/, ([, p]) => ({ 'outline-color': p.startsWith('var') ? p : `var(${p})` })],
+  [/^outline-\[(--.+)]$/, ([, p]) => ({ 'outline-color': `var(${p})` })],
+  [/^outline-\[(var\(--.+\))]$/, ([, p]) => ({ 'outline-color': p })],
 ];
 
 export const outlineStyle = [
