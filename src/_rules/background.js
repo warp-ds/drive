@@ -1,4 +1,4 @@
-import { positionMap, globalKeywords, makeGlobalStaticRules, handleComplexArbitraryValues } from '#utils';
+import { positionMap, globalKeywords, makeGlobalStaticRules } from '#utils';
 
 export const backgrounds = [
   // size
