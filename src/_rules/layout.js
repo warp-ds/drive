@@ -21,15 +21,14 @@ export const overflows = [
 ];
 
 export const columns = [
-  [
-    /^columns-([1-9]|1[0-2])$/,
+  ['columns-auto', { 'columns': 'auto' }],
+  
+  [/^columns-([1-9]|1[0-2])$/,
     ([, d]) => ({ 'columns': h.number(d) }),
     { autocomplete: 'columns-<num>' },
   ],
-  ['columns-auto', { 'columns': 'auto' }],
   // matching arbitrary values
-  [
-    /^columns-\[(\d+)?]$/,
+  [/^columns-\[(\d+)?]$/,
     ([, d]) => ({ 'columns': h.number(d) }),
     { autocomplete: 'columns-<num>' },
   ],

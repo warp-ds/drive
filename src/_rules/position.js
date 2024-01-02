@@ -6,17 +6,16 @@ export const positions = [
 ];
 
 export const orders = [
-  [
-    /^order-([1-9]|1[0-2])$/,
-    ([, d]) => ({ 'order': h.number(d) }),
-    { autocomplete: 'order-<num>' },
-  ],
   ['order-first', { order: '-9999' }],
   ['order-last', { order: '9999' }],
   ['order-none', { order: '0' }],
+
+  [/^order-([1-9]|1[0-2])$/,
+    ([, d]) => ({ 'order': h.number(d) }),
+    { autocomplete: 'order-<num>' },
+  ],
   // matching arbitrary values
-  [
-    /^order-\[(\d+)?]$/,
+  [/^order-\[(\d+)?]$/,
     ([, d]) => ({ 'order': h.number(d) }),
     { autocomplete: 'order-<num>' },
   ],
