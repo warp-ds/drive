@@ -519,14 +519,6 @@ exports[`justifies > check justify- classes and their expected justify-content v
 .justify-evenly{justify-content:space-evenly;}"
 `;
 
-exports[`justifies > check justify-items- classes and their expected justify-itemns values 1`] = `
-"/* layer: default */
-.justify-items-start{justify-items:start;}
-.justify-items-end{justify-items:end;}
-.justify-items-center{justify-items:center;}
-.justify-items-stretch{justify-items:stretch;}"
-`;
-
 exports[`justifies > check justify-items- classes and their expected justify-items values 1`] = `
 "/* layer: default */
 .justify-items-start{justify-items:start;}

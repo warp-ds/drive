@@ -48,8 +48,9 @@ export function px(str) {
   if (!Number.isNaN(num)) return unit ? `${round(num)}${unit}` : `${round(num)}px`;
 }
 export function number(str) {
-  if (!numberRE.test(str)) return;
-  const num = parseFloat(str);
+  const newStr = (str.startsWith('[') && str.endsWith(']')) ? bracket(str) : str;
+  if (!numberRE.test(newStr)) return;
+  const num = parseFloat(newStr);
   if (!Number.isNaN(num)) return round(num);
 }
 export function percent(str) {

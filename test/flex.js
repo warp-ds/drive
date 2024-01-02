@@ -82,3 +82,44 @@ test('flex shrink/grow', async (t) => {
     `);
 
 });
+
+test('flex shrink/grow with arbitrary values', async (t) => {
+  const autoClasses = ['grow', 'shrink'];
+  const classes = Array.from({ length: 6 }, (_, index) => [`shrink-[${index}]`, `grow-[${index}]`]).flat();
+
+  const { css } = await t.uno.generate([...classes, ...autoClasses]);
+  expect(css).toMatchSnapshot();
+});
+
+test('flex-basis', async (t) => {
+  const autoClasses = ['basis'];
+  const classes = [
+    'basis-1',
+    'basis-2',
+    'basis-4',
+    'basis-8',
+    'basis-16',
+    'basis-32',
+    'basis-48',
+    'basis-64',
+    'basis-1/2',
+    'basis-1/5',
+    'basis-1/4',
+    'basis-2/5',
+  ];
+
+  const { css } = await t.uno.generate([...classes, ...autoClasses]);
+  expect(css).toMatchSnapshot();
+});
+test('flex-basis with arbitrary values', async (t) => {
+  const autoClasses = ['basis'];
+  const classes = [
+    'basis-[15]',
+    'basis-[15rem]',
+    'basis-[15px]',
+    'basis-[15%]',
+  ];
+
+  const { css } = await t.uno.generate([...classes, ...autoClasses]);
+  expect(css).toMatchSnapshot();
+});

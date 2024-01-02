@@ -85,6 +85,36 @@ test('grid auto flows', async (t) => {
   expect(css).toMatchSnapshot();
 });
 
+test('grid auto rows and cols with arbitrary values', async (t) => {
+  const gridRowsCols = [
+    'auto-rows-[20]',
+    'auto-rows-[20px]',
+    'auto-rows-[20rem]',
+    'auto-rows-[20fr]',
+    'auto-rows-[20%]',
+    'auto-rows-[20cm]',
+    'auto-rows-[20fr_20cm_0%]',
+    'auto-rows-[20fr_20_0%]',
+    'auto-rows-[minmax(0,2fr)]',
+    'auto-rows-[min-content_max-content_auto]',
+    'auto-rows-[minmax(100px,auto)_minmax(max-content,2fr)_minmax(20%,80vmax)]',
+    'auto-cols-[20]',
+    'auto-cols-[20px]',
+    'auto-cols-[20rem]',
+    'auto-cols-[20fr]',
+    'auto-cols-[20%]',
+    'auto-cols-[20cm]',
+    'auto-cols-[20fr_20cm_0%]',
+    'auto-cols-[20fr_20_0%]',
+    'auto-cols-[minmax(0,2fr)]',
+    'auto-cols-[min-content_max-content_auto]',
+    'auto-cols-[minmax(100px,auto)_minmax(max-content,2fr)_minmax(20%,80vmax)]',
+  ];
+  const { css } = await t.uno.generate(gridRowsCols);
+
+  expect(css).toMatchSnapshot();
+});
+
 test('grid templates basic', async (t) => {
   const classesRows = rows.map((num) => `grid-rows-${num}`);
   const classesCols = columns.map((num) => `grid-cols-${num}`);
