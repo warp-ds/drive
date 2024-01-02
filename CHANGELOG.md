@@ -1,3 +1,10 @@
+# [1.4.0-next.6](https://github.com/warp-ds/drive/compare/v1.4.0-next.5...v1.4.0-next.6) (2024-01-02)
+
+
+### Bug Fixes
+
+* Misc cleanup/fixes for arbitrary values ([#182](https://github.com/warp-ds/drive/issues/182)) ([c5b47b5](https://github.com/warp-ds/drive/commit/c5b47b51e7dfd0d0e373d13ba31627214d071eb3))
+
 # [1.4.0-next.5](https://github.com/warp-ds/drive/compare/v1.4.0-next.4...v1.4.0-next.5) (2024-01-02)
 
 
