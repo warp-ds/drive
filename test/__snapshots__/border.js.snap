@@ -58,12 +58,12 @@ exports[`border > supports setting arbitrary border colors 1`] = `
 
 exports[`border > supports setting arbitrary border width 1`] = `
 "/* layer: default */
-.border-\\\\[6\\\\]{border-width:6px;}
-.border-\\\\[66\\\\]{border-width:66px;}
-.border-b-\\\\[7\\\\]{border-bottom-width:7px;}
-.border-l-\\\\[7\\\\]{border-left-width:7px;}
-.border-r-\\\\[7\\\\]{border-right-width:7px;}
-.border-t-\\\\[7\\\\]{border-top-width:7px;}"
+.border-\\\\[6\\\\]{border-width:0.6rem;}
+.border-\\\\[66px\\\\]{border-width:66px;}
+.border-b-\\\\[7px\\\\]{border-bottom-width:7px;}
+.border-l-\\\\[10\\\\%\\\\]{border-left-width:10%;}
+.border-r-\\\\[7\\\\]{border-right-width:0.7rem;}
+.border-t-\\\\[7rem\\\\]{border-top-width:7rem;}"
 `;
 
 exports[`border > supports setting arbitrary divide colors 1`] = `

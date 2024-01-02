@@ -28,7 +28,7 @@ export const borders = [
     { autocomplete: [`border-(${Object.keys(lineWidth).join('|')})`, `border-<directions>-(${Object.keys(lineWidth).join('|')})`] },
   ],
   [
-    /^border(-[lrtbxy])?-\[(\d+)]$/,
+    /^border(-[lrtbxy])?-\[(\d+)(rem|px|%)?]$/,
     handleArbitraryBorderWidth,
     { autocomplete: ['border-[<num>]', 'border-<directions>-[<num>]'] },
   ],
@@ -38,7 +38,7 @@ export const borders = [
   [/^border-inverted$/, () => ({ 'border-color': 'var(--w-s-border-inverted)' })],
   [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
   [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
-  [/^border(-[lrtbxy])?-\[(\D.*)]$/, handleArbitraryBorderColor],
+  [/^border(-[lrtbxy])?-\[((?:var|--).*)]$/, handleArbitraryBorderColor],
 
   // border-style
   [
@@ -53,9 +53,8 @@ function handleBorderWidth([, dir = '', width], { theme }) {
   if (applicableWidth) return directionMap[dir.substring(1)]?.map((i) => [`border${i}-width`, applicableWidth]);
 }
 
-function handleArbitraryBorderWidth([, dir = '', width]) {
-  //TODO: Use the usePixels flag to determine which unit to use
-  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-width`, `${width}px`]);
+function handleArbitraryBorderWidth([, dir = '', value, unit], context) {
+  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-width`, resolveArbitraryValues(value, unit, context)]);
 }
 
 function handleArbitraryBorderColor([, dir = '', val]) {
@@ -80,7 +79,7 @@ export const divide = [
   [/^divide-([xy])-reverse$/, ([, d]) => ({ [`--w-divide-${d}-reverse`]: 1 })],
 
   // arbitrary border-color
-  [/^divide(-[xy])?-\[(.+)]$/, handleArbitraryDivideColor],
+  [/^divide(-[xy])?-\[((?:var|--).+)]$/, handleArbitraryDivideColor],
 ];
 
 function handleDivideBorder([_selector, dir, width, reverse], { theme }) {
