@@ -29,7 +29,7 @@ export const columns = [
   ['columns-auto', { 'columns': 'auto' }],
   // matching arbitrary values
   [
-    /^columns-\[(\d*)?]$/,
+    /^columns-\[(\d+)?]$/,
     ([, d]) => ({ 'columns': h.number(d) }),
     { autocomplete: 'columns-<num>' },
   ],
