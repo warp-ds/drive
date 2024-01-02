@@ -22,7 +22,7 @@ export const overflows = [
 
 export const columns = [
   ['columns-auto', { 'columns': 'auto' }],
-  
+
   [/^columns-([1-9]|1[0-2])$/,
     ([, d]) => ({ 'columns': h.number(d) }),
     { autocomplete: 'columns-<num>' },
