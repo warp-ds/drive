@@ -1,3 +1,10 @@
+# [1.4.0-next.4](https://github.com/warp-ds/drive/compare/v1.4.0-next.3...v1.4.0-next.4) (2024-01-02)
+
+
+### Features
+
+* support arbitrary values for flex-basis, flex-grow, flex-shrink, grid-auto-rows, grid-auto-columns ([#180](https://github.com/warp-ds/drive/issues/180)) ([d3106cd](https://github.com/warp-ds/drive/commit/d3106cd9a333a286c3ef12aa925b1736e6a90b0c))
+
 # [1.4.0-next.3](https://github.com/warp-ds/drive/compare/v1.4.0-next.2...v1.4.0-next.3) (2023-12-14)
 
 
