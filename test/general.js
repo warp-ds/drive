@@ -40,6 +40,19 @@ test(`the HTML parser is sane`, async ({ uno }) => {
     }"
   `);
 });
+test(`testing empty string as arbitrary value`, async ({ uno }) => {
+  const { css } = await uno.generate([`before:content-[""]`, 'sm:grid']);
+  expect(css).toMatchSnapshot();
+});
+test(`testing content-empty`, async ({ uno }) => {
+  const { css } = await uno.generate([`before:content-empty`, 'sm:grid']);
+  expect(css).toMatchSnapshot();
+});
+
+test(`testing content-none`, async ({ uno }) => {
+  const { css } = await uno.generate([`before:content-none`, 'sm:grid']);
+  expect(css).toMatchSnapshot();
+});
 
 test('can generate pixel values for theme', async () => {
   const uno = getGenerator({ usePixels: true });

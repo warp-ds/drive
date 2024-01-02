@@ -17,6 +17,32 @@ exports[`grid auto flows 1`] = `
 .grid-flow-col-dense{grid-auto-flow:column dense;}"
 `;
 
+exports[`grid auto rows and cols with arbitrary values 1`] = `
+"/* layer: default */
+.auto-rows-\\\\[20\\\\]{grid-auto-rows:2rem;}
+.auto-rows-\\\\[20\\\\%\\\\]{grid-auto-rows:20%;}
+.auto-rows-\\\\[20cm\\\\]{grid-auto-rows:20cm;}
+.auto-rows-\\\\[20fr_20_0\\\\%\\\\]{grid-auto-rows:20fr 2rem 0%;}
+.auto-rows-\\\\[20fr_20cm_0\\\\%\\\\]{grid-auto-rows:20fr 20cm 0%;}
+.auto-rows-\\\\[20fr\\\\]{grid-auto-rows:20fr;}
+.auto-rows-\\\\[20px\\\\]{grid-auto-rows:20px;}
+.auto-rows-\\\\[20rem\\\\]{grid-auto-rows:20rem;}
+.auto-rows-\\\\[min-content_max-content_auto\\\\]{grid-auto-rows:min-content max-content auto;}
+.auto-rows-\\\\[minmax\\\\(0\\\\,2fr\\\\)\\\\]{grid-auto-rows:minmax(0,2fr);}
+.auto-rows-\\\\[minmax\\\\(100px\\\\,auto\\\\)_minmax\\\\(max-content\\\\,2fr\\\\)_minmax\\\\(20\\\\%\\\\,80vmax\\\\)\\\\]{grid-auto-rows:minmax(100px,auto) minmax(max-content,2fr) minmax(20%,80vmax);}
+.auto-cols-\\\\[20\\\\]{grid-auto-columns:2rem;}
+.auto-cols-\\\\[20\\\\%\\\\]{grid-auto-columns:20%;}
+.auto-cols-\\\\[20cm\\\\]{grid-auto-columns:20cm;}
+.auto-cols-\\\\[20fr_20_0\\\\%\\\\]{grid-auto-columns:20fr 2rem 0%;}
+.auto-cols-\\\\[20fr_20cm_0\\\\%\\\\]{grid-auto-columns:20fr 20cm 0%;}
+.auto-cols-\\\\[20fr\\\\]{grid-auto-columns:20fr;}
+.auto-cols-\\\\[20px\\\\]{grid-auto-columns:20px;}
+.auto-cols-\\\\[20rem\\\\]{grid-auto-columns:20rem;}
+.auto-cols-\\\\[min-content_max-content_auto\\\\]{grid-auto-columns:min-content max-content auto;}
+.auto-cols-\\\\[minmax\\\\(0\\\\,2fr\\\\)\\\\]{grid-auto-columns:minmax(0,2fr);}
+.auto-cols-\\\\[minmax\\\\(100px\\\\,auto\\\\)_minmax\\\\(max-content\\\\,2fr\\\\)_minmax\\\\(20\\\\%\\\\,80vmax\\\\)\\\\]{grid-auto-columns:minmax(100px,auto) minmax(max-content,2fr) minmax(20%,80vmax);}"
+`;
+
 exports[`grid span 1`] = `
 "/* layer: default */
 .col-auto{grid-column:auto;}

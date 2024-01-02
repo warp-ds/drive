@@ -1,4 +1,4 @@
-import { handler as h } from '#utils';
+import { handler as h, resolveArbitraryValues } from '#utils';
 
 export const flex = [
   // flex
@@ -26,6 +26,13 @@ export const flex = [
     /^basis-(.+)$/,
     ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }),
     { autocomplete: ['basis-$spacing'] },
+  ],
+  // matching arbitrary values
+  [
+    /^basis-\[(.\d*)(rem|px|%)?]$/,
+    ([, value, unit], context) => ({
+      'flex-basis': resolveArbitraryValues(value, unit, context),
+    }),
   ],
   // directions
   ['flex-row', { 'flex-direction': 'row' }],
