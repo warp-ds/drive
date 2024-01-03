@@ -8,9 +8,9 @@ test('flex with arbitrary values', async (t) => {
 
   const { css } = await t.uno.generate(classes);
   expect(css).toMatchInlineSnapshot(`
-      "/* layer: default */
-      .flex-\\\\[2_2_0\\\\%\\\\]{flex:2 2 0%;}"
-    `);
+    "/* layer: default */
+    .flex-\\[2_2_0\\%\\]{flex:2 2 0%;}"
+  `);
 });
 
 test('flex directions', async (t) => {

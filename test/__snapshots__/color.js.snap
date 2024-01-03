@@ -25,8 +25,8 @@ exports[`opacity by theme 1`] = `
 
 exports[`supports setting arbitrary text colors 1`] = `
 "/* layer: default */
-.text-\\\\[--w-s-color-border\\\\],
-.text-\\\\[var\\\\(--w-s-color-border\\\\)\\\\]{color:var(--w-s-color-border);}"
+.text-\\[--w-s-color-border\\],
+.text-\\[var\\(--w-s-color-border\\)\\]{color:var(--w-s-color-border);}"
 `;
 
 exports[`text colors 1`] = `

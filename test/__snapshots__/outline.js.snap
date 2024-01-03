@@ -14,8 +14,8 @@ exports[`outline > supports setting outline colors 1`] = `
 .outline-inherit{outline-color:inherit;}
 .outline-transparent{outline-color:transparent;}
 .outline-current{outline-color:currentColor;}
-.outline-\\\\[--w-s-color-border\\\\],
-.outline-\\\\[var\\\\(--w-s-color-border\\\\)\\\\]{outline-color:var(--w-s-color-border);}"
+.outline-\\[--w-s-color-border\\],
+.outline-\\[var\\(--w-s-color-border\\)\\]{outline-color:var(--w-s-color-border);}"
 `;
 
 exports[`outline > supports setting outline styles 1`] = `

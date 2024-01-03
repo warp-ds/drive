@@ -124,18 +124,18 @@ exports[`global keywords > justify, alignments and placements should work with g
 
 exports[`insets > check inset- classes and their expected arbitrary values 1`] = `
 "/* layer: default */
-.inset-\\\\[16\\\\]{inset:1.6rem;}
-.inset-\\\\[16\\\\%\\\\]{inset:16%;}
-.inset-\\\\[16px\\\\]{inset:16px;}
-.inset-\\\\[16rem\\\\]{inset:16rem;}
-.inset-x-\\\\[16\\\\]{left:1.6rem;right:1.6rem;}
-.inset-x-\\\\[16\\\\%\\\\]{left:16%;right:16%;}
-.inset-x-\\\\[16px\\\\]{left:16px;right:16px;}
-.inset-x-\\\\[16rem\\\\]{left:16rem;right:16rem;}
-.inset-y-\\\\[16\\\\]{top:1.6rem;bottom:1.6rem;}
-.inset-y-\\\\[16\\\\%\\\\]{top:16%;bottom:16%;}
-.inset-y-\\\\[16px\\\\]{top:16px;bottom:16px;}
-.inset-y-\\\\[16rem\\\\]{top:16rem;bottom:16rem;}"
+.inset-\\[16\\]{inset:1.6rem;}
+.inset-\\[16\\%\\]{inset:16%;}
+.inset-\\[16px\\]{inset:16px;}
+.inset-\\[16rem\\]{inset:16rem;}
+.inset-x-\\[16\\]{left:1.6rem;right:1.6rem;}
+.inset-x-\\[16\\%\\]{left:16%;right:16%;}
+.inset-x-\\[16px\\]{left:16px;right:16px;}
+.inset-x-\\[16rem\\]{left:16rem;right:16rem;}
+.inset-y-\\[16\\]{top:1.6rem;bottom:1.6rem;}
+.inset-y-\\[16\\%\\]{top:16%;bottom:16%;}
+.inset-y-\\[16px\\]{top:16px;bottom:16px;}
+.inset-y-\\[16rem\\]{top:16rem;bottom:16rem;}"
 `;
 
 exports[`insets > check inset- classes and their expected values 1`] = `
@@ -392,22 +392,22 @@ exports[`insets > check negative -top-, -left-, -right-, -bottom- classes and th
 
 exports[`insets > check top-, left-, right-, bottom- classes and their expected arbitrary values 1`] = `
 "/* layer: default */
-.bottom-\\\\[16\\\\]{bottom:1.6rem;}
-.bottom-\\\\[16\\\\%\\\\]{bottom:16%;}
-.bottom-\\\\[16px\\\\]{bottom:16px;}
-.bottom-\\\\[16rem\\\\]{bottom:16rem;}
-.left-\\\\[16\\\\]{left:1.6rem;}
-.left-\\\\[16\\\\%\\\\]{left:16%;}
-.left-\\\\[16px\\\\]{left:16px;}
-.left-\\\\[16rem\\\\]{left:16rem;}
-.right-\\\\[16\\\\]{right:1.6rem;}
-.right-\\\\[16\\\\%\\\\]{right:16%;}
-.right-\\\\[16px\\\\]{right:16px;}
-.right-\\\\[16rem\\\\]{right:16rem;}
-.top-\\\\[16\\\\]{top:1.6rem;}
-.top-\\\\[16\\\\%\\\\]{top:16%;}
-.top-\\\\[16px\\\\]{top:16px;}
-.top-\\\\[16rem\\\\]{top:16rem;}"
+.bottom-\\[16\\]{bottom:1.6rem;}
+.bottom-\\[16\\%\\]{bottom:16%;}
+.bottom-\\[16px\\]{bottom:16px;}
+.bottom-\\[16rem\\]{bottom:16rem;}
+.left-\\[16\\]{left:1.6rem;}
+.left-\\[16\\%\\]{left:16%;}
+.left-\\[16px\\]{left:16px;}
+.left-\\[16rem\\]{left:16rem;}
+.right-\\[16\\]{right:1.6rem;}
+.right-\\[16\\%\\]{right:16%;}
+.right-\\[16px\\]{right:16px;}
+.right-\\[16rem\\]{right:16rem;}
+.top-\\[16\\]{top:1.6rem;}
+.top-\\[16\\%\\]{top:16%;}
+.top-\\[16px\\]{top:16px;}
+.top-\\[16rem\\]{top:16rem;}"
 `;
 
 exports[`insets > check top-, left-, right-, bottom- classes and their expected values 1`] = `
@@ -554,9 +554,9 @@ exports[`order > allows values 1 to 12 1`] = `
 
 exports[`order > arbitrary values 1`] = `
 "/* layer: default */
-.order-\\\\[14\\\\]{order:14;}
-.order-\\\\[20\\\\]{order:20;}
-.order-\\\\[50\\\\]{order:50;}"
+.order-\\[14\\]{order:14;}
+.order-\\[20\\]{order:20;}
+.order-\\[50\\]{order:50;}"
 `;
 
 exports[`order > ensure -first, -last and -none is allowed and that the correct value is set 1`] = `
