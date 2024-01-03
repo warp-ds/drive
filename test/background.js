@@ -69,16 +69,15 @@ test("supports setting arbitrary background colors", async ({ uno }) => {
   expect(css).toMatchSnapshot();
 });
 
-// TODO: Uncomment this once there is a fix for support arbitrary values for background-position:
-// test("supports setting arbitrary background positions", async ({ uno }) => {
-//   const classes = [
-//     "bg-[25%_75%]",
-//     "bg-[right_3em_bottom_10px]",
-//     "bg-[center_top_1rem]",
-//   ];
-//   const { css } = await uno.generate(classes);
-//   expect(css).toMatchSnapshot();
-// });
+test("supports setting arbitrary background positions", async ({ uno }) => {
+  const classes = [
+    "bg-[25%_75%]",
+    "bg-[right_3em_bottom_10px]",
+    "bg-[center_top_1rem]",
+  ];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
 
 test('invalid background color classes', async({ uno }) => {
   const classes = ['bg-color', 'background-[--w-s-color-background]', 'background-[var(--w-s-color-background)]'];

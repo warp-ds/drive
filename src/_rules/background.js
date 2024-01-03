@@ -1,4 +1,4 @@
-import { positionMap, globalKeywords, makeGlobalStaticRules } from '#utils';
+import { positionMap, globalKeywords, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
 
 export const backgrounds = [
   // size
@@ -15,6 +15,9 @@ export const backgrounds = [
   // skip 1 & 2 letters shortcut
   [/^bg-([-\w]{3,})$/, ([, s]) => ({ 'background-position': positionMap[s] })],
   [/^bg-([-\w]{3,})-([-\w]{3,})$/, ([, first, second]) => ({ 'background-position': `${positionMap[first]} ${positionMap[second]}` })],
+
+  // arbitrary position
+  [/^bg-\[((?!var\(|--|url\().+)]$/, ([, value]) => ({ 'background-position': resolveArbitraryValues(value) })],
 
   // clip
   ['bg-clip-border', { '-webkit-background-clip': 'border-box', 'background-clip': 'border-box' }],
