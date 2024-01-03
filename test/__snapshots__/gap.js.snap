@@ -30,13 +30,13 @@ exports[`gap allows to render css based of all units in spaceBase 1`] = `
 
 exports[`gap does render css for arbitrary values 1`] = `
 "/* layer: default */
-.gap-\\\\[27\\\\]{gap:2.7rem;}
-.gap-\\\\[27px\\\\]{gap:27px;}
-.gap-\\\\[27rem\\\\]{gap:27rem;}
-.gap-x-\\\\[27\\\\]{column-gap:2.7rem;}
-.gap-x-\\\\[27px\\\\]{column-gap:27px;}
-.gap-x-\\\\[27rem\\\\]{column-gap:27rem;}
-.gap-y-\\\\[27\\\\]{row-gap:2.7rem;}
-.gap-y-\\\\[27px\\\\]{row-gap:27px;}
-.gap-y-\\\\[27rem\\\\]{row-gap:27rem;}"
+.gap-\\[27\\]{gap:2.7rem;}
+.gap-\\[27px\\]{gap:27px;}
+.gap-\\[27rem\\]{gap:27rem;}
+.gap-x-\\[27\\]{column-gap:2.7rem;}
+.gap-x-\\[27px\\]{column-gap:27px;}
+.gap-x-\\[27rem\\]{column-gap:27rem;}
+.gap-y-\\[27\\]{row-gap:2.7rem;}
+.gap-y-\\[27px\\]{row-gap:27px;}
+.gap-y-\\[27rem\\]{row-gap:27rem;}"
 `;

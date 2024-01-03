@@ -18,9 +18,9 @@ exports[`columns > allows values 1 to 12 1`] = `
 
 exports[`columns > arbitrary values 1`] = `
 "/* layer: default */
-.columns-\\\\[13\\\\]{columns:13;}
-.columns-\\\\[25\\\\]{columns:25;}
-.columns-\\\\[55\\\\]{columns:55;}"
+.columns-\\[13\\]{columns:13;}
+.columns-\\[25\\]{columns:25;}
+.columns-\\[55\\]{columns:55;}"
 `;
 
 exports[`columns > columns-auto 1`] = `

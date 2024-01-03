@@ -19,28 +19,28 @@ exports[`grid auto flows 1`] = `
 
 exports[`grid auto rows and cols with arbitrary values 1`] = `
 "/* layer: default */
-.auto-rows-\\\\[20\\\\]{grid-auto-rows:2rem;}
-.auto-rows-\\\\[20\\\\%\\\\]{grid-auto-rows:20%;}
-.auto-rows-\\\\[20cm\\\\]{grid-auto-rows:20cm;}
-.auto-rows-\\\\[20fr_20_0\\\\%\\\\]{grid-auto-rows:20fr 2rem 0%;}
-.auto-rows-\\\\[20fr_20cm_0\\\\%\\\\]{grid-auto-rows:20fr 20cm 0%;}
-.auto-rows-\\\\[20fr\\\\]{grid-auto-rows:20fr;}
-.auto-rows-\\\\[20px\\\\]{grid-auto-rows:20px;}
-.auto-rows-\\\\[20rem\\\\]{grid-auto-rows:20rem;}
-.auto-rows-\\\\[min-content_max-content_auto\\\\]{grid-auto-rows:min-content max-content auto;}
-.auto-rows-\\\\[minmax\\\\(0\\\\,2fr\\\\)\\\\]{grid-auto-rows:minmax(0,2fr);}
-.auto-rows-\\\\[minmax\\\\(100px\\\\,auto\\\\)_minmax\\\\(max-content\\\\,2fr\\\\)_minmax\\\\(20\\\\%\\\\,80vmax\\\\)\\\\]{grid-auto-rows:minmax(100px,auto) minmax(max-content,2fr) minmax(20%,80vmax);}
-.auto-cols-\\\\[20\\\\]{grid-auto-columns:2rem;}
-.auto-cols-\\\\[20\\\\%\\\\]{grid-auto-columns:20%;}
-.auto-cols-\\\\[20cm\\\\]{grid-auto-columns:20cm;}
-.auto-cols-\\\\[20fr_20_0\\\\%\\\\]{grid-auto-columns:20fr 2rem 0%;}
-.auto-cols-\\\\[20fr_20cm_0\\\\%\\\\]{grid-auto-columns:20fr 20cm 0%;}
-.auto-cols-\\\\[20fr\\\\]{grid-auto-columns:20fr;}
-.auto-cols-\\\\[20px\\\\]{grid-auto-columns:20px;}
-.auto-cols-\\\\[20rem\\\\]{grid-auto-columns:20rem;}
-.auto-cols-\\\\[min-content_max-content_auto\\\\]{grid-auto-columns:min-content max-content auto;}
-.auto-cols-\\\\[minmax\\\\(0\\\\,2fr\\\\)\\\\]{grid-auto-columns:minmax(0,2fr);}
-.auto-cols-\\\\[minmax\\\\(100px\\\\,auto\\\\)_minmax\\\\(max-content\\\\,2fr\\\\)_minmax\\\\(20\\\\%\\\\,80vmax\\\\)\\\\]{grid-auto-columns:minmax(100px,auto) minmax(max-content,2fr) minmax(20%,80vmax);}"
+.auto-rows-\\[20\\]{grid-auto-rows:2rem;}
+.auto-rows-\\[20\\%\\]{grid-auto-rows:20%;}
+.auto-rows-\\[20cm\\]{grid-auto-rows:20cm;}
+.auto-rows-\\[20fr_20_0\\%\\]{grid-auto-rows:20fr 2rem 0%;}
+.auto-rows-\\[20fr_20cm_0\\%\\]{grid-auto-rows:20fr 20cm 0%;}
+.auto-rows-\\[20fr\\]{grid-auto-rows:20fr;}
+.auto-rows-\\[20px\\]{grid-auto-rows:20px;}
+.auto-rows-\\[20rem\\]{grid-auto-rows:20rem;}
+.auto-rows-\\[min-content_max-content_auto\\]{grid-auto-rows:min-content max-content auto;}
+.auto-rows-\\[minmax\\(0\\,2fr\\)\\]{grid-auto-rows:minmax(0,2fr);}
+.auto-rows-\\[minmax\\(100px\\,auto\\)_minmax\\(max-content\\,2fr\\)_minmax\\(20\\%\\,80vmax\\)\\]{grid-auto-rows:minmax(100px,auto) minmax(max-content,2fr) minmax(20%,80vmax);}
+.auto-cols-\\[20\\]{grid-auto-columns:2rem;}
+.auto-cols-\\[20\\%\\]{grid-auto-columns:20%;}
+.auto-cols-\\[20cm\\]{grid-auto-columns:20cm;}
+.auto-cols-\\[20fr_20_0\\%\\]{grid-auto-columns:20fr 2rem 0%;}
+.auto-cols-\\[20fr_20cm_0\\%\\]{grid-auto-columns:20fr 20cm 0%;}
+.auto-cols-\\[20fr\\]{grid-auto-columns:20fr;}
+.auto-cols-\\[20px\\]{grid-auto-columns:20px;}
+.auto-cols-\\[20rem\\]{grid-auto-columns:20rem;}
+.auto-cols-\\[min-content_max-content_auto\\]{grid-auto-columns:min-content max-content auto;}
+.auto-cols-\\[minmax\\(0\\,2fr\\)\\]{grid-auto-columns:minmax(0,2fr);}
+.auto-cols-\\[minmax\\(100px\\,auto\\)_minmax\\(max-content\\,2fr\\)_minmax\\(20\\%\\,80vmax\\)\\]{grid-auto-columns:minmax(100px,auto) minmax(max-content,2fr) minmax(20%,80vmax);}"
 `;
 
 exports[`grid span 1`] = `
@@ -117,14 +117,14 @@ exports[`grid starts and ends 1`] = `
 
 exports[`grid template columns with arbitrary values 1`] = `
 "/* layer: default */
-.grid-cols-\\\\[200px_minmax\\\\(900px\\\\,_1fr\\\\)_100px\\\\]{grid-template-columns:200px minmax(900px, 1fr) 100px;}
-.grid-cols-\\\\[320px_1fr\\\\]{grid-template-columns:320px 1fr;}
+.grid-cols-\\[200px_minmax\\(900px\\,_1fr\\)_100px\\]{grid-template-columns:200px minmax(900px, 1fr) 100px;}
+.grid-cols-\\[320px_1fr\\]{grid-template-columns:320px 1fr;}
 .grid-cols-minmax-200px{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}"
 `;
 
 exports[`grid template rows with arbitrary values 1`] = `
 "/* layer: default */
-.grid-rows-\\\\[200px_repeat\\\\(auto-fill\\\\,\\\\ 100px\\\\)_300px\\\\]{grid-template-rows:200px repeat(auto-fill, 100px) 300px;}
+.grid-rows-\\[200px_repeat\\(auto-fill\\,\\ 100px\\)_300px\\]{grid-template-rows:200px repeat(auto-fill, 100px) 300px;}
 .grid-rows-minmax-400px{grid-template-rows:repeat(auto-fill,minmax(400px,1fr));}"
 `;
 

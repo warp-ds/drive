@@ -34,9 +34,9 @@ test(`the HTML parser is sane`, async ({ uno }) => {
   const { css } = await uno.generate([`before:content-['before-stuff']`, 'sm:grid']);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
-    .before\\\\:content-\\\\[\\\\'before-stuff\\\\'\\\\]::before{content:'before-stuff';}
+    .before\\:content-\\[\\'before-stuff\\'\\]::before{content:'before-stuff';}
     @media (min-width: 480px){
-    .sm\\\\:grid{display:grid;}
+    .sm\\:grid{display:grid;}
     }"
   `);
 });

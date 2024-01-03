@@ -2,6 +2,6 @@
 
 exports[`arbitrary 1`] = `
 "/* layer: default */
-.\\\\[--f-modal-max-height\\\\:\\\\ 80\\\\%\\\\]{--f-modal-max-height:80%;}
-.\\\\[--w-content\\\\:\\\\ \\\\\\"I\\\\ am\\\\ awesome\\\\\\"\\\\]{--w-content:\\"I am awesome\\";}"
+.\\[--f-modal-max-height\\:\\ 80\\%\\]{--f-modal-max-height:80%;}
+.\\[--w-content\\:\\ \\"I\\ am\\ awesome\\"\\]{--w-content:"I am awesome";}"
 `;
