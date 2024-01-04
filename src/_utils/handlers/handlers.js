@@ -49,10 +49,10 @@ export function px(str) {
   if (!Number.isNaN(num)) return unit ? `${round(num)}${unit}` : `${round(num)}px`;
 }
 export function number(str) {
-  const newStr = (str?.startsWith('[') && str?.endsWith(']')) ? bracket(str) : str;
-  if (!numberRE.test(newStr)) return;
-  const num = parseFloat(newStr);
-  if (!Number.isNaN(num)) return round(num);
+  if (numberRE.test(str)) {
+    const num = parseFloat(str);
+    if (!Number.isNaN(num)) return round(num);
+  }
 }
 export function percent(str) {
   if (str.endsWith('%')) str = str.slice(0, -1);
