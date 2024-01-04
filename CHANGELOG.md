@@ -1,3 +1,10 @@
+# [1.4.0-next.7](https://github.com/warp-ds/drive/compare/v1.4.0-next.6...v1.4.0-next.7) (2024-01-04)
+
+
+### Features
+
+* Support arbitrary values for background position ([#183](https://github.com/warp-ds/drive/issues/183)) ([6508312](https://github.com/warp-ds/drive/commit/6508312baffafd4174a82eb22da7afa4246245c5))
+
 # [1.4.0-next.6](https://github.com/warp-ds/drive/compare/v1.4.0-next.5...v1.4.0-next.6) (2024-01-02)
 
 
