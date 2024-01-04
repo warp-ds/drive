@@ -46,6 +46,10 @@ export const transitions = [
     ([, d]) => ({ 'transition-timing-function': easings[d] }),
     { autocomplete: 'ease-(linear|in|out|in-out)' },
   ],
+  // matching arbitrary values transition-timing
+  [/^ease-\[(cubic-bezier\(.*\))]$/,
+    ([, value]) => ({ 'transition-timing-function': value }),
+  ],
   // props
   [/^transition-property-(.+)$/,
     ([, v]) => ({ 'transition-property': h.global(v) || transitionProperty(v) }),

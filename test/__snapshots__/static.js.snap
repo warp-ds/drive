@@ -72,8 +72,8 @@ exports[`static rules do static things 1`] = `
 .select-revert{user-select:revert;}
 .select-revert-layer{user-select:revert-layer;}
 .select-unset{user-select:unset;}
-.content-empty,
-.content-none{content:\\"\\";}
+.content-empty{content:"";}
+.content-none{content:none;}
 .break-normal{overflow-wrap:normal;word-break:normal;}
 .break-words{overflow-wrap:break-word;}
 .break-all{word-break:break-all;}
@@ -203,5 +203,5 @@ exports[`static rules for object position > supports all predefined values in th
 .object-top-left{object-position:top left;}
 .object-top-right,
 .object-tr{object-position:top right;}
-.pb-safe-\\\\[32\\\\]{padding-bottom:calc(32px + env(safe-area-inset-bottom, 0px));}"
+.pb-safe-\\[32\\]{padding-bottom:calc(32px + env(safe-area-inset-bottom, 0px));}"
 `;

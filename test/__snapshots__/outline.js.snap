@@ -9,7 +9,16 @@ exports[`outline > offset 1`] = `
 .outline-offset-8{outline-offset:8px;}"
 `;
 
-exports[`outline > style 1`] = `
+exports[`outline > supports setting outline colors 1`] = `
+"/* layer: default */
+.outline-inherit{outline-color:inherit;}
+.outline-transparent{outline-color:transparent;}
+.outline-current{outline-color:currentColor;}
+.outline-\\[--w-s-color-border\\],
+.outline-\\[var\\(--w-s-color-border\\)\\]{outline-color:var(--w-s-color-border);}"
+`;
+
+exports[`outline > supports setting outline styles 1`] = `
 "/* layer: default */
 .outline-none{outline:2px solid transparent;outline-offset:2px;}
 .outline{outline-style:solid;}

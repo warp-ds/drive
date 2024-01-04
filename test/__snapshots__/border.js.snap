@@ -26,16 +26,16 @@ exports[`border > right, left, top bottom 1`] = `
 
 exports[`border > supports divide borders between horizontal and stacked children 1`] = `
 "/* layer: default */
-.divide-x-0>*+*{--w-divide-x-reverse:0;border-left-width:calc(0 * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(0 * var(--w-divide-x-reverse))}
-.divide-x-1>*+*{--w-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(1px * var(--w-divide-x-reverse))}
-.divide-x-2>*+*{--w-divide-x-reverse:0;border-left-width:calc(2px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(2px * var(--w-divide-x-reverse))}
-.divide-x-4>*+*{--w-divide-x-reverse:0;border-left-width:calc(4px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(4px * var(--w-divide-x-reverse))}
-.divide-x-8>*+*{--w-divide-x-reverse:0;border-left-width:calc(8px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(8px * var(--w-divide-x-reverse))}
-.divide-y-0>*+*{--w-divide-y-reverse:0;border-top-width:calc(0 * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(0 * var(--w-divide-y-reverse))}
-.divide-y-1>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse))}
-.divide-y-2>*+*{--w-divide-y-reverse:0;border-top-width:calc(2px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(2px * var(--w-divide-y-reverse))}
-.divide-y-4>*+*{--w-divide-y-reverse:0;border-top-width:calc(4px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(4px * var(--w-divide-y-reverse))}
-.divide-y-8>*+*{--w-divide-y-reverse:0;border-top-width:calc(8px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(8px * var(--w-divide-y-reverse))}"
+.divide-x-0>*+*{--w-divide-x-reverse:0;border-left-width:calc(0 * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(0 * var(--w-divide-x-reverse));}
+.divide-x-1>*+*{--w-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(1px * var(--w-divide-x-reverse));}
+.divide-x-2>*+*{--w-divide-x-reverse:0;border-left-width:calc(2px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(2px * var(--w-divide-x-reverse));}
+.divide-x-4>*+*{--w-divide-x-reverse:0;border-left-width:calc(4px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(4px * var(--w-divide-x-reverse));}
+.divide-x-8>*+*{--w-divide-x-reverse:0;border-left-width:calc(8px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(8px * var(--w-divide-x-reverse));}
+.divide-y-0>*+*{--w-divide-y-reverse:0;border-top-width:calc(0 * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(0 * var(--w-divide-y-reverse));}
+.divide-y-1>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse));}
+.divide-y-2>*+*{--w-divide-y-reverse:0;border-top-width:calc(2px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(2px * var(--w-divide-y-reverse));}
+.divide-y-4>*+*{--w-divide-y-reverse:0;border-top-width:calc(4px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(4px * var(--w-divide-y-reverse));}
+.divide-y-8>*+*{--w-divide-y-reverse:0;border-top-width:calc(8px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(8px * var(--w-divide-y-reverse));}"
 `;
 
 exports[`border > supports divide borders between horizontal and stacked children in reverse order 1`] = `
@@ -46,18 +46,32 @@ exports[`border > supports divide borders between horizontal and stacked childre
 
 exports[`border > supports divide borders between horizontal and stacked children, default width 1`] = `
 "/* layer: default */
-.divide-x>*+*{--w-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(1px * var(--w-divide-x-reverse))}
-.divide-y>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse))}"
+.divide-x>*+*{--w-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--w-divide-x-reverse)));border-right-width:calc(1px * var(--w-divide-x-reverse));}
+.divide-y>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse));}"
+`;
+
+exports[`border > supports setting arbitrary border colors 1`] = `
+"/* layer: default */
+.border-\\[--w-s-color-border\\],
+.border-\\[var\\(--w-s-color-border\\)\\]{border-color:var(--w-s-color-border);}"
 `;
 
 exports[`border > supports setting arbitrary border width 1`] = `
 "/* layer: default */
-.border-\\\\[6\\\\]{border-width:6px;}
-.border-\\\\[66\\\\]{border-width:66px;}
-.border-b-\\\\[7\\\\]{border-bottom-width:7px;}
-.border-l-\\\\[7\\\\]{border-left-width:7px;}
-.border-r-\\\\[7\\\\]{border-right-width:7px;}
-.border-t-\\\\[7\\\\]{border-top-width:7px;}"
+.border-\\[6\\]{border-width:0.6rem;}
+.border-\\[66px\\]{border-width:66px;}
+.border-b-\\[7px\\]{border-bottom-width:7px;}
+.border-l-\\[10\\%\\]{border-left-width:10%;}
+.border-r-\\[7\\]{border-right-width:0.7rem;}
+.border-t-\\[7rem\\]{border-top-width:7rem;}"
+`;
+
+exports[`border > supports setting arbitrary divide colors 1`] = `
+"/* layer: default */
+.divide-\\[--w-s-color-border\\]>*+*{border-color: var(--w-s-color-border);}
+.divide-\\[var\\(--w-s-color-border-subtle\\)\\]>*+*{border-color: var(--w-s-color-border-subtle);}
+.divide-x-\\[var\\(--w-s-color-border-negative\\)\\]>*+*{border-left-color: var(--w-s-color-border-negative);border-right-color: var(--w-s-color-border-negative);}
+.divide-y-\\[var\\(--w-s-color-border-positive\\)\\]>*+*{border-top-color: var(--w-s-color-border-positive);border-bottom-color: var(--w-s-color-border-positive);}"
 `;
 
 exports[`border > supports setting border color 1`] = `
@@ -102,6 +116,46 @@ exports[`border > supports x|y with value and without 1`] = `
 .border-y-2{border-top-width:2px;border-bottom-width:2px;}
 .border-y-4{border-top-width:4px;border-bottom-width:4px;}
 .border-y-8{border-top-width:8px;border-bottom-width:8px;}"
+`;
+
+exports[`rounded > support setting arbitrary rounded 1`] = `
+"/* layer: default */
+.rounded-\\[31\\]{border-radius:3.1rem;}
+.rounded-\\[31\\%\\]{border-radius:31%;}
+.rounded-\\[31px\\]{border-radius:31px;}
+.rounded-\\[31rem\\]{border-radius:31rem;}
+.rounded-b-\\[31\\]{border-bottom-left-radius:3.1rem;border-bottom-right-radius:3.1rem;}
+.rounded-b-\\[31\\%\\]{border-bottom-left-radius:31%;border-bottom-right-radius:31%;}
+.rounded-b-\\[31px\\]{border-bottom-left-radius:31px;border-bottom-right-radius:31px;}
+.rounded-b-\\[31rem\\]{border-bottom-left-radius:31rem;border-bottom-right-radius:31rem;}
+.rounded-bl-\\[31\\]{border-bottom-left-radius:3.1rem;}
+.rounded-bl-\\[31\\%\\]{border-bottom-left-radius:31%;}
+.rounded-bl-\\[31px\\]{border-bottom-left-radius:31px;}
+.rounded-bl-\\[31rem\\]{border-bottom-left-radius:31rem;}
+.rounded-br-\\[31\\]{border-bottom-right-radius:3.1rem;}
+.rounded-br-\\[31\\%\\]{border-bottom-right-radius:31%;}
+.rounded-br-\\[31px\\]{border-bottom-right-radius:31px;}
+.rounded-br-\\[31rem\\]{border-bottom-right-radius:31rem;}
+.rounded-l-\\[31\\]{border-top-left-radius:3.1rem;border-bottom-left-radius:3.1rem;}
+.rounded-l-\\[31\\%\\]{border-top-left-radius:31%;border-bottom-left-radius:31%;}
+.rounded-l-\\[31px\\]{border-top-left-radius:31px;border-bottom-left-radius:31px;}
+.rounded-l-\\[31rem\\]{border-top-left-radius:31rem;border-bottom-left-radius:31rem;}
+.rounded-r-\\[31\\]{border-top-right-radius:3.1rem;border-bottom-right-radius:3.1rem;}
+.rounded-r-\\[31\\%\\]{border-top-right-radius:31%;border-bottom-right-radius:31%;}
+.rounded-r-\\[31px\\]{border-top-right-radius:31px;border-bottom-right-radius:31px;}
+.rounded-r-\\[31rem\\]{border-top-right-radius:31rem;border-bottom-right-radius:31rem;}
+.rounded-t-\\[31\\]{border-top-left-radius:3.1rem;border-top-right-radius:3.1rem;}
+.rounded-t-\\[31\\%\\]{border-top-left-radius:31%;border-top-right-radius:31%;}
+.rounded-t-\\[31px\\]{border-top-left-radius:31px;border-top-right-radius:31px;}
+.rounded-t-\\[31rem\\]{border-top-left-radius:31rem;border-top-right-radius:31rem;}
+.rounded-tl-\\[31\\]{border-top-left-radius:3.1rem;}
+.rounded-tl-\\[31\\%\\]{border-top-left-radius:31%;}
+.rounded-tl-\\[31px\\]{border-top-left-radius:31px;}
+.rounded-tl-\\[31rem\\]{border-top-left-radius:31rem;}
+.rounded-tr-\\[31\\]{border-top-right-radius:3.1rem;}
+.rounded-tr-\\[31\\%\\]{border-top-right-radius:31%;}
+.rounded-tr-\\[31px\\]{border-top-right-radius:31px;}
+.rounded-tr-\\[31rem\\]{border-top-right-radius:31rem;}"
 `;
 
 exports[`rounded > supports x|y with value 1`] = `

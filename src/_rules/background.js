@@ -1,18 +1,24 @@
-import { positionMap, globalKeywords, makeGlobalStaticRules } from '#utils';
+import { positionMap, globalKeywords, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
 
 export const backgrounds = [
   // size
   ['bg-auto', { 'background-size': 'auto' }],
   ['bg-cover', { 'background-size': 'cover' }],
   ['bg-contain', { 'background-size': 'contain' }],
-  // attachments
+
+  // attachment
   ['bg-fixed', { 'background-attachment': 'fixed' }],
   ['bg-local', { 'background-attachment': 'local' }],
   ['bg-scroll', { 'background-attachment': 'scroll' }],
-  // positions
+
+  // position
   // skip 1 & 2 letters shortcut
   [/^bg-([-\w]{3,})$/, ([, s]) => ({ 'background-position': positionMap[s] })],
   [/^bg-([-\w]{3,})-([-\w]{3,})$/, ([, first, second]) => ({ 'background-position': `${positionMap[first]} ${positionMap[second]}` })],
+
+  // arbitrary position
+  [/^bg-\[((?!var\(|--|url\().+)]$/, ([, value]) => ({ 'background-position': resolveArbitraryValues(value) })],
+
   // clip
   ['bg-clip-border', { '-webkit-background-clip': 'border-box', 'background-clip': 'border-box' }],
   ['bg-clip-content', { '-webkit-background-clip': 'content-box', 'background-clip': 'content-box' }],
@@ -22,7 +28,8 @@ export const backgrounds = [
     '-webkit-background-clip': keyword,
     'background-clip': keyword,
   }]),
-  // repeats
+
+  // repeat
   ['bg-repeat', { 'background-repeat': 'repeat' }],
   ['bg-no-repeat', { 'background-repeat': 'no-repeat' }],
   ['bg-repeat-x', { 'background-repeat': 'repeat-x' }],
@@ -31,21 +38,25 @@ export const backgrounds = [
   ['bg-repeat-space', { 'background-repeat': 'space' }],
   ...makeGlobalStaticRules('bg-repeat', 'background-repeat'),
 
-  // origins
+  // origin
   ['bg-origin-border', { 'background-origin': 'border-box' }],
   ['bg-origin-padding', { 'background-origin': 'padding-box' }],
   ['bg-origin-content', { 'background-origin': 'content-box' }],
   ...makeGlobalStaticRules('bg-origin', 'background-origin'),
 
-  //arbitrary
-  [/^bg-\[(.+)\]/, ([, p]) => {
-    if (p.startsWith('url')) {
-      // Process url(var(--something)) and extract the var itself -> --something
-      const urlAsVar = p.match(/url\(var\(([^)]*)/)?.[1];
-      return { 'background-image': urlAsVar ? `var(${urlAsVar})` : p };
-    } else if (p.startsWith('var')) {
-      return { 'background-color': p };
-    }
-    return { 'background-color': `var(${p})` };
+  // color
+  ['bg-inherit', { 'background-color': 'inherit' }],
+  ['bg-transparent', { 'background-color': 'transparent' }],
+  ['bg-current', { 'background-color': 'currentColor' }],
+
+  // arbitrary color
+  [/^bg-\[(--.+)]$/, ([, p]) => ({ 'background-color': `var(${p})` })],
+  [/^bg-\[(var\(--.+\))]$/, ([, p]) => ({ 'background-color': p })],
+
+  // arbitrary image
+  [/^bg-\[(url\(.+\))]$/, ([, p]) => {
+    // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
+    const cssVar = p.match(/^url\((var\([^)]+\))\)$/)?.[1];
+    return { 'background-image': cssVar ?? p };
   }],
 ];

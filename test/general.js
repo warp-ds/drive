@@ -34,11 +34,24 @@ test(`the HTML parser is sane`, async ({ uno }) => {
   const { css } = await uno.generate([`before:content-['before-stuff']`, 'sm:grid']);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
-    .before\\\\:content-\\\\[\\\\'before-stuff\\\\'\\\\]::before{content:'before-stuff';}
+    .before\\:content-\\[\\'before-stuff\\'\\]::before{content:'before-stuff';}
     @media (min-width: 480px){
-    .sm\\\\:grid{display:grid;}
+    .sm\\:grid{display:grid;}
     }"
   `);
+});
+test(`testing empty string as arbitrary value`, async ({ uno }) => {
+  const { css } = await uno.generate([`before:content-[""]`, 'sm:grid']);
+  expect(css).toMatchSnapshot();
+});
+test(`testing content-empty`, async ({ uno }) => {
+  const { css } = await uno.generate([`before:content-empty`, 'sm:grid']);
+  expect(css).toMatchSnapshot();
+});
+
+test(`testing content-none`, async ({ uno }) => {
+  const { css } = await uno.generate([`before:content-none`, 'sm:grid']);
+  expect(css).toMatchSnapshot();
 });
 
 test('can generate pixel values for theme', async () => {

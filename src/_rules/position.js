@@ -1,4 +1,4 @@
-import { handler as h, insetMap, makeGlobalStaticRules } from '#utils';
+import { handler as h, insetMap, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
 import { warnOnce } from '@unocss/core';
 
 export const positions = [
@@ -6,14 +6,19 @@ export const positions = [
 ];
 
 export const orders = [
-  [
-    /^order-(\d+)$/,
-    ([, d]) => ({ 'order': h.number(d) }),
-    { autocomplete: 'order-<num>' },
-  ],
   ['order-first', { order: '-9999' }],
   ['order-last', { order: '9999' }],
   ['order-none', { order: '0' }],
+
+  [/^order-([1-9]|1[0-2])$/,
+    ([, d]) => ({ 'order': h.number(d) }),
+    { autocomplete: 'order-<num>' },
+  ],
+  // matching arbitrary values
+  [/^order-\[(\d+)]$/,
+    ([, d]) => ({ 'order': h.number(d) }),
+    { autocomplete: 'order-<num>' },
+  ],
 ];
 
 export const justifies = [
@@ -117,6 +122,24 @@ export const insets = [
   ],
   [/^inset-([xy])-(.+)$/, handleInsetValues],
   [/^(top|left|right|bottom)-(.+)$/, ([, d, v], ctx) => ({ [d]: handleInsetValue(v, ctx) })],
+  //matching arbitrary values
+  [/^inset-\[(.\d*)(rem|px|%)?]$/,
+    ([, value, unit], context) => ({
+      inset: resolveArbitraryValues(value, unit, context),
+    }),
+  ],
+  [/^inset-([xy])-\[(.\d*)(rem|px|%)?]$/,
+    ([, direction, value, unit], context) =>
+      insetMap[direction].map((i) => [
+        `${i.slice(1)}`,
+        resolveArbitraryValues(value, unit, context),
+      ]),
+  ],
+  [/^(top|left|right|bottom)-\[(.\d*)(rem|px|%)?]$/,
+    ([, direction, value, unit], context) => ({
+      [direction]: resolveArbitraryValues(value, unit, context),
+    }),
+  ],
 ];
 
 export const floats = [

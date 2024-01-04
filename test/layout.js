@@ -41,3 +41,30 @@ describe("position", () => {
     `);
   });
 });
+
+describe('columns', () => {
+  test('allows values 1 to 12', async ({ uno }) => {
+    const range = Array.from({ length: 12 }).map((_, i) => i + 1);
+    const classes = range.map(value => `columns-${value}`);
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('columns-auto', async ({ uno }) => {
+    const styles = {
+      ['columns-auto']: 'auto',
+    };
+    const classes = Object.keys(styles);
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+  test('arbitrary values', async ({ uno }) => {
+    const classes = [
+      'columns-[13]',
+      'columns-[25]',
+      'columns-[55]',
+    ];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+});

@@ -1,4 +1,4 @@
-import { handler as h } from '#utils';
+import { handler as h, resolveArbitraryValues } from '#utils';
 
 const autoDirection = (prop) => {
   switch (prop) {
@@ -53,6 +53,13 @@ export const grid = [
     ([, v]) => ({ 'grid-auto-columns': autoDirection(v) }),
     { autocomplete: ['auto-(rows|cols)-<num>'] },
   ],
+
+  // matching arbitrary values auto-rows + auto-cols
+  [/^auto-rows-\[([\w%]+(?:[-\w()%,.]+)*)\]$/, ([, v]) => ({ 'grid-auto-rows': resolveArbitraryValues(v, null, null) })],
+  [/^auto-cols-\[([\w%]+(?:[-\w()%,.]+)*)\]$/, ([, v]) => ({ 'grid-auto-columns': resolveArbitraryValues(v, null, null) }),
+    { autocomplete: ['auto-(rows|cols)-<num>'] },
+  ],
+
   ['grid-flow-row', { 'grid-auto-flow': 'row' }],
   ['grid-flow-col', { 'grid-auto-flow': 'column' }],
   ['grid-flow-dense', { 'grid-auto-flow': 'dense' }],

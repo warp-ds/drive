@@ -162,7 +162,7 @@ export function colorableShadows(shadows, colorVar) {
   const colored = [];
   shadows = toArray(shadows);
   for (let i = 0; i < shadows.length; i++) {
-    // shadow values are between 3 to 6 terms including color
+    // shadow values are between 3 and 6 terms including color
     const components = getComponents(shadows[i], ' ', 6);
     if (!components || components.length < 3) return shadows;
     const color = parseCssColor(components.pop());
@@ -220,10 +220,18 @@ export function getBracket(str, open, close) {
 }
 
 export function resolveArbitraryValues(value, unit, context) {
-  if (unit === "rem") return h.rem(`${value}${unit}`);
-  if (unit === "px" || context.theme.usingPixels) return h.px(value);
-  if (value.startsWith('--')) {
-    return `var(${value})`;
+  if (value.includes('_')) {
+    const valueWithoutUnderscore = value.replace(/_/g, " ");
+    if (/\d/.test(valueWithoutUnderscore)) {
+      const digits = valueWithoutUnderscore.split(' ');
+      return digits?.map(number => h.rem(number) || number).join(' ');
+    } else {
+      return valueWithoutUnderscore;
+    }
   }
+  if (unit === 'rem') return h.rem(`${value}${unit}`);
+  if (unit === 'px' || context?.theme?.usingPixels) return h.px(value);
+  if (unit === '%') return `${h.percent(`${value}`) * 100 }${unit}`;
+  if (value.startsWith('--')) return `var(${value})`;
   return h.rem(value) || value;
-};
+}

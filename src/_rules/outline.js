@@ -5,6 +5,14 @@ const outlineNone = {
   'outline-offset': '2px',
 };
 
+export const outlineColors = [
+  ['outline-inherit', { 'outline-color': 'inherit' }],
+  ['outline-transparent', { 'outline-color': 'transparent' }],
+  ['outline-current', { 'outline-color': 'currentColor' }],
+  [/^outline-\[(--.+)]$/, ([, p]) => ({ 'outline-color': `var(${p})` })],
+  [/^outline-\[(var\(--.+\))]$/, ([, p]) => ({ 'outline-color': p })],
+];
+
 export const outlineStyle = [
   ["outline-none", { ...outlineNone }],
   ["outline", { "outline-style": "solid" }],

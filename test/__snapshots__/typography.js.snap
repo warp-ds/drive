@@ -42,10 +42,10 @@ exports[`typography - leading classes  1`] = `
 
 exports[`typography - leading classes with arbitrary values 1`] = `
 "/* layer: default */
-.leading-\\\\[11\\\\]{line-height:1.1rem;}
-.leading-\\\\[24\\\\]{line-height:2.4rem;}
-.leading-\\\\[24px\\\\]{line-height:24px;}
-.leading-\\\\[24rem\\\\]{line-height:24rem;}"
+.leading-\\[11\\]{line-height:1.1rem;}
+.leading-\\[24\\]{line-height:2.4rem;}
+.leading-\\[24px\\]{line-height:24px;}
+.leading-\\[24rem\\]{line-height:24rem;}"
 `;
 
 exports[`typography - text classes  1`] = `

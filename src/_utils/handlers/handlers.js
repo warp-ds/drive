@@ -1,6 +1,7 @@
 import { escapeSelector } from '@unocss/core';
 import { globalKeywords } from '../mappings.js';
 import { numberRE, numberWithUnitRE, unitOnlyRE } from './regex.js';
+
 // Not all, but covers most high frequency attributes
 const cssProps = [
   // basic props
@@ -48,9 +49,10 @@ export function px(str) {
   if (!Number.isNaN(num)) return unit ? `${round(num)}${unit}` : `${round(num)}px`;
 }
 export function number(str) {
-  if (!numberRE.test(str)) return;
-  const num = parseFloat(str);
-  if (!Number.isNaN(num)) return round(num);
+  if (numberRE.test(str)) {
+    const num = parseFloat(str);
+    if (!Number.isNaN(num)) return round(num);
+  }
 }
 export function percent(str) {
   if (str.endsWith('%')) str = str.slice(0, -1);

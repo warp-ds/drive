@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`columns > allows values 1 to 12 1`] = `
+"/* layer: default */
+.columns-1{columns:1;}
+.columns-10{columns:10;}
+.columns-11{columns:11;}
+.columns-12{columns:12;}
+.columns-2{columns:2;}
+.columns-3{columns:3;}
+.columns-4{columns:4;}
+.columns-5{columns:5;}
+.columns-6{columns:6;}
+.columns-7{columns:7;}
+.columns-8{columns:8;}
+.columns-9{columns:9;}"
+`;
+
+exports[`columns > arbitrary values 1`] = `
+"/* layer: default */
+.columns-\\[13\\]{columns:13;}
+.columns-\\[25\\]{columns:25;}
+.columns-\\[55\\]{columns:55;}"
+`;
+
+exports[`columns > columns-auto 1`] = `
+"/* layer: default */
+.columns-auto{columns:auto;}"
+`;

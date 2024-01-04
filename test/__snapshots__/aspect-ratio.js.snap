@@ -9,8 +9,8 @@ exports[`aspect-ratio, -video and -square 1`] = `
 
 exports[`it generates backported aspect-ratios 1`] = `
 "/* layer: default */
-.aspect-1\\\\/1{position:relative;padding-bottom:100%;}.aspect-1\\\\/1>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
-.aspect-16\\\\/9{position:relative;padding-bottom:56.25%;}.aspect-16\\\\/9>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
-.aspect-2\\\\/1{position:relative;padding-bottom:50%;}.aspect-2\\\\/1>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
-.aspect-4\\\\/3{position:relative;padding-bottom:75%;}.aspect-4\\\\/3>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}"
+.aspect-1\\/1{position:relative;padding-bottom:100%;}.aspect-1\\/1>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
+.aspect-16\\/9{position:relative;padding-bottom:56.25%;}.aspect-16\\/9>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
+.aspect-2\\/1{position:relative;padding-bottom:50%;}.aspect-2\\/1>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}
+.aspect-4\\/3{position:relative;padding-bottom:75%;}.aspect-4\\/3>*{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;}"
 `;

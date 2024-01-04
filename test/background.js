@@ -49,27 +49,38 @@ test('bg clip', async ({ uno }) => {
 test('bg invalid', async ({ uno }) => {
   const classes = ['bg-white', 'bg-none'];
   const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot('""');
+  expect(css).toHaveLength(0);
 });
 
 test('bg arbitrary', async ({ uno }) => {
   const classes = [
     `bg-[url('/img/hero-pattern.svg')]`,
     `bg-[url("/img/hero-pattern.svg")]`,
-    `bg-[var(--w-color)]`,
     `before:bg-[url(var(--w-form-check-mark))]`,
-    `bg-[--w-color]`,
     `peer-checked:before:bg-[url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M4 8L7 11L12.5 5" stroke="%2371717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')]`,
     `bg-[url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")]`];
   const { css } = await uno.generate(classes);
-  expect(css).toMatchInlineSnapshot(`
-    "/* layer: default */
-    .bg-\\\\[--w-color\\\\],
-    .bg-\\\\[var\\\\(--w-color\\\\)\\\\]{background-color:var(--w-color);}
-    .bg-\\\\[url\\\\(\\\\'\\\\/img\\\\/hero-pattern\\\\.svg\\\\'\\\\)\\\\]{background-image:url('/img/hero-pattern.svg');}
-    .bg-\\\\[url\\\\(\\\\\\"\\\\/img\\\\/hero-pattern\\\\.svg\\\\\\"\\\\)\\\\]{background-image:url(\\"/img/hero-pattern.svg\\");}
-    .bg-\\\\[url\\\\(\\\\\\"data\\\\:image\\\\/svg\\\\+xml\\\\,\\\\%3csvg\\\\ xmlns\\\\=\\\\'http\\\\:\\\\/\\\\/www\\\\.w3\\\\.org\\\\/2000\\\\/svg\\\\'\\\\ viewBox\\\\=\\\\'0\\\\ 0\\\\ 16\\\\ 16\\\\'\\\\ fill\\\\=\\\\'white\\\\'\\\\%3e\\\\%3cpath\\\\ d\\\\=\\\\'M12\\\\.207\\\\ 4\\\\.793a1\\\\ 1\\\\ 0\\\\ 010\\\\ 1\\\\.414l-5\\\\ 5a1\\\\ 1\\\\ 0\\\\ 01-1\\\\.414\\\\ 0l-2-2a1\\\\ 1\\\\ 0\\\\ 011\\\\.414-1\\\\.414L6\\\\.5\\\\ 9\\\\.086l4\\\\.293-4\\\\.293a1\\\\ 1\\\\ 0\\\\ 011\\\\.414\\\\ 0z\\\\'\\\\/\\\\%3e\\\\%3c\\\\/svg\\\\%3e\\\\\\"\\\\)\\\\]{background-image:url(\\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e\\");}
-    .peer:checked~.peer-checked\\\\:before\\\\:bg-\\\\[url\\\\(\\\\'data\\\\:image\\\\/svg\\\\+xml\\\\,\\\\%3Csvg\\\\ width\\\\=\\\\\\"16\\\\\\"\\\\ height\\\\=\\\\\\"16\\\\\\"\\\\ viewBox\\\\=\\\\\\"0\\\\ 0\\\\ 16\\\\ 16\\\\\\"\\\\ fill\\\\=\\\\\\"none\\\\\\"\\\\ xmlns\\\\=\\\\\\"http\\\\:\\\\/\\\\/www\\\\.w3\\\\.org\\\\/2000\\\\/svg\\\\\\"\\\\%3E\\\\%3Cpath\\\\ d\\\\=\\\\\\"M4\\\\ 8L7\\\\ 11L12\\\\.5\\\\ 5\\\\\\"\\\\ stroke\\\\=\\\\\\"\\\\%2371717A\\\\\\"\\\\ stroke-width\\\\=\\\\\\"1\\\\.5\\\\\\"\\\\ stroke-linecap\\\\=\\\\\\"round\\\\\\"\\\\ stroke-linejoin\\\\=\\\\\\"round\\\\\\"\\\\/\\\\%3E\\\\%3C\\\\/svg\\\\%3E\\\\'\\\\)\\\\]::before{background-image:url('data:image/svg+xml,%3Csvg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cpath d=\\"M4 8L7 11L12.5 5\\" stroke=\\"%2371717A\\" stroke-width=\\"1.5\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/%3E%3C/svg%3E');}
-    .before\\\\:bg-\\\\[url\\\\(var\\\\(--w-form-check-mark\\\\)\\\\)\\\\]::before{background-image:var(--w-form-check-mark);}"
-  `);
+  expect(css).toMatchSnapshot();
+});
+
+test("supports setting arbitrary background colors", async ({ uno }) => {
+  const classes = ["bg-[--w-s-color-background]", "bg-[var(--w-s-color-background)]"];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test("supports setting arbitrary background positions", async ({ uno }) => {
+  const classes = [
+    "bg-[25%_75%]",
+    "bg-[right_3em_bottom_10px]",
+    "bg-[center_top_1rem]",
+  ];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('invalid background color classes', async({ uno }) => {
+  const classes = ['bg-color', 'background-[--w-s-color-background]', 'background-[var(--w-s-color-background)]'];
+  const { css } = await uno.generate(classes);
+  expect(css).toHaveLength(0);
 });
