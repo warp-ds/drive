@@ -1,3 +1,10 @@
+# [1.4.0-next.8](https://github.com/warp-ds/drive/compare/v1.4.0-next.7...v1.4.0-next.8) (2024-01-04)
+
+
+### Bug Fixes
+
+* Improve regexps for flex grow/shrink ([#185](https://github.com/warp-ds/drive/issues/185)) ([808c026](https://github.com/warp-ds/drive/commit/808c026214715045c72ba78fbbde4a9a310a5de5))
+
 # [1.4.0-next.7](https://github.com/warp-ds/drive/compare/v1.4.0-next.6...v1.4.0-next.7) (2024-01-04)
 
 
