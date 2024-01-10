@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^0.58.0
     version: 0.58.3
   '@warp-ds/eslint-config':
-    specifier: ^0.0.1
-    version: 0.0.1(eslint@8.56.0)
+    specifier: ^1.0.0
+    version: 1.0.3(eslint@8.56.0)
   cz-conventional-changelog:
     specifier: ^3.3.0
     version: 3.3.0
@@ -1746,8 +1746,8 @@ packages:
       pretty-format: 29.7.0
     dev: true
 
-  /@warp-ds/eslint-config@0.0.1(eslint@8.56.0):
-    resolution: {integrity: sha512-lzmn67NF8ZyilXDiRVPJqx95FvMGVZw//na33DDEPEnk5apeV1WD53uruFJM0DjvO9QEc51xo1zI1oS4ocWRrA==}
+  /@warp-ds/eslint-config@1.0.3(eslint@8.56.0):
+    resolution: {integrity: sha512-70QinTpfONU96vufc4sE8Dfbws3VuUiuBR7VC4Z5xPQebj2iLHixTJczOY2+ew/CaFp7weSpiZf8I1TNrrcuNg==}
     peerDependencies:
       eslint: ^8.34.0
     dependencies:
