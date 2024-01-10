@@ -30,8 +30,8 @@
     "dev:env": "vite dev-env --config ./vite.config.js",
     "test": "vitest",
     "build": "rollup -c",
-    "lint": "eslint . --fix",
-    "lint:check": "eslint ."
+    "lint:fix": "eslint . --fix --ignore-path .gitignore",
+    "lint:check": "eslint . --ignore-path .gitignore"
   },
   "keywords": [],
   "author": "@djh",
@@ -46,7 +46,7 @@
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "@unocss/autocomplete": "^0.58.0",
-    "@warp-ds/eslint-config": "^1.0.0",
+    "@warp-ds/eslint-config": "^1.0.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
     "rollup": "^4.9.4",
