@@ -26,7 +26,7 @@ describe('border', () => {
   });
 
   test('supports setting arbitrary border color variables', async ({ uno }) => {
-    const classes = ['border-[--w-s-color-border]', 'border-[var(--w-s-color-border)]', 'border-[var(--w-s-color-border)]'];
+    const classes = ['border-[--w-s-color-border]', 'border-[var(--w-s-color-border)]', 'border-x-[var(--w-s-color-border)]', 'border-y-[--w-s-color-border]', 'border-l-[var(--w-s-color-border)]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
