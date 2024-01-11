@@ -43,14 +43,13 @@ export const divide = [
   // border-width
   [/^divide-([xy])$/, handleDivideWidth, { autocomplete: 'divide-(x|y)' }],
   [/^divide-([xy])-(\d+)(-reverse)?$/, handleDivideWidth, { autocomplete: [`divide-(x|y)-(${Object.keys(lineWidth).join('|')})`, `divide-(x|y)-(${Object.keys(lineWidth).join('|')})-reverse`] }],
+  [/^divide-([xy])-\[(\d+)(rem|px|%)?](-reverse)?$/, handleArbitraryDivideWidth],
 
   // reverse order
   [/^divide-([xy])-reverse$/, ([, d]) => ({ [`--w-divide-${d}-reverse`]: 1 })],
 
-  // arbitrary border-width
-  [/^divide-([xy])-\[(\d+)(rem|px|%)?](-reverse)?$/, handleArbitraryDivideWidth],
-
-  // arbitrary border-color
+  // border-color
+  [/^divide(-[xy])?-current$/, (match) => handleArbitraryDivideColor(match.concat('currentColor'))],
   [/^divide(-[xy])?-\[(var\(.+\)|--.+|\D.*)]$/, handleArbitraryDivideColor],
 ];
 
