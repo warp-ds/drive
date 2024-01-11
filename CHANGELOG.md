@@ -1,3 +1,10 @@
+## [1.4.1-next.1](https://github.com/warp-ds/drive/compare/v1.4.0...v1.4.1-next.1) (2024-01-11)
+
+
+### Bug Fixes
+
+* Improve arbitrary values handling for border and divide ([#186](https://github.com/warp-ds/drive/issues/186)) ([882ff69](https://github.com/warp-ds/drive/commit/882ff69dca7677f4ee23ac55dc7a9c415cb7d344))
+
 # [1.4.0](https://github.com/warp-ds/drive/compare/v1.3.0...v1.4.0) (2024-01-04)
 
 
