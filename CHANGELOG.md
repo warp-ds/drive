@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/warp-ds/drive/compare/v1.4.0...v1.5.0) (2024-01-11)
+
+
+### Bug Fixes
+
+* Improve arbitrary values handling for border and divide ([#186](https://github.com/warp-ds/drive/issues/186)) ([882ff69](https://github.com/warp-ds/drive/commit/882ff69dca7677f4ee23ac55dc7a9c415cb7d344))
+
+
+### Features
+
+* Add support for divide-current ([#187](https://github.com/warp-ds/drive/issues/187)) ([abf14e5](https://github.com/warp-ds/drive/commit/abf14e574256e22d8465630908c46e251f95e507))
+
 # [1.5.0-next.1](https://github.com/warp-ds/drive/compare/v1.4.1-next.1...v1.5.0-next.1) (2024-01-11)
 
 
