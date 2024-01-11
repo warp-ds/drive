@@ -1,3 +1,10 @@
+# [1.5.0-next.1](https://github.com/warp-ds/drive/compare/v1.4.1-next.1...v1.5.0-next.1) (2024-01-11)
+
+
+### Features
+
+* Add support for divide-current ([#187](https://github.com/warp-ds/drive/issues/187)) ([abf14e5](https://github.com/warp-ds/drive/commit/abf14e574256e22d8465630908c46e251f95e507))
+
 ## [1.4.1-next.1](https://github.com/warp-ds/drive/compare/v1.4.0...v1.4.1-next.1) (2024-01-11)
 
 
