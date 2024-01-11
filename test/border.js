@@ -25,46 +25,46 @@ describe('border', () => {
     expect(css).toMatchSnapshot();
   });
 
-  test('supports setting arbitrary border colors', async ({ uno }) => {
-    const classes = ['border-[--w-s-color-border]', 'border-[var(--w-s-color-border)]'];
+  test('supports setting arbitrary border color variables', async ({ uno }) => {
+    const classes = ['border-[--w-s-color-border]', 'border-[var(--w-s-color-border)]', 'border-[var(--w-s-color-border)]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
-  test('supports setting arbitrary divide colors', async ({ uno }) => {
-    const classes = [
-      'divide-[--w-s-color-border]',
-      'divide-[var(--w-s-color-border-subtle)]',
-      'divide-x-[var(--w-s-color-border-negative)]',
-      'divide-y-[var(--w-s-color-border-positive)]',
-    ];
+  test('supports setting arbitrary border color values', async ({ uno }) => {
+    const classes = ['border-[#000000]', 'border-[black]', 'border-x-[rgb(0,0,0)]', 'border-y-[rgba(0,0,0,0)]', 'border-l-[white]'];
+    const antiClasses = ['border-#000000', 'border-black', 'border-x-white', 'border-y-rgba(0,0,0,0)', 'border[white]'];
+    const { css } = await uno.generate([...classes, ...antiClasses]);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('supports setting arbitrary divide color variables', async ({ uno }) => {
+    const classes = ['divide-[--w-s-color-border]', 'divide-[var(--w-s-color-border-subtle)]', 'divide-x-[var(--w-s-color-border-negative)]', 'divide-y-[var(--w-s-color-border-positive)]'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('supports setting divide to current color', async ({ uno }) => {
+    const classes = ['divide-current', 'divide-x-current', 'divide-y-current'];
+    const antiClasses = ['divide-currentcolor', 'dividecurrent', 'divide-l-current', 'divide-current-y'];
+    const { css } = await uno.generate([...classes, ...antiClasses]);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('supports setting arbitrary divide color values', async ({ uno }) => {
+    const classes = ['divide-[#000000]', 'divide-[black]', 'divide-x-[rgb(0,0,0)]', 'divide-y-[rgba(0,0,0,0)]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('supports setting border style', async ({ uno }) => {
-    const classes = [
-      'border-solid',
-      'border-dashed',
-      'border-dotted',
-      'border-double',
-      'border-hidden',
-      'border-none',
-      'border-groove',
-      'border-ridge',
-      'border-inset',
-      'border-outset',
-    ];
+    const classes = ['border-solid', 'border-dashed', 'border-dotted', 'border-double', 'border-hidden', 'border-none', 'border-groove', 'border-ridge', 'border-inset', 'border-outset'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('supports setting border color', async ({ uno }) => {
-    const classes = [
-      'border-transparent',
-      'border-inherit',
-      'border-current',
-    ];
+    const classes = ['border-transparent', 'border-inherit', 'border-current'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -80,13 +80,17 @@ describe('border', () => {
   });
 
   test('supports divide borders between horizontal and stacked children', async ({ uno }) => {
-    const classes = Object.keys(lineWidth).map(width => [`divide-x-${width}`, `divide-y-${width}`]).flat();
+    const classes = Object.keys(lineWidth)
+      .map((width) => [`divide-x-${width}`, `divide-y-${width}`])
+      .flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('supports divide borders between horizontal and stacked children in reverse order', async ({ uno }) => {
-    const classes = Object.keys(lineWidth).map(() => [`divide-x-reverse`, `divide-y-reverse`]).flat();
+    const classes = Object.keys(lineWidth)
+      .map(() => [`divide-x-reverse`, `divide-y-reverse`])
+      .flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -111,46 +115,8 @@ describe('rounded', () => {
   });
 
   test('support setting arbitrary rounded', async ({ uno }) => {
-    const classes = [
-      'rounded-[31]',
-      'rounded-[31rem]',
-      'rounded-[31px]',
-      'rounded-[31%]',
-      'rounded-t-[31]',
-      'rounded-t-[31rem]',
-      'rounded-t-[31px]',
-      'rounded-t-[31%]',
-      'rounded-tr-[31]',
-      'rounded-tr-[31rem]',
-      'rounded-tr-[31px]',
-      'rounded-tr-[31%]',
-      'rounded-tl-[31]',
-      'rounded-tl-[31rem]',
-      'rounded-tl-[31px]',
-      'rounded-tl-[31%]',
-      'rounded-r-[31]',
-      'rounded-r-[31rem]',
-      'rounded-r-[31px]',
-      'rounded-r-[31%]',
-      'rounded-l-[31]',
-      'rounded-l-[31rem]',
-      'rounded-l-[31px]',
-      'rounded-l-[31%]',
-      'rounded-b-[31]',
-      'rounded-b-[31rem]',
-      'rounded-b-[31px]',
-      'rounded-b-[31%]',
-      'rounded-br-[31]',
-      'rounded-br-[31rem]',
-      'rounded-br-[31px]',
-      'rounded-br-[31%]',
-      'rounded-bl-[31]',
-      'rounded-bl-[31rem]',
-      'rounded-bl-[31px]',
-      'rounded-bl-[31%]',
-    ];
+    const classes = ['rounded-[31]', 'rounded-[31rem]', 'rounded-[31px]', 'rounded-[31%]', 'rounded-t-[31]', 'rounded-t-[31rem]', 'rounded-t-[31px]', 'rounded-t-[31%]', 'rounded-tr-[31]', 'rounded-tr-[31rem]', 'rounded-tr-[31px]', 'rounded-tr-[31%]', 'rounded-tl-[31]', 'rounded-tl-[31rem]', 'rounded-tl-[31px]', 'rounded-tl-[31%]', 'rounded-r-[31]', 'rounded-r-[31rem]', 'rounded-r-[31px]', 'rounded-r-[31%]', 'rounded-l-[31]', 'rounded-l-[31rem]', 'rounded-l-[31px]', 'rounded-l-[31%]', 'rounded-b-[31]', 'rounded-b-[31rem]', 'rounded-b-[31px]', 'rounded-b-[31%]', 'rounded-br-[31]', 'rounded-br-[31rem]', 'rounded-br-[31px]', 'rounded-br-[31%]', 'rounded-bl-[31]', 'rounded-bl-[31rem]', 'rounded-bl-[31px]', 'rounded-bl-[31%]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 });
-

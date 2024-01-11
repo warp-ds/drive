@@ -50,7 +50,16 @@ exports[`border > supports divide borders between horizontal and stacked childre
 .divide-y>*+*{--w-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--w-divide-y-reverse)));border-bottom-width:calc(1px * var(--w-divide-y-reverse));}"
 `;
 
-exports[`border > supports setting arbitrary border colors 1`] = `
+exports[`border > supports setting arbitrary border color values 1`] = `
+"/* layer: default */
+.border-\\[\\#000000\\]{border-color:#000000;}
+.border-\\[black\\]{border-color:black;}
+.border-l-\\[white\\]{border-left-color:white;}
+.border-x-\\[rgb\\(0\\,0\\,0\\)\\]{border-left-color:rgb(0,0,0);border-right-color:rgb(0,0,0);}
+.border-y-\\[rgba\\(0\\,0\\,0\\,0\\)\\]{border-top-color:rgba(0,0,0,0);border-bottom-color:rgba(0,0,0,0);}"
+`;
+
+exports[`border > supports setting arbitrary border color variables 1`] = `
 "/* layer: default */
 .border-\\[--w-s-color-border\\],
 .border-\\[var\\(--w-s-color-border\\)\\]{border-color:var(--w-s-color-border);}"
@@ -66,7 +75,15 @@ exports[`border > supports setting arbitrary border width 1`] = `
 .border-t-\\[7rem\\]{border-top-width:7rem;}"
 `;
 
-exports[`border > supports setting arbitrary divide colors 1`] = `
+exports[`border > supports setting arbitrary divide color values 1`] = `
+"/* layer: default */
+.divide-\\[\\#000000\\]>*+*{border-color: #000000;}
+.divide-\\[black\\]>*+*{border-color: black;}
+.divide-x-\\[rgb\\(0\\,0\\,0\\)\\]>*+*{border-left-color: rgb(0,0,0);border-right-color: rgb(0,0,0);}
+.divide-y-\\[rgba\\(0\\,0\\,0\\,0\\)\\]>*+*{border-top-color: rgba(0,0,0,0);border-bottom-color: rgba(0,0,0,0);}"
+`;
+
+exports[`border > supports setting arbitrary divide color variables 1`] = `
 "/* layer: default */
 .divide-\\[--w-s-color-border\\]>*+*{border-color: var(--w-s-color-border);}
 .divide-\\[var\\(--w-s-color-border-subtle\\)\\]>*+*{border-color: var(--w-s-color-border-subtle);}
@@ -102,6 +119,13 @@ exports[`border > supports setting border width 1`] = `
 .border-2{border-width:2px;}
 .border-4{border-width:4px;}
 .border-8{border-width:8px;}"
+`;
+
+exports[`border > supports setting divide to current color 1`] = `
+"/* layer: default */
+.divide-current>*+*{border-color: currentColor;}
+.divide-x-current>*+*{border-left-color: currentColor;border-right-color: currentColor;}
+.divide-y-current>*+*{border-top-color: currentColor;border-bottom-color: currentColor;}"
 `;
 
 exports[`border > supports x|y with value and without 1`] = `
