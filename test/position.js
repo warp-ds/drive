@@ -16,7 +16,7 @@ describe('position', () => {
 describe('order', () => {
   test('allows values 1 to 12', async ({ uno }) => {
     const range = Array.from({ length: 12 }).map((_, i) => i + 1);
-    const classes = range.map(value => `order-${value}`);
+    const classes = range.map((value) => `order-${value}`);
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -32,11 +32,7 @@ describe('order', () => {
     expect(css).toMatchSnapshot();
   });
   test('arbitrary values', async ({ uno }) => {
-    const classes = [
-      'order-[14]',
-      'order-[20]',
-      'order-[50]',
-    ];
+    const classes = ['order-[14]', 'order-[20]', 'order-[50]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -44,7 +40,7 @@ describe('order', () => {
 
 describe('justifies', () => {
   test('check justify- classes and their expected justify-content values', async ({ uno }) => {
-    const classes = ['justify-start', 'justify-end','justify-center','justify-between', ',justify-around', 'justify-evenly'];
+    const classes = ['justify-start', 'justify-end', 'justify-center', 'justify-between', ',justify-around', 'justify-evenly'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -70,7 +66,7 @@ describe('alignments', () => {
   });
 
   test('check items- classes and their expected align-items values', async ({ uno }) => {
-    const classes = ['items-start', 'items-end', 'items-center', 'items-baseline' ,'items-stretch'];
+    const classes = ['items-start', 'items-end', 'items-center', 'items-baseline', 'items-stretch'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -90,7 +86,7 @@ describe('placements', () => {
   });
 
   test('check place-items- classes and their expected place-items values', async ({ uno }) => {
-    const classes = ['place-items-start', 'place-items-end' ,'place-items-center','place-items-stretch'];
+    const classes = ['place-items-start', 'place-items-end', 'place-items-center', 'place-items-stretch'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -104,8 +100,7 @@ describe('placements', () => {
 
 describe('global keywords', () => {
   test('justify, alignments and placements should work with global keywords', async ({ uno }) => {
-    const classes = ['justify', 'justify-items', 'justify-self', 'content', 'items', 'self', 'place-content', 'place-items', 'place-self']
-      .map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat();
+    const classes = ['justify', 'justify-items', 'justify-self', 'content', 'items', 'self', 'place-content', 'place-items', 'place-self'].map((prefix) => globalKeywords.map((keyword) => `${prefix}-${keyword}`)).flat();
 
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -114,67 +109,37 @@ describe('global keywords', () => {
 
 describe('insets', () => {
   test('check inset- classes and their expected values', async ({ uno }) => {
-    const classes = spaceBase.map(n => ([`inset-${n}`, `inset-x-${n}`, `inset-y-${n}`])).flat();
+    const classes = spaceBase.map((n) => [`inset-${n}`, `inset-x-${n}`, `inset-y-${n}`]).flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('check negative -inset- classes and their expected values', async ({ uno }) => {
-    const classes = spaceBase.map((n) => ([`-inset-${n}`, `-inset-x-${n}`, `-inset-y-${n}`])).flat();
+    const classes = spaceBase.map((n) => [`-inset-${n}`, `-inset-x-${n}`, `-inset-y-${n}`]).flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('check inset- classes and their expected arbitrary values', async ({ uno }) => {
-    const classes = [
-      'inset-[16]',
-      'inset-x-[16]',
-      'inset-y-[16]',
-      'inset-[16rem]',
-      'inset-x-[16rem]',
-      'inset-y-[16rem]',
-      'inset-[16px]',
-      'inset-x-[16px]',
-      'inset-y-[16px]',
-      'inset-[16%]',
-      'inset-x-[16%]',
-      'inset-y-[16%]',
-    ];
+    const classes = ['inset-[16]', 'inset-x-[16]', 'inset-y-[16]', 'inset-[16rem]', 'inset-x-[16rem]', 'inset-y-[16rem]', 'inset-[16px]', 'inset-x-[16px]', 'inset-y-[16px]', 'inset-[16%]', 'inset-x-[16%]', 'inset-y-[16%]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('check top-, left-, right-, bottom- classes and their expected values', async ({ uno }) => {
-    const classes = spaceBase.map((n) => ([`top-${n}`, `left-${n}`, `right-${n}`, `bottom-${n}`])).flat();
+    const classes = spaceBase.map((n) => [`top-${n}`, `left-${n}`, `right-${n}`, `bottom-${n}`]).flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('check negative -top-, -left-, -right-, -bottom- classes and their expected values', async ({ uno }) => {
-    const classes = spaceBase.map((n) => ([`-top-${n}`,`-left-${n}`,`-right-${n}`,`-bottom-${n}`])).flat();
+    const classes = spaceBase.map((n) => [`-top-${n}`, `-left-${n}`, `-right-${n}`, `-bottom-${n}`]).flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
 
   test('check top-, left-, right-, bottom- classes and their expected arbitrary values', async ({ uno }) => {
-    const classes = [
-      'top-[16]',
-      'left-[16]',
-      'right-[16]',
-      'bottom-[16]',
-      'top-[16rem]',
-      'left-[16rem]',
-      'right-[16rem]',
-      'bottom-[16rem]',
-      'top-[16px]',
-      'left-[16px]',
-      'right-[16px]',
-      'bottom-[16px]',
-      'top-[16%]',
-      'left-[16%]',
-      'right-[16%]',
-      'bottom-[16%]',
-    ];
+    const classes = ['top-[16]', 'left-[16]', 'right-[16]', 'bottom-[16]', 'top-[16rem]', 'left-[16rem]', 'right-[16rem]', 'bottom-[16rem]', 'top-[16px]', 'left-[16px]', 'right-[16px]', 'bottom-[16px]', 'top-[16%]', 'left-[16%]', 'right-[16%]', 'bottom-[16%]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -194,7 +159,7 @@ describe('floats', () => {
   });
 
   test('float and clear should work with global keywords', async ({ uno }) => {
-    const classes = ['float', 'clear'].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat();
+    const classes = ['float', 'clear'].map((prefix) => globalKeywords.map((keyword) => `${prefix}-${keyword}`)).flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -203,8 +168,8 @@ describe('floats', () => {
 describe('z-index', () => {
   test('check z- classes and their expected values', async ({ uno }) => {
     const validLevels = [0, 10, 20, 30, 40, 50];
-    const positiveClasses = validLevels.map(i => `z-${i}`);
-    const negativeClasses = validLevels.map(i => `-z-${i}`);
+    const positiveClasses = validLevels.map((i) => `z-${i}`);
+    const negativeClasses = validLevels.map((i) => `-z-${i}`);
     const { css } = await uno.generate([...positiveClasses, ...negativeClasses, 'z-auto']);
     expect(css).toMatchSnapshot();
   });
@@ -224,7 +189,7 @@ describe('box sizing', () => {
   });
 
   test('box- classes should work with global keywords', async ({ uno }) => {
-    const classes = ['box'].map(prefix => globalKeywords.map(keyword => `${prefix}-${keyword}`)).flat();
+    const classes = ['box'].map((prefix) => globalKeywords.map((keyword) => `${prefix}-${keyword}`)).flat();
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });

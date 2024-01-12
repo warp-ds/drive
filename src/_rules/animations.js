@@ -13,17 +13,23 @@ const spinnerAfter = 'right:0;';
 const spinnerKeyframes = '@keyframes animate-spinner {to{transform:rotate(359deg);}}';
 
 export const animations = [
-  [/^animate-inprogress$/, ([_selector]) => {
-    const selector = escapeSelector(_selector);
-    const base = `.${selector}{${inProgress}}`;
-    return base + keyFrames;
-  }],
-  [/^animate-spinner$/, ([_selector]) => {
-    const selector = escapeSelector(_selector);
-    const baseSpinner = `.${selector}{${spinner}}`;
-    const pseudo = `.${selector}::before,.${selector}::after{${spinnerPseudo}}`;
-    const pseudoAfter = `.${selector}::after{${spinnerAfter}}`;
-    const pseudoBefore = `.${selector}::before{${spinnerBefore}}`;
-    return baseSpinner + pseudo + pseudoAfter + pseudoBefore + spinnerKeyframes;
-  }],
+  [
+    /^animate-inprogress$/,
+    ([_selector]) => {
+      const selector = escapeSelector(_selector);
+      const base = `.${selector}{${inProgress}}`;
+      return base + keyFrames;
+    },
+  ],
+  [
+    /^animate-spinner$/,
+    ([_selector]) => {
+      const selector = escapeSelector(_selector);
+      const baseSpinner = `.${selector}{${spinner}}`;
+      const pseudo = `.${selector}::before,.${selector}::after{${spinnerPseudo}}`;
+      const pseudoAfter = `.${selector}::after{${spinnerAfter}}`;
+      const pseudoBefore = `.${selector}::before{${spinnerBefore}}`;
+      return baseSpinner + pseudo + pseudoAfter + pseudoBefore + spinnerKeyframes;
+    },
+  ],
 ];

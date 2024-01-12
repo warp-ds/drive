@@ -1,3 +1,1 @@
-export const cssVariables = [
-  [/^\[(--(.*)):(.*)\]$/, ([, variable, _, value]) => ({ [variable]: value?.trim() })],
-];
+export const cssVariables = [[/^\[(--(.*)):(.*)\]$/, ([, variable, _, value]) => ({ [variable]: value?.trim() })]];

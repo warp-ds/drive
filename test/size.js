@@ -4,11 +4,11 @@ import { describe, expect, test } from 'vitest';
 
 setup();
 
-const getSpecialSuffixes = (prefix) => ['full', 'fit', 'min', 'max', 'screen'].map(e => `${prefix}-${e}`);
+const getSpecialSuffixes = (prefix) => ['full', 'fit', 'min', 'max', 'screen'].map((e) => `${prefix}-${e}`);
 
 describe('width and height', () => {
   test('width', async ({ uno }) => {
-    const classes = spaceBase.map(e => `w-${e}`);
+    const classes = spaceBase.map((e) => `w-${e}`);
     classes.push(...getSpecialSuffixes('w'));
     classes.push(...getFractions('w'));
     const { css } = await uno.generate(classes);
@@ -19,7 +19,7 @@ describe('width and height', () => {
     expect(css).toMatchInlineSnapshot('""');
   });
   test('height', async ({ uno }) => {
-    const classes = spaceBase.map(e => `h-${e}`);
+    const classes = spaceBase.map((e) => `h-${e}`);
     classes.push(...getSpecialSuffixes('h'));
     classes.push(...getFractions('h'));
     const { css } = await uno.generate(classes);
@@ -33,7 +33,7 @@ describe('width and height', () => {
 
 describe('max width and height', () => {
   test('max-width', async ({ uno }) => {
-    const classes = spaceBase.map(e => `max-w-${e}`);
+    const classes = spaceBase.map((e) => `max-w-${e}`);
     classes.push(...getSpecialSuffixes('max-w'));
     classes.push(...getFractions('max-w'));
     classes.push('max-w-prose');
@@ -42,7 +42,7 @@ describe('max width and height', () => {
     expect(css).toMatchSnapshot();
   });
   test('max-height', async ({ uno }) => {
-    const classes = spaceBase.map(e => `max-h-${e}`);
+    const classes = spaceBase.map((e) => `max-h-${e}`);
     classes.push(...getSpecialSuffixes('max-h'));
     classes.push(...getFractions('max-h'));
     const { css } = await uno.generate(classes);
@@ -52,14 +52,14 @@ describe('max width and height', () => {
 
 describe('min width and height', () => {
   test('min-width', async ({ uno }) => {
-    const classes = spaceBase.map(e => `min-w-${e}`);
+    const classes = spaceBase.map((e) => `min-w-${e}`);
     classes.push(...getSpecialSuffixes('min-w'));
     classes.push(...getFractions('min-w'));
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
   test('min-height', async ({ uno }) => {
-    const classes = spaceBase.map(e => `min-h-${e}`);
+    const classes = spaceBase.map((e) => `min-h-${e}`);
     classes.push(...getSpecialSuffixes('min-h'));
     classes.push(...getFractions('min-h'));
     const { css } = await uno.generate(classes);
@@ -67,9 +67,8 @@ describe('min width and height', () => {
   });
 });
 
-
-describe("width and height with arbitrary values", () => {
-  test('width with css variables and anything else', async(t) => {
+describe('width and height with arbitrary values', () => {
+  test('width with css variables and anything else', async (t) => {
     const classes = ['w-[--css-variable]', 'w-[var(--css-variable)]', 'w-[customStuff]'];
     const { css } = await t.uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -106,7 +105,7 @@ describe("width and height with arbitrary values", () => {
     const { css } = await t.uno.generate(classes);
     expect(css).toMatchInlineSnapshot('""');
   });
-  test('height with css variables and anything else', async(t) => {
+  test('height with css variables and anything else', async (t) => {
     const classes = ['h-[--css-variable]', 'h-[var(--css-variable)]', 'h-[customStuff]'];
     const { css } = await t.uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -144,8 +143,8 @@ describe("width and height with arbitrary values", () => {
   });
 });
 
-describe("min width and height with arbitrary values", () => {
-  test('min width with css variables and anything else', async(t) => {
+describe('min width and height with arbitrary values', () => {
+  test('min width with css variables and anything else', async (t) => {
     const classes = ['min-w-[--css-variable]', 'min-w-[var(--css-variable)]', 'min-w-[customStuff]'];
     const { css } = await t.uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -182,7 +181,7 @@ describe("min width and height with arbitrary values", () => {
     expect(css).toMatchInlineSnapshot('""');
   });
 
-  test('min height with css variables and anything else', async(t) => {
+  test('min height with css variables and anything else', async (t) => {
     const classes = ['min-h-[--css-variable]', 'min-h-[var(--css-variable)]', 'min-h-[customStuff]'];
     const { css } = await t.uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -220,7 +219,7 @@ describe("min width and height with arbitrary values", () => {
   });
 });
 
-describe("max width and height with arbitrary values", () => {
+describe('max width and height with arbitrary values', () => {
   test('max-width with rem values', async (t) => {
     const classes = ['max-w-[20000]', 'max-w-[99999]', 'max-w-[378]'];
 

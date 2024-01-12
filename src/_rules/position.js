@@ -1,24 +1,16 @@
 import { handler as h, insetMap, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
 import { warnOnce } from '@unocss/core';
 
-export const positions = [
-  [/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })],
-];
+export const positions = [[/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })]];
 
 export const orders = [
   ['order-first', { order: '-9999' }],
   ['order-last', { order: '9999' }],
   ['order-none', { order: '0' }],
 
-  [/^order-([1-9]|1[0-2])$/,
-    ([, d]) => ({ 'order': h.number(d) }),
-    { autocomplete: 'order-<num>' },
-  ],
+  [/^order-([1-9]|1[0-2])$/, ([, d]) => ({ order: h.number(d) }), { autocomplete: 'order-<num>' }],
   // matching arbitrary values
-  [/^order-\[(\d+)]$/,
-    ([, d]) => ({ 'order': h.number(d) }),
-    { autocomplete: 'order-<num>' },
-  ],
+  [/^order-\[(\d+)]$/, ([, d]) => ({ order: h.number(d) }), { autocomplete: 'order-<num>' }],
 ];
 
 export const justifies = [
@@ -108,34 +100,28 @@ function handleInsetValue(v, { theme }) {
 }
 function handleInsetValues([, d, v], ctx) {
   const r = handleInsetValue(v, ctx);
-  if (r != null && d in insetMap) return insetMap[d].map(i => [i.slice(1), r]);
+  if (r != null && d in insetMap) return insetMap[d].map((i) => [i.slice(1), r]);
 }
 export const insets = [
-  [/^inset-(.+)$/, ([, v], ctx) => ({ inset: handleInsetValue(v, ctx) }),
+  [
+    /^inset-(.+)$/,
+    ([, v], ctx) => ({ inset: handleInsetValue(v, ctx) }),
     {
-      autocomplete: [
-        'inset-$spacing',
-        'inset-<directions>-$spacing',
-        '(top|left|right|bottom)-$spacing',
-      ],
+      autocomplete: ['inset-$spacing', 'inset-<directions>-$spacing', '(top|left|right|bottom)-$spacing'],
     },
   ],
   [/^inset-([xy])-(.+)$/, handleInsetValues],
   [/^(top|left|right|bottom)-(.+)$/, ([, d, v], ctx) => ({ [d]: handleInsetValue(v, ctx) })],
   //matching arbitrary values
-  [/^inset-\[(.\d*)(rem|px|%)?]$/,
+  [
+    /^inset-\[(.\d*)(rem|px|%)?]$/,
     ([, value, unit], context) => ({
       inset: resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^inset-([xy])-\[(.\d*)(rem|px|%)?]$/,
-    ([, direction, value, unit], context) =>
-      insetMap[direction].map((i) => [
-        `${i.slice(1)}`,
-        resolveArbitraryValues(value, unit, context),
-      ]),
-  ],
-  [/^(top|left|right|bottom)-\[(.\d*)(rem|px|%)?]$/,
+  [/^inset-([xy])-\[(.\d*)(rem|px|%)?]$/, ([, direction, value, unit], context) => insetMap[direction].map((i) => [`${i.slice(1)}`, resolveArbitraryValues(value, unit, context)])],
+  [
+    /^(top|left|right|bottom)-\[(.\d*)(rem|px|%)?]$/,
     ([, direction, value, unit], context) => ({
       [direction]: resolveArbitraryValues(value, unit, context),
     }),
@@ -166,8 +152,4 @@ export const zIndexes = [
   ['z-auto', { 'z-index': 'auto' }],
 ];
 
-export const boxSizing = [
-  ['box-border', { 'box-sizing': 'border-box' }],
-  ['box-content', { 'box-sizing': 'content-box' }],
-  ...makeGlobalStaticRules('box', 'box-sizing'),
-];
+export const boxSizing = [['box-border', { 'box-sizing': 'border-box' }], ['box-content', { 'box-sizing': 'content-box' }], ...makeGlobalStaticRules('box', 'box-sizing')];

@@ -13,7 +13,7 @@ import { getComponents } from './getComponents.js';
 export function directionSize(propertyPrefix) {
   return ([_, direction, size], { theme }) => {
     const v = theme.spacing?.[size] ?? h.bracket.global.auto.fraction(size);
-    if (v != null) return directionMap[direction].map(i => [`${propertyPrefix}${i}`, v]);
+    if (v != null) return directionMap[direction].map((i) => [`${propertyPrefix}${i}`, v]);
   };
 }
 /**
@@ -25,7 +25,10 @@ function getThemeColor(theme, colors) {
   for (const c of colors) {
     index += 1;
     if (obj && typeof obj !== 'string') {
-      const camel = colors.slice(index).join('-').replace(/(-[a-z])/g, n => n.slice(1).toUpperCase());
+      const camel = colors
+        .slice(index)
+        .join('-')
+        .replace(/(-[a-z])/g, (n) => n.slice(1).toUpperCase());
       if (obj[camel]) return obj[camel];
       if (obj[c]) {
         obj = obj[c];
@@ -41,10 +44,7 @@ export function splitShorthand(body, type) {
   const split = body.split(/(?:\/|:)/);
 
   if (split[0] === `[${type}`) {
-    return [
-      split.slice(0, 2).join(':'),
-      split[2],
-    ];
+    return [split.slice(0, 2).join(':'), split[2]];
   }
 
   return split;
@@ -73,9 +73,7 @@ export function parseColor(body, theme) {
   } else {
     [main, opacity] = split;
   }
-  const colors = main
-    .replace(/([a-z])([0-9])/g, '$1-$2')
-    .split(/-/g);
+  const colors = main.replace(/([a-z])([0-9])/g, '$1-$2').split(/-/g);
   const [name] = colors;
   if (!name) return;
   let color;
@@ -187,7 +185,7 @@ export function resolveVerticalBreakpoints({ theme, generator }) {
   return verticalBreakpoints;
 }
 export function makeGlobalStaticRules(prefix, property) {
-  return globalKeywords.map(keyword => [`${prefix}-${keyword}`, { [property ?? prefix]: keyword }]);
+  return globalKeywords.map((keyword) => [`${prefix}-${keyword}`, { [property ?? prefix]: keyword }]);
 }
 export function getBracket(str, open, close) {
   if (str === '') return;
@@ -208,11 +206,7 @@ export function getBracket(str, open, close) {
         --parenthesis;
         if (parenthesis < 0) return;
         if (parenthesis === 0) {
-          return [
-            str.slice(openAt, i + 1),
-            str.slice(i + 1),
-            str.slice(0, openAt),
-          ];
+          return [str.slice(openAt, i + 1), str.slice(i + 1), str.slice(0, openAt)];
         }
         break;
     }
@@ -221,17 +215,17 @@ export function getBracket(str, open, close) {
 
 export function resolveArbitraryValues(value, unit, context) {
   if (value.includes('_')) {
-    const valueWithoutUnderscore = value.replace(/_/g, " ");
+    const valueWithoutUnderscore = value.replace(/_/g, ' ');
     if (/\d/.test(valueWithoutUnderscore)) {
       const digits = valueWithoutUnderscore.split(' ');
-      return digits?.map(number => h.rem(number) || number).join(' ');
+      return digits?.map((number) => h.rem(number) || number).join(' ');
     } else {
       return valueWithoutUnderscore;
     }
   }
   if (unit === 'rem') return h.rem(`${value}${unit}`);
   if (unit === 'px' || context?.theme?.usingPixels) return h.px(value);
-  if (unit === '%') return `${h.percent(`${value}`) * 100 }${unit}`;
+  if (unit === '%') return `${h.percent(`${value}`) * 100}${unit}`;
   if (value.startsWith('--')) return `var(${value})`;
   return h.rem(value) || value;
 }

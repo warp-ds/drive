@@ -24,10 +24,13 @@ export const backgrounds = [
   ['bg-clip-content', { '-webkit-background-clip': 'content-box', 'background-clip': 'content-box' }],
   ['bg-clip-padding', { '-webkit-background-clip': 'padding-box', 'background-clip': 'padding-box' }],
   ['bg-clip-text', { '-webkit-background-clip': 'text', 'background-clip': 'text' }],
-  ...globalKeywords.map(keyword => [`bg-clip-${keyword}`, {
-    '-webkit-background-clip': keyword,
-    'background-clip': keyword,
-  }]),
+  ...globalKeywords.map((keyword) => [
+    `bg-clip-${keyword}`,
+    {
+      '-webkit-background-clip': keyword,
+      'background-clip': keyword,
+    },
+  ]),
 
   // repeat
   ['bg-repeat', { 'background-repeat': 'repeat' }],
@@ -54,9 +57,12 @@ export const backgrounds = [
   [/^bg-\[(var\(--.+\))]$/, ([, p]) => ({ 'background-color': p })],
 
   // arbitrary image
-  [/^bg-\[(url\(.+\))]$/, ([, p]) => {
-    // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
-    const cssVar = p.match(/^url\((var\([^)]+\))\)$/)?.[1];
-    return { 'background-image': cssVar ?? p };
-  }],
+  [
+    /^bg-\[(url\(.+\))]$/,
+    ([, p]) => {
+      // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
+      const cssVar = p.match(/^url\((var\([^)]+\))\)$/)?.[1];
+      return { 'background-image': cssVar ?? p };
+    },
+  ],
 ];
