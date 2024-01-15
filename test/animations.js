@@ -1,6 +1,5 @@
-import { setup } from "./_helpers.js";
-import { expect, test } from "vitest";
-
+import { setup } from './_helpers.js';
+import { expect, test } from 'vitest';
 
 setup();
 
@@ -22,4 +21,3 @@ test('animate spinner', async ({ uno }) => {
     .animate-spinner{--spinner-size: 24px;height: var(--spinner-size);width: var(--spinner-size);border-radius: 50%;border: calc(var(--spinner-size) / 8) solid var(--w-color-spinner-border);border-top-color: var(--w-color-spinner-border-top);position: relative;animation: animate-spinner 0.75s infinite linear;}.animate-spinner::before,.animate-spinner::after{content: ' ';height: calc(var(--spinner-size) / 8);width: calc(var(--spinner-size) / 8);border-radius: 50%;position: absolute;top: calc(var(--spinner-size) / 180);}.animate-spinner::after{right:0;}.animate-spinner::before{left:0;}@keyframes animate-spinner {to{transform:rotate(359deg);}}"
   `);
 });
-

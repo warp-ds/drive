@@ -1,6 +1,4 @@
-export const shadows = [
-  [/^shadow-(s|m|l|xl)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size})` })],
-];
+export const shadows = [[/^shadow-(s|m|l|xl)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size})` })]];
 
 const dropShadowDefaultColor = '64, 64, 64';
 
@@ -11,6 +9,4 @@ const dropShadowDefaults = {
   xl: [`drop-shadow(rgba(${dropShadowDefaultColor}, .22) 0 9px 12px) drop-shadow(rgba(${dropShadowDefaultColor}, .25) 0 14px 28px)`],
 };
 
-export const dropShadows = [
-  [/^drop-shadow-(s|m|l|xl)$/, ([, size]) => ({ 'filter': dropShadowDefaults[size] })],
-];
+export const dropShadows = [[/^drop-shadow-(s|m|l|xl)$/, ([, size]) => ({ filter: dropShadowDefaults[size] })]];

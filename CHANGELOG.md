@@ -1,3 +1,10 @@
+# [1.6.0-next.1](https://github.com/warp-ds/drive/compare/v1.5.0...v1.6.0-next.1) (2024-01-15)
+
+
+### Features
+
+* Add rule for setting background-image to none ([#192](https://github.com/warp-ds/drive/issues/192)) ([495fdf0](https://github.com/warp-ds/drive/commit/495fdf0c1c375a9e71f5d9568331c8c99a447712))
+
 # [1.5.0](https://github.com/warp-ds/drive/compare/v1.4.0...v1.5.0) (2024-01-11)
 
 

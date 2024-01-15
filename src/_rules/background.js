@@ -24,10 +24,13 @@ export const backgrounds = [
   ['bg-clip-content', { '-webkit-background-clip': 'content-box', 'background-clip': 'content-box' }],
   ['bg-clip-padding', { '-webkit-background-clip': 'padding-box', 'background-clip': 'padding-box' }],
   ['bg-clip-text', { '-webkit-background-clip': 'text', 'background-clip': 'text' }],
-  ...globalKeywords.map(keyword => [`bg-clip-${keyword}`, {
-    '-webkit-background-clip': keyword,
-    'background-clip': keyword,
-  }]),
+  ...globalKeywords.map((keyword) => [
+    `bg-clip-${keyword}`,
+    {
+      '-webkit-background-clip': keyword,
+      'background-clip': keyword,
+    },
+  ]),
 
   // repeat
   ['bg-repeat', { 'background-repeat': 'repeat' }],
@@ -48,15 +51,13 @@ export const backgrounds = [
   ['bg-inherit', { 'background-color': 'inherit' }],
   ['bg-transparent', { 'background-color': 'transparent' }],
   ['bg-current', { 'background-color': 'currentColor' }],
+  [/^bg-\[(var\(--.+\)|--.+)]$/, ([, val]) => ({ 'background-color': val.startsWith('--') ? `var(${val})` : val })],
 
-  // arbitrary color
-  [/^bg-\[(--.+)]$/, ([, p]) => ({ 'background-color': `var(${p})` })],
-  [/^bg-\[(var\(--.+\))]$/, ([, p]) => ({ 'background-color': p })],
-
-  // arbitrary image
-  [/^bg-\[(url\(.+\))]$/, ([, p]) => {
+  // image
+  ['bg-none', { 'background-image': 'none' }],
+  [
+    /^bg-\[(url\(.+\))]$/,
     // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
-    const cssVar = p.match(/^url\((var\([^)]+\))\)$/)?.[1];
-    return { 'background-image': cssVar ?? p };
-  }],
+    ([, p]) => ({ 'background-image': p.match(/^url\((var\([^)]+\))\)$/)?.[1] ?? p }),
+  ],
 ];

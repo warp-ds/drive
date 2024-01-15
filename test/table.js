@@ -29,13 +29,7 @@ test('border-collapse', async (t) => {
 });
 
 test('border-spacing', async (t) => {
-  const classes = spaceBase
-    .map((spacingUnit) => [
-      `border-spacing-x-${spacingUnit}`,
-      `border-spacing-y-${spacingUnit}`,
-      `border-spacing-${spacingUnit}`,
-    ])
-    .flat();
+  const classes = spaceBase.map((spacingUnit) => [`border-spacing-x-${spacingUnit}`, `border-spacing-y-${spacingUnit}`, `border-spacing-${spacingUnit}`]).flat();
 
   const { css } = await t.uno.generate(classes);
 

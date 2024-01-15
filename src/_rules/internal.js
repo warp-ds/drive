@@ -5,11 +5,12 @@ export const internalRules = [
   [/^i-text-(.+)$/, ([, cssvar]) => ({ color: h.warpToken(cssvar) })],
   [/^i-border-(.+)$/, ([, cssvar]) => ({ 'border-color': h.warpToken(cssvar) })],
   [/^i-shadow-(.+)$/, ([, cssvar]) => ({ 'box-shadow': h.warpToken(cssvar) })],
-  [/^i-border-([rltb])-(.+)$/, ([, direction, cssvar]) => {
-    if (direction in directionMap && cssvar != null) {
-      return directionMap[direction].map(
-        (dir) => [`border${dir}-color`, h.warpToken(cssvar)],
-      );
-    }
-  }],
+  [
+    /^i-border-([rltb])-(.+)$/,
+    ([, direction, cssvar]) => {
+      if (direction in directionMap && cssvar != null) {
+        return directionMap[direction].map((dir) => [`border${dir}-color`, h.warpToken(cssvar)]);
+      }
+    },
+  ],
 ];
