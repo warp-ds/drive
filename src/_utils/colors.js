@@ -3,7 +3,7 @@ import { getComponents } from './getComponents.js';
 
 const cssColorFunctions = ['hsl', 'hsla', 'hwb', 'lab', 'lch', 'oklab', 'oklch', 'rgb', 'rgba'];
 const alphaPlaceholders = ['%alpha', '<alpha-value>'];
-const alphaPlaceholdersRE = new RegExp(alphaPlaceholders.map(v => escapeRegExp(v)).join('|'));
+const alphaPlaceholdersRE = new RegExp(alphaPlaceholders.map((v) => escapeRegExp(v)).join('|'));
 export function hex2rgba(hex = '') {
   const color = parseHexColor(hex);
   if (color != null) {
@@ -22,7 +22,7 @@ export function parseCssColor(str = '') {
   if (cssColorFunctions.includes(type) && ![1, 3].includes(components.length)) return;
   return {
     type,
-    components: components.map(c => (typeof c === 'string' ? c.trim() : c)),
+    components: components.map((c) => (typeof c === 'string' ? c.trim() : c)),
     alpha: typeof alpha === 'string' ? alpha.trim() : alpha,
   };
 }
@@ -61,25 +61,19 @@ function parseHexColor(str) {
   switch (body.length) {
     case 3:
     case 4:
-      const digits = Array.from(body, s => Number.parseInt(s, 16)).map(n => (n << 4) | n);
+      const digits = Array.from(body, (s) => Number.parseInt(s, 16)).map((n) => (n << 4) | n);
       return {
         type: 'rgb',
         components: digits.slice(0, 3),
-        alpha: body.length === 3
-          ? undefined
-          : Math.round(digits[3] / 255 * 100) / 100,
+        alpha: body.length === 3 ? undefined : Math.round((digits[3] / 255) * 100) / 100,
       };
     case 6:
     case 8:
       const value = Number.parseInt(body, 16);
       return {
         type: 'rgb',
-        components: body.length === 6
-          ? [(value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF]
-          : [(value >> 24) & 0xFF, (value >> 16) & 0xFF, (value >> 8) & 0xFF],
-        alpha: body.length === 6
-          ? undefined
-          : Math.round((value & 0xFF) / 255 * 100) / 100,
+        components: body.length === 6 ? [(value >> 16) & 0xff, (value >> 8) & 0xff, value & 0xff] : [(value >> 24) & 0xff, (value >> 16) & 0xff, (value >> 8) & 0xff],
+        alpha: body.length === 6 ? undefined : Math.round(((value & 0xff) / 255) * 100) / 100,
       };
   }
 }
@@ -120,7 +114,10 @@ function parseCssSpaceColorFunction(color) {
   const [, fn, componentString] = match;
   const parsed = parseCssSpaceColorValues(`${fn} ${componentString}`);
   if (parsed) {
-    const { alpha, components: [type, ...components] } = parsed;
+    const {
+      alpha,
+      components: [type, ...components],
+    } = parsed;
     return {
       type,
       components,
@@ -133,7 +130,10 @@ function parseCssColorFunction(color) {
   if (!match) return;
   const parsed = parseCssSpaceColorValues(match[1]);
   if (parsed) {
-    const { alpha, components: [type, ...components] } = parsed;
+    const {
+      alpha,
+      components: [type, ...components],
+    } = parsed;
     return {
       type,
       components,

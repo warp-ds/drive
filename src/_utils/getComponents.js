@@ -19,10 +19,7 @@ export function getComponent(str, open, close, separators) {
           const separatorLength = separator.length;
           if (separatorLength && separator === str.slice(i, i + separatorLength) && parenthesis === 0) {
             if (i === 0 || i === l - separatorLength) return;
-            return [
-              str.slice(0, i),
-              str.slice(i + separatorLength),
-            ];
+            return [str.slice(0, i), str.slice(i + separatorLength)];
           }
         }
     }

@@ -16,17 +16,7 @@ test('gap does not render css for invalid spacing units', async ({ uno }) => {
 });
 
 test('gap does render css for arbitrary values', async ({ uno }) => {
-  const classes = [
-    'gap-[27]',
-    'gap-[27px]',
-    'gap-[27rem]',
-    'gap-x-[27]',
-    'gap-x-[27px]',
-    'gap-x-[27rem]',
-    'gap-y-[27]',
-    'gap-y-[27px]',
-    'gap-y-[27rem]',
-  ];
+  const classes = ['gap-[27]', 'gap-[27px]', 'gap-[27rem]', 'gap-x-[27]', 'gap-x-[27px]', 'gap-x-[27rem]', 'gap-y-[27]', 'gap-y-[27px]', 'gap-y-[27rem]'];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });

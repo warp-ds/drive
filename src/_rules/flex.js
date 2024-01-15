@@ -3,7 +3,16 @@ import { handler as h, resolveArbitraryValues } from '#utils';
 export const flex = [
   [
     /^flex-(.*)$/,
-    ([_, d]) => ({ flex: h.bracket(d) != null ? h.bracket(d).split(' ').map(e => h.cssvar.fraction(e) ?? e).join(' ') : h.cssvar.fraction(d) }),
+    ([_, d]) => ({
+      flex:
+        h.bracket(d) != null
+          ? h
+              .bracket(d)
+              .split(' ')
+              .map((e) => h.cssvar.fraction(e) ?? e)
+              .join(' ')
+          : h.cssvar.fraction(d),
+    }),
   ],
   ['flex-1', { flex: '1 1 0%' }],
   ['flex-auto', { flex: '1 1 auto' }],
@@ -12,22 +21,10 @@ export const flex = [
 
   // shrink / grow / basis
   ['shrink', { 'flex-shrink': 1 }],
-  [
-    /^shrink-\[?(\d+)]?$/,
-    ([, d]) => ({ 'flex-shrink': h.number(d) ?? 1 }),
-    { autocomplete: ['shrink-<num>'] },
-  ],
+  [/^shrink-\[?(\d+)]?$/, ([, d]) => ({ 'flex-shrink': h.number(d) ?? 1 }), { autocomplete: ['shrink-<num>'] }],
   ['grow', { 'flex-grow': 1 }],
-  [
-    /^grow-\[?(\d+)]?$/,
-    ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }),
-    { autocomplete: ['grow-<num>'] },
-  ],
-  [
-    /^basis-(.+)$/,
-    ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }),
-    { autocomplete: ['basis-$spacing'] },
-  ],
+  [/^grow-\[?(\d+)]?$/, ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }), { autocomplete: ['grow-<num>'] }],
+  [/^basis-(.+)$/, ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }), { autocomplete: ['basis-$spacing'] }],
   // matching arbitrary values
   [
     /^basis-\[(.\d*)(rem|px|%)?]$/,

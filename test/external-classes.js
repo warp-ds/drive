@@ -1,7 +1,7 @@
 import { setup } from './_helpers.js';
 import { describe, expect, test } from 'vitest';
 
-setup({ externalizeClasses: true, externalClasses: ["mt-32", "mb-32"] });
+setup({ externalizeClasses: true, externalClasses: ['mt-32', 'mb-32'] });
 
 describe('external classes', () => {
   test('externalized classes of mt-32 and mb-32 should be excluded from the css', async ({ uno }) => {

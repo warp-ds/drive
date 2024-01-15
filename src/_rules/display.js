@@ -1,6 +1,5 @@
 import { globalKeywords, handler as h } from '#utils';
 
-
 export const display = [
   ['block', { display: 'block' }],
   ['inline-block', { display: 'inline-block' }],

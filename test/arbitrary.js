@@ -1,6 +1,5 @@
-import { setup } from "./_helpers.js";
-import { expect, test } from "vitest";
-
+import { setup } from './_helpers.js';
+import { expect, test } from 'vitest';
 
 setup();
 
@@ -10,4 +9,3 @@ test('arbitrary', async ({ uno }) => {
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
-

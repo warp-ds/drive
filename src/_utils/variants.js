@@ -10,10 +10,11 @@ export const variantMatcher = (name, handler) => {
       if (match) {
         return {
           matcher: input.slice(match[0].length),
-          handle: (input, next) => next({
-            ...input,
-            ...handler(input),
-          }),
+          handle: (input, next) =>
+            next({
+              ...input,
+              ...handler(input),
+            }),
         };
       }
     },
@@ -29,10 +30,11 @@ export const variantParentMatcher = (name, parent) => {
       if (match) {
         return {
           matcher: input.slice(match[0].length),
-          handle: (input, next) => next({
-            ...input,
-            parent: `${input.parent ? `${input.parent} $$ ` : ''}${parent}`,
-          }),
+          handle: (input, next) =>
+            next({
+              ...input,
+              parent: `${input.parent ? `${input.parent} $$ ` : ''}${parent}`,
+            }),
         };
       }
     },
@@ -57,16 +59,12 @@ export const variantGetParameter = (prefix, matcher, separators) => {
       const [label = '', rest = body[1]] = variantGetParameter('/', body[1], separators) ?? [];
       return [body[0], rest, label];
     }
-    for (const separator of separators.filter(x => x !== '/')) {
+    for (const separator of separators.filter((x) => x !== '/')) {
       const pos = matcher.indexOf(separator, prefix.length);
       if (pos !== -1) {
         const labelPos = matcher.indexOf('/', prefix.length);
         const unlabelled = labelPos === -1 || pos <= labelPos;
-        return [
-          matcher.slice(prefix.length, unlabelled ? pos : labelPos),
-          matcher.slice(pos + separator.length),
-          unlabelled ? '' : matcher.slice(labelPos + 1, pos),
-        ];
+        return [matcher.slice(prefix.length, unlabelled ? pos : labelPos), matcher.slice(pos + separator.length), unlabelled ? '' : matcher.slice(labelPos + 1, pos)];
       }
     }
   }
