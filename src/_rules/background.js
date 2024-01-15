@@ -51,18 +51,13 @@ export const backgrounds = [
   ['bg-inherit', { 'background-color': 'inherit' }],
   ['bg-transparent', { 'background-color': 'transparent' }],
   ['bg-current', { 'background-color': 'currentColor' }],
+  [/^bg-\[(var\(--.+\)|--.+)]$/, ([, val]) => ({ 'background-color': val.startsWith('--') ? `var(${val})` : val })],
 
-  // arbitrary color
-  [/^bg-\[(--.+)]$/, ([, p]) => ({ 'background-color': `var(${p})` })],
-  [/^bg-\[(var\(--.+\))]$/, ([, p]) => ({ 'background-color': p })],
-
-  // arbitrary image
+  // image
+  ['bg-none', { 'background-image': 'none' }],
   [
     /^bg-\[(url\(.+\))]$/,
-    ([, p]) => {
-      // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
-      const cssVar = p.match(/^url\((var\([^)]+\))\)$/)?.[1];
-      return { 'background-image': cssVar ?? p };
-    },
+    // Extract potential css variable from url: url(var(--a-background-image-url)) -> var(--a-background-image-url)
+    ([, p]) => ({ 'background-image': p.match(/^url\((var\([^)]+\))\)$/)?.[1] ?? p }),
   ],
 ];
