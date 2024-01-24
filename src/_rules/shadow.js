@@ -1,4 +1,9 @@
-export const shadows = [[/^shadow-(s|m|l|xl)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size})` })]];
+import { resolveArbitraryValues } from '#utils';
+
+export const shadows = [
+  [/^shadow-(s|m|l|xl)$/, ([, size]) => ({ 'box-shadow': `var(--w-shadow-${size})` })],
+  [/^shadow-\[(.+)]$/, ([, val]) => ({ 'box-shadow': val.startsWith('--') ? `var(${val})` : resolveArbitraryValues(val) })],
+];
 
 const dropShadowDefaultColor = '64, 64, 64';
 
