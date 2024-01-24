@@ -1,5 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`arbitrary box-shadows work 1`] = `
+"/* layer: default */
+.shadow-\\[--w-shadow-m\\]{box-shadow:var(--w-shadow-m);}
+.shadow-\\[0_6px_12px_rgba\\(0\\,0\\,0\\,\\.2\\)\\,0_10px_20px_rgba\\(0\\,0\\,0\\,\\.1\\)\\]{box-shadow:0rem 6px 12px rgba(0,0,0,.2),0 10px 20px rgba(0,0,0,.1);}
+.shadow-\\[var\\(--arbitrary-shadow-var\\)\\]{box-shadow:var(--arbitrary-shadow-var);}"
+`;
+
 exports[`drop shadows 1`] = `
 "/* layer: default */
 .drop-shadow-l{filter:drop-shadow(rgba(64, 64, 64, .23) 0 6px 8px) drop-shadow(rgba(64, 64, 64, .19) 0 10px 20px);}
