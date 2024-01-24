@@ -1,3 +1,10 @@
+# [1.7.0-next.1](https://github.com/warp-ds/drive/compare/v1.6.1-next.1...v1.7.0-next.1) (2024-01-24)
+
+
+### Features
+
+* Add support for arbitrary box-shadow ([#194](https://github.com/warp-ds/drive/issues/194)) ([984e3d3](https://github.com/warp-ds/drive/commit/984e3d31e2653ed64340f0bc924c558109084586))
+
 ## [1.6.1-next.1](https://github.com/warp-ds/drive/compare/v1.6.0...v1.6.1-next.1) (2024-01-24)
 
 
