@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/warp-ds/drive/compare/v1.6.0...v1.7.0) (2024-01-24)
+
+
+### Bug Fixes
+
+* Use semantic token for spinner color ([#195](https://github.com/warp-ds/drive/issues/195)) ([f8ec1a3](https://github.com/warp-ds/drive/commit/f8ec1a318295f977702aaf37a46a92b395c11b1e))
+
+
+### Features
+
+* Add support for arbitrary box-shadow ([#194](https://github.com/warp-ds/drive/issues/194)) ([984e3d3](https://github.com/warp-ds/drive/commit/984e3d31e2653ed64340f0bc924c558109084586))
+
 # [1.7.0-next.1](https://github.com/warp-ds/drive/compare/v1.6.1-next.1...v1.7.0-next.1) (2024-01-24)
 
 
