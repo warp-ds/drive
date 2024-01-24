@@ -1,4 +1,4 @@
-// Deprecated - DO NOT USE! - Replace with arbitrary box-shadow (box-[---token]) to handle theming
+// Deprecated - DO NOT USE! - Replace with arbitrary box-shadow (shadow-[--token]) to handle theming
 
 const defaultColor = 'rgba(0, 0, 0, .08)';
 const sliderStates = {
