@@ -1,3 +1,10 @@
+## [1.6.1-next.1](https://github.com/warp-ds/drive/compare/v1.6.0...v1.6.1-next.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* Use semantic token for spinner color ([#195](https://github.com/warp-ds/drive/issues/195)) ([f8ec1a3](https://github.com/warp-ds/drive/commit/f8ec1a318295f977702aaf37a46a92b395c11b1e))
+
 # [1.6.0](https://github.com/warp-ds/drive/compare/v1.5.0...v1.6.0) (2024-01-16)
 
 
