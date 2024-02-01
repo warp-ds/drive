@@ -9,3 +9,15 @@ test('it generates css based on semantic warp tokens', async ({ uno }) => {
   const { css } = await uno.generate([...classes, ...antiClasses]);
   expect(css).toMatchSnapshot();
 });
+
+test('it generates css based on semantic warp tokens with alpha channel', async ({ uno }) => {
+  const classes = ['s-bg/90', 's-bg-positive-selected-hover/100', 's-text/0', 's-text-link-active/55', 's-border/60', 's-border-l/5', 's-border-r/100', 's-border-t/99', 's-border-b/1', 's-border-x/5', 's-border-y/75', 's-border-l-disabled/12', 's-border-r-primary-selected-hover/45', 's-border-t-positive/45', 's-border-b-negative-hover/7', 's-border-x-warning-active/23', 's-border-y-info-subtle-active/15', 's-divide/76', 's-divide-disabled/23', 's-divide-negative/100', 's-divide-x-disabled/10', 's-divide-y-negative/53', 's-divide-info-subtle-active/4', 's-outline/0', 's-outline-focused/100', 's-outline-negative/77', 's-icon/4', 's-icon-hover/55', 's-icon-active/23', 's-icon-selected-hover/22', 's-icon-disabled/23', 's-icon-subtle/25', 's-icon-subtle-hover/2', 's-icon-subtle-active/9', 's-icon-inverted/99', 's-icon-primary/35', 's-icon-positive/5', 's-icon-negative/55', 's-icon-warning/2', 's-icon-info/100'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('it should not generate css with incorrect alpha channel values', async ({ uno }) => {
+  const antiClasses = ['s-bg/900', 's-bg/', 's-bg/101', 's-bg/001', 's-bg/1000', 's-bg/00', 's-bg/01', 's-bg-positive-selected-hover/00', 's-text/001', 's-text-link-active/5566', 's-border/1000', 's-border-l/505'];
+  const { css } = await uno.generate(antiClasses);
+  expect(css).toHaveLength(0);
+});
