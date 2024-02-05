@@ -171,7 +171,8 @@ export function warpToken(str) {
   if (str.match(/^\$\S/)) return `var(--w-${escapeSelector(str.slice(1))})`;
 }
 export function semanticToken(str) {
-  return `var(--w-s-color-${str})`;
+  const alpha = str.match(/^([^\/]+)\/(0|[1-9][0-9]?|100)$/);
+  return alpha ? `rgba(var(--w-s-rgb-${alpha[1]}), ${percent(alpha[2])})` : `var(--w-s-color-${str})`;
 }
 export function cssvar(str) {
   if (str.match(/^\$\S/)) return `var(--${escapeSelector(str.slice(1))})`;
