@@ -1,3 +1,10 @@
+# [1.8.0-next.1](https://github.com/warp-ds/drive/compare/v1.7.0...v1.8.0-next.1) (2024-02-05)
+
+
+### Features
+
+* Add support for alpha channel modifier to semantic color classes ([#197](https://github.com/warp-ds/drive/issues/197)) ([3236a1f](https://github.com/warp-ds/drive/commit/3236a1f0655048474d3182a67ed4fc17cfc2692b))
+
 # [1.7.0](https://github.com/warp-ds/drive/compare/v1.6.0...v1.7.0) (2024-01-24)
 
 
