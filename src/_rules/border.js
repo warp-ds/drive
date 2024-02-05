@@ -1,5 +1,5 @@
 import { escapeSelector } from '@unocss/core';
-import { directionMap, cornerMap, resolveArbitraryValues } from '#utils';
+import { directionMap, cornerMap, resolveArbitraryValues, resolveArbitraryCssVariable } from '#utils';
 import { lineWidth } from '#theme';
 
 const borderStyles = ['solid', 'dashed', 'dotted', 'double', 'hidden', 'none', 'groove', 'ridge', 'inset', 'outset'];
@@ -15,7 +15,7 @@ export const borders = [
   [/^border-inverted$/, () => ({ 'border-color': 'var(--w-s-border-inverted)' })],
   [/^border-inherit$/, () => ({ 'border-color': 'inherit' })],
   [/^border-current$/, () => ({ 'border-color': 'currentColor' })],
-  [/^border(-[lrtbxy])?-\[(var\(.+\)|--.+|\D.*)]$/, handleArbitraryBorderColor],
+  [/^border(-[lrtbxy])?-\[(var\(--.+\)|--[^\/]+|\D[^\/]*)(\/(0|[1-9][0-9]?|100))?]$/, handleArbitraryBorderColor],
 
   // border-style
   [new RegExp(`^border(-[lrtbxy])?-(${borderStyles.join('|')})$`), handleBorderStyle, { autocomplete: [`border-(${borderStyles.join('|')})`, `border-<directions>-(${borderStyles.join('|')})`] }],
@@ -30,9 +30,8 @@ function handleArbitraryBorderWidth([, dir = '', value, unit], context) {
   return directionMap[dir.substring(1)]?.map((i) => [`border${i}-width`, resolveArbitraryValues(value, unit, context)]);
 }
 
-function handleArbitraryBorderColor([, dir = '', val]) {
-  const cssVal = val.startsWith('--') ? `var(${val})` : val;
-  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-color`, cssVal]);
+function handleArbitraryBorderColor([, dir = '', val, alpha]) {
+  return directionMap[dir.substring(1)]?.map((i) => [`border${i}-color`, resolveArbitraryCssVariable(val, alpha)]);
 }
 
 function handleBorderStyle([, dir = '', style]) {
@@ -50,7 +49,7 @@ export const divide = [
 
   // border-color
   [/^divide(-[xy])?-current$/, (match) => handleArbitraryDivideColor(match.concat('currentColor'))],
-  [/^divide(-[xy])?-\[(var\(.+\)|--.+|\D.*)]$/, handleArbitraryDivideColor],
+  [/^divide(-[xy])?-\[(var\(--.+\)|--[^\/]+|\D[^\/]*)(\/(0|[1-9][0-9]?|100))?]$/, handleArbitraryDivideColor],
 ];
 
 function getDivideWidthStyles(selector, dir, width, reverse) {
@@ -75,8 +74,8 @@ function handleArbitraryDivideWidth([_selector, dir, width, unit, reverse], { th
   return getDivideWidthStyles(_selector, dir, resolveArbitraryValues(width, unit, theme), reverse);
 }
 
-function handleArbitraryDivideColor([_selector, dir = '', val]) {
-  const cssRules = directionMap[dir?.substring(1)]?.map((i) => `border${i}-color: ${val.startsWith('--') ? `var(${val})` : val}`);
+function handleArbitraryDivideColor([_selector, dir = '', val, alpha]) {
+  const cssRules = directionMap[dir?.substring(1)]?.map((i) => `border${i}-color: ${resolveArbitraryCssVariable(val, alpha)}`);
   if (cssRules) return `.${escapeSelector(_selector)}>*+*{${cssRules.join(';')};}`;
 }
 

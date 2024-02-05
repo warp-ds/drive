@@ -1,4 +1,5 @@
 import { lineWidth } from '#theme';
+import { resolveArbitraryCssVariable } from '#utils';
 
 const outlineNone = {
   outline: '2px solid transparent',
@@ -9,8 +10,7 @@ export const outlineColors = [
   ['outline-inherit', { 'outline-color': 'inherit' }],
   ['outline-transparent', { 'outline-color': 'transparent' }],
   ['outline-current', { 'outline-color': 'currentColor' }],
-  [/^outline-\[(--.+)]$/, ([, p]) => ({ 'outline-color': `var(${p})` })],
-  [/^outline-\[(var\(--.+\))]$/, ([, p]) => ({ 'outline-color': p })],
+  [/^outline-\[(var\(--.+\)|--[^\/]+)(\/(0|[1-9][0-9]?|100))?]$/, ([, val, alpha]) => ({ 'outline-color': resolveArbitraryCssVariable(val, alpha) })],
 ];
 
 export const outlineStyle = [
