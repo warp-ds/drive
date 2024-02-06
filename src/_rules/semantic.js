@@ -1,15 +1,17 @@
 import { directionMap, handler as h } from '#utils';
 import { escapeSelector } from '@unocss/core';
 
-const handleBorder = ([, direction = '', cssvar = '']) => directionMap[direction.substring(1)]?.map((dir) => [`border${dir}-color`, h.semanticToken(`border${cssvar}`)]);
+const handleBorder = ([, direction = '', semanticVal = '']) => directionMap[direction.substring(1)]?.map((dir) => [`border${dir}-color`, h.semanticToken(`border${semanticVal}`)]);
 
-const handleDivide = ([_selector, direction = '', cssvar = '']) => `.${escapeSelector(_selector)}>*+*{${directionMap[direction.substring(1)]?.map((dir) => `border${dir}-color: ${h.semanticToken(`border${cssvar}`)};`).join('')}}`;
+const handleDivide = ([_selector, direction = '', semanticVal = '']) => `.${escapeSelector(_selector)}>*+*{${directionMap[direction.substring(1)]?.map((dir) => `border${dir}-color: ${h.semanticToken(`border${semanticVal}`)};`).join('')}}`;
+
+const getSemanticRegEx = (groupName, directions) => new RegExp(`^s-${groupName}${directions ? `(-[${directions}])?` : ''}((-[^\\/]+)?(\\/(0|[1-9][0-9]?|100))?)?$`);
 
 export const semanticRules = [
-  [/^s-bg(-.+)?$/, ([, cssvar = '']) => ({ 'background-color': h.semanticToken(`background${cssvar}`) })],
-  [/^s-text(-.+)?$/, ([, cssvar = '']) => ({ color: h.semanticToken(`text${cssvar}`) })],
-  [/^s-icon(-.+)?$/, ([, cssvar = '']) => ({ color: h.semanticToken(`icon${cssvar}`) })],
-  [/^s-border(-[lrtbxy])?(-.+)?$/, handleBorder],
-  [/^s-outline(-.+)?$/, ([, cssvar = '']) => ({ 'outline-color': h.semanticToken(`border${cssvar}`) })],
-  [/^s-divide(-[xy])?(-.+)?$/, handleDivide],
+  [getSemanticRegEx('bg'), ([, semanticVal = '']) => ({ 'background-color': h.semanticToken(`background${semanticVal}`) })],
+  [getSemanticRegEx('text'), ([, semanticVal = '']) => ({ color: h.semanticToken(`text${semanticVal}`) })],
+  [getSemanticRegEx('icon'), ([, semanticVal = '']) => ({ color: h.semanticToken(`icon${semanticVal}`) })],
+  [getSemanticRegEx('outline'), ([, semanticVal = '']) => ({ 'outline-color': h.semanticToken(`border${semanticVal}`) })],
+  [getSemanticRegEx('border', 'lrtbxy'), handleBorder],
+  [getSemanticRegEx('divide', 'xy'), handleDivide],
 ];

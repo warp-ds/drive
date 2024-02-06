@@ -68,6 +68,20 @@ exports[`border > supports setting arbitrary border color variables 1`] = `
 .border-y-\\[--w-s-color-border\\]{border-top-color:var(--w-s-color-border);border-bottom-color:var(--w-s-color-border);}"
 `;
 
+exports[`border > supports setting arbitrary border color variables with alpha channel 1`] = `
+"/* layer: default */
+.border-\\[--w-black\\/90\\]{border-color:rgba(var(--w-rgb-black),0.9);}
+.border-\\[--w-rgb-white\\/0\\]{border-color:rgba(var(--w-rgb-white),0);}
+.border-\\[--w-s-color-background-positive-selected-hover\\/100\\]{border-color:rgba(var(--w-s-rgb-background-positive-selected-hover),1);}
+.border-\\[var\\(--w-color-text-link-active\\)\\/55\\]{border-color:rgba(var(--w-rgb-text-link-active),0.55);}
+.border-\\[var\\(--w-s-color-border\\)\\/60\\]{border-color:rgba(var(--w-s-rgb-border),0.6);}
+.border-l-\\[--w-s-color-background\\/5\\]{border-left-color:rgba(var(--w-s-rgb-background),0.05);}
+.border-l-\\[var\\(--w-s-rgb-border-disabled\\)\\/12\\]{border-left-color:rgba(var(--w-s-rgb-border-disabled),0.12);}
+.border-r-\\[var\\(--w-black\\)\\/100\\]{border-right-color:rgba(var(--w-rgb-black),1);}
+.border-x-\\[--w-white\\/5\\]{border-left-color:rgba(var(--w-rgb-white),0.05);border-right-color:rgba(var(--w-rgb-white),0.05);}
+.border-y-\\[--w-rgb-black\\/75\\]{border-top-color:rgba(var(--w-rgb-black),0.75);border-bottom-color:rgba(var(--w-rgb-black),0.75);}"
+`;
+
 exports[`border > supports setting arbitrary border width 1`] = `
 "/* layer: default */
 .border-\\[6\\]{border-width:0.6rem;}
@@ -92,6 +106,20 @@ exports[`border > supports setting arbitrary divide color variables 1`] = `
 .divide-\\[var\\(--w-s-color-border-subtle\\)\\]>*+*{border-color: var(--w-s-color-border-subtle);}
 .divide-x-\\[var\\(--w-s-color-border-negative\\)\\]>*+*{border-left-color: var(--w-s-color-border-negative);border-right-color: var(--w-s-color-border-negative);}
 .divide-y-\\[var\\(--w-s-color-border-positive\\)\\]>*+*{border-top-color: var(--w-s-color-border-positive);border-bottom-color: var(--w-s-color-border-positive);}"
+`;
+
+exports[`border > supports setting arbitrary divide color variables with alpha channel 1`] = `
+"/* layer: default */
+.divide-\\[--w-black\\/90\\]>*+*{border-color: rgba(var(--w-rgb-black),0.9);}
+.divide-\\[--w-rgb-white\\/0\\]>*+*{border-color: rgba(var(--w-rgb-white),0);}
+.divide-\\[--w-s-color-background-positive-selected-hover\\/100\\]>*+*{border-color: rgba(var(--w-s-rgb-background-positive-selected-hover),1);}
+.divide-\\[var\\(--w-color-text-link-active\\)\\/55\\]>*+*{border-color: rgba(var(--w-rgb-text-link-active),0.55);}
+.divide-\\[var\\(--w-s-color-border\\)\\/60\\]>*+*{border-color: rgba(var(--w-s-rgb-border),0.6);}
+.divide-x-\\[--w-s-color-background\\/5\\]>*+*{border-left-color: rgba(var(--w-s-rgb-background),0.05);border-right-color: rgba(var(--w-s-rgb-background),0.05);}
+.divide-x-\\[--w-white\\/5\\]>*+*{border-left-color: rgba(var(--w-rgb-white),0.05);border-right-color: rgba(var(--w-rgb-white),0.05);}
+.divide-y-\\[--w-rgb-black\\/75\\]>*+*{border-top-color: rgba(var(--w-rgb-black),0.75);border-bottom-color: rgba(var(--w-rgb-black),0.75);}
+.divide-y-\\[var\\(--w-black\\)\\/100\\]>*+*{border-top-color: rgba(var(--w-rgb-black),1);border-bottom-color: rgba(var(--w-rgb-black),1);}
+.divide-y-\\[var\\(--w-s-rgb-border-disabled\\)\\/12\\]>*+*{border-top-color: rgba(var(--w-s-rgb-border-disabled),0.12);border-bottom-color: rgba(var(--w-s-rgb-border-disabled),0.12);}"
 `;
 
 exports[`border > supports setting border color 1`] = `

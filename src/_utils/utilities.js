@@ -3,6 +3,7 @@ import { colorOpacityToString, colorToString, parseCssColor } from './colors.js'
 import { handler as h } from './handlers/index.js';
 import { directionMap, globalKeywords } from './mappings.js';
 import { getComponents } from './getComponents.js';
+import { percent } from './handlers/handlers.js';
 
 /**
  * Provide {@link DynamicMatcher} function returning spacing definition. See spacing rules.
@@ -228,4 +229,15 @@ export function resolveArbitraryValues(value, unit, context) {
   if (unit === '%') return `${h.percent(`${value}`) * 100}${unit}`;
   if (value.startsWith('--')) return `var(${value})`;
   return h.rem(value) || value;
+}
+
+export function resolveArbitraryCssVariable(val, alpha) {
+  let cssValue = val.startsWith('--') ? `var(${val})` : val;
+  if (alpha) {
+    if (!/^var\(--w-(s-)?rgb-/.test(cssValue)) {
+      cssValue = cssValue.replace(/^var\(--w-(s-)?(color-)?(.*)\)$/, 'var(--w-$1rgb-$3)');
+    }
+    cssValue = `rgba(${cssValue},${percent(alpha.substring(1))})`;
+  }
+  return cssValue;
 }

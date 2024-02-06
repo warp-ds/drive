@@ -23,6 +23,20 @@ exports[`opacity by theme 1`] = `
 .opacity-75{opacity:75%;}"
 `;
 
+exports[`supports setting arbitrary outline color variables with alpha channel 1`] = `
+"/* layer: default */
+.text-\\[--w-black\\/90\\]{color:rgba(var(--w-rgb-black),0.9);}
+.text-\\[--w-rgb-black\\/75\\]{color:rgba(var(--w-rgb-black),0.75);}
+.text-\\[--w-rgb-white\\/0\\]{color:rgba(var(--w-rgb-white),0);}
+.text-\\[--w-s-color-background-positive-selected-hover\\/100\\]{color:rgba(var(--w-s-rgb-background-positive-selected-hover),1);}
+.text-\\[--w-s-color-background\\/5\\]{color:rgba(var(--w-s-rgb-background),0.05);}
+.text-\\[--w-white\\/5\\]{color:rgba(var(--w-rgb-white),0.05);}
+.text-\\[var\\(--w-black\\)\\/100\\]{color:rgba(var(--w-rgb-black),1);}
+.text-\\[var\\(--w-color-text-link-active\\)\\/55\\]{color:rgba(var(--w-rgb-text-link-active),0.55);}
+.text-\\[var\\(--w-s-color-border\\)\\/60\\]{color:rgba(var(--w-s-rgb-border),0.6);}
+.text-\\[var\\(--w-s-rgb-border-disabled\\)\\/12\\]{color:rgba(var(--w-s-rgb-border-disabled),0.12);}"
+`;
+
 exports[`supports setting arbitrary text colors 1`] = `
 "/* layer: default */
 .text-\\[--w-s-color-border\\],
