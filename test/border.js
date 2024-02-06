@@ -38,6 +38,18 @@ describe('border', () => {
     expect(css).toMatchSnapshot();
   });
 
+  test('supports setting arbitrary border color variables with alpha channel', async ({ uno }) => {
+    const classes = ['border-[--w-black/90]', 'border-[--w-s-color-background-positive-selected-hover/100]', 'border-[--w-rgb-white/0]', 'border-[var(--w-color-text-link-active)/55]', 'border-[var(--w-s-color-border)/60]', 'border-l-[--w-s-color-background/5]', 'border-r-[var(--w-black)/100]', 'border-x-[--w-white/5]', 'border-y-[--w-rgb-black/75]', 'border-l-[var(--w-s-rgb-border-disabled)/12]'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('it should not generate css for arbitrary border color variables with incorrect alpha channel values', async ({ uno }) => {
+    const antiClasses = ['border-[--w-black/900]', 'border-x-[--w-black/]', 'border-l-[--w-black/101]', 'border-[--w-black/001]', 'border-[--w-black/1000]', 'border-[--w-black/00]', 'border-y-[--w-black/01]'];
+    const { css } = await uno.generate(antiClasses);
+    expect(css).toHaveLength(0);
+  });
+
   test('supports setting arbitrary divide color variables', async ({ uno }) => {
     const classes = ['divide-[--w-s-color-border]', 'divide-[var(--w-s-color-border-subtle)]', 'divide-x-[var(--w-s-color-border-negative)]', 'divide-y-[var(--w-s-color-border-positive)]'];
     const { css } = await uno.generate(classes);
@@ -55,6 +67,18 @@ describe('border', () => {
     const classes = ['divide-[#000000]', 'divide-[black]', 'divide-x-[rgb(0,0,0)]', 'divide-y-[rgba(0,0,0,0)]'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
+  });
+
+  test('supports setting arbitrary divide color variables with alpha channel', async ({ uno }) => {
+    const classes = ['divide-[--w-black/90]', 'divide-[--w-s-color-background-positive-selected-hover/100]', 'divide-[--w-rgb-white/0]', 'divide-[var(--w-color-text-link-active)/55]', 'divide-[var(--w-s-color-border)/60]', 'divide-x-[--w-s-color-background/5]', 'divide-y-[var(--w-black)/100]', 'divide-x-[--w-white/5]', 'divide-y-[--w-rgb-black/75]', 'divide-y-[var(--w-s-rgb-border-disabled)/12]'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('it should not generate css for arbitrary divide color variables with incorrect alpha channel values', async ({ uno }) => {
+    const antiClasses = ['divide-[--w-black/900]', 'divide-x-[--w-black/]', 'divide-y-[--w-black/101]', 'divide-[--w-black/001]', 'divide-[--w-black/1000]', 'divide-[--w-black/00]', 'divide-y-[--w-black/01]'];
+    const { css } = await uno.generate(antiClasses);
+    expect(css).toHaveLength(0);
   });
 
   test('supports setting border style', async ({ uno }) => {

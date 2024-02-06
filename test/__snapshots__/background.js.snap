@@ -89,6 +89,20 @@ exports[`bg size 1`] = `
 .bg-contain{background-size:contain;}"
 `;
 
+exports[`supports setting arbitrary background color variables with alpha channel 1`] = `
+"/* layer: default */
+.bg-\\[--w-black\\/90\\]{background-color:rgba(var(--w-rgb-black),0.9);}
+.bg-\\[--w-rgb-black\\/75\\]{background-color:rgba(var(--w-rgb-black),0.75);}
+.bg-\\[--w-rgb-white\\/0\\]{background-color:rgba(var(--w-rgb-white),0);}
+.bg-\\[--w-s-color-background-positive-selected-hover\\/100\\]{background-color:rgba(var(--w-s-rgb-background-positive-selected-hover),1);}
+.bg-\\[--w-s-color-background\\/5\\]{background-color:rgba(var(--w-s-rgb-background),0.05);}
+.bg-\\[--w-white\\/5\\]{background-color:rgba(var(--w-rgb-white),0.05);}
+.bg-\\[var\\(--w-black\\)\\/100\\]{background-color:rgba(var(--w-rgb-black),1);}
+.bg-\\[var\\(--w-color-text-link-active\\)\\/55\\]{background-color:rgba(var(--w-rgb-text-link-active),0.55);}
+.bg-\\[var\\(--w-s-color-border\\)\\/60\\]{background-color:rgba(var(--w-s-rgb-border),0.6);}
+.bg-\\[var\\(--w-s-rgb-border-disabled\\)\\/12\\]{background-color:rgba(var(--w-s-rgb-border-disabled),0.12);}"
+`;
+
 exports[`supports setting arbitrary background colors 1`] = `
 "/* layer: default */
 .bg-\\[--w-s-color-background\\],

@@ -1,4 +1,4 @@
-import { positionMap, globalKeywords, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
+import { positionMap, globalKeywords, makeGlobalStaticRules, resolveArbitraryValues, resolveArbitraryCssVariable } from '#utils';
 
 export const backgrounds = [
   // size
@@ -51,7 +51,7 @@ export const backgrounds = [
   ['bg-inherit', { 'background-color': 'inherit' }],
   ['bg-transparent', { 'background-color': 'transparent' }],
   ['bg-current', { 'background-color': 'currentColor' }],
-  [/^bg-\[(var\(--.+\)|--.+)]$/, ([, val]) => ({ 'background-color': val.startsWith('--') ? `var(${val})` : val })],
+  [/^bg-\[(var\(--.+\)|--[^\/]+)(\/(0|[1-9][0-9]?|100))?]$/, ([, val, alpha]) => ({ 'background-color': resolveArbitraryCssVariable(val, alpha) })],
 
   // image
   ['bg-none', { 'background-image': 'none' }],

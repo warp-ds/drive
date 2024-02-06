@@ -55,6 +55,18 @@ test('supports setting arbitrary background colors', async ({ uno }) => {
   expect(css).toMatchSnapshot();
 });
 
+test('supports setting arbitrary background color variables with alpha channel', async ({ uno }) => {
+  const classes = ['bg-[--w-black/90]', 'bg-[--w-s-color-background-positive-selected-hover/100]', 'bg-[--w-rgb-white/0]', 'bg-[var(--w-color-text-link-active)/55]', 'bg-[var(--w-s-color-border)/60]', 'bg-[--w-s-color-background/5]', 'bg-[var(--w-black)/100]', 'bg-[--w-white/5]', 'bg-[--w-rgb-black/75]', 'bg-[var(--w-s-rgb-border-disabled)/12]'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('it should not generate css for arbitrary background color variables with incorrect alpha channel values', async ({ uno }) => {
+  const antiClasses = ['bg-[--w-black/900]', 'bg-[--w-black/]', 'bg-[--w-black/101]', 'bg-[--w-black/001]', 'bg-[--w-black/1000]', 'bg-[--w-black/00]', 'bg-[--w-black/01]'];
+  const { css } = await uno.generate(antiClasses);
+  expect(css).toHaveLength(0);
+});
+
 test('supports setting arbitrary background positions', async ({ uno }) => {
   const classes = ['bg-[25%_75%]', 'bg-[right_3em_bottom_10px]', 'bg-[center_top_1rem]'];
   const { css } = await uno.generate(classes);
