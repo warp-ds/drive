@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/warp-ds/drive/compare/v1.8.0...v1.8.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* Remove use of deprecated component tokens ([#200](https://github.com/warp-ds/drive/issues/200)) ([90c0ea5](https://github.com/warp-ds/drive/commit/90c0ea5315e30e74a6195314b8795af662cc8292))
+
 ## [1.8.1-next.1](https://github.com/warp-ds/drive/compare/v1.8.0...v1.8.1-next.1) (2024-02-13)
 
 
