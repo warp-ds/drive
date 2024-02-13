@@ -48,10 +48,10 @@
     "@warp-ds/eslint-config": "^1.0.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
-    "rollup": "^4.9.4",
+    "rollup": "^4.10.0",
     "semantic-release": "^23.0.0",
     "unocss": "^0.58.5",
-    "vitest": "^1.1.3"
+    "vitest": "^1.2.2"
   },
   "eslintConfig": {
     "extends": "@warp-ds"
