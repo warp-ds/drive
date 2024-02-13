@@ -44,7 +44,7 @@ const checkmarkStyles = entriesToCss(
     width: '16px', //TODO: Change to corresponding variable when available
     height: '28px', //TODO: Change to corresponding variable when available
     left: 0,
-    color: 'var(--w-list-color-icon-checked)',
+    color: 'var(--w-s-color-icon-primary)',
     'background-size': 'contain',
     'background-position': '50%',
     'background-repeat': 'no-repeat',
