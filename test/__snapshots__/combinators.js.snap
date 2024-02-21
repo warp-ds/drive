@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`combinators > all 1`] = `
+"/* layer: default */
+.all\\:-bottom-1\\/2 *{bottom:-50%;}
+.\\!all\\:mt-32 *{margin-top:3.2rem !important;}
+.all\\:-mt-32 *{margin-top:-3.2rem;}
+.all\\:mt-32 *{margin-top:3.2rem;}"
+`;
+
+exports[`combinators > children 1`] = `
+"/* layer: default */
+.children\\:-bottom-1\\/2>*{bottom:-50%;}
+.\\!children\\:mt-32>*{margin-top:3.2rem !important;}
+.children\\:-mt-32>*{margin-top:-3.2rem;}
+.children\\:mt-32>*{margin-top:3.2rem;}"
+`;
+
+exports[`combinators > next 1`] = `
+"/* layer: default */
+.next\\:-bottom-1\\/2+*{bottom:-50%;}
+.\\!next\\:mt-32+*{margin-top:3.2rem !important;}
+.next\\:-mt-32+*{margin-top:-3.2rem;}
+.next\\:mt-32+*{margin-top:3.2rem;}"
+`;
+
+exports[`combinators > sibling 1`] = `
+"/* layer: default */
+.sibling\\:-bottom-1\\/2+*{bottom:-50%;}
+.\\!sibling\\:mt-32+*{margin-top:3.2rem !important;}
+.sibling\\:-mt-32+*{margin-top:-3.2rem;}
+.sibling\\:mt-32+*{margin-top:3.2rem;}"
+`;
+
+exports[`combinators > siblings 1`] = `
+"/* layer: default */
+.siblings\\:-bottom-1\\/2~*{bottom:-50%;}
+.\\!siblings\\:mt-32~*{margin-top:3.2rem !important;}
+.siblings\\:-mt-32~*{margin-top:-3.2rem;}
+.siblings\\:mt-32~*{margin-top:3.2rem;}"
+`;
