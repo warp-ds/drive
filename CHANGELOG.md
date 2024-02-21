@@ -1,3 +1,10 @@
+# [1.9.0-next.1](https://github.com/warp-ds/drive/compare/v1.8.1...v1.9.0-next.1) (2024-02-21)
+
+
+### Features
+
+* Add support for variant combinators ([#202](https://github.com/warp-ds/drive/issues/202)) ([e9a6a0a](https://github.com/warp-ds/drive/commit/e9a6a0ab98caec72c9025c0872437bc418e1f5a0))
+
 ## [1.8.1](https://github.com/warp-ds/drive/compare/v1.8.0...v1.8.1) (2024-02-13)
 
 
