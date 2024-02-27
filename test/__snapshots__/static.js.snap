@@ -74,6 +74,14 @@ exports[`static rules do static things 1`] = `
 .select-unset{user-select:unset;}
 .content-empty{content:"";}
 .content-none{content:none;}
+.hyphens-manual{-webkit-hyphens:manual;-ms-hyphens:manual;hyphens:manual;}
+.hyphens-auto{-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;}
+.hyphens-none{-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;}
+.hyphens-inherit{-webkit-hyphens:inherit;-ms-hyphens:inherit;hyphens:inherit;}
+.hyphens-initial{-webkit-hyphens:initial;-ms-hyphens:initial;hyphens:initial;}
+.hyphens-revert{-webkit-hyphens:revert;-ms-hyphens:revert;hyphens:revert;}
+.hyphens-revert-layer{-webkit-hyphens:revert-layer;-ms-hyphens:revert-layer;hyphens:revert-layer;}
+.hyphens-unset{-webkit-hyphens:unset;-ms-hyphens:unset;hyphens:unset;}
 .break-normal{overflow-wrap:normal;word-break:normal;}
 .break-words{overflow-wrap:break-word;}
 .break-all{word-break:break-all;}
