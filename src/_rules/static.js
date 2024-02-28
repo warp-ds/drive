@@ -20,6 +20,17 @@ export const contents = [
   ['content-none', { content: 'none' }],
 ];
 
+export const hyphens = [
+  ...['manual', 'auto', 'none', ...globalKeywords].map((keyword) => [
+    `hyphens-${keyword}`,
+    {
+      '-webkit-hyphens': keyword,
+      '-ms-hyphens': keyword,
+      hyphens: keyword,
+    },
+  ]),
+];
+
 export const breaks = [
   ['break-normal', { 'overflow-wrap': 'normal', 'word-break': 'normal' }],
   ['break-words', { 'overflow-wrap': 'break-word' }],
