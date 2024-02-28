@@ -8,15 +8,17 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install pnpm and dependencies
+    - name: Install pnpm
       uses: pnpm/action-setup@v2
       with:
         version: 8
-        run_install: true
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        cache: 'pnpm'
+        node-version: lts/*
+    - name: Install dependencies
+      run: pnpm i
     - name: Test and build
       run: |
         pnpm test
