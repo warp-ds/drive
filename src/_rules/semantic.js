@@ -14,4 +14,12 @@ export const semanticRules = [
   [getSemanticRegEx('outline'), ([, semanticVal = '']) => ({ 'outline-color': h.semanticToken(`border${semanticVal}`) })],
   [getSemanticRegEx('border', 'lrtbxy'), handleBorder],
   [getSemanticRegEx('divide', 'xy'), handleDivide],
+  [/^s-surface-sunken$/, () => ({ 'background-color': 'var(--w-s-color-surface-sunken)' })],
+  [
+    /^s-(surface-elevated-.*)$/,
+    ([, semanticVal]) => ({
+      'background-color': `var(--w-s-color-${semanticVal}`,
+      'box-shadow': `var(--w-s-shadow-${semanticVal})`,
+    }),
+  ],
 ];

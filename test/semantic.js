@@ -21,3 +21,15 @@ test('it should not generate css with incorrect alpha channel values', async ({ 
   const { css } = await uno.generate(antiClasses);
   expect(css).toHaveLength(0);
 });
+
+test('it generates css based on semantic surface tokens', async ({ uno }) => {
+  const classes = ['s-surface-sunken', 's-surface-elevated-100', 's-surface-elevated-100-hover', 's-surface-elevated-100-active', 's-surface-elevated-200', 's-surface-elevated-200-hover', 's-surface-elevated-200-active', 's-surface-elevated-300', 's-surface-elevated-300-hover', 's-surface-elevated-300-active'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+
+test('it should not generate css for incorrect surface classes', async ({ uno }) => {
+  const antiClasses = ['s-surface', 's-surface-sunken-100', 's-surface-elevated', 'surface-elevated-100', 'surface-sunken'];
+  const { css } = await uno.generate(antiClasses);
+  expect(css).toHaveLength(0);
+});
