@@ -1,3 +1,10 @@
+## [1.10.1-next.1](https://github.com/warp-ds/drive/compare/v1.10.0...v1.10.1-next.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* Bug fix for elevated surface classes ([#210](https://github.com/warp-ds/drive/issues/210)) ([7e453dc](https://github.com/warp-ds/drive/commit/7e453dcdd8965daf2b36cd6307beacacaa565c69))
+
 # [1.10.0](https://github.com/warp-ds/drive/compare/v1.9.0...v1.10.0) (2024-03-15)
 
 
