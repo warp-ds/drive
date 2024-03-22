@@ -3,15 +3,15 @@
 exports[`it generates css based on semantic surface tokens 1`] = `
 "/* layer: default */
 .s-surface-sunken{background-color:var(--w-s-color-surface-sunken);}
-.s-surface-elevated-100{background-color:var(--w-s-color-surface-elevated-100;box-shadow:var(--w-s-shadow-surface-elevated-100);}
-.s-surface-elevated-100-active{background-color:var(--w-s-color-surface-elevated-100-active;box-shadow:var(--w-s-shadow-surface-elevated-100-active);}
-.s-surface-elevated-100-hover{background-color:var(--w-s-color-surface-elevated-100-hover;box-shadow:var(--w-s-shadow-surface-elevated-100-hover);}
-.s-surface-elevated-200{background-color:var(--w-s-color-surface-elevated-200;box-shadow:var(--w-s-shadow-surface-elevated-200);}
-.s-surface-elevated-200-active{background-color:var(--w-s-color-surface-elevated-200-active;box-shadow:var(--w-s-shadow-surface-elevated-200-active);}
-.s-surface-elevated-200-hover{background-color:var(--w-s-color-surface-elevated-200-hover;box-shadow:var(--w-s-shadow-surface-elevated-200-hover);}
-.s-surface-elevated-300{background-color:var(--w-s-color-surface-elevated-300;box-shadow:var(--w-s-shadow-surface-elevated-300);}
-.s-surface-elevated-300-active{background-color:var(--w-s-color-surface-elevated-300-active;box-shadow:var(--w-s-shadow-surface-elevated-300-active);}
-.s-surface-elevated-300-hover{background-color:var(--w-s-color-surface-elevated-300-hover;box-shadow:var(--w-s-shadow-surface-elevated-300-hover);}"
+.s-surface-elevated-100{background-color:var(--w-s-color-surface-elevated-100);box-shadow:var(--w-s-shadow-surface-elevated-100);}
+.s-surface-elevated-100-active{background-color:var(--w-s-color-surface-elevated-100-active);box-shadow:var(--w-s-shadow-surface-elevated-100-active);}
+.s-surface-elevated-100-hover{background-color:var(--w-s-color-surface-elevated-100-hover);box-shadow:var(--w-s-shadow-surface-elevated-100-hover);}
+.s-surface-elevated-200{background-color:var(--w-s-color-surface-elevated-200);box-shadow:var(--w-s-shadow-surface-elevated-200);}
+.s-surface-elevated-200-active{background-color:var(--w-s-color-surface-elevated-200-active);box-shadow:var(--w-s-shadow-surface-elevated-200-active);}
+.s-surface-elevated-200-hover{background-color:var(--w-s-color-surface-elevated-200-hover);box-shadow:var(--w-s-shadow-surface-elevated-200-hover);}
+.s-surface-elevated-300{background-color:var(--w-s-color-surface-elevated-300);box-shadow:var(--w-s-shadow-surface-elevated-300);}
+.s-surface-elevated-300-active{background-color:var(--w-s-color-surface-elevated-300-active);box-shadow:var(--w-s-shadow-surface-elevated-300-active);}
+.s-surface-elevated-300-hover{background-color:var(--w-s-color-surface-elevated-300-hover);box-shadow:var(--w-s-shadow-surface-elevated-300-hover);}"
 `;
 
 exports[`it generates css based on semantic warp tokens 1`] = `
