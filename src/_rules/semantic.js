@@ -18,7 +18,7 @@ export const semanticRules = [
   [
     /^s-(surface-elevated-.*)$/,
     ([, semanticVal]) => ({
-      'background-color': `var(--w-s-color-${semanticVal}`,
+      'background-color': `var(--w-s-color-${semanticVal})`,
       'box-shadow': `var(--w-s-shadow-${semanticVal})`,
     }),
   ],
