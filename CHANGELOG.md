@@ -1,3 +1,10 @@
+## [1.10.2-next.1](https://github.com/warp-ds/drive/compare/v1.10.1...v1.10.2-next.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* Correct color for spinner background ([#212](https://github.com/warp-ds/drive/issues/212)) ([5720630](https://github.com/warp-ds/drive/commit/57206300c591fa5f23c5d0cb9502df97b92e7bdc))
+
 ## [1.10.1](https://github.com/warp-ds/drive/compare/v1.10.0...v1.10.1) (2024-03-25)
 
 
