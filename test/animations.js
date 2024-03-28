@@ -16,6 +16,6 @@ test('animate spinner', async ({ uno }) => {
   const { css } = await uno.generate(classes);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
-    .animate-spinner{--spinner-size: 24px;height: var(--spinner-size);width: var(--spinner-size);border-radius: 50%;border: calc(var(--spinner-size) / 8) solid rgba(var(--w-s-rgb-border-primary),.5);border-top-color: var(--w-s-color-border-primary);position: relative;animation: animate-spinner 0.75s infinite linear;}.animate-spinner::before,.animate-spinner::after{content: ' ';height: calc(var(--spinner-size) / 8);width: calc(var(--spinner-size) / 8);border-radius: 50%;position: absolute;top: calc(var(--spinner-size) / 180);}.animate-spinner::after{right:0;}.animate-spinner::before{left:0;}@keyframes animate-spinner {to{transform:rotate(359deg);}}"
+    .animate-spinner{--spinner-size: 24px;height: var(--spinner-size);width: var(--spinner-size);border-radius: 50%;border: calc(var(--spinner-size) / 8) solid rgba(var(--w-s-rgb-border-primary-subtle),.5);border-top-color: var(--w-s-color-border-primary);position: relative;animation: animate-spinner 0.75s infinite linear;}.animate-spinner::before,.animate-spinner::after{content: ' ';height: calc(var(--spinner-size) / 8);width: calc(var(--spinner-size) / 8);border-radius: 50%;position: absolute;top: calc(var(--spinner-size) / 180);}.animate-spinner::after{right:0;}.animate-spinner::before{left:0;}@keyframes animate-spinner {to{transform:rotate(359deg);}}"
   `);
 });
