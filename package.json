@@ -47,7 +47,7 @@
     "@unocss/autocomplete": "^0.58.5",
     "@warp-ds/eslint-config": "^1.0.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.56.0",
+    "eslint": "^9.0.0",
     "rollup": "^4.10.0",
     "semantic-release": "^23.0.0",
     "unocss": "^0.58.5",
