@@ -1,3 +1,16 @@
+# [1.11.0](https://github.com/warp-ds/drive/compare/v1.10.2...v1.11.0) (2024-04-15)
+
+
+### Bug Fixes
+
+* New svg icon and styling fixes for list-checked ([#215](https://github.com/warp-ds/drive/issues/215)) ([859dc69](https://github.com/warp-ds/drive/commit/859dc69a77ca74db59c9b2bc3a818c74cf0e45af))
+
+
+### Features
+
+* Added rules for break-before and break-after ([#217](https://github.com/warp-ds/drive/issues/217)) ([b630130](https://github.com/warp-ds/drive/commit/b6301306202f1907a592da219fc6135649d6c35f))
+* Added rules for break-inside ([#216](https://github.com/warp-ds/drive/issues/216)) ([d87aec6](https://github.com/warp-ds/drive/commit/d87aec6a5e6677c304c8e0d9955000d7ea414922))
+
 # [1.11.0-next.3](https://github.com/warp-ds/drive/compare/v1.11.0-next.2...v1.11.0-next.3) (2024-04-15)
 
 
