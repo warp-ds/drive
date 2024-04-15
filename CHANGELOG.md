@@ -1,3 +1,10 @@
+# [1.11.0-next.1](https://github.com/warp-ds/drive/compare/v1.10.2...v1.11.0-next.1) (2024-04-15)
+
+
+### Features
+
+* Added rules for break-inside ([#216](https://github.com/warp-ds/drive/issues/216)) ([d87aec6](https://github.com/warp-ds/drive/commit/d87aec6a5e6677c304c8e0d9955000d7ea414922))
+
 ## [1.10.2](https://github.com/warp-ds/drive/compare/v1.10.1...v1.10.2) (2024-03-28)
 
 
