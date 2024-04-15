@@ -1,3 +1,10 @@
+# [1.11.0-next.2](https://github.com/warp-ds/drive/compare/v1.11.0-next.1...v1.11.0-next.2) (2024-04-15)
+
+
+### Features
+
+* Added rules for break-before and break-after ([#217](https://github.com/warp-ds/drive/issues/217)) ([b630130](https://github.com/warp-ds/drive/commit/b6301306202f1907a592da219fc6135649d6c35f))
+
 # [1.11.0-next.1](https://github.com/warp-ds/drive/compare/v1.10.2...v1.11.0-next.1) (2024-04-15)
 
 
