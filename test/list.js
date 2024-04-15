@@ -27,7 +27,7 @@ describe('list', () => {
 
     expect(css).toMatchInlineSnapshot(`
       "/* layer: default */
-      .list-checked{line-height:var(--w-font-line-height-1);}.list-checked>li{position:relative;padding-left:24px;}.list-checked>li::before{content:"";display:block;position:absolute;width:16px;height:28px;left:0;color:var(--w-s-color-icon-primary);background-size:contain;background-position:50%;background-repeat:no-repeat;background-image:"";}"
+      .list-checked>li{position:relative;padding-left:1.2em;}.list-checked>li::before{content:"";position:absolute;left:0;top:.1em;width:1em;height:1em;background:no-repeat 50%/contain var(--w-icon-list-checked);}"
     `);
   });
 });
