@@ -25,30 +25,21 @@ export const listStyle = [
   ...makeGlobalStaticRules('list', 'list-style-type'),
 ];
 
-const listCheckedContainerStyles = entriesToCss(
-  Object.entries({
-    'line-height': 'var(--w-font-line-height-1)', //TODO: Add proper line-height variable
-  }),
-);
 const listCheckedItemStyles = entriesToCss(
   Object.entries({
     position: 'relative',
-    'padding-left': '24px', //TODO: Change to corresponding variable when available
+    'padding-left': '1.2em',
   }),
 );
 const checkmarkStyles = entriesToCss(
   Object.entries({
     content: '""',
-    display: 'block',
     position: 'absolute',
-    width: '16px', //TODO: Change to corresponding variable when available
-    height: '28px', //TODO: Change to corresponding variable when available
     left: 0,
-    color: 'var(--w-s-color-icon-primary)',
-    'background-size': 'contain',
-    'background-position': '50%',
-    'background-repeat': 'no-repeat',
-    'background-image': '""', //TODO: Can we do this with an svg image url here? Or how will we solve this? Themeable?
+    top: '.1em',
+    width: '1em',
+    height: '1em',
+    background: 'no-repeat 50%/contain var(--w-icon-list-checked)',
   }),
 );
 
@@ -56,10 +47,9 @@ export const listChecked = [
   [
     /^list-checked$/,
     ([selector]) => {
-      const listContainer = `.${selector}{${listCheckedContainerStyles}}`;
       const listItem = `.${selector}>li{${listCheckedItemStyles}}`;
       const checkmark = `.${selector}>li::before{${checkmarkStyles}}`;
-      return listContainer + listItem + checkmark;
+      return listItem + checkmark;
     },
   ],
 ];
