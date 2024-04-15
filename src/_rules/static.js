@@ -36,6 +36,10 @@ export const breaks = [
   ['break-words', { 'overflow-wrap': 'break-word' }],
   ['break-all', { 'word-break': 'break-all' }],
   ['break-keep', { 'word-break': 'keep-all' }],
+  ['break-inside-auto', { 'break-inside': 'auto' }],
+  ['break-inside-avoid', { 'break-inside': 'avoid' }],
+  ['break-inside-avoid-page', { 'break-inside': 'avoid-page' }],
+  ['break-inside-avoid-column', { 'break-inside': 'avoid-column' }],
 ];
 
 export const textOverflows = [
