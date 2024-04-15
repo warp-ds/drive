@@ -1,3 +1,10 @@
+# [1.11.0-next.3](https://github.com/warp-ds/drive/compare/v1.11.0-next.2...v1.11.0-next.3) (2024-04-15)
+
+
+### Bug Fixes
+
+* New svg icon and styling fixes for list-checked ([#215](https://github.com/warp-ds/drive/issues/215)) ([859dc69](https://github.com/warp-ds/drive/commit/859dc69a77ca74db59c9b2bc3a818c74cf0e45af))
+
 # [1.11.0-next.2](https://github.com/warp-ds/drive/compare/v1.11.0-next.1...v1.11.0-next.2) (2024-04-15)
 
 
