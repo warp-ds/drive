@@ -1,5 +1,38 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`arbitrary margin with css variables works 1`] = `
+"/* layer: default */
+.m-\\[var\\(--w-spacing\\)\\]{margin:var(--w-spacing);}
+.mx-\\[var\\(--w-spacing\\)\\]{margin-left:var(--w-spacing);margin-right:var(--w-spacing);}
+.my-\\[var\\(--w-spacing\\)\\]{margin-top:var(--w-spacing);margin-bottom:var(--w-spacing);}
+.mb-\\[var\\(--w-spacing\\)\\]{margin-bottom:var(--w-spacing);}
+.ml-\\[var\\(--w-spacing\\)\\]{margin-left:var(--w-spacing);}
+.mr-\\[var\\(--w-spacing\\)\\]{margin-right:var(--w-spacing);}
+.mt-\\[var\\(--w-spacing\\)\\]{margin-top:var(--w-spacing);}"
+`;
+
+exports[`arbitrary margin with warp css var and default value works 1`] = `
+"/* layer: default */
+.m-\\[var\\(--w-spacing\\,_8px\\)\\]{margin:var(--w-spacing, 8px);}
+.mx-\\[var\\(--w-spacing\\,_8px\\)\\]{margin-left:var(--w-spacing, 8px);margin-right:var(--w-spacing, 8px);}
+.my-\\[var\\(--w-spacing\\,_8px\\)\\]{margin-top:var(--w-spacing, 8px);margin-bottom:var(--w-spacing, 8px);}
+.mb-\\[var\\(--w-spacing\\,_8px\\)\\]{margin-bottom:var(--w-spacing, 8px);}
+.ml-\\[var\\(--w-spacing\\,_8px\\)\\]{margin-left:var(--w-spacing, 8px);}
+.mr-\\[var\\(--w-spacing\\,_8px\\)\\]{margin-right:var(--w-spacing, 8px);}
+.mt-\\[var\\(--w-spacing\\,_8px\\)\\]{margin-top:var(--w-spacing, 8px);}"
+`;
+
+exports[`arbitrary margin with warp tokens works 1`] = `
+"/* layer: default */
+.m-\\[--w-spacing\\]{margin:var(--w-spacing);}
+.mx-\\[--w-spacing\\]{margin-left:var(--w-spacing);margin-right:var(--w-spacing);}
+.my-\\[--w-spacing\\]{margin-top:var(--w-spacing);margin-bottom:var(--w-spacing);}
+.mb-\\[--w-spacing\\]{margin-bottom:var(--w-spacing);}
+.ml-\\[--w-spacing\\]{margin-left:var(--w-spacing);}
+.mr-\\[--w-spacing\\]{margin-right:var(--w-spacing);}
+.mt-\\[--w-spacing\\]{margin-top:var(--w-spacing);}"
+`;
+
 exports[`arbitrary margin works 1`] = `
 "/* layer: default */
 .m-\\[8\\]{margin:0.8rem;}
@@ -23,6 +56,39 @@ exports[`arbitrary margin works 1`] = `
 .mt-\\[8\\]{margin-top:0.8rem;}
 .mt-\\[8px\\]{margin-top:8px;}
 .mt-\\[8rem\\]{margin-top:8rem;}"
+`;
+
+exports[`arbitrary padding with css variables works 1`] = `
+"/* layer: default */
+.p-\\[var\\(--w-spacing\\)\\]{padding:var(--w-spacing);}
+.px-\\[var\\(--w-spacing\\)\\]{padding-left:var(--w-spacing);padding-right:var(--w-spacing);}
+.py-\\[var\\(--w-spacing\\)\\]{padding-top:var(--w-spacing);padding-bottom:var(--w-spacing);}
+.pb-\\[var\\(--w-spacing\\)\\]{padding-bottom:var(--w-spacing);}
+.pl-\\[var\\(--w-spacing\\)\\]{padding-left:var(--w-spacing);}
+.pr-\\[var\\(--w-spacing\\)\\]{padding-right:var(--w-spacing);}
+.pt-\\[var\\(--w-spacing\\)\\]{padding-top:var(--w-spacing);}"
+`;
+
+exports[`arbitrary padding with warp css var and default value works 1`] = `
+"/* layer: default */
+.p-\\[var\\(--w-spacing\\,_8px\\)\\]{padding:var(--w-spacing, 8px);}
+.px-\\[var\\(--w-spacing\\,_8px\\)\\]{padding-left:var(--w-spacing, 8px);padding-right:var(--w-spacing, 8px);}
+.py-\\[var\\(--w-spacing\\,_8px\\)\\]{padding-top:var(--w-spacing, 8px);padding-bottom:var(--w-spacing, 8px);}
+.pb-\\[var\\(--w-spacing\\,_8px\\)\\]{padding-bottom:var(--w-spacing, 8px);}
+.pl-\\[var\\(--w-spacing\\,_8px\\)\\]{padding-left:var(--w-spacing, 8px);}
+.pr-\\[var\\(--w-spacing\\,_8px\\)\\]{padding-right:var(--w-spacing, 8px);}
+.pt-\\[var\\(--w-spacing\\,_8px\\)\\]{padding-top:var(--w-spacing, 8px);}"
+`;
+
+exports[`arbitrary padding with warp tokens works 1`] = `
+"/* layer: default */
+.p-\\[--w-spacing\\]{padding:var(--w-spacing);}
+.px-\\[--w-spacing\\]{padding-left:var(--w-spacing);padding-right:var(--w-spacing);}
+.py-\\[--w-spacing\\]{padding-top:var(--w-spacing);padding-bottom:var(--w-spacing);}
+.pb-\\[--w-spacing\\]{padding-bottom:var(--w-spacing);}
+.pl-\\[--w-spacing\\]{padding-left:var(--w-spacing);}
+.pr-\\[--w-spacing\\]{padding-right:var(--w-spacing);}
+.pt-\\[--w-spacing\\]{padding-top:var(--w-spacing);}"
 `;
 
 exports[`arbitrary padding works 1`] = `

@@ -8,13 +8,13 @@ export const padding = [
   [/^p([rltb])-(.\d*)$/, directionSize('padding'), { autocomplete: '(m|p)<directions>-<num>' }],
   // matching arbitrary values
   [
-    /^p-\[(.\d*)(rem|px)?]$/,
+    /^p-\[(.+)(rem|px)?]$/,
     ([, value, unit], context) => ({
       padding: resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^p([xy])-\[(.\d*)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)])],
-  [/^p([rltb])-\[(.\d*)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)])],
+  [/^p([xy])-\[(.+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)])],
+  [/^p([rltb])-\[(.+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)])],
 ];
 
 export const margin = [
@@ -23,11 +23,11 @@ export const margin = [
   [/^m([rltb])-(.+)$/, directionSize('margin')],
   // matching arbitrary values
   [
-    /^m-\[(.\d*)(rem|px)?]$/,
+    /^m-\[(.+)(rem|px)?]$/,
     ([, value, unit], context) => ({
       margin: resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^m([xy])-\[(.\d*)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)])],
-  [/^m([rltb])-\[(.\d*)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)])],
+  [/^m([xy])-\[(.+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)])],
+  [/^m([rltb])-\[(.+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)])],
 ];
