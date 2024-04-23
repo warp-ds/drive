@@ -140,3 +140,7 @@ exports[`padding works 1`] = `
 .pr-16{padding-right:1.6rem;}
 .pt-16{padding-top:1.6rem;}"
 `;
+
+exports[`should not render styles for margin with invalid arbitrary values 1`] = `""`;
+
+exports[`should not render styles for padding with invalid arbitrary values 1`] = `""`;
