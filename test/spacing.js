@@ -4,7 +4,7 @@ import { setup } from './_helpers.js';
 setup();
 
 test('padding works', async ({ uno }) => {
-  const classes = ['p-8', 'px-2', 'py-4', 'pl-32', 'pr-16', 'pb-8', 'pt-16'];
+  const classes = ['p-8', 'px-2', 'py-4', 'pl-32', 'pr-16', 'pb-8', 'pt-16', 'p-auto', 'pl-auto'];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
@@ -52,6 +52,11 @@ test('arbitrary padding with warp css var and default value works', async ({ uno
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
+test('should not render styles for padding with invalid arbitrary values', async ({ uno }) => {
+  const classes = ['p-[kvar(--w-spacing,_8px)]', 'px-[hello]', 'py-[-hello]', 'pt-[]', 'pb-[..]'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
 test('arbitrary margin with warp tokens works', async ({ uno }) => {
   const classes = ['m-[--w-spacing]', 'mx-[--w-spacing]', 'my-[--w-spacing]', 'mt-[--w-spacing]', 'mb-[--w-spacing]', 'ml-[--w-spacing]', 'mr-[--w-spacing]'];
   const { css } = await uno.generate(classes);
@@ -64,6 +69,11 @@ test('arbitrary margin with css variables works', async ({ uno }) => {
 });
 test('arbitrary margin with warp css var and default value works', async ({ uno }) => {
   const classes = ['m-[var(--w-spacing,_8px)]', 'mx-[var(--w-spacing,_8px)]', 'my-[var(--w-spacing,_8px)]', 'mt-[var(--w-spacing,_8px)]', 'mb-[var(--w-spacing,_8px)]', 'ml-[var(--w-spacing,_8px)]', 'mr-[var(--w-spacing,_8px)]'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchSnapshot();
+});
+test('should not render styles for margin with invalid arbitrary values', async ({ uno }) => {
+  const classes = ['m-[kvar(--w-spacing,_8px)]', 'mx-[hello]', 'my-[-hello]', 'mt-[]', 'mb-[..]'];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });

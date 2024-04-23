@@ -3,9 +3,9 @@ import { directionSize, resolveArbitraryValues, directionMap } from '#utils';
 // negatives come in via the negative variant
 export const padding = [
   // empty capture group here sets an empty string for 'direction' instead of undefined
-  [/^p()-(.\d*)$/, directionSize('padding'), { autocomplete: '(m|p)-<num>' }],
-  [/^p([xy])-(.\d*)$/, directionSize('padding')],
-  [/^p([rltb])-(.\d*)$/, directionSize('padding'), { autocomplete: '(m|p)<directions>-<num>' }],
+  [/^p()-(.+)$/, directionSize('padding'), { autocomplete: '(m|p)-<num>' }],
+  [/^p([xy])-(.+)$/, directionSize('padding')],
+  [/^p([rltb])-(.+)$/, directionSize('padding'), { autocomplete: '(m|p)<directions>-<num>' }],
   // matching arbitrary values containing 'var(--)', '--', or a (negative) number with optional unit
   [
     /^p-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/,
