@@ -1,3 +1,10 @@
+# [1.12.0-next.1](https://github.com/warp-ds/drive/compare/v1.11.0...v1.12.0-next.1) (2024-04-26)
+
+
+### Features
+
+* support css vars as arbitrary values for margins and paddings ([#219](https://github.com/warp-ds/drive/issues/219)) ([43d913f](https://github.com/warp-ds/drive/commit/43d913f46191785e063915334daf44f95f3735df))
+
 # [1.11.0](https://github.com/warp-ds/drive/compare/v1.10.2...v1.11.0) (2024-04-15)
 
 
