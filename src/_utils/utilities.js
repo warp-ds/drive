@@ -13,7 +13,7 @@ import { percent } from './handlers/handlers.js';
  */
 export function directionSize(propertyPrefix) {
   return ([_, direction, size], { theme }) => {
-    const v = theme.spacing?.[size] ?? h.bracket.global.auto.fraction(size);
+    const v = theme.spacing?.[size] ?? h.global.auto.fraction(size);
     if (v != null) return directionMap[direction].map((i) => [`${propertyPrefix}${i}`, v]);
   };
 }
