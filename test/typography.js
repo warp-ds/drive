@@ -17,6 +17,7 @@ test('typography - leading classes ', async ({ uno }) => {
   const classes = Object.entries(lineHeightMap)
     .map(([number, size]) => [`leading-${number}`, `leading-${size}`])
     .flat(1);
+  classes.push('leading-none');
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
