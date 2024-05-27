@@ -1,3 +1,10 @@
+## [1.12.1-next.1](https://github.com/warp-ds/drive/compare/v1.12.0...v1.12.1-next.1) (2024-05-27)
+
+
+### Bug Fixes
+
+* Tweak positioning of list-checked icon ([#223](https://github.com/warp-ds/drive/issues/223)) ([5f1a13f](https://github.com/warp-ds/drive/commit/5f1a13fecf2da34bb67ede38afed721283a8d832))
+
 # [1.12.0](https://github.com/warp-ds/drive/compare/v1.11.0...v1.12.0) (2024-04-29)
 
 
