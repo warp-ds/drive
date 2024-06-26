@@ -1,9 +1,8 @@
 import { entriesToCss, escapeSelector } from '@unocss/core';
 
-// TODO: Remove deprecated fallback (--w-s-color-focused) in v2
 const focusRingStyle = entriesToCss(
   Object.entries({
-    outline: '2px solid var(--w-s-color-border-focused, var(--w-s-color-focused))',
+    outline: '2px solid var(--w-s-color-border-focused)',
     'outline-offset': 'var(--w-outline-offset, 1px)',
   }),
 );
