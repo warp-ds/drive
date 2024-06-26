@@ -22,7 +22,6 @@ import * as position from './position.js';
 import * as semantic from './semantic.js';
 import * as shadow from './shadow.js';
 import * as size from './size.js';
-import * as slider from './slider.js';
 import * as spaceMargin from './space-margin.js';
 import * as spacing from './spacing.js';
 import * as typography from './typography.js';
@@ -57,7 +56,6 @@ const ruleGroups = {
   ...semantic,
   ...shadow,
   ...size,
-  ...slider,
   ...spaceMargin,
   ...spacing,
   ...staticRules,
@@ -95,7 +93,6 @@ export * from './size.js';
 export * from './space-margin.js';
 export * from './spacing.js';
 export * from './static.js';
-export * from './slider.js';
 export * from './table.js';
 export * from './transform.js';
 export * from './transition.js';
