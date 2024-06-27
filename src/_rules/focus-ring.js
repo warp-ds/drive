@@ -2,7 +2,7 @@ import { entriesToCss, escapeSelector } from '@unocss/core';
 
 const focusRingStyle = entriesToCss(
   Object.entries({
-    outline: '2px solid var(--w-s-color-border-focused)',
+    outline: '2px solid var(--w-s-color-border-focus)',
     'outline-offset': 'var(--w-outline-offset, 1px)',
   }),
 );
