@@ -7,8 +7,8 @@ import * as backgrounds from './background.js';
 import * as behaviors from './behaviors.js';
 import * as border from './border.js';
 import * as color from './color.js';
-import * as display from './display.js';
 import * as decoration from './decoration.js';
+import * as display from './display.js';
 import * as flex from './flex.js';
 import * as focusRing from './focus-ring.js';
 import * as gap from './gap.js';
@@ -24,11 +24,11 @@ import * as shadow from './shadow.js';
 import * as size from './size.js';
 import * as spaceMargin from './space-margin.js';
 import * as spacing from './spacing.js';
-import * as typography from './typography.js';
 import * as staticRules from './static.js';
+import * as table from './table.js';
 import * as transform from './transform.js';
 import * as transition from './transition.js';
-import * as table from './table.js';
+import * as typography from './typography.js';
 
 const ruleGroups = {
   ...align,

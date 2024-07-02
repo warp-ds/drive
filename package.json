@@ -28,12 +28,12 @@
     "unocss":"0.x"
   },
   "scripts": {
+    "build": "rollup -c",
     "commit": "cz",
     "dev": "node dev.js",
-    "test": "vitest",
-    "build": "rollup -c",
-    "lint:fix": "eslint . --fix --ignore-path .gitignore",
-    "lint:check": "eslint . --ignore-path .gitignore"
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "lint:check": "eslint . --ignore-path .gitignore",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "@djh",
@@ -48,9 +48,10 @@
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "@unocss/autocomplete": "^0.58.5",
-    "@warp-ds/eslint-config": "^1.0.4",
+    "@warp-ds/eslint-config": "1.0.5",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.56.0",
+    "eslint": "8.57.0",
+    "prettier": "3.2.5",
     "rollup": "^4.10.0",
     "semantic-release": "^23.0.0",
     "vitest": "^1.2.2"

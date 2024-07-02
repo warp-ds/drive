@@ -1,5 +1,6 @@
-import { setup } from './_helpers.js';
 import { expect, test } from 'vitest';
+
+import { setup } from './_helpers.js';
 
 setup();
 
@@ -21,7 +22,17 @@ test('will-change', async ({ uno }) => {
 });
 
 test('overscroll', async ({ uno }) => {
-  const classes = ['overscroll-auto', 'overscroll-contain', 'overscroll-none', 'overscroll-y-auto', 'overscroll-y-contain', 'overscroll-y-none', 'overscroll-x-auto', 'overscroll-x-contain', 'overscroll-x-none'];
+  const classes = [
+    'overscroll-auto',
+    'overscroll-contain',
+    'overscroll-none',
+    'overscroll-y-auto',
+    'overscroll-y-contain',
+    'overscroll-y-none',
+    'overscroll-x-auto',
+    'overscroll-x-contain',
+    'overscroll-x-none',
+  ];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });

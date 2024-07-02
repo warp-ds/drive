@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest';
+
 import { setup } from './_helpers.js';
 
 setup();

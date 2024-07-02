@@ -20,7 +20,11 @@ export const grid = [
   ['col-span-full', { 'grid-column': '1 / -1' }],
   ['row-span-full', { 'grid-row': '1 / -1' }],
   [/^row-span-(\d+)$/, ([, d]) => ({ 'grid-row': `span ${h.number(d)}/span ${h.number(d)}` })],
-  [/^col-span-(\d+)$/, ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }), { autocomplete: ['(row|col)-span-<num>'] }],
+  [
+    /^col-span-(\d+)$/,
+    ([, d]) => ({ 'grid-column': `span ${h.number(d)}/span ${h.number(d)}` }),
+    { autocomplete: ['(row|col)-span-<num>'] },
+  ],
   // starts & ends
   [/^row-start-(.+)$/, ([, d]) => ({ 'grid-row-start': h.number.auto(d) })],
   [/^col-start-(.+)$/, ([, d]) => ({ 'grid-column-start': h.number.auto(d) })],
@@ -32,7 +36,11 @@ export const grid = [
 
   // matching arbitrary values auto-rows + auto-cols
   [/^auto-rows-\[([\w%]+(?:[-\w()%,.]+)*)\]$/, ([, v]) => ({ 'grid-auto-rows': resolveArbitraryValues(v, null, null) })],
-  [/^auto-cols-\[([\w%]+(?:[-\w()%,.]+)*)\]$/, ([, v]) => ({ 'grid-auto-columns': resolveArbitraryValues(v, null, null) }), { autocomplete: ['auto-(rows|cols)-<num>'] }],
+  [
+    /^auto-cols-\[([\w%]+(?:[-\w()%,.]+)*)\]$/,
+    ([, v]) => ({ 'grid-auto-columns': resolveArbitraryValues(v, null, null) }),
+    { autocomplete: ['auto-(rows|cols)-<num>'] },
+  ],
 
   ['grid-flow-row', { 'grid-auto-flow': 'row' }],
   ['grid-flow-col', { 'grid-auto-flow': 'column' }],
@@ -50,7 +58,11 @@ export const grid = [
     }),
   ],
   [/^grid-rows-(\d+)$/, ([, d]) => ({ 'grid-template-rows': `repeat(${d},minmax(0,1fr))` })],
-  [/^grid-cols-(\d+)$/, ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }), { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] }],
+  [
+    /^grid-cols-(\d+)$/,
+    ([, d]) => ({ 'grid-template-columns': `repeat(${d},minmax(0,1fr))` }),
+    { autocomplete: ['grid-(rows|cols)-<num>', 'grid-(rows|cols)-none'] },
+  ],
   ['grid-rows-none', { 'grid-template-rows': 'none' }],
   ['grid-cols-none', { 'grid-template-columns': 'none' }],
 ];

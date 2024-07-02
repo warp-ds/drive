@@ -1,11 +1,26 @@
-import { setup } from './_helpers.js';
 import { describe, expect, test } from 'vitest';
+
+import { setup } from './_helpers.js';
 
 setup();
 
 describe('position', () => {
   test('check static, fixed, absolute, relative and sticky values', async (t) => {
-    const classes = ['overflow-clip', 'overflow-auto', 'overflow-hidden', 'overflow-visible', 'overflow-scroll', 'overflow-x-auto', 'overflow-x-hidden', 'overflow-x-visible', 'overflow-x-scroll', 'overflow-y-auto', 'overflow-y-hidden', 'overflow-y-visible', 'overflow-y-scroll'];
+    const classes = [
+      'overflow-clip',
+      'overflow-auto',
+      'overflow-hidden',
+      'overflow-visible',
+      'overflow-scroll',
+      'overflow-x-auto',
+      'overflow-x-hidden',
+      'overflow-x-visible',
+      'overflow-x-scroll',
+      'overflow-y-auto',
+      'overflow-y-hidden',
+      'overflow-y-visible',
+      'overflow-y-scroll',
+    ];
 
     const { css } = await t.uno.generate(classes);
 

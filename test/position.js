@@ -1,7 +1,9 @@
+import { describe, expect, test } from 'vitest';
+
 import { setup } from './_helpers.js';
+
 import { spaceBase } from '#theme';
 import { globalKeywords } from '#utils';
-import { describe, expect, test } from 'vitest';
 
 setup();
 
@@ -72,7 +74,20 @@ describe('alignments', () => {
   });
 
   test('check self- classes and their expected align-self values', async ({ uno }) => {
-    const classes = ['self-auto', 'auto', 'self-start', 'flex-start', 'self-end', 'flex-end', 'self-center', 'center', 'self-stretch', 'stretch', 'self-baseline', 'baseline'];
+    const classes = [
+      'self-auto',
+      'auto',
+      'self-start',
+      'flex-start',
+      'self-end',
+      'flex-end',
+      'self-center',
+      'center',
+      'self-stretch',
+      'stretch',
+      'self-baseline',
+      'baseline',
+    ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -80,7 +95,16 @@ describe('alignments', () => {
 
 describe('placements', () => {
   test('check place-content- classes and their expected place-content values', async ({ uno }) => {
-    const classes = ['place-content-center', 'place-content-start', 'place-content-end', 'place-content-between', 'place-content-around', 'place-content-evenly', 'place-content-stretch', 'place-content-baseline'];
+    const classes = [
+      'place-content-center',
+      'place-content-start',
+      'place-content-end',
+      'place-content-between',
+      'place-content-around',
+      'place-content-evenly',
+      'place-content-stretch',
+      'place-content-baseline',
+    ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -100,7 +124,9 @@ describe('placements', () => {
 
 describe('global keywords', () => {
   test('justify, alignments and placements should work with global keywords', async ({ uno }) => {
-    const classes = ['justify', 'justify-items', 'justify-self', 'content', 'items', 'self', 'place-content', 'place-items', 'place-self'].map((prefix) => globalKeywords.map((keyword) => `${prefix}-${keyword}`)).flat();
+    const classes = ['justify', 'justify-items', 'justify-self', 'content', 'items', 'self', 'place-content', 'place-items', 'place-self']
+      .map((prefix) => globalKeywords.map((keyword) => `${prefix}-${keyword}`))
+      .flat();
 
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -121,7 +147,20 @@ describe('insets', () => {
   });
 
   test('check inset- classes and their expected arbitrary values', async ({ uno }) => {
-    const classes = ['inset-[16]', 'inset-x-[16]', 'inset-y-[16]', 'inset-[16rem]', 'inset-x-[16rem]', 'inset-y-[16rem]', 'inset-[16px]', 'inset-x-[16px]', 'inset-y-[16px]', 'inset-[16%]', 'inset-x-[16%]', 'inset-y-[16%]'];
+    const classes = [
+      'inset-[16]',
+      'inset-x-[16]',
+      'inset-y-[16]',
+      'inset-[16rem]',
+      'inset-x-[16rem]',
+      'inset-y-[16rem]',
+      'inset-[16px]',
+      'inset-x-[16px]',
+      'inset-y-[16px]',
+      'inset-[16%]',
+      'inset-x-[16%]',
+      'inset-y-[16%]',
+    ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
@@ -139,7 +178,24 @@ describe('insets', () => {
   });
 
   test('check top-, left-, right-, bottom- classes and their expected arbitrary values', async ({ uno }) => {
-    const classes = ['top-[16]', 'left-[16]', 'right-[16]', 'bottom-[16]', 'top-[16rem]', 'left-[16rem]', 'right-[16rem]', 'bottom-[16rem]', 'top-[16px]', 'left-[16px]', 'right-[16px]', 'bottom-[16px]', 'top-[16%]', 'left-[16%]', 'right-[16%]', 'bottom-[16%]'];
+    const classes = [
+      'top-[16]',
+      'left-[16]',
+      'right-[16]',
+      'bottom-[16]',
+      'top-[16rem]',
+      'left-[16rem]',
+      'right-[16rem]',
+      'bottom-[16rem]',
+      'top-[16px]',
+      'left-[16px]',
+      'right-[16px]',
+      'bottom-[16px]',
+      'top-[16%]',
+      'left-[16%]',
+      'right-[16%]',
+      'bottom-[16%]',
+    ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });

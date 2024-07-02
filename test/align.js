@@ -1,11 +1,26 @@
-import { setup } from './_helpers.js';
 import { describe, expect, test } from 'vitest';
+
+import { setup } from './_helpers.js';
 
 setup();
 
 describe('align', () => {
   test('vertical align rules generates expected styles based on allowed classes', async (t) => {
-    const classes = ['align-mid', 'align-base', 'align-btm', 'align-baseline', 'align-top', 'align-start', 'align-middle', 'align-bottom', 'align-end', 'align-text-top', 'align-text-bottom', 'align-sub', 'align-super'];
+    const classes = [
+      'align-mid',
+      'align-base',
+      'align-btm',
+      'align-baseline',
+      'align-top',
+      'align-start',
+      'align-middle',
+      'align-bottom',
+      'align-end',
+      'align-text-top',
+      'align-text-bottom',
+      'align-sub',
+      'align-super',
+    ];
 
     const { css } = await t.uno.generate(classes);
 

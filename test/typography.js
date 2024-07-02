@@ -1,7 +1,10 @@
 import { expect, test } from 'vitest';
-import { setup } from './_helpers.js';
-import { textMap, lineHeightMap } from '#utils';
+
 import { typographyAliases } from '../src/_shortcuts/typography.js';
+
+import { setup } from './_helpers.js';
+
+import { textMap, lineHeightMap } from '#utils';
 
 setup();
 
