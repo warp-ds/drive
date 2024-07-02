@@ -1,3 +1,10 @@
+# [1.13.0-next.1](https://github.com/warp-ds/drive/compare/v1.12.1-next.1...v1.13.0-next.1) (2024-07-02)
+
+
+### Features
+
+* Added leading-none rule to set line-height to 1 ([#222](https://github.com/warp-ds/drive/issues/222)) ([b8c0092](https://github.com/warp-ds/drive/commit/b8c0092f057750c8aa00dae398a7b7a261fff9b3))
+
 ## [1.12.1-next.1](https://github.com/warp-ds/drive/compare/v1.12.0...v1.12.1-next.1) (2024-05-27)
 
 
