@@ -50,7 +50,7 @@
     "@unocss/autocomplete": "^0.58.5",
     "@warp-ds/eslint-config": "1.0.5",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "8.57.0",
+    "eslint": "9.6.0",
     "prettier": "3.2.5",
     "rollup": "^4.10.0",
     "semantic-release": "^23.0.0",
