@@ -13,7 +13,6 @@ import * as flex from './flex.js';
 import * as focusRing from './focus-ring.js';
 import * as gap from './gap.js';
 import * as grid from './grid.js';
-import * as internal from './internal.js';
 import * as layout from './layout.js';
 import * as lineClamp from './line-clamp.js';
 import * as list from './list.js';
@@ -47,7 +46,6 @@ const ruleGroups = {
   ...focusRing,
   ...gap,
   ...grid,
-  ...internal,
   ...layout,
   ...lineClamp,
   ...list,
@@ -81,7 +79,6 @@ export * from './flex.js';
 export * from './focus-ring.js';
 export * from './gap.js';
 export * from './grid.js';
-export * from './internal.js';
 export * from './layout.js';
 export * from './line-clamp.js';
 export * from './list.js';
