@@ -1,6 +1,8 @@
-import { setup } from './_helpers.js';
-import { spaceBase } from '#theme';
 import { expect, test } from 'vitest';
+
+import { setup } from './_helpers.js';
+
+import { spaceBase } from '#theme';
 
 setup();
 

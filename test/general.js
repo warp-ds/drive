@@ -1,7 +1,9 @@
-import { rules, display } from '#rules';
-import { assert, expect, test } from 'vitest';
-import { setup, getGenerator } from './_helpers.js';
 import { createAutocomplete } from '@unocss/autocomplete';
+import { assert, expect, test } from 'vitest';
+
+import { setup, getGenerator } from './_helpers.js';
+
+import { rules, display } from '#rules';
 
 setup();
 

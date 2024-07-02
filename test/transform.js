@@ -1,7 +1,9 @@
-import { setup, getFractions } from './_helpers.js';
 import { expect, test } from 'vitest';
-import { positionMap } from '#utils';
+
+import { setup, getFractions } from './_helpers.js';
+
 import { spaceBase } from '#theme';
+import { positionMap } from '#utils';
 
 setup();
 
@@ -20,7 +22,14 @@ test('translate', async ({ uno }) => {
 });
 
 test('arbitrary translate', async ({ uno }) => {
-  const classes = ['translate-x-[75]', 'translate-x-[75rem]', 'translate-x-[75px]', 'translate-y-[75]', 'translate-y-[75rem]', 'translate-y-[75px]'];
+  const classes = [
+    'translate-x-[75]',
+    'translate-x-[75rem]',
+    'translate-x-[75px]',
+    'translate-y-[75]',
+    'translate-y-[75rem]',
+    'translate-y-[75px]',
+  ];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });

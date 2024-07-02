@@ -1,4 +1,5 @@
 import { entriesToCss } from '@unocss/core';
+
 import { makeGlobalStaticRules } from '#utils';
 
 const listStyleTypes = {

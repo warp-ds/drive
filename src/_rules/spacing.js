@@ -13,8 +13,16 @@ export const padding = [
       padding: resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^p([xy])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)])],
-  [/^p([rltb])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)])],
+  [
+    /^p([xy])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/,
+    ([, direction, value, unit], context) =>
+      directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)]),
+  ],
+  [
+    /^p([rltb])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/,
+    ([, direction, value, unit], context) =>
+      directionMap[direction].map((i) => [`padding${i}`, resolveArbitraryValues(value, unit, context)]),
+  ],
 ];
 
 export const margin = [
@@ -28,6 +36,14 @@ export const margin = [
       margin: resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^m([xy])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)])],
-  [/^m([rltb])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/, ([, direction, value, unit], context) => directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)])],
+  [
+    /^m([xy])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/,
+    ([, direction, value, unit], context) =>
+      directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)]),
+  ],
+  [
+    /^m([rltb])-\[(var\(--.+\)|--.+|-?\d+)(rem|px)?]$/,
+    ([, direction, value, unit], context) =>
+      directionMap[direction].map((i) => [`margin${i}`, resolveArbitraryValues(value, unit, context)]),
+  ],
 ];

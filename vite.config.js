@@ -1,5 +1,6 @@
-import { defineConfig } from 'vitest/config';
 import UnoCSS from 'unocss/vite';
+import { defineConfig } from 'vitest/config';
+
 import { presetWarp } from '#plugin';
 
 export default defineConfig({
