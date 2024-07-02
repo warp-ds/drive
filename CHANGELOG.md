@@ -1,3 +1,25 @@
+# [2.0.0-next.1](https://github.com/warp-ds/drive/compare/v1.13.0-next.1...v2.0.0-next.1) (2024-07-02)
+
+
+### Bug Fixes
+
+* remove deprecations ([#225](https://github.com/warp-ds/drive/issues/225)) ([04ec89f](https://github.com/warp-ds/drive/commit/04ec89ffb85154ef61dc397e20238ae83ea8d47c))
+
+
+### BREAKING CHANGES
+
+* * fix(focus-ring): remove deprecated default token in outline color
+
+* fix(preflights): use v2/resets.css url resets should now come from @warp-ds/css/v2 instead of v1
+
+* fix(slider): remove deprecated slider rules
+
+ * fix(focus-ring): remove deprecated --w-s-color-border-focused token
+
+* fix: change unocss into a peerDependency and change to get the latest versions
+
+* fix: update @warp-ds/eslint-config to latest version, update lint scripts and fix linting errors
+
 # [1.13.0-next.1](https://github.com/warp-ds/drive/compare/v1.12.1-next.1...v1.13.0-next.1) (2024-07-02)
 
 
