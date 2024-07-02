@@ -1,11 +1,15 @@
-import { directionMap, handler as h } from '#utils';
 import { escapeSelector } from '@unocss/core';
 
-const handleBorder = ([, direction = '', semanticVal = '']) => directionMap[direction.substring(1)]?.map((dir) => [`border${dir}-color`, h.semanticToken(`border${semanticVal}`)]);
+import { directionMap, handler as h } from '#utils';
 
-const handleDivide = ([_selector, direction = '', semanticVal = '']) => `.${escapeSelector(_selector)}>*+*{${directionMap[direction.substring(1)]?.map((dir) => `border${dir}-color: ${h.semanticToken(`border${semanticVal}`)};`).join('')}}`;
+const handleBorder = ([, direction = '', semanticVal = '']) =>
+  directionMap[direction.substring(1)]?.map((dir) => [`border${dir}-color`, h.semanticToken(`border${semanticVal}`)]);
 
-const getSemanticRegEx = (groupName, directions) => new RegExp(`^s-${groupName}${directions ? `(-[${directions}])?` : ''}((-[^\\/]+)?(\\/(0|[1-9][0-9]?|100))?)?$`);
+const handleDivide = ([_selector, direction = '', semanticVal = '']) =>
+  `.${escapeSelector(_selector)}>*+*{${directionMap[direction.substring(1)]?.map((dir) => `border${dir}-color: ${h.semanticToken(`border${semanticVal}`)};`).join('')}}`;
+
+const getSemanticRegEx = (groupName, directions) =>
+  new RegExp(`^s-${groupName}${directions ? `(-[${directions}])?` : ''}((-[^\\/]+)?(\\/(0|[1-9][0-9]?|100))?)?$`);
 
 export const semanticRules = [
   [getSemanticRegEx('bg'), ([, semanticVal = '']) => ({ 'background-color': h.semanticToken(`background${semanticVal}`) })],

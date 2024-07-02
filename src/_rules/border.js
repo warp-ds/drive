@@ -1,14 +1,23 @@
 import { escapeSelector } from '@unocss/core';
-import { directionMap, cornerMap, resolveArbitraryValues, resolveArbitraryCssVariable } from '#utils';
+
 import { lineWidth } from '#theme';
+import { directionMap, cornerMap, resolveArbitraryValues, resolveArbitraryCssVariable } from '#utils';
 
 const borderStyles = ['solid', 'dashed', 'dotted', 'double', 'hidden', 'none', 'groove', 'ridge', 'inset', 'outset'];
 
 export const borders = [
   // border-width
   [/^border(-[lrtbxy])?$/, handleBorderWidth, { autocomplete: ['border', 'border-<directions>'] }],
-  [/^border(-[lrtbxy])?-(\d+)$/, handleBorderWidth, { autocomplete: [`border-(${Object.keys(lineWidth).join('|')})`, `border-<directions>-(${Object.keys(lineWidth).join('|')})`] }],
-  [/^border(-[lrtbxy])?-\[(\d+)(rem|px|%)?]$/, handleArbitraryBorderWidth, { autocomplete: ['border-[<num>]', 'border-<directions>-[<num>]'] }],
+  [
+    /^border(-[lrtbxy])?-(\d+)$/,
+    handleBorderWidth,
+    { autocomplete: [`border-(${Object.keys(lineWidth).join('|')})`, `border-<directions>-(${Object.keys(lineWidth).join('|')})`] },
+  ],
+  [
+    /^border(-[lrtbxy])?-\[(\d+)(rem|px|%)?]$/,
+    handleArbitraryBorderWidth,
+    { autocomplete: ['border-[<num>]', 'border-<directions>-[<num>]'] },
+  ],
 
   // border-color
   [/^border-transparent$/, () => ({ 'border-color': 'transparent' })],
@@ -18,7 +27,11 @@ export const borders = [
   [/^border(-[lrtbxy])?-\[(var\(--.+\)|--[^\/]+|\D[^\/]*)(\/(0|[1-9][0-9]?|100))?]$/, handleArbitraryBorderColor],
 
   // border-style
-  [new RegExp(`^border(-[lrtbxy])?-(${borderStyles.join('|')})$`), handleBorderStyle, { autocomplete: [`border-(${borderStyles.join('|')})`, `border-<directions>-(${borderStyles.join('|')})`] }],
+  [
+    new RegExp(`^border(-[lrtbxy])?-(${borderStyles.join('|')})$`),
+    handleBorderStyle,
+    { autocomplete: [`border-(${borderStyles.join('|')})`, `border-<directions>-(${borderStyles.join('|')})`] },
+  ],
 ];
 
 function handleBorderWidth([, dir = '', width], { theme }) {
@@ -41,7 +54,11 @@ function handleBorderStyle([, dir = '', style]) {
 export const divide = [
   // border-width
   [/^divide-([xy])$/, handleDivideWidth, { autocomplete: 'divide-(x|y)' }],
-  [/^divide-([xy])-(\d+)(-reverse)?$/, handleDivideWidth, { autocomplete: [`divide-(x|y)-(${Object.keys(lineWidth).join('|')})`, `divide-(x|y)-(${Object.keys(lineWidth).join('|')})-reverse`] }],
+  [
+    /^divide-([xy])-(\d+)(-reverse)?$/,
+    handleDivideWidth,
+    { autocomplete: [`divide-(x|y)-(${Object.keys(lineWidth).join('|')})`, `divide-(x|y)-(${Object.keys(lineWidth).join('|')})-reverse`] },
+  ],
   [/^divide-([xy])-\[(\d+)(rem|px|%)?](-reverse)?$/, handleArbitraryDivideWidth],
 
   // reverse order
@@ -91,7 +108,11 @@ export const rounded = [
       'border-radius': resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^rounded-([rltb]+)-\[(.\d*)(rem|px|%)?]$/, ([, direction, value, unit], context) => cornerMap[direction].map((i) => [`border${i}-radius`, resolveArbitraryValues(value, unit, context)])],
+  [
+    /^rounded-([rltb]+)-\[(.\d*)(rem|px|%)?]$/,
+    ([, direction, value, unit], context) =>
+      cornerMap[direction].map((i) => [`border${i}-radius`, resolveArbitraryValues(value, unit, context)]),
+  ],
 ];
 
 function handleRounded([, corner = '', val], { theme }) {

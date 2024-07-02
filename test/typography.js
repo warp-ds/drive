@@ -1,7 +1,10 @@
 import { expect, test } from 'vitest';
-import { setup } from './_helpers.js';
-import { textMap, lineHeightMap } from '#utils';
+
 import { typographyAliases } from '../src/_shortcuts/typography.js';
+
+import { setup } from './_helpers.js';
+
+import { textMap, lineHeightMap } from '#utils';
 
 setup();
 
@@ -17,6 +20,7 @@ test('typography - leading classes ', async ({ uno }) => {
   const classes = Object.entries(lineHeightMap)
     .map(([number, size]) => [`leading-${number}`, `leading-${size}`])
     .flat(1);
+  classes.push('leading-none');
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });

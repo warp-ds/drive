@@ -1,9 +1,9 @@
+import { postprocess } from '#postprocess';
 import { preflights } from '#preflights';
 import { rules } from '#rules';
 import { shortcuts } from '#shortcuts';
-import { variants } from '#variants';
 import { useTheme } from '#theme';
-import { postprocess } from '#postprocess';
+import { variants } from '#variants';
 /**
  * @typedef PluginOptions
  * @type {Object}

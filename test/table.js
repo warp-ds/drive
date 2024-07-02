@@ -1,6 +1,8 @@
 import { expect, test } from 'vitest';
-import { spaceBase } from '#theme';
+
 import { setup } from './_helpers.js';
+
+import { spaceBase } from '#theme';
 
 setup();
 
@@ -29,7 +31,9 @@ test('border-collapse', async (t) => {
 });
 
 test('border-spacing', async (t) => {
-  const classes = spaceBase.map((spacingUnit) => [`border-spacing-x-${spacingUnit}`, `border-spacing-y-${spacingUnit}`, `border-spacing-${spacingUnit}`]).flat();
+  const classes = spaceBase
+    .map((spacingUnit) => [`border-spacing-x-${spacingUnit}`, `border-spacing-y-${spacingUnit}`, `border-spacing-${spacingUnit}`])
+    .flat();
 
   const { css } = await t.uno.generate(classes);
 

@@ -1,4 +1,5 @@
 import { escapeRegExp } from '@unocss/core';
+
 import { getBracket } from './utilities.js';
 
 export const variantMatcher = (name, handler) => {
@@ -64,7 +65,11 @@ export const variantGetParameter = (prefix, matcher, separators) => {
       if (pos !== -1) {
         const labelPos = matcher.indexOf('/', prefix.length);
         const unlabelled = labelPos === -1 || pos <= labelPos;
-        return [matcher.slice(prefix.length, unlabelled ? pos : labelPos), matcher.slice(pos + separator.length), unlabelled ? '' : matcher.slice(labelPos + 1, pos)];
+        return [
+          matcher.slice(prefix.length, unlabelled ? pos : labelPos),
+          matcher.slice(pos + separator.length),
+          unlabelled ? '' : matcher.slice(labelPos + 1, pos),
+        ];
       }
     }
   }

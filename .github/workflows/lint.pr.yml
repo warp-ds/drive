@@ -15,7 +15,7 @@ jobs:
     - name: Install pnpm and dependencies
       uses: pnpm/action-setup@v2
       with:
-        version: 8
+        version: 9
         run_install: true
     - name: Lint
       run: pnpm lint:check

@@ -1,9 +1,10 @@
 import { toArray } from '@unocss/core';
+
 import { colorOpacityToString, colorToString, parseCssColor } from './colors.js';
-import { handler as h } from './handlers/index.js';
-import { directionMap, globalKeywords } from './mappings.js';
 import { getComponents } from './getComponents.js';
 import { percent } from './handlers/handlers.js';
+import { handler as h } from './handlers/index.js';
+import { directionMap, globalKeywords } from './mappings.js';
 
 /**
  * Provide {@link DynamicMatcher} function returning spacing definition. See spacing rules.

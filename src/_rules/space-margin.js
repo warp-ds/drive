@@ -11,7 +11,10 @@ function handlerSpace([, d, s = 1], { theme }) {
   if (v != null) {
     const results = directionMap[d].map((item) => {
       const key = `margin${item}`;
-      const value = item.endsWith('right') || item.endsWith('bottom') ? `calc(${v} * var(--w-space-${d}-reverse))` : `calc(${v} * calc(1 - var(--w-space-${d}-reverse)))`;
+      const value =
+        item.endsWith('right') || item.endsWith('bottom')
+          ? `calc(${v} * var(--w-space-${d}-reverse))`
+          : `calc(${v} * calc(1 - var(--w-space-${d}-reverse)))`;
       return [key, value];
     });
 

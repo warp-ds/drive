@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest';
+
 import { setup } from './_helpers.js';
 
 setup();
@@ -92,7 +93,20 @@ test('flex shrink/grow with arbitrary values', async (t) => {
 
 test('flex-basis', async (t) => {
   const autoClasses = ['basis'];
-  const classes = ['basis-1', 'basis-2', 'basis-4', 'basis-8', 'basis-16', 'basis-32', 'basis-48', 'basis-64', 'basis-1/2', 'basis-1/5', 'basis-1/4', 'basis-2/5'];
+  const classes = [
+    'basis-1',
+    'basis-2',
+    'basis-4',
+    'basis-8',
+    'basis-16',
+    'basis-32',
+    'basis-48',
+    'basis-64',
+    'basis-1/2',
+    'basis-1/5',
+    'basis-1/4',
+    'basis-2/5',
+  ];
 
   const { css } = await t.uno.generate([...classes, ...autoClasses]);
   expect(css).toMatchSnapshot();

@@ -1,7 +1,10 @@
 import { describe, expect, test } from 'vitest';
-import { setup } from './_helpers.js';
-import { globalKeywords } from '#utils';
+
 import * as displayRules from '../src/_rules/display.js';
+
+import { setup } from './_helpers.js';
+
+import { globalKeywords } from '#utils';
 
 setup();
 

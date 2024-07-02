@@ -1,5 +1,7 @@
 import { escapeSelector } from '@unocss/core';
+
 import { globalKeywords } from '../mappings.js';
+
 import { numberRE, numberWithUnitRE, unitOnlyRE } from './regex.js';
 
 // Not all, but covers most high frequency attributes
@@ -152,7 +154,9 @@ function bracketWithType(str, requiredType) {
       .replace(/(url\(.*?\))/g, (v) => v.replace(/_/g, '\\_'))
       .replace(/(^|[^\\])_/g, '$1 ')
       .replace(/\\_/g, '_')
-      .replace(/(?:calc|clamp|max|min)\((.*)/g, (v) => v.replace(/(-?\d*\.?\d(?!\b-.+[,)](?![^+\-/*])\D)(?:%|[a-z]+)?|\))([+\-/*])/g, '$1 $2 '));
+      .replace(/(?:calc|clamp|max|min)\((.*)/g, (v) =>
+        v.replace(/(-?\d*\.?\d(?!\b-.+[,)](?![^+\-/*])\D)(?:%|[a-z]+)?|\))([+\-/*])/g, '$1 $2 '),
+      );
   }
 }
 export function bracket(str) {

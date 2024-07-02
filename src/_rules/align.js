@@ -17,6 +17,15 @@ const verticalAlignAlias = {
   ...Object.fromEntries(globalKeywords.map((x) => [x, x])),
 };
 
-export const verticalAligns = [[/^align-([-\w]+)$/, ([, v]) => ({ 'vertical-align': verticalAlignAlias[v] }), { autocomplete: `align-(${Object.keys(verticalAlignAlias).join('|')})` }]];
+export const verticalAligns = [
+  [
+    /^align-([-\w]+)$/,
+    ([, v]) => ({ 'vertical-align': verticalAlignAlias[v] }),
+    { autocomplete: `align-(${Object.keys(verticalAlignAlias).join('|')})` },
+  ],
+];
 
-export const textAligns = ['center', 'left', 'right', 'justify', 'start', 'end', ...globalKeywords].map((v) => [`text-${v}`, { 'text-align': v }]);
+export const textAligns = ['center', 'left', 'right', 'justify', 'start', 'end', ...globalKeywords].map((v) => [
+  `text-${v}`,
+  { 'text-align': v },
+]);

@@ -1,5 +1,6 @@
 import { createGenerator } from '@unocss/core';
 import { beforeEach } from 'vitest';
+
 import { presetWarp } from '#plugin';
 
 export const getGenerator = (opts = {}) => createGenerator({ presets: [presetWarp({ ...opts, development: true })] });

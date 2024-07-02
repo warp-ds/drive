@@ -1,4 +1,5 @@
 import { entriesToCss } from '@unocss/core';
+
 import { makeGlobalStaticRules } from '#utils';
 
 const listStyleTypes = {
@@ -28,7 +29,7 @@ export const listStyle = [
 const listCheckedItemStyles = entriesToCss(
   Object.entries({
     position: 'relative',
-    'padding-left': '1.2em',
+    'padding-left': '1.5em',
   }),
 );
 const checkmarkStyles = entriesToCss(
@@ -36,9 +37,8 @@ const checkmarkStyles = entriesToCss(
     content: '""',
     position: 'absolute',
     left: 0,
-    top: '.1em',
     width: '1em',
-    height: '1em',
+    height: '1.2em',
     background: 'no-repeat 50%/contain var(--w-icon-list-checked)',
   }),
 );

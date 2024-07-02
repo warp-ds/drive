@@ -24,7 +24,11 @@ export const flex = [
   [/^shrink-\[?(\d+)]?$/, ([, d]) => ({ 'flex-shrink': h.number(d) ?? 1 }), { autocomplete: ['shrink-<num>'] }],
   ['grow', { 'flex-grow': 1 }],
   [/^grow-\[?(\d+)]?$/, ([, d = '']) => ({ 'flex-grow': h.number(d) ?? 1 }), { autocomplete: ['grow-<num>'] }],
-  [/^basis-(.+)$/, ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }), { autocomplete: ['basis-$spacing'] }],
+  [
+    /^basis-(.+)$/,
+    ([, d], { theme }) => ({ 'flex-basis': theme.spacing?.[d] ?? h.auto.fraction(d) }),
+    { autocomplete: ['basis-$spacing'] },
+  ],
   // matching arbitrary values
   [
     /^basis-\[(.\d*)(rem|px|%)?]$/,

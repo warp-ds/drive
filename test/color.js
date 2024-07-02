@@ -1,5 +1,7 @@
-import { setup } from './_helpers.js';
 import { expect, test } from 'vitest';
+
+import { setup } from './_helpers.js';
+
 import { opacity } from '#theme';
 
 setup();
@@ -29,13 +31,32 @@ test('supports setting arbitrary text colors', async ({ uno }) => {
 });
 
 test('supports setting arbitrary outline color variables with alpha channel', async ({ uno }) => {
-  const classes = ['text-[--w-black/90]', 'text-[--w-s-color-background-positive-selected-hover/100]', 'text-[--w-rgb-white/0]', 'text-[var(--w-color-text-link-active)/55]', 'text-[var(--w-s-color-border)/60]', 'text-[--w-s-color-background/5]', 'text-[var(--w-black)/100]', 'text-[--w-white/5]', 'text-[--w-rgb-black/75]', 'text-[var(--w-s-rgb-border-disabled)/12]'];
+  const classes = [
+    'text-[--w-black/90]',
+    'text-[--w-s-color-background-positive-selected-hover/100]',
+    'text-[--w-rgb-white/0]',
+    'text-[var(--w-color-text-link-active)/55]',
+    'text-[var(--w-s-color-border)/60]',
+    'text-[--w-s-color-background/5]',
+    'text-[var(--w-black)/100]',
+    'text-[--w-white/5]',
+    'text-[--w-rgb-black/75]',
+    'text-[var(--w-s-rgb-border-disabled)/12]',
+  ];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
 });
 
 test('it should not generate css for arbitrary outline color variables with incorrect alpha channel values', async ({ uno }) => {
-  const antiClasses = ['text-[--w-black/900]', 'text-[--w-black/]', 'text-[--w-black/101]', 'text-[--w-black/001]', 'text-[--w-black/1000]', 'text-[--w-black/00]', 'text-[--w-black/01]'];
+  const antiClasses = [
+    'text-[--w-black/900]',
+    'text-[--w-black/]',
+    'text-[--w-black/101]',
+    'text-[--w-black/001]',
+    'text-[--w-black/1000]',
+    'text-[--w-black/00]',
+    'text-[--w-black/01]',
+  ];
   const { css } = await uno.generate(antiClasses);
   expect(css).toHaveLength(0);
 });

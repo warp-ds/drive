@@ -1,5 +1,6 @@
-import { handler as h, insetMap, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
 import { warnOnce } from '@unocss/core';
+
+import { handler as h, insetMap, makeGlobalStaticRules, resolveArbitraryValues } from '#utils';
 
 export const positions = [[/^(static|fixed|absolute|relative|sticky)$/, ([, v]) => ({ position: v })]];
 
@@ -119,7 +120,11 @@ export const insets = [
       inset: resolveArbitraryValues(value, unit, context),
     }),
   ],
-  [/^inset-([xy])-\[(.\d*)(rem|px|%)?]$/, ([, direction, value, unit], context) => insetMap[direction].map((i) => [`${i.slice(1)}`, resolveArbitraryValues(value, unit, context)])],
+  [
+    /^inset-([xy])-\[(.\d*)(rem|px|%)?]$/,
+    ([, direction, value, unit], context) =>
+      insetMap[direction].map((i) => [`${i.slice(1)}`, resolveArbitraryValues(value, unit, context)]),
+  ],
   [
     /^(top|left|right|bottom)-\[(.\d*)(rem|px|%)?]$/,
     ([, direction, value, unit], context) => ({
@@ -152,4 +157,8 @@ export const zIndexes = [
   ['z-auto', { 'z-index': 'auto' }],
 ];
 
-export const boxSizing = [['box-border', { 'box-sizing': 'border-box' }], ['box-content', { 'box-sizing': 'content-box' }], ...makeGlobalStaticRules('box', 'box-sizing')];
+export const boxSizing = [
+  ['box-border', { 'box-sizing': 'border-box' }],
+  ['box-content', { 'box-sizing': 'content-box' }],
+  ...makeGlobalStaticRules('box', 'box-sizing'),
+];

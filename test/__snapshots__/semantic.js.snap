@@ -35,7 +35,7 @@ exports[`it generates css based on semantic warp tokens 1`] = `
 .s-icon-subtle-hover{color:var(--w-s-color-icon-subtle-hover);}
 .s-icon-warning{color:var(--w-s-color-icon-warning);}
 .s-outline{outline-color:var(--w-s-color-border);}
-.s-outline-focused{outline-color:var(--w-s-color-border-focused);}
+.s-outline-focus{outline-color:var(--w-s-color-border-focus);}
 .s-outline-negative{outline-color:var(--w-s-color-border-negative);}
 .s-border{border-color:var(--w-s-color-border);}
 .s-border-b{border-bottom-color:var(--w-s-color-border);}
@@ -78,7 +78,7 @@ exports[`it generates css based on semantic warp tokens with alpha channel 1`] =
 .s-icon-subtle\\/25{color:rgba(var(--w-s-rgb-icon-subtle), 0.25);}
 .s-icon-warning\\/2{color:rgba(var(--w-s-rgb-icon-warning), 0.02);}
 .s-icon\\/4{color:rgba(var(--w-s-rgb-icon), 0.04);}
-.s-outline-focused\\/100{outline-color:rgba(var(--w-s-rgb-border-focused), 1);}
+.s-outline-focus\\/100{outline-color:rgba(var(--w-s-rgb-border-focus), 1);}
 .s-outline-negative\\/77{outline-color:rgba(var(--w-s-rgb-border-negative), 0.77);}
 .s-outline\\/0{outline-color:rgba(var(--w-s-rgb-border), 0);}
 .s-border-b-negative-hover\\/7{border-bottom-color:rgba(var(--w-s-rgb-border-negative-hover), 0.07);}

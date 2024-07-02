@@ -1,6 +1,8 @@
-import { setup, getFractions, getGenerator } from './_helpers.js';
-import { spaceBase } from '#theme';
 import { describe, expect, test } from 'vitest';
+
+import { setup, getFractions, getGenerator } from './_helpers.js';
+
+import { spaceBase } from '#theme';
 
 setup();
 
