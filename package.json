@@ -24,6 +24,9 @@
     "src",
     "dev.js"
   ],
+  "peerDependencies": {
+    "unocss":"0.x"
+  },
   "scripts": {
     "commit": "cz",
     "dev": "node dev.js",
@@ -36,9 +39,9 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "^0.58.5",
-    "@unocss/rule-utils": "^0.58.5",
-    "@unocss/preset-mini": "^0.58.5"
+    "@unocss/core": "0.x",
+    "@unocss/rule-utils": "0.x",
+    "@unocss/preset-mini": "0.x"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -50,7 +53,6 @@
     "eslint": "^8.56.0",
     "rollup": "^4.10.0",
     "semantic-release": "^23.0.0",
-    "unocss": "^0.58.5",
     "vitest": "^1.2.2"
   },
   "eslintConfig": {
