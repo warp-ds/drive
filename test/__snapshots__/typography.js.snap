@@ -22,6 +22,7 @@ exports[`shortcuts 1`] = `
 
 exports[`typography - leading classes  1`] = `
 "/* layer: default */
+.leading-none{line-height:1;}
 .leading-16,
 .leading-xs{line-height:var(--w-line-height-xs);}
 .leading-18,
