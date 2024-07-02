@@ -1,3 +1,10 @@
+# [2.0.0-next.2](https://github.com/warp-ds/drive/compare/v2.0.0-next.1...v2.0.0-next.2) (2024-07-02)
+
+
+### Bug Fixes
+
+* remove internal.js from rules and test ([#227](https://github.com/warp-ds/drive/issues/227)) ([048cf61](https://github.com/warp-ds/drive/commit/048cf612116a9e37395ef81c47fbd074b41e6499))
+
 # [2.0.0-next.1](https://github.com/warp-ds/drive/compare/v1.13.0-next.1...v2.0.0-next.1) (2024-07-02)
 
 
