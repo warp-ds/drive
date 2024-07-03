@@ -7,13 +7,12 @@ import * as backgrounds from './background.js';
 import * as behaviors from './behaviors.js';
 import * as border from './border.js';
 import * as color from './color.js';
-import * as display from './display.js';
 import * as decoration from './decoration.js';
+import * as display from './display.js';
 import * as flex from './flex.js';
 import * as focusRing from './focus-ring.js';
 import * as gap from './gap.js';
 import * as grid from './grid.js';
-import * as internal from './internal.js';
 import * as layout from './layout.js';
 import * as lineClamp from './line-clamp.js';
 import * as list from './list.js';
@@ -22,14 +21,13 @@ import * as position from './position.js';
 import * as semantic from './semantic.js';
 import * as shadow from './shadow.js';
 import * as size from './size.js';
-import * as slider from './slider.js';
 import * as spaceMargin from './space-margin.js';
 import * as spacing from './spacing.js';
-import * as typography from './typography.js';
 import * as staticRules from './static.js';
+import * as table from './table.js';
 import * as transform from './transform.js';
 import * as transition from './transition.js';
-import * as table from './table.js';
+import * as typography from './typography.js';
 
 const ruleGroups = {
   ...align,
@@ -48,7 +46,6 @@ const ruleGroups = {
   ...focusRing,
   ...gap,
   ...grid,
-  ...internal,
   ...layout,
   ...lineClamp,
   ...list,
@@ -57,7 +54,6 @@ const ruleGroups = {
   ...semantic,
   ...shadow,
   ...size,
-  ...slider,
   ...spaceMargin,
   ...spacing,
   ...staticRules,
@@ -83,7 +79,6 @@ export * from './flex.js';
 export * from './focus-ring.js';
 export * from './gap.js';
 export * from './grid.js';
-export * from './internal.js';
 export * from './layout.js';
 export * from './line-clamp.js';
 export * from './list.js';
@@ -95,7 +90,6 @@ export * from './size.js';
 export * from './space-margin.js';
 export * from './spacing.js';
 export * from './static.js';
-export * from './slider.js';
 export * from './table.js';
 export * from './transform.js';
 export * from './transition.js';

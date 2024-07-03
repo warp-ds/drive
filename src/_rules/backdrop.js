@@ -11,5 +11,8 @@ const blurSize = {
 
 export const backdrop = [
   [/^backdrop-blur$/, () => ({ '-webkit-backdrop-filter': `blur(${blurSize.default})`, 'backdrop-filter': `blur(${blurSize.default})` })],
-  [/^backdrop-blur-(none|s|m|l|xl|xxl|xxxl)$/, ([, size]) => ({ '-webkit-backdrop-filter': `blur(${blurSize[size]})`, 'backdrop-filter': `blur(${blurSize[size]})` })],
+  [
+    /^backdrop-blur-(none|s|m|l|xl|xxl|xxxl)$/,
+    ([, size]) => ({ '-webkit-backdrop-filter': `blur(${blurSize[size]})`, 'backdrop-filter': `blur(${blurSize[size]})` }),
+  ],
 ];

@@ -1,5 +1,6 @@
-import { setup } from './_helpers.js';
 import { describe, expect, test } from 'vitest';
+
+import { setup } from './_helpers.js';
 
 setup({ externalizeClasses: true, externalClasses: ['mt-32', 'mb-32'] });
 

@@ -1,17 +1,86 @@
 import { globalKeywords, handler as h, makeGlobalStaticRules, positionMap } from '#utils';
 
-export const appearances = [['visible', { visibility: 'visible' }], ['invisible', { visibility: 'hidden' }], ['backface-visible', { 'backface-visibility': 'visible' }], ['backface-hidden', { 'backface-visibility': 'hidden' }], ...makeGlobalStaticRules('backface', 'backface-visibility')];
+export const appearances = [
+  ['visible', { visibility: 'visible' }],
+  ['invisible', { visibility: 'hidden' }],
+  ['backface-visible', { 'backface-visibility': 'visible' }],
+  ['backface-hidden', { 'backface-visibility': 'hidden' }],
+  ...makeGlobalStaticRules('backface', 'backface-visibility'),
+];
 
-const cursorValues = ['auto', 'default', 'none', 'context-menu', 'help', 'pointer', 'progress', 'wait', 'cell', 'crosshair', 'text', 'vertical-text', 'alias', 'copy', 'move', 'no-drop', 'not-allowed', 'grab', 'grabbing', 'all-scroll', 'col-resize', 'row-resize', 'n-resize', 'e-resize', 's-resize', 'w-resize', 'ne-resize', 'nw-resize', 'se-resize', 'sw-resize', 'ew-resize', 'ns-resize', 'nesw-resize', 'nwse-resize', 'zoom-in', 'zoom-out'];
-export const cursors = [[/^cursor-(.+)$/, ([, c]) => ({ cursor: h.global(c) })], ...cursorValues.map((v) => [`cursor-${v}`, { cursor: v }])];
+const cursorValues = [
+  'auto',
+  'default',
+  'none',
+  'context-menu',
+  'help',
+  'pointer',
+  'progress',
+  'wait',
+  'cell',
+  'crosshair',
+  'text',
+  'vertical-text',
+  'alias',
+  'copy',
+  'move',
+  'no-drop',
+  'not-allowed',
+  'grab',
+  'grabbing',
+  'all-scroll',
+  'col-resize',
+  'row-resize',
+  'n-resize',
+  'e-resize',
+  's-resize',
+  'w-resize',
+  'ne-resize',
+  'nw-resize',
+  'se-resize',
+  'sw-resize',
+  'ew-resize',
+  'ns-resize',
+  'nesw-resize',
+  'nwse-resize',
+  'zoom-in',
+  'zoom-out',
+];
+export const cursors = [
+  [/^cursor-(.+)$/, ([, c]) => ({ cursor: h.global(c) })],
+  ...cursorValues.map((v) => [`cursor-${v}`, { cursor: v }]),
+];
 
-export const pointerEvents = [['pointer-events-auto', { 'pointer-events': 'auto' }], ['pointer-events-none', { 'pointer-events': 'none' }], ...makeGlobalStaticRules('pointer-events')];
+export const pointerEvents = [
+  ['pointer-events-auto', { 'pointer-events': 'auto' }],
+  ['pointer-events-none', { 'pointer-events': 'none' }],
+  ...makeGlobalStaticRules('pointer-events'),
+];
 
-export const resizes = [['resize-x', { resize: 'horizontal' }], ['resize-y', { resize: 'vertical' }], ['resize', { resize: 'both' }], ['resize-none', { resize: 'none' }], ...makeGlobalStaticRules('resize')];
+export const resizes = [
+  ['resize-x', { resize: 'horizontal' }],
+  ['resize-y', { resize: 'vertical' }],
+  ['resize', { resize: 'both' }],
+  ['resize-none', { resize: 'none' }],
+  ...makeGlobalStaticRules('resize'),
+];
 
-export const userSelects = [['select-auto', { 'user-select': 'auto' }], ['select-all', { 'user-select': 'all' }], ['select-text', { 'user-select': 'text' }], ['select-none', { 'user-select': 'none' }], ...makeGlobalStaticRules('select', 'user-select')];
+export const userSelects = [
+  ['select-auto', { 'user-select': 'auto' }],
+  ['select-all', { 'user-select': 'all' }],
+  ['select-text', { 'user-select': 'text' }],
+  ['select-none', { 'user-select': 'none' }],
+  ...makeGlobalStaticRules('select', 'user-select'),
+];
 
-export const whitespaces = [[/^whitespace-([-\w]+)$/, ([, v]) => (['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'break-spaces', ...globalKeywords].includes(v) ? { 'white-space': v } : undefined), { autocomplete: 'whitespace-(normal|nowrap|pre|pre-line|pre-wrap|break-spaces)' }]];
+export const whitespaces = [
+  [
+    /^whitespace-([-\w]+)$/,
+    ([, v]) =>
+      ['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'break-spaces', ...globalKeywords].includes(v) ? { 'white-space': v } : undefined,
+    { autocomplete: 'whitespace-(normal|nowrap|pre|pre-line|pre-wrap|break-spaces)' },
+  ],
+];
 
 // this is left flexible intentionally
 export const contents = [

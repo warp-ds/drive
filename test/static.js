@@ -1,7 +1,11 @@
-import { setup } from './_helpers.js';
 import { expect, test, describe } from 'vitest';
-import { positionMap } from '#utils';
+
 import * as staticRules from '../src/_rules/static.js';
+
+import { setup } from './_helpers.js';
+
+import { positionMap } from '#utils';
+
 // TODO: change this to a subpath import when this lands
 // https://github.com/vitejs/vite/pull/7770
 

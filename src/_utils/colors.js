@@ -1,4 +1,5 @@
 import { escapeRegExp } from '@unocss/core';
+
 import { getComponents } from './getComponents.js';
 
 const cssColorFunctions = ['hsl', 'hsla', 'hwb', 'lab', 'lch', 'oklab', 'oklch', 'rgb', 'rgba'];
@@ -37,7 +38,9 @@ export function colorToString(color, alphaOverride) {
   alpha = alphaOverride ?? alpha;
   type = type.toLowerCase();
   // Comma separated functions
-  if (['hsla', 'hsl', 'rgba', 'rgb'].includes(type)) return `${type.replace('a', '')}a(${components.join(',')}${alpha == null ? '' : `,${alpha}`})`;
+  if (['hsla', 'hsl', 'rgba', 'rgb'].includes(type)) {
+    return `${type.replace('a', '')}a(${components.join(',')}${alpha == null ? '' : `,${alpha}`})`;
+  }
   alpha = alpha == null ? '' : ` / ${alpha}`;
   if (cssColorFunctions.includes(type)) return `${type}(${components.join(' ')}${alpha})`;
   return `color(${type} ${components.join(' ')}${alpha})`;
@@ -72,7 +75,10 @@ function parseHexColor(str) {
       const value = Number.parseInt(body, 16);
       return {
         type: 'rgb',
-        components: body.length === 6 ? [(value >> 16) & 0xff, (value >> 8) & 0xff, value & 0xff] : [(value >> 24) & 0xff, (value >> 16) & 0xff, (value >> 8) & 0xff],
+        components:
+          body.length === 6
+            ? [(value >> 16) & 0xff, (value >> 8) & 0xff, value & 0xff]
+            : [(value >> 24) & 0xff, (value >> 16) & 0xff, (value >> 8) & 0xff],
         alpha: body.length === 6 ? undefined : Math.round(((value & 0xff) / 255) * 100) / 100,
       };
   }
@@ -153,7 +159,10 @@ function parseCssSpaceColorValues(componentString) {
     };
   }
   // (fn 1 2 3/ 4) or (fn 1 2 3 /4)
-  if (components[totalComponents - 2] != null && (components[totalComponents - 2].endsWith('/') || components[totalComponents - 1].startsWith('/'))) {
+  if (
+    components[totalComponents - 2] != null &&
+    (components[totalComponents - 2].endsWith('/') || components[totalComponents - 1].startsWith('/'))
+  ) {
     const removed = components.splice(totalComponents - 2);
     components.push(removed.join(' '));
     --totalComponents;
