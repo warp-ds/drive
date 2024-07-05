@@ -1,7 +1,7 @@
 {
   "name": "@warp-ds/uno",
   "repository": "git@github.com:warp-ds/drive.git",
-  "version": "2.0.2",
+  "version": "2.0.1-next.1",
   "type": "module",
   "exports": {
     ".": "./src/plugin.js",
