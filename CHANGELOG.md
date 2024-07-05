@@ -1,3 +1,10 @@
+## [2.0.1-next.1](https://github.com/warp-ds/drive/compare/v2.0.0...v2.0.1-next.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* bump pnpm/action-setup@v2 to v4 ([70e1ac4](https://github.com/warp-ds/drive/commit/70e1ac471a69afc36c2b3454eb4aa9beefb5cc10))
+
 # [2.0.0](https://github.com/warp-ds/drive/compare/v1.12.0...v2.0.0) (2024-07-03)
 
 
