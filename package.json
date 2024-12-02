@@ -39,9 +39,9 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "0.x",
-    "@unocss/rule-utils": "0.x",
-    "@unocss/preset-mini": "0.x"
+    "@unocss/core": "0.64.1",
+    "@unocss/rule-utils": "0.64.1",
+    "@unocss/preset-mini": "0.64.1"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -66,5 +66,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
 }
