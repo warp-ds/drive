@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/warp-ds/drive/compare/v2.0.0...v2.0.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* pin to uno 0.64.1 ([#230](https://github.com/warp-ds/drive/issues/230)) ([5d6d310](https://github.com/warp-ds/drive/commit/5d6d310ef4d25cca4e88d1172f49598a94c83b0f))
+
 # [2.0.0](https://github.com/warp-ds/drive/compare/v1.12.0...v2.0.0) (2024-07-03)
 
 
