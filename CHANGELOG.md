@@ -35,7 +35,7 @@
 
 * fix(slider): remove deprecated slider rules
 
- * fix(focus-ring): remove deprecated --w-s-color-border-focused token
+* fix(focus-ring): remove deprecated --w-s-color-border-focused token
 
 * fix: change unocss into a peerDependency and change to get the latest versions
 
@@ -64,7 +64,7 @@
 
 * fix(slider): remove deprecated slider rules
 
- * fix(focus-ring): remove deprecated --w-s-color-border-focused token
+* fix(focus-ring): remove deprecated --w-s-color-border-focused token
 
 * fix: change unocss into a peerDependency and change to get the latest versions
 
