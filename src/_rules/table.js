@@ -17,7 +17,7 @@ function handleBorderSpacing([, direction, spacing], { theme }) {
   const spacingValue = theme.spacing?.[spacing];
   const defaultValue = theme.spacing[1];
 
-  if (!Boolean(spacingValue)) return;
+  if (!spacingValue) return;
 
   const borderSpacingValue = () => {
     switch (direction) {

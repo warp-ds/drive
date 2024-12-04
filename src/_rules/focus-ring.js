@@ -32,7 +32,7 @@ export const focusRing = [
         const escapedSelector = escapeSelector(selectorWithVariant);
         const tagLabel = selectorWithVariant?.split('-')?.[0] ?? '';
         const combinator = combinatorsByTag[tagLabel];
-        if (!!combinator) {
+        if (combinator) {
           const focus = `.${tagLabel}:focus${combinator}.${escapedSelector},.${tagLabel}:focus-visible${combinator}.${escapedSelector}{${focusRingStyle}}`;
           const notFocusVisible = `.${tagLabel}:not(:focus-visible)${combinator}.${escapedSelector}{${outlineNone}}`;
           return focus + notFocusVisible;
