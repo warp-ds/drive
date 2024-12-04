@@ -3,10 +3,10 @@ import { beforeEach } from 'vitest';
 
 import { presetWarp } from '#plugin';
 
-export const getGenerator = (opts = {}) => createGenerator({ presets: [presetWarp({ ...opts, development: true })] });
+export const getGenerator = async (opts = {}) => await createGenerator({ presets: [presetWarp({ ...opts, development: true })] });
 export const setup = (opts = {}) => {
-  beforeEach((t) => {
-    t.uno = getGenerator({ ...opts, development: true });
+  beforeEach(async (t) => {
+    t.uno = await getGenerator({ ...opts, development: true });
   });
 };
 
