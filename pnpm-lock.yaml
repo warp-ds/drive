@@ -31,11 +31,11 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(semantic-release@24.0.0(typescript@5.7.2))
       '@unocss/autocomplete':
-        specifier: 0.x
+        specifier: ~0.65.1
         version: 0.65.1
       '@warp-ds/eslint-config':
-        specifier: 1.0.5
-        version: 1.0.5(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.2))(eslint@8.57.1)
+        specifier: 1.1.0
+        version: 1.1.0(@eslint/js@8.57.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.2))(eslint@8.57.1)(globals@15.13.0)
       cz-conventional-changelog:
         specifier: 3.3.0
         version: 3.3.0(@types/node@22.10.2)(typescript@5.7.2)
@@ -941,13 +941,15 @@ packages:
   '@vue/shared@3.5.13':
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
 
-  '@warp-ds/eslint-config@1.0.5':
-    resolution: {integrity: sha512-cHakkN7BVpqwQxpEeDrl3V8/QDco/7UwHTWIFzN3C9t8RlfcT9Y1QTNfMzJQBiIux8oQNE6rom0AydmWLo8mRw==}
+  '@warp-ds/eslint-config@1.1.0':
+    resolution: {integrity: sha512-mknngpCIPTCtju9LXBM61PU8/tEc+fezWxOXVb6NQw38Gyivn82rxx34J+czDJ+PJIruAktlEh2FR8anzD7GpQ==}
     peerDependencies:
-      eslint: ^8.57.0
-      eslint-config-prettier: ^9.1.0
-      eslint-plugin-import: ^2.29.1
-      eslint-plugin-prettier: ^5.1.3
+      '@eslint/js': 9.16.0
+      eslint: 9.16.0
+      eslint-config-prettier: 9.1.0
+      eslint-plugin-import: 2.31.0
+      eslint-plugin-prettier: 5.2.1
+      globals: 15.13.0
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -4187,12 +4189,14 @@ snapshots:
 
   '@vue/shared@3.5.13': {}
 
-  '@warp-ds/eslint-config@1.0.5(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.2))(eslint@8.57.1)':
+  '@warp-ds/eslint-config@1.1.0(@eslint/js@8.57.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.2))(eslint@8.57.1)(globals@15.13.0)':
     dependencies:
+      '@eslint/js': 8.57.1
       eslint: 8.57.1
       eslint-config-prettier: 9.1.0(eslint@8.57.1)
       eslint-plugin-import: 2.31.0(eslint@8.57.1)
       eslint-plugin-prettier: 5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.2)
+      globals: 15.13.0
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:

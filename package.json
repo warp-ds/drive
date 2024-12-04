@@ -47,16 +47,13 @@
     "@rollup/plugin-node-resolve": "15.2.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@unocss/autocomplete": "0.x",
-    "@warp-ds/eslint-config": "1.0.5",
+    "@unocss/autocomplete": "~0.65.1",
+    "@warp-ds/eslint-config": "1.1.0",
     "cz-conventional-changelog": "3.3.0",
     "prettier": "3.3.2",
     "rollup": "4.18.1",
     "semantic-release": "24.0.0",
     "vitest": "2.0.1"
-  },
-  "eslintConfig": {
-    "extends": "@warp-ds"
   },
   "publishConfig": {
     "access": "public"
