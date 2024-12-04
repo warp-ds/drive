@@ -1,3 +1,10 @@
+## [2.0.1-next.2](https://github.com/warp-ds/drive/compare/v2.0.1-next.1...v2.0.1-next.2) (2024-12-04)
+
+
+### Bug Fixes
+
+* Upgrade uno to 0.65 ([#231](https://github.com/warp-ds/drive/issues/231)) ([1ca186a](https://github.com/warp-ds/drive/commit/1ca186af233de481d0de7630e1be6d95b0e0402b))
+
 ## [2.0.1-next.1](https://github.com/warp-ds/drive/compare/v2.0.0...v2.0.1-next.1) (2024-07-05)
 
 
