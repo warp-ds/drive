@@ -1,7 +1,7 @@
 {
   "name": "@warp-ds/uno",
   "repository": "git@github.com:warp-ds/drive.git",
-  "version": "2.0.1",
+  "version": "2.0.2-next.1",
   "type": "module",
   "exports": {
     ".": "./src/plugin.js",
@@ -31,33 +31,29 @@
     "build": "rollup -c",
     "commit": "cz",
     "dev": "node dev.js",
-    "lint": "eslint . --fix --ignore-path .gitignore",
-    "lint:check": "eslint . --ignore-path .gitignore",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
     "test": "vitest"
   },
   "keywords": [],
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "0.64.1",
-    "@unocss/rule-utils": "0.64.1",
-    "@unocss/preset-mini": "0.64.1"
+    "@unocss/core": "~0.65.1",
+    "@unocss/preset-mini": "~0.65.1",
+    "@unocss/rule-utils": "~0.65.1"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@semantic-release/changelog": "^6.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@unocss/autocomplete": "^0.58.5",
-    "@warp-ds/eslint-config": "1.0.5",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "8.57.0",
-    "prettier": "3.2.5",
-    "rollup": "^4.10.0",
-    "semantic-release": "^23.0.0",
-    "vitest": "^1.2.2"
-  },
-  "eslintConfig": {
-    "extends": "@warp-ds"
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@unocss/autocomplete": "~0.65.1",
+    "@warp-ds/eslint-config": "1.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "prettier": "3.3.2",
+    "rollup": "4.18.1",
+    "semantic-release": "24.0.0",
+    "vitest": "2.0.1"
   },
   "publishConfig": {
     "access": "public"
@@ -66,6 +62,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
+  }
 }

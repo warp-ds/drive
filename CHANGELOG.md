@@ -1,9 +1,26 @@
-## [2.0.1](https://github.com/warp-ds/drive/compare/v2.0.0...v2.0.1) (2024-12-02)
+## [2.0.2-next.1](https://github.com/warp-ds/drive/compare/v2.0.1...v2.0.2-next.1) (2024-12-12)
 
 
 ### Bug Fixes
 
+* bump pnpm/action-setup@v2 to v4 ([70e1ac4](https://github.com/warp-ds/drive/commit/70e1ac471a69afc36c2b3454eb4aa9beefb5cc10))
+* pin to uno 0.64.1 ([#230](https://github.com/warp-ds/drive/issues/230)) ([4ea8272](https://github.com/warp-ds/drive/commit/4ea8272591dabc61873312d2c3416d1770e42ec3))
+* Upgrade uno to 0.65 ([#231](https://github.com/warp-ds/drive/issues/231)) ([1ca186a](https://github.com/warp-ds/drive/commit/1ca186af233de481d0de7630e1be6d95b0e0402b))
+
+## [2.0.1-next.2](https://github.com/warp-ds/drive/compare/v2.0.1-next.1...v2.0.1-next.2) (2024-12-04)
+
+### Bug Fixes
+
+* Upgrade uno to 0.65 ([#231](https://github.com/warp-ds/drive/issues/231)) ([1ca186a](https://github.com/warp-ds/drive/commit/1ca186af233de481d0de7630e1be6d95b0e0402b))
+
+## [2.0.1-next.1](https://github.com/warp-ds/drive/compare/v2.0.0...v2.0.1-next.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* bump pnpm/action-setup@v2 to v4 ([70e1ac4](https://github.com/warp-ds/drive/commit/70e1ac471a69afc36c2b3454eb4aa9beefb5cc10))
 * pin to uno 0.64.1 ([#230](https://github.com/warp-ds/drive/issues/230)) ([5d6d310](https://github.com/warp-ds/drive/commit/5d6d310ef4d25cca4e88d1172f49598a94c83b0f))
+
 
 # [2.0.0](https://github.com/warp-ds/drive/compare/v1.12.0...v2.0.0) (2024-07-03)
 
@@ -28,7 +45,7 @@
 
 * fix(slider): remove deprecated slider rules
 
- * fix(focus-ring): remove deprecated --w-s-color-border-focused token
+* fix(focus-ring): remove deprecated --w-s-color-border-focused token
 
 * fix: change unocss into a peerDependency and change to get the latest versions
 
@@ -57,7 +74,7 @@
 
 * fix(slider): remove deprecated slider rules
 
- * fix(focus-ring): remove deprecated --w-s-color-border-focused token
+* fix(focus-ring): remove deprecated --w-s-color-border-focused token
 
 * fix: change unocss into a peerDependency and change to get the latest versions
 

@@ -3,7 +3,7 @@ export const variantLastChild = (matcher) => {
     return matcher;
   }
   return {
-    matcher: matcher.slice(11),
+    matcher: matcher?.slice(11),
     selector: () => `.last-child\\:mb-0>:last-child`,
   };
 };

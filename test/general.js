@@ -60,7 +60,7 @@ test(`testing content-none`, async ({ uno }) => {
 });
 
 test('can generate pixel values for theme', async () => {
-  const uno = getGenerator({ usePixels: true });
+  const uno = await getGenerator({ usePixels: true });
   const { css } = await uno.generate(['pt-8', 'bottom-4', '-ml-32']);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
@@ -71,7 +71,7 @@ test('can generate pixel values for theme', async () => {
 });
 
 test('it can externalize classes', async () => {
-  const uno = getGenerator({ externalizeClasses: true, externalClasses: ['p-16', '-ml-32'] });
+  const uno = await getGenerator({ externalizeClasses: true, externalClasses: ['p-16', '-ml-32'] });
   const { css } = await uno.generate(['pt-8', 'bottom-4', '-ml-32']);
   expect(css).toMatchInlineSnapshot(`
     "/* layer: default */
