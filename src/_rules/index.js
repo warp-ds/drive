@@ -7,6 +7,7 @@ import * as backgrounds from './background.js';
 import * as behaviors from './behaviors.js';
 import * as border from './border.js';
 import * as color from './color.js';
+import * as dataviz from './dataviz.js';
 import * as decoration from './decoration.js';
 import * as display from './display.js';
 import * as flex from './flex.js';
@@ -40,6 +41,7 @@ const ruleGroups = {
   ...border,
   ...table,
   ...color,
+  ...dataviz,
   ...display,
   ...decoration,
   ...flex,
@@ -73,6 +75,7 @@ export * from './background.js';
 export * from './behaviors.js';
 export * from './border.js';
 export * from './color.js';
+export * from './dataviz.js';
 export * from './display.js';
 export * from './decoration.js';
 export * from './flex.js';
