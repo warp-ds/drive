@@ -180,7 +180,7 @@ export function semanticToken(str) {
 }
 export function datavizToken(str) {
   const alpha = str.match(/^([^\/]+)\/(0|[1-9][0-9]?|100)$/);
-  return alpha ? `rgba(var(--w-s-rgb-${alpha[1]}), ${percent(alpha[2])})` : `var(--w-dv-s-color-${str})`;
+  return alpha ? `rgba(var(--w-dv-s-rgb-${alpha[1]}), ${percent(alpha[2])})` : `var(--w-dv-s-color-${str})`;
 }
 export function cssvar(str) {
   if (str.match(/^\$\S/)) return `var(--${escapeSelector(str.slice(1))})`;
