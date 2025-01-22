@@ -1,3 +1,10 @@
+# [2.1.0-next.1](https://github.com/warp-ds/drive/compare/v2.0.3-next.1...v2.1.0-next.1) (2025-01-22)
+
+
+### Features
+
+* **rules:** handle dataviz classes ([#235](https://github.com/warp-ds/drive/issues/235)) ([84f0ca3](https://github.com/warp-ds/drive/commit/84f0ca37cb84845a8f3108e40a605194c9f895e6))
+
 ## [2.0.3-next.1](https://github.com/warp-ds/drive/compare/v2.0.2...v2.0.3-next.1) (2025-01-22)
 
 
