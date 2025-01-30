@@ -83,7 +83,7 @@ test('it should not generate css with incorrect alpha channel values', async ({ 
     'dv-s-bg/1000',
     'dv-s-bg/00',
     'dv-s-bg/01',
-    'dv-s-bg-positive-selected-hover/00',
+    'dv-s-bg-positive-selected-highlight/00',
     'dv-s-text/001',
     'dv-s-text-link-active/5566',
     'dv-s-border/1000',
@@ -95,20 +95,20 @@ test('it should not generate css with incorrect alpha channel values', async ({ 
 
 test('pseudo', async ({ uno }) => {
   const classes = [
-    'focus:dv-s-icon-category7-focus',
-    'focus:dv-s-fill-icon-category8-focus',
-    'focus:dv-s-stroke-icon-negative-focus',
-    'focus:dv-s-icon-neutral-focus',
-    'focus:dv-s-icon-positive-focus',
-    'focus:dv-s-icon-warning-focus',
-    'hover:dv-s-border-primary-hover',
-    'hover:dv-s-bg-secondary-hover',
-    'hover:dv-s-icon-negative-hover',
-    'hover:dv-s-icon-neutral-hover',
-    'hover:dv-s-stroke-line-neutral-hover',
-    'hover:dv-s-line-neutral-hover',
-    'hover:dv-s-text-positive-hover',
-    'hover:dv-s-text-warning-hover',
+    'focus:dv-s-icon-category7-highlight',
+    'focus:dv-s-fill-icon-category8-highlight',
+    'focus:dv-s-stroke-icon-negative-highlight',
+    'focus:dv-s-icon-neutral-highlight',
+    'focus:dv-s-icon-positive-highlight',
+    'focus:dv-s-icon-warning-highlight',
+    'hover:dv-s-border-primary-highlight',
+    'hover:dv-s-bg-secondary-highlight',
+    'hover:dv-s-icon-negative-highlight',
+    'hover:dv-s-icon-neutral-highlight',
+    'hover:dv-s-stroke-line-neutral-highlight',
+    'hover:dv-s-line-neutral-highlight',
+    'hover:dv-s-text-positive-highlight',
+    'hover:dv-s-text-warning-highlight',
   ];
   const { css } = await uno.generate(classes);
   expect(css).toMatchSnapshot();
