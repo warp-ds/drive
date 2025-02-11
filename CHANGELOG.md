@@ -1,3 +1,10 @@
+# [2.1.0-next.2](https://github.com/warp-ds/drive/compare/v2.1.0-next.1...v2.1.0-next.2) (2025-02-11)
+
+
+### Features
+
+* Dataviz updates ([#239](https://github.com/warp-ds/drive/issues/239)) ([f53fb74](https://github.com/warp-ds/drive/commit/f53fb7463dd481f61ff50f0b4a7a63b25b70d633))
+
 # [2.1.0-next.1](https://github.com/warp-ds/drive/compare/v2.0.3-next.1...v2.1.0-next.1) (2025-01-22)
 
 
