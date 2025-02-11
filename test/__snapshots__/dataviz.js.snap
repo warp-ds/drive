@@ -21,7 +21,23 @@ exports[`it generates css based on semantic dataviz tokens 1`] = `
 .dv-s-bg-negative{background-color:var(--w-dv-s-color-background-negative);}
 .dv-s-bg-neutral{background-color:var(--w-dv-s-color-background-neutral);}
 .dv-s-bg-positive{background-color:var(--w-dv-s-color-background-positive);}
+.dv-s-bg-primary{background-color:var(--w-dv-s-color-background-primary);}
 .dv-s-bg-warning{background-color:var(--w-dv-s-color-background-warning);}
+.dv-s-chartline{color:var(--w-dv-s-color-chartline);}
+.dv-s-chartline-subtle{color:var(--w-dv-s-color-chartline-subtle);}
+.dv-s-fill-chartline{fill:var(--w-dv-s-color-chartline);}
+.dv-s-fill-chartline-subtle{fill:var(--w-dv-s-color-chartline-subtle);}
+.dv-s-stroke-chartline{stroke:var(--w-dv-s-color-chartline);}
+.dv-s-stroke-chartline-subtle{stroke:var(--w-dv-s-color-chartline-subtle);}
+.dv-s-chartbg{color:var(--w-dv-s-color-chartbackground);}
+.dv-s-fill-chartbg{fill:var(--w-dv-s-color-chartbackground);}
+.dv-s-stroke-chartbg{stroke:var(--w-dv-s-color-chartbackground);}
+.dv-s-charttext{color:var(--w-dv-s-color-charttext);}
+.dv-s-charttext-subtle{color:var(--w-dv-s-color-charttext-subtle);}
+.dv-s-fill-charttext{fill:var(--w-dv-s-color-charttext);}
+.dv-s-fill-charttext-subtle{fill:var(--w-dv-s-color-charttext-subtle);}
+.dv-s-stroke-charttext{stroke:var(--w-dv-s-color-charttext);}
+.dv-s-stroke-charttext-subtle{stroke:var(--w-dv-s-color-charttext-subtle);}
 .dv-s-outline-category6{outline-color:var(--w-dv-s-color-border-category6);}
 .dv-s-outline-negative{outline-color:var(--w-dv-s-color-border-negative);}
 .dv-s-outline-neutral{outline-color:var(--w-dv-s-color-border-neutral);}
@@ -58,18 +74,18 @@ exports[`it generates css based on semantic dataviz tokens with alpha channel 1`
 
 exports[`pseudo 1`] = `
 "/* layer: default */
-.hover\\:dv-s-stroke-line-neutral-hover:hover{stroke:var(--w-dv-s-color-line-neutral-hover);}
-.focus\\:dv-s-fill-icon-category8-focus:focus{fill:var(--w-dv-s-color-icon-category8-focus);}
-.focus\\:dv-s-stroke-icon-negative-focus:focus{stroke:var(--w-dv-s-color-icon-negative-focus);}
-.hover\\:dv-s-border-primary-hover:hover{border-color:var(--w-dv-s-color-border-primary-hover);}
-.hover\\:dv-s-line-neutral-hover:hover{border-color:var(--w-dv-s-color-line-neutral-hover);}
-.hover\\:dv-s-bg-secondary-hover:hover{background-color:var(--w-dv-s-color-background-secondary-hover);}
-.hover\\:dv-s-text-positive-hover:hover{color:var(--w-dv-s-color-text-positive-hover);}
-.hover\\:dv-s-text-warning-hover:hover{color:var(--w-dv-s-color-text-warning-hover);}
-.hover\\:dv-s-icon-negative-hover:hover{color:var(--w-dv-s-color-icon-negative-hover);}
-.hover\\:dv-s-icon-neutral-hover:hover{color:var(--w-dv-s-color-icon-neutral-hover);}
-.focus\\:dv-s-icon-category7-focus:focus{color:var(--w-dv-s-color-icon-category7-focus);}
-.focus\\:dv-s-icon-neutral-focus:focus{color:var(--w-dv-s-color-icon-neutral-focus);}
-.focus\\:dv-s-icon-positive-focus:focus{color:var(--w-dv-s-color-icon-positive-focus);}
-.focus\\:dv-s-icon-warning-focus:focus{color:var(--w-dv-s-color-icon-warning-focus);}"
+.hover\\:dv-s-stroke-line-neutral-highlight:hover{stroke:var(--w-dv-s-color-line-neutral-highlight);}
+.focus\\:dv-s-fill-icon-category8-highlight:focus{fill:var(--w-dv-s-color-icon-category8-highlight);}
+.focus\\:dv-s-stroke-icon-negative-highlight:focus{stroke:var(--w-dv-s-color-icon-negative-highlight);}
+.hover\\:dv-s-border-primary-highlight:hover{border-color:var(--w-dv-s-color-border-primary-highlight);}
+.hover\\:dv-s-line-neutral-highlight:hover{border-color:var(--w-dv-s-color-line-neutral-highlight);}
+.hover\\:dv-s-bg-secondary-highlight:hover{background-color:var(--w-dv-s-color-background-secondary-highlight);}
+.hover\\:dv-s-text-positive-highlight:hover{color:var(--w-dv-s-color-text-positive-highlight);}
+.hover\\:dv-s-text-warning-highlight:hover{color:var(--w-dv-s-color-text-warning-highlight);}
+.hover\\:dv-s-icon-negative-highlight:hover{color:var(--w-dv-s-color-icon-negative-highlight);}
+.hover\\:dv-s-icon-neutral-highlight:hover{color:var(--w-dv-s-color-icon-neutral-highlight);}
+.focus\\:dv-s-icon-category7-highlight:focus{color:var(--w-dv-s-color-icon-category7-highlight);}
+.focus\\:dv-s-icon-neutral-highlight:focus{color:var(--w-dv-s-color-icon-neutral-highlight);}
+.focus\\:dv-s-icon-positive-highlight:focus{color:var(--w-dv-s-color-icon-positive-highlight);}
+.focus\\:dv-s-icon-warning-highlight:focus{color:var(--w-dv-s-color-icon-warning-highlight);}"
 `;
