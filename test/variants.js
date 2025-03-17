@@ -30,6 +30,8 @@ describe('variants', () => {
       'group/llama',
       'group-hover/llama:m-32',
       'part-[part-name]:s-bg-primary',
+      'data-[is-active]:s-bg-primary',
+      'aria-[invalid=spelling]:s-bg-primary',
     ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
