@@ -1,3 +1,10 @@
+# [2.2.0-next.1](https://github.com/warp-ds/drive/compare/v2.1.0...v2.2.0-next.1) (2025-03-18)
+
+
+### Features
+
+* allow targeting using data attribute like `data-[is-active]:s-bg-primary` ([#242](https://github.com/warp-ds/drive/issues/242)) ([95eeaf4](https://github.com/warp-ds/drive/commit/95eeaf4d12596057cb7b0827ce90bc0b621ce643))
+
 # [2.1.0](https://github.com/warp-ds/drive/compare/v2.0.2...v2.1.0) (2025-02-11)
 
 
