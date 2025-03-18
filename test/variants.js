@@ -30,8 +30,6 @@ describe('variants', () => {
       'group/llama',
       'group-hover/llama:m-32',
       'part-[part-name]:s-bg-primary',
-      'data-[is-active]:s-bg-primary',
-      'aria-[invalid=spelling]:s-bg-primary',
     ];
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
@@ -42,5 +40,16 @@ describe('variants', () => {
     expect(css).toMatchSnapshot();
   });
 
+  test('data variant', async ({ uno }) => {
+    const classes = ['data-[is-active]:s-bg-primary'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('aria variant', async ({ uno }) => {
+    const classes = ['aria-[invalid=spelling]:s-bg-primary'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
   // space/divide variant is already tested by the space/divide classes
 });
