@@ -1,3 +1,10 @@
+# [2.2.0-next.2](https://github.com/warp-ds/drive/compare/v2.2.0-next.1...v2.2.0-next.2) (2025-05-02)
+
+
+### Bug Fixes
+
+* **deps:** update unocss monorepo to v66 (major) ([#237](https://github.com/warp-ds/drive/issues/237)) ([f463f6d](https://github.com/warp-ds/drive/commit/f463f6d555a1b6814dbb1cd487ac2874d15b37bf))
+
 # [2.2.0-next.1](https://github.com/warp-ds/drive/compare/v2.1.0...v2.2.0-next.1) (2025-03-18)
 
 
