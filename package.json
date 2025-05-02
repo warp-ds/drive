@@ -25,7 +25,7 @@
     "dev.js"
   ],
   "peerDependencies": {
-    "unocss": "0.x"
+    "unocss": "0.x || 66.x"
   },
   "scripts": {
     "build": "rollup -c",
@@ -39,15 +39,15 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "~0.65.1",
-    "@unocss/preset-mini": "~0.65.1",
-    "@unocss/rule-utils": "~0.65.1"
+    "@unocss/core": "~66.0.0",
+    "@unocss/preset-mini": "~66.0.0",
+    "@unocss/rule-utils": "~66.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "15.2.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@unocss/autocomplete": "~0.65.1",
+    "@unocss/autocomplete": "~66.0.0",
     "@warp-ds/eslint-config": "1.1.0",
     "cz-conventional-changelog": "3.3.0",
     "prettier": "3.3.2",
