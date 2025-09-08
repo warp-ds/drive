@@ -39,18 +39,18 @@
   "author": "@djh",
   "license": "Apache-2.0",
   "dependencies": {
-    "@unocss/core": "~66.0.0",
-    "@unocss/preset-mini": "~66.0.0",
-    "@unocss/rule-utils": "~66.0.0"
+    "@unocss/core": "~66.5.0",
+    "@unocss/preset-mini": "~66.5.0",
+    "@unocss/rule-utils": "~66.5.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-node-resolve": "15.3.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@unocss/autocomplete": "~66.0.0",
+    "@unocss/autocomplete": "~66.5.0",
     "@warp-ds/eslint-config": "1.1.0",
     "cz-conventional-changelog": "3.3.0",
-    "prettier": "3.3.2",
+    "prettier": "3.6.2",
     "rollup": "4.18.1",
     "semantic-release": "24.0.0",
     "vitest": "2.0.1"
