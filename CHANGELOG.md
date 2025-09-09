@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/warp-ds/drive/compare/v2.1.0...v2.2.0) (2025-09-09)
+
+
+### Bug Fixes
+
+* **deps:** update unocss monorepo to v66 (major) ([#237](https://github.com/warp-ds/drive/issues/237)) ([f463f6d](https://github.com/warp-ds/drive/commit/f463f6d555a1b6814dbb1cd487ac2874d15b37bf))
+
+
+### Features
+
+* allow targeting using data attribute like `data-[is-active]:s-bg-primary` ([#242](https://github.com/warp-ds/drive/issues/242)) ([95eeaf4](https://github.com/warp-ds/drive/commit/95eeaf4d12596057cb7b0827ce90bc0b621ce643))
+
 # [2.2.0-next.2](https://github.com/warp-ds/drive/compare/v2.2.0-next.1...v2.2.0-next.2) (2025-05-02)
 
 
