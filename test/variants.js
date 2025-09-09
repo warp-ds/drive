@@ -40,5 +40,16 @@ describe('variants', () => {
     expect(css).toMatchSnapshot();
   });
 
+  test('data variant', async ({ uno }) => {
+    const classes = ['data-[is-active]:s-bg-primary'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
+  test('aria variant', async ({ uno }) => {
+    const classes = ['aria-[invalid=spelling]:s-bg-primary'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
   // space/divide variant is already tested by the space/divide classes
 });

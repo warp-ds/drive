@@ -7,6 +7,8 @@ import {
   variantPseudoClassesAndElements,
   variantPartClasses,
   variantCombinators,
+  variantDataAttribute,
+  variantAria,
 } from '@unocss/preset-mini/variants';
 
 import { variantLastChild } from './lastChild.js';
@@ -23,6 +25,8 @@ export const variants = [
   variantPartClasses,
   ...variantTaggedPseudoClasses({ attributifyPseudo: false }),
   ...variantCombinators,
+  variantDataAttribute,
+  variantAria,
 ];
 
 export {
@@ -36,4 +40,6 @@ export {
   variantTaggedPseudoClasses,
   variantPartClasses,
   variantCombinators,
+  variantDataAttribute,
+  variantAria,
 };

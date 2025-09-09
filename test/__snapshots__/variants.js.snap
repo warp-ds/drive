@@ -1,5 +1,10 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`variants > aria variant 1`] = `
+"/* layer: default */
+.aria-\\[invalid\\=spelling\\]\\:s-bg-primary[aria-invalid=spelling]{background-color:var(--w-s-color-background-primary);}"
+`;
+
 exports[`variants > breakpoints 1`] = `
 "/* layer: default */
 @media (max-width: 767.9px){
@@ -16,6 +21,11 @@ exports[`variants > breakpoints 1`] = `
 exports[`variants > custom 1`] = `
 "/* layer: default */
 .last-child\\:mb-0>:last-child{margin-bottom:0rem;}"
+`;
+
+exports[`variants > data variant 1`] = `
+"/* layer: default */
+.data-\\[is-active\\]\\:s-bg-primary[data-is-active]{background-color:var(--w-s-color-background-primary);}"
 `;
 
 exports[`variants > important 1`] = `
