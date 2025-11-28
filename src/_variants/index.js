@@ -9,6 +9,7 @@ import {
   variantCombinators,
   variantDataAttribute,
   variantAria,
+  variantVariables,
 } from '@unocss/preset-mini/variants';
 
 import { variantLastChild } from './lastChild.js';
@@ -27,6 +28,7 @@ export const variants = [
   ...variantCombinators,
   variantDataAttribute,
   variantAria,
+  variantVariables,
 ];
 
 export {
@@ -42,4 +44,5 @@ export {
   variantCombinators,
   variantDataAttribute,
   variantAria,
+  variantVariables,
 };
