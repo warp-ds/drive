@@ -1,3 +1,10 @@
+# [2.3.0-next.1](https://github.com/warp-ds/drive/compare/v2.2.0...v2.3.0-next.1) (2025-11-28)
+
+
+### Features
+
+* enable arbitrary variants ([#250](https://github.com/warp-ds/drive/issues/250)) ([b73502b](https://github.com/warp-ds/drive/commit/b73502b652641af07f8cd111e5c8201f82f887c8))
+
 # [2.2.0](https://github.com/warp-ds/drive/compare/v2.1.0...v2.2.0) (2025-09-09)
 
 
