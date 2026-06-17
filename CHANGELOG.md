@@ -1,3 +1,10 @@
+# [2.3.0-next.2](https://github.com/warp-ds/uno/compare/v2.3.0-next.1...v2.3.0-next.2) (2026-06-17)
+
+
+### Features
+
+* add dark/light mode variants support ([#255](https://github.com/warp-ds/uno/issues/255)) ([2102186](https://github.com/warp-ds/uno/commit/2102186d9c9efccc2c98f85a7da53e705d5ea236))
+
 # [2.3.0-next.1](https://github.com/warp-ds/drive/compare/v2.2.0...v2.3.0-next.1) (2025-11-28)
 
 
