@@ -1,0 +1,23 @@
+name: Pull request
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - uses: pnpm/setup@v1
+      with:
+        runtime: node@lts
+        cache: true
+        install: true
+    - run: pnpm lint:check
+    - run: pnpm test
+    - run: pnpm build
+
+  title:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: warp-ds/pr-linter@v1

@@ -4,17 +4,16 @@ on:
     workflows:
       - Release
     branches:
-      - master
+      - main
     types: completed
 jobs:
   rebase:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Rebase next to master
+      - uses: actions/checkout@v6
+      - name: Rebase next to main
         run: |
           git fetch --unshallow
           git checkout next
-          git rebase origin/master
+          git rebase origin/main
           git push
