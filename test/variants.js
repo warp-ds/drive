@@ -51,5 +51,12 @@ describe('variants', () => {
     const { css } = await uno.generate(classes);
     expect(css).toMatchSnapshot();
   });
+
+  test('dark', async ({ uno }) => {
+    const classes = ['dark:s-bg-subtle', 'light:s-text-inverted-static'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchSnapshot();
+  });
+
   // space/divide variant is already tested by the space/divide classes
 });

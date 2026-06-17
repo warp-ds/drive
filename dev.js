@@ -27,7 +27,7 @@ const {
 const uno = await createGenerator({
   presets: [presetWarp({ ...options, development: true })],
 });
-const devClasses = ['m-16!', 'opacity-50', '[&>[role="tablist"]]:flex'];
+const devClasses = ['m-16!', 'opacity-50', '[&>[role="tablist"]]:flex', 'dark:s-bg-info-subtle', 'light:s-bg-subtle'];
 const classes = cliClasses ?? devClasses;
 const result = await uno.generate(classes);
 console.log(result.css);
