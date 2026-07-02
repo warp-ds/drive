@@ -1,8 +1,8 @@
-# drive - a UnoCSS preset
+# uno - a UnoCSS preset
 
 ## How to contribute
 
-If you'd like to contribute to `@warp-ds/drive`, start by reviewing the [contributing guidelines](https://github.com/warp-ds/drive/blob/main/CONTRIBUTING.md).
+If you'd like to contribute to `@warp-ds/uno`, start by reviewing the [contributing guidelines](https://github.com/warp-ds/uno/blob/main/CONTRIBUTING.md).
 
 
 ## Plugin API
@@ -53,7 +53,7 @@ pnpm dev -c m-2
 
 ## Releases
 
-This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/drive) using a `next` tag (e.g. `1.1.0-next.1`).
+This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/uno) using a `next` tag (e.g. `1.1.0-next.1`).
 Anyone needing to use the latest changes of this package can install the `next` version while waiting for the stable release.
 
 
@@ -64,4 +64,4 @@ Detailed changes for each release can be found in the [CHANGELOG](CHANGELOG.md) 
 
 ## License
 
-@warp-ds/drive is available under the [Apache-2.0 software license](https://github.com/warp-ds/drive/blob/main/LICENSE).
+@warp-ds/uno is available under the [Apache-2.0 software license](https://github.com/warp-ds/uno/blob/main/LICENSE).
