@@ -1,9 +1,9 @@
-# Contributing to @warp-ds/drive
+# Contributing to @warp-ds/uno
 
-Welcome to the [@warp-ds/drive](https://github.com/warp-ds/drive) repository!
+Welcome to the [@warp-ds/uno](https://github.com/warp-ds/uno) repository!
 We're glad you're interested in contributing.
 
-This repository is mastertained by the [Warp Core Team](https://github.com/orgs/warp-ds/teams/warp-core-team)
+This repository is maintained by the [Warp Core Team](https://github.com/orgs/warp-ds/teams/warp-core-team)
 and is home to a UnoCSS plugin which defines rules, theme, preflights and other settings used for generating styles within the
 [Warp Design System](https://github.com/warp-ds/).
 
@@ -12,7 +12,7 @@ To get an overview of the project, read the [README](README.md).
 
 ## Development Setup
 
-To get started with developing [@warp-ds/drive](https://github.com/warp-ds/drive), follow the instructions below.
+To get started with developing [@warp-ds/uno](https://github.com/warp-ds/uno), follow the instructions below.
 This will walk you through setting up your development environment and running the tests.
 
 
@@ -21,7 +21,7 @@ This will walk you through setting up your development environment and running t
 Start by cloning the repository to your dev environment by running:
 
 ```sh
-git clone https://github.com/warp-ds/drive
+git clone https://github.com/warp-ds/uno
 ```
 
 
@@ -64,7 +64,7 @@ pnpm dev -c m-2
 
 There are two branches to keep in mind:
 - `next` : used for pre-releases.
-- `master` : the master branch, used for stable releases.
+- `main` : the main branch, used for stable releases.
 
 When adding a new feature, fixing a bug, or adding to the repository in any other way,
 you should always do this in a feature branch that is branched off the `next` branch.
@@ -100,24 +100,24 @@ When installed, you should be able to type `cz` or `git cz` in your terminal to 
 ## Releases
 
 This project uses [Semantic Release](https://github.com/semantic-release/semantic-release) to automate package
-publishing when making changes to the `master` or `next` branch.
+publishing when making changes to the `main` or `next` branch.
 
 Please note that the version published will depend on your commit message structure.
 Make sure to review and follow the instructions in the [Committing](#committing) section before committing.
 
-This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/drive) using a `next` tag (e.g. `1.1.0-next.1`).
+This project is continuously published to [NPM](https://www.npmjs.com/package/@warp-ds/uno) using a `next` tag (e.g. `1.1.0-next.1`).
 Anyone needing to use the latest changes of this package can install the `next` version while waiting for the stable release.
 
-A stable release from the `master` branch is basically done by just opening a pull request from `next` to `master` and then making sure to *merge* commit the pull request.
-NEVER SQUASH-MERGE TO `master` to prevent losing history and commit messages from all commits to `next`.
+A stable release from the `main` branch is basically done by just opening a pull request from `next` to `main` and then making sure to *merge* commit the pull request.
+NEVER SQUASH-MERGE TO `main` to prevent losing history and commit messages from all commits to `next`.
 
-To avoid git history divergence between `next` and `master`,
-when a stable release from `master` results in a semantic-release-bot commit being pushed to `master`,
-a GitHub action automatically rebases `next` to `origin/master` after every release from `master`.
+To avoid git history divergence between `next` and `main`,
+when a stable release from `main` results in a semantic-release-bot commit being pushed to `main`,
+a GitHub action automatically rebases `next` to `origin/master` after every release from `main`.
 
 ( For reference, see this rfc in Fabric-ds: [RFC: Fabric Releases and Release Schedule](https://github.com/fabric-ds/issues/blob/779d59723993c13d62374516259602d967da56ca/rfcs/0004-releases.md) )
 
 ## License
 
-@warp-ds/drive is [Apache-2.0 licensed](https://github.com/warp-ds/react/blob/master/LICENSE).
+@warp-ds/uno is [Apache-2.0 licensed](https://github.com/warp-ds/react/blob/master/LICENSE).
 By contributing to @warp-ds/react, you agree that your contributions will be licensed under its Apache-2.0 license.
